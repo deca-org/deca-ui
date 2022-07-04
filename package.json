@@ -114,7 +114,7 @@
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/coverage",
     "testEnvironment": "jest-environment-jsdom",
-    "coverageReporters": ["clover", "json", "lcov", "text-summary", "html"]
+    "coverageReporters": ["clover", "json", "lcov", "text-summary", "html", "cobertura"]
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
