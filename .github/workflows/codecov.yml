@@ -1,0 +1,8 @@
+name: Codecov
+on: [push]
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.0

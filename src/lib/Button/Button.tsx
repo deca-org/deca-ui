@@ -11,7 +11,7 @@ export interface ButtonProps {
   /**
    * function that executes when button is clicked
    */
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Button = (props: ButtonProps): JSX.Element => {
