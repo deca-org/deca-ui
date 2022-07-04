@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Button } from './Button';
 
 export default {
@@ -6,4 +7,12 @@ export default {
   component: Button,
 };
 
-export const Primary = () => <Button>hello</Button>;
+export const Primary = () => (
+  <Button
+    onClick={() => {
+      console.table();
+    }}
+  >
+    hello
+  </Button>
+);
