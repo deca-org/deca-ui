@@ -19,7 +19,6 @@
     "test": "run-s build test:*",
     "test:lint": "eslint src --ext .ts",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
-    "test:spelling": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
     "test:unit": "jest --coverage",
     "check-cli": "run-s test diff-integration-tests check-integration-tests",
     "check-integration-tests": "run-s check-integration-test:*",
@@ -36,7 +35,8 @@
     "reset-hard": "git clean -dfx && git reset --hard && npm i",
     "prepare-release": "run-s reset-hard test doc:html version doc:publish",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\""
   },
   "engines": {
     "node": ">=10"
