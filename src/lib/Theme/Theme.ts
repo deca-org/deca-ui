@@ -1,11 +1,15 @@
 import { createStitches } from '@stitches/react';
+import type * as Stitches from '@stitches/react';
 import { rem } from 'polished';
 
-type CSSVal = string | number;
-
-export const { styled, css } = createStitches({
+const baseTheme = {
   theme: {
     colors: {
+      primary: '#5C7CFA',
+      secondary: '#F9A825',
+      black: '#000000',
+      white: '#FFFFFF',
+      transparent: '#FFFFFF00',
       brown900: '#3E2723',
       brown800: '#4E342E',
       brown700: '#5D4037',
@@ -222,63 +226,181 @@ export const { styled, css } = createStitches({
         '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
       mono: 'SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace',
     },
-    fontWeights: {},
-    lineHeights: {},
-    letterSpacings: {},
-    sizes: {},
-    borderWidths: {},
-    borderStyles: {},
-    radii: {},
-    shadows: {},
-    zIndices: {},
-    transitions: {},
+    fontWeights: {
+      hairline: 100,
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800,
+      black: 900,
+    },
+    lineHeights: {
+      xs: 1,
+      sm: 1.25,
+      base: 1.5,
+      md: 1.5,
+      lg: 1.75,
+      xl: 1.75,
+      xl2: 2,
+      xl3: 2.25,
+      xl4: 2.5,
+    },
+    letterSpacings: {
+      tighter: '-0.05em',
+      tight: '-0.025em',
+      normal: '0',
+      wide: '0.025em',
+      wider: '0.05em',
+      widest: '0.1em',
+    },
+    borderWidths: {
+      light: '1px',
+      normal: '2px',
+      bold: '3px',
+      extrabold: '4px',
+      black: '5px',
+    },
+    radii: {
+      xs: '5px',
+      sm: '7px',
+      md: '12px',
+      base: '14px',
+      lg: '14px',
+      xl: '18px',
+      squared: '33%',
+      rounded: '50%',
+      pill: '9999px',
+    },
+    shadows: {
+      a11y: '0 0 0 3px rgba(66,153,225,0.6)',
+    },
+    zIndices: {
+      1: '100',
+      2: '200',
+      3: '300',
+      4: '400',
+      5: '500',
+      10: '1000',
+      max: '9999',
+    },
+    transitions: {
+      default: 'all 250ms ease',
+    },
     media: {
-      sm: '544px',
-      md: '768px',
-      lg: '1012px',
-      xl: '1280px',
+      xs: '650px',
+      sm: '960px',
+      md: '1280px',
+      lg: '1400px',
+      xl: '1920px',
     },
   },
   utils: {
     // Abbreviated margin properties
-    m: (value: CSSVal) => ({
+    m: (value: Stitches.PropertyValue<'margin'>) => ({
       margin: value,
     }),
-    mt: (value: CSSVal) => ({
+    mt: (value: Stitches.PropertyValue<'marginTop'>) => ({
       marginTop: value,
     }),
-    mr: (value: CSSVal) => ({
+    mr: (value: Stitches.PropertyValue<'marginRight'>) => ({
       marginRight: value,
     }),
-    mb: (value: CSSVal) => ({
+    mb: (value: Stitches.PropertyValue<'marginBottom'>) => ({
       marginBottom: value,
     }),
-    ml: (value: CSSVal) => ({
+    ml: (value: Stitches.PropertyValue<'marginLeft'>) => ({
       marginLeft: value,
     }),
-    mx: (value: CSSVal) => ({
+    mx: (value: Stitches.ScaleValue<'space'>) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    my: (value: CSSVal) => ({
+    my: (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: value,
       marginBottom: value,
     }),
 
+    // Abbreviated padding properties
+    p: (value: Stitches.PropertyValue<'padding'>) => ({
+      padding: value,
+    }),
+    pt: (value: Stitches.PropertyValue<'paddingTop'>) => ({
+      paddingTop: value,
+    }),
+    pr: (value: Stitches.PropertyValue<'paddingRight'>) => ({
+      paddingRight: value,
+    }),
+    pb: (value: Stitches.PropertyValue<'paddingBottom'>) => ({
+      paddingBottom: value,
+    }),
+    pl: (value: Stitches.PropertyValue<'paddingLeft'>) => ({
+      paddingLeft: value,
+    }),
+    px: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+
+    // color
+    bg: (value: Stitches.PropertyValue<'backgroundColor'>) => ({
+      backgroundColor: value,
+    }),
+
     // A property for applying width/height together
-    size: (value: CSSVal) => ({
+    size: (value: Stitches.PropertyValue<'width' | 'height'>) => ({
       width: value,
       height: value,
     }),
 
     // A property to apply linear gradient
-    linearGradient: (value: CSSVal) => ({
+    linearGradient: (value: Stitches.PropertyValue<'backgroundImage'>) => ({
       backgroundImage: `linear-gradient(${value})`,
     }),
 
     // An abbreviated property for border-radius
-    br: (value: CSSVal) => ({
+    br: (value: Stitches.PropertyValue<'borderRadius'>) => ({
       borderRadius: value,
     }),
   },
-});
+};
+
+const stitches = createStitches(baseTheme);
+
+export const createThemeBase = stitches.createTheme;
+export const styled = stitches.styled;
+export const css = stitches.css;
+export const globalCss = stitches.globalCss;
+export const theme = stitches.theme;
+export const config = stitches.config;
+export type CSS = Stitches.CSS<typeof config>;
+export type StitchesTheme = typeof theme;
+export type StandardColors =
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'error';
+
+export type AllColors = keyof typeof theme.colors;
+
+export type StandardColorValues =
+  | 'primary'
+  | 'secondary'
+  | 'lightGreen700'
+  | 'amber700'
+  | 'red700';
+
+export const standardColors: Record<StandardColors, AllColors> = {
+  primary: 'primary',
+  secondary: 'secondary',
+  success: 'lightGreen700',
+  warning: 'amber700',
+  error: 'red700',
+};
