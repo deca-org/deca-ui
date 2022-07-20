@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import { Button } from './Button';
+import Button from './Button';
 
 describe('components/Button', () => {
   it('renders button', () => {

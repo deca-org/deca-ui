@@ -105,6 +105,7 @@ const Button = React.forwardRef(
         onClick={onClick}
         color={color}
         disabled={disabled}
+        aria-disabled={disabled}
         variant={variant}
         size={size}
         maxWidth={maxWidth}

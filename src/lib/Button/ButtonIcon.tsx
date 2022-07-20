@@ -36,7 +36,7 @@ const StyledButtonIcon = styled('span', {
       },
       md: {
         '& svg': {
-          width: rem(22),
+          width: rem(21),
         },
       },
       lg: {
