@@ -368,6 +368,13 @@ const baseTheme = {
     br: (value: Stitches.PropertyValue<'borderRadius'>) => ({
       borderRadius: value,
     }),
+
+    // property for flexbox
+    dflex: (value: Stitches.PropertyValue<'justifyContent'>) => ({
+      display: 'flex',
+      justifyContent: value,
+      alignItems: value,
+    }),
   },
 };
 

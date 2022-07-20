@@ -1,8 +1,9 @@
-import { CSS, StandardColors, theme } from '@lib/Theme';
+import { CSS, StandardColors } from '@lib/Theme';
+import { useDOMRef } from '@lib/Utils';
 import React from 'react';
-import { Camera } from 'react-feather';
 
 import StyledButton from './Button.styles';
+import ButtonIcon from './ButtonIcon';
 
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
@@ -11,7 +12,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
   /**
    * The content of the component.
    */
-  children: React.ReactNode | undefined;
+  children?: React.ReactNode | undefined;
   /**
    * ClassName applied to the component
    * @default ''
@@ -50,10 +51,10 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    */
   color?: StandardColors;
   /**
-   * Autoscale button width
+   * Set button width to 100%.
    * @default false
    */
-  auto?: boolean;
+  maxWidth?: boolean;
   /**
    * Icon on the left side of the component.
    */
@@ -72,33 +73,91 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
   iconRightCss?: CSS;
 }
 
-const defaultProps = {
-  color: 'primary',
-  disabled: false,
-  variant: 'solid',
-  size: 'md',
-  auto: false,
-  className: '',
-};
-
 const Button = React.forwardRef(
   (
-    { as, css, iconLeftCss, iconRightCss, onClick, ...btnProps }: ButtonProps,
+    {
+      as = 'button',
+      css,
+      icon,
+      iconRight,
+      iconLeftCss,
+      iconRightCss,
+      onClick,
+      color = 'primary',
+      disabled = false,
+      variant = 'solid',
+      size = 'md',
+      maxWidth = false,
+      className = '',
+      children,
+      ...btnProps
+    }: ButtonProps,
     ref: React.Ref<HTMLButtonElement | null>
   ) => {
+    const hasText = React.Children.count(children) !== 0;
+
+    const buttonRef = useDOMRef(ref);
+
     return (
-      <>
-        <StyledButton
-          size="md"
-          color="error"
-          variant="outlined"
-          disabled={false}
-        >
-          Button
-        </StyledButton>
-      </>
+      <StyledButton
+        as={as}
+        css={css}
+        onClick={onClick}
+        color={color}
+        disabled={disabled}
+        variant={variant}
+        size={size}
+        maxWidth={maxWidth}
+        className={className}
+        ref={buttonRef}
+        {...btnProps}
+      >
+        {(icon && hasText) || (icon && iconRight) ? (
+          <ButtonIcon
+            size={size}
+            isSingle={false}
+            side="left"
+            css={iconLeftCss}
+          >
+            {icon}
+          </ButtonIcon>
+        ) : (
+          icon && (
+            <ButtonIcon
+              size={size}
+              isSingle={true}
+              side="left"
+              css={iconLeftCss}
+            >
+              {icon}
+            </ButtonIcon>
+          )
+        )}
+        {hasText && children}
+        {(iconRight && hasText) || (icon && iconRight) ? (
+          <ButtonIcon
+            size={size}
+            isSingle={false}
+            side="right"
+            css={iconRightCss}
+          >
+            {iconRight}
+          </ButtonIcon>
+        ) : (
+          iconRight && (
+            <ButtonIcon
+              size={size}
+              isSingle={true}
+              side="right"
+              css={iconRightCss}
+            >
+              {iconRight}
+            </ButtonIcon>
+          )
+        )}
+      </StyledButton>
     );
   }
 );
 
-export { Button };
+export default Button;

@@ -1,5 +1,5 @@
 import { CSS, standardColors, styled, theme } from '@lib/Theme';
-import { darken, readableColor, transparentize } from 'polished';
+import { darken, readableColor, rem, transparentize } from 'polished';
 
 const compoundVariantComposer = () => {
   const colorVariants: {
@@ -104,6 +104,7 @@ const compoundVariantComposer = () => {
 
 const StyledButton = styled('button', {
   fontWeight: '$semibold',
+  dflex: 'center',
   boxSizing: 'border-box',
   borderRadius: '$xs',
   borderWidth: '$normal',
@@ -148,16 +149,19 @@ const StyledButton = styled('button', {
         py: '$2',
         px: '$2',
         fontSize: '$caption',
+        height: rem(36),
       },
       md: {
         py: '$2',
         px: '$3',
         fontSize: '$body',
+        height: rem(40),
       },
       lg: {
         py: '$3',
         px: '$4',
         fontSize: '$body',
+        height: rem(56),
       },
     },
     variant: {
@@ -172,6 +176,11 @@ const StyledButton = styled('button', {
       },
       false: {
         opacity: 1,
+      },
+    },
+    maxWidth: {
+      true: {
+        width: '100%',
       },
     },
   },
