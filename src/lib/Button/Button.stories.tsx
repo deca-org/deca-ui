@@ -20,16 +20,25 @@ Default.args = {
   css: {},
   className: '',
   maxWidth: false,
+  variant: 'solid',
+  role: 'button',
 };
 
-export const Icon = Template.bind({});
-Icon.args = {
+export const IconButton = Template.bind({});
+IconButton.args = {
+  ...Default.args,
+  children: undefined,
+  icon: <ArrowCircleDownOutline />,
+};
+
+export const IconWithLabel = Template.bind({});
+IconWithLabel.args = {
   ...Default.args,
   icon: <ArrowCircleDownOutline />,
 };
 
-export const RightSideIcon = Template.bind({});
-RightSideIcon.args = {
+export const RightSideIconWithLabel = Template.bind({});
+RightSideIconWithLabel.args = {
   ...Default.args,
   iconRight: <ArrowCircleRightOutline />,
 };

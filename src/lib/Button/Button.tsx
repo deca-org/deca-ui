@@ -14,6 +14,10 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    */
   children?: React.ReactNode | undefined;
   /**
+   * The role attribute of the component.
+   */
+  role?: string;
+  /**
    * ClassName applied to the component
    * @default ''
    */
@@ -76,6 +80,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
 const Button = React.forwardRef(
   (
     {
+      role = 'button',
       as = 'button',
       css,
       icon,
@@ -98,8 +103,13 @@ const Button = React.forwardRef(
 
     const buttonRef = useDOMRef(ref);
 
+    if (disabled) {
+      onClick = undefined;
+    }
+
     return (
       <StyledButton
+        role={role}
         as={as}
         css={css}
         onClick={onClick}

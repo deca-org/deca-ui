@@ -6,7 +6,6 @@ const StyledButtonIcon = styled('span', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  width: '100%',
   height: '100%',
   '& svg': {
     background: 'transparent',

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Button matches screenshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    role="button"
+  >
+    Label
+  </button>
+</DocumentFragment>
+`;
+
+exports[`components/Button renders all colors 1`] = `
+<DocumentFragment>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-bmmCCE-color-secondary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-chBTEJ-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-UIZmM-color-success c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-fMjTrh-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-eNqAek-color-warning c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dKsfPN-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-dodmCG-color-error c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-gURxYt-cv"
+    role="button"
+  >
+    Label
+  </button>
+</DocumentFragment>
+`;
+
+exports[`components/Button renders all sizes 1`] = `
+<DocumentFragment>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-dPmqWS-size-sm c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-STxME-size-lg c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    role="button"
+  >
+    Label
+  </button>
+</DocumentFragment>
+`;
+
+exports[`components/Button renders all variants 1`] = `
+<DocumentFragment>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-bRdhPS-cv"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    aria-disabled="false"
+    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-cyBLNz-cv"
+    role="button"
+  >
+    Label
+  </button>
+</DocumentFragment>
+`;
