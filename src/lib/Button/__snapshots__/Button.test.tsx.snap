@@ -4,7 +4,7 @@ exports[`components/Button matches screenshot 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dSKgWl-cv"
     role="button"
   >
     Label
@@ -16,35 +16,35 @@ exports[`components/Button renders all colors 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dSKgWl-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-bmmCCE-color-secondary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-chBTEJ-cv"
+    class="c-jSUOIM c-jSUOIM-bmmCCE-color-secondary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-chBTEJ-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-UIZmM-color-success c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-fMjTrh-cv"
+    class="c-jSUOIM c-jSUOIM-UIZmM-color-success c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-fMjTrh-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-eNqAek-color-warning c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dKsfPN-cv"
+    class="c-jSUOIM c-jSUOIM-eNqAek-color-warning c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dKsfPN-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-dodmCG-color-error c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-gURxYt-cv"
+    class="c-jSUOIM c-jSUOIM-dodmCG-color-error c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-gURxYt-cv"
     role="button"
   >
     Label
@@ -56,21 +56,21 @@ exports[`components/Button renders all sizes 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-dPmqWS-size-sm c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-dPmqWS-size-sm c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dSKgWl-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dSKgWl-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-STxME-size-lg c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-STxME-size-lg c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dSKgWl-cv"
     role="button"
   >
     Label
@@ -82,21 +82,21 @@ exports[`components/Button renders all variants 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-dSKgWl-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-dSKgWl-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-bRdhPS-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-bRdhPS-cv"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fBbYVR c-fBbYVR-jsOpSy-color-primary c-fBbYVR-gWJSuX-size-md c-fBbYVR-bDGmTT-disabled-false c-fBbYVR-cyBLNz-cv"
+    class="c-jSUOIM c-jSUOIM-jsOpSy-color-primary c-jSUOIM-gWJSuX-size-md c-jSUOIM-bDGmTT-disabled-false c-jSUOIM-cyBLNz-cv"
     role="button"
   >
     Label
