@@ -209,6 +209,21 @@ const baseTheme = {
       4: rem(32),
       5: rem(64),
       6: rem(128),
+      7: rem(192),
+      8: rem(256),
+      9: rem(320),
+    },
+    sizes: {
+      0: rem(2),
+      1: rem(4),
+      2: rem(8),
+      3: rem(16),
+      4: rem(32),
+      5: rem(64),
+      6: rem(128),
+      7: rem(192),
+      8: rem(256),
+      9: rem(320),
     },
     fontSizes: {
       h1: rem(48),
@@ -223,7 +238,7 @@ const baseTheme = {
     },
     fonts: {
       normal:
-        '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+        'Roboto, Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
       mono: 'SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace',
     },
     fontWeights: {

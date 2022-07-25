@@ -104,6 +104,8 @@ const compoundVariantComposer = () => {
 
 const StyledButton = styled('button', {
   fontWeight: '$semibold',
+  fontFamily: '$normal',
+  '-webkit-font-smoothing': 'antialiased',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

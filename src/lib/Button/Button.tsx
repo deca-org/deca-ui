@@ -1,5 +1,6 @@
 import { CSS, StandardColors } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
+import clsx from 'clsx';
 import React from 'react';
 
 import StyledButton from './Button.styles';
@@ -107,6 +108,8 @@ const Button = React.forwardRef(
       onClick = undefined;
     }
 
+    const preClass = 'decaButton';
+
     return (
       <StyledButton
         role={role}
@@ -119,7 +122,7 @@ const Button = React.forwardRef(
         variant={variant}
         size={size}
         maxWidth={maxWidth}
-        className={className}
+        className={clsx(className, `${preClass}-root`)}
         ref={buttonRef}
         {...btnProps}
       >
@@ -129,6 +132,7 @@ const Button = React.forwardRef(
             isSingle={false}
             side="left"
             css={iconLeftCss}
+            className={`${preClass}-leftIcon`}
           >
             {icon}
           </ButtonIcon>
@@ -139,6 +143,7 @@ const Button = React.forwardRef(
               isSingle={true}
               side="left"
               css={iconLeftCss}
+              className={`${preClass}-leftIcon`}
             >
               {icon}
             </ButtonIcon>
@@ -151,6 +156,7 @@ const Button = React.forwardRef(
             isSingle={false}
             side="right"
             css={iconRightCss}
+            className={`${preClass}-rightIcon`}
           >
             {iconRight}
           </ButtonIcon>
@@ -161,6 +167,7 @@ const Button = React.forwardRef(
               isSingle={true}
               side="right"
               css={iconRightCss}
+              className={`${preClass}-rightIcon`}
             >
               {iconRight}
             </ButtonIcon>

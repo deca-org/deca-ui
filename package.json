@@ -66,6 +66,7 @@
     "@typescript-eslint/parser": "^4.0.1",
     "@typescript-eslint/typescript-estree": "^5.30.4",
     "babel-loader": "^8.2.5",
+    "clsx": "^1.2.1",
     "codecov": "^3.5.0",
     "cspell": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
