@@ -1,11 +1,25 @@
-import { CSS, standardColors, styled, theme } from '@lib/Theme';
-import { darken, readableColor, rem, transparentize } from 'polished';
+import { styled } from '@lib/Theme';
 
-export const StyledInputMainContainer = styled('div', {});
+export const StyledInputMainContainer = styled('div', {
+  width: '100%',
+  fontFamily: '$normal',
+  variants: {
+    size: {
+      sm: {
+        width: '$32',
+      },
+      md: {
+        width: '$35',
+      },
+      lg: {
+        width: '$35',
+      },
+    },
+  },
+});
 
 export const StyledInputLabel = styled('span', {
   fontWeight: '$semibold',
-  fontFamily: '$normal',
   '-webkit-font-smoothing': 'antialiased',
   transition: '$default',
   ml: '$0',
@@ -15,6 +29,9 @@ export const StyledInputLabel = styled('span', {
         fontSize: '$footnote',
       },
       md: {
+        fontSize: '$caption',
+      },
+      lg: {
         fontSize: '$caption',
       },
     },
@@ -31,23 +48,36 @@ export const StyledInputLabel = styled('span', {
   },
 });
 
+export const StyledInputHelperText = styled('p', {
+  fontSize: '$footnote',
+  color: '$gray600',
+  lineHeight: '$0',
+  m: '$n',
+  ml: '$0',
+});
+
 export const StyledInputContainer = styled('div', {
   fontWeight: '$semibold',
-  fontFamily: '$normal',
   borderRadius: '$xs',
+  boxSizing: 'border-box',
   borderWidth: '$normal',
   borderStyle: 'solid',
   transition: '$default',
-  width: '$7',
+  mt: '$1',
+  mb: '$2',
   variants: {
     size: {
       sm: {
-        mt: '$1',
-        height: rem(36),
+        height: '$6',
+        width: '$32',
       },
       md: {
-        mt: '$1',
-        height: rem(40),
+        height: '$9',
+        width: '$35',
+      },
+      lg: {
+        height: '$10',
+        width: '$35',
       },
     },
     state: {

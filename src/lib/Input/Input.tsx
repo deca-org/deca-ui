@@ -5,6 +5,7 @@ import React, { useState, useMemo, useRef, useImperativeHandle } from 'react';
 import {
   StyledInputMainContainer,
   StyledInputLabel,
+  StyledInputHelperText,
   StyledInputContainer,
   StyledInputIcon,
   StyledInput,
@@ -26,7 +27,7 @@ export interface InputProps
        * Size of the component.
        * @default md
        */
-      size?: 'sm' | 'md';
+      size?: 'sm' | 'md' | 'lg';
     }
   > {
   /**
@@ -175,7 +176,7 @@ const Input = React.forwardRef(
     }, [focused, disabled, selfValue]);
 
     return (
-      <StyledInputMainContainer>
+      <StyledInputMainContainer size={size}>
         {label && (
           <StyledInputLabel size={size} state={getState}>
             {label}
@@ -188,6 +189,11 @@ const Input = React.forwardRef(
             onChange={changeHandler}
           ></StyledInput>
         </StyledInputContainer>
+        {helperText && (
+          <StyledInputHelperText size={size} state={getState}>
+            {helperText}
+          </StyledInputHelperText>
+        )}
       </StyledInputMainContainer>
     );
   }

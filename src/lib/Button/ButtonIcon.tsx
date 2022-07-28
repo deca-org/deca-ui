@@ -1,5 +1,4 @@
 import { CSS, styled } from '@lib/Theme';
-import { rem } from 'polished';
 import React from 'react';
 
 const StyledButtonIcon = styled('span', {
@@ -15,14 +14,57 @@ const StyledButtonIcon = styled('span', {
       isSingle: false,
       side: 'left',
       css: {
-        mr: '$1',
+        mr: '$2',
       },
     },
     {
       isSingle: false,
       side: 'right',
       css: {
+        ml: '$2',
+      },
+    },
+    {
+      isSingle: false,
+      side: 'left',
+      size: 'sm',
+      css: {
+        mr: '$1',
+      },
+    },
+    {
+      isSingle: false,
+      side: 'right',
+      size: 'sm',
+      css: {
         ml: '$1',
+      },
+    },
+    {
+      isSingle: true,
+      size: 'sm',
+      css: {
+        '& svg': {
+          width: '$3',
+        },
+      },
+    },
+    {
+      isSingle: true,
+      size: 'md',
+      css: {
+        '& svg': {
+          width: '$4',
+        },
+      },
+    },
+    {
+      isSingle: true,
+      size: 'lg',
+      css: {
+        '& svg': {
+          width: '$5',
+        },
       },
     },
   ],
@@ -30,17 +72,17 @@ const StyledButtonIcon = styled('span', {
     size: {
       sm: {
         '& svg': {
-          width: rem(18),
+          width: '$3',
         },
       },
       md: {
         '& svg': {
-          width: rem(21),
+          width: '$4',
         },
       },
       lg: {
         '& svg': {
-          width: rem(23),
+          width: '$5',
         },
       },
     },

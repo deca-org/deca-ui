@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ArrowCircleDownOutline } from '@styled-icons/evaicons-outline/ArrowCircleDownOutline';
-import { ArrowCircleRightOutline } from '@styled-icons/evaicons-outline/ArrowCircleRightOutline';
+import { PurchaseTagAlt } from '@styled-icons/boxicons-solid/PurchaseTagAlt';
 import React from 'react';
 
 import Button from './Button';
@@ -28,17 +27,17 @@ export const IconButton = Template.bind({});
 IconButton.args = {
   ...Default.args,
   children: undefined,
-  icon: <ArrowCircleDownOutline />,
+  icon: <PurchaseTagAlt />,
 };
 
 export const IconWithLabel = Template.bind({});
 IconWithLabel.args = {
   ...Default.args,
-  icon: <ArrowCircleDownOutline />,
+  icon: <PurchaseTagAlt />,
 };
 
 export const RightSideIconWithLabel = Template.bind({});
 RightSideIconWithLabel.args = {
   ...Default.args,
-  iconRight: <ArrowCircleRightOutline />,
+  iconRight: <PurchaseTagAlt />,
 };

@@ -1,7 +1,7 @@
 import { CSS, StandardColors } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
 import clsx from 'clsx';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import StyledButton from './Button.styles';
 import ButtonIcon from './ButtonIcon';
@@ -100,9 +100,21 @@ const Button = React.forwardRef(
     }: ButtonProps,
     ref: React.Ref<HTMLButtonElement | null>
   ) => {
-    const hasText = React.Children.count(children) !== 0;
+    const hasText = useMemo(
+      () => React.Children.count(children) !== 0,
+      [children]
+    );
 
     const buttonRef = useDOMRef(ref);
+
+    // ensures only icon or only iconRight is present
+    const singleIcon = useMemo(
+      () =>
+        (!hasText && !iconRight && icon) || (!hasText && !icon && iconRight)
+          ? true
+          : false,
+      [children, iconRight, icon]
+    );
 
     if (disabled) {
       onClick = undefined;
@@ -124,6 +136,7 @@ const Button = React.forwardRef(
         maxWidth={maxWidth}
         className={clsx(className, `${preClass}-root`)}
         ref={buttonRef}
+        singleIcon={singleIcon}
         {...btnProps}
       >
         {(icon && hasText) || (icon && iconRight) ? (

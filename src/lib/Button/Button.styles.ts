@@ -1,5 +1,5 @@
 import { CSS, standardColors, styled, theme } from '@lib/Theme';
-import { darken, readableColor, rem, transparentize } from 'polished';
+import { darken, readableColor, transparentize } from 'polished';
 
 const compoundVariantComposer = () => {
   const colorVariants: {
@@ -119,7 +119,33 @@ const StyledButton = styled('button', {
   '&:focus-visible': {
     boxShadow: '$a11y',
   },
-  compoundVariants: compoundVariantComposer(),
+  compoundVariants: [
+    ...compoundVariantComposer(),
+    {
+      singleIcon: true,
+      size: 'sm',
+      css: {
+        px: '$n',
+        size: '$6',
+      },
+    },
+    {
+      singleIcon: true,
+      size: 'md',
+      css: {
+        px: '$n',
+        size: '$9',
+      },
+    },
+    {
+      singleIcon: true,
+      size: 'lg',
+      css: {
+        px: '$n',
+        size: '$10',
+      },
+    },
+  ],
   variants: {
     color: {
       primary: {
@@ -150,23 +176,24 @@ const StyledButton = styled('button', {
     },
     size: {
       sm: {
-        py: '$2',
         px: '$2',
         fontSize: '$caption',
-        height: rem(36),
+        height: '$6',
       },
       md: {
-        py: '$2',
         px: '$3',
         fontSize: '$body',
-        height: rem(40),
+        height: '$9',
       },
       lg: {
-        py: '$3',
         px: '$4',
-        fontSize: '$body',
-        height: rem(56),
+        fontSize: '$bodyLg',
+        height: '$10',
       },
+    },
+    singleIcon: {
+      true: {},
+      false: {},
     },
     variant: {
       solid: {},
@@ -175,11 +202,11 @@ const StyledButton = styled('button', {
     },
     disabled: {
       true: {
-        opacity: 0.5,
+        opacity: '50%',
         cursor: 'not-allowed',
       },
       false: {
-        opacity: 1,
+        opacity: '100%',
       },
     },
     maxWidth: {
