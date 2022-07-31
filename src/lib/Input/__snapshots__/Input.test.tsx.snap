@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Input matches screenshot 1`] = `
+<DocumentFragment>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <label
+      class="c-hHEPWm c-hHEPWm-cNhXCf-size-md decaInput-label"
+      for=":r0:"
+    >
+      Label Text
+    </label>
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r0:"
+        placeholder="Placeholder Text"
+        value=""
+      />
+    </div>
+    <p
+      class="c-bdULyd c-bdULyd-RRNal-state-default decaInput-helperText"
+    >
+      Helper Text
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Input renders all colors 1`] = `
+<DocumentFragment>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r2:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r3:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r4:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r5:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r6:"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Input renders all sizes 1`] = `
+<DocumentFragment>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-dQgSKX-size-sm c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r7:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r8:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-jeReyr-size-lg c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":r9:"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Input renders all variants 1`] = `
+<DocumentFragment>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-htQczz-variant-solid decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        id=":ra:"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="c-eyAzKy decaInput-root"
+  >
+    <div
+      class="c-epBthF c-epBthF-fEWyJT-size-md c-epBthF-gSYwEE-cv decaInput-wrap"
+    >
+      <input
+        class="c-gxYldF decaInput-input"
+        id=":rb:"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

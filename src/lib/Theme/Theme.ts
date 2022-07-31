@@ -36,7 +36,7 @@ const baseTheme = {
       gray600: '#868E96',
       gray500: '#ADB5BD',
       gray400: '#CED4DA',
-      gray300: '#DEE2E6',
+      gray300: '#E0E4E8',
       gray200: '#E9ECEF',
       gray100: '#F1F3F5',
       gray50: '#F8F9FA',

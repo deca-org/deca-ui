@@ -1,7 +1,7 @@
+import { ArrowCircleRightOutline } from '@styled-icons/evaicons-outline/ArrowCircleRightOutline';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
-import { ArrowCircleRightOutline } from '@styled-icons/evaicons-outline/ArrowCircleRightOutline';
 
 import Button from './Button';
 

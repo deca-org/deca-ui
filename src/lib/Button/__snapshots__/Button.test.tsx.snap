@@ -4,7 +4,7 @@ exports[`components/Button matches screenshot 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dSKgWl-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dSKgWl-cv decaButton-root"
     role="button"
   >
     Label
@@ -16,35 +16,35 @@ exports[`components/Button renders all colors 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dSKgWl-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dSKgWl-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-bmmCCE-color-secondary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-chBTEJ-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-bmmCCE-color-secondary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-chBTEJ-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-UIZmM-color-success c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-fMjTrh-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-UIZmM-color-success c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-fMjTrh-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-eNqAek-color-warning c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dKsfPN-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-eNqAek-color-warning c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dKsfPN-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-dodmCG-color-error c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-gURxYt-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-dodmCG-color-error c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-gURxYt-cv decaButton-root"
     role="button"
   >
     Label
@@ -56,21 +56,21 @@ exports[`components/Button renders all sizes 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-cmVdgU-size-sm c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dSKgWl-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-cmVdgU-size-sm c-jXjExk-dCRXRO-disabled-false c-jXjExk-dSKgWl-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dSKgWl-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dSKgWl-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-lXiLo-size-lg c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dSKgWl-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-lXiLo-size-lg c-jXjExk-dCRXRO-disabled-false c-jXjExk-dSKgWl-cv decaButton-root"
     role="button"
   >
     Label
@@ -82,21 +82,21 @@ exports[`components/Button renders all variants 1`] = `
 <DocumentFragment>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-dSKgWl-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dSKgWl-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-bRdhPS-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-bRdhPS-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-fvBNaZ c-fvBNaZ-jsOpSy-color-primary c-fvBNaZ-sKeyg-size-md c-fvBNaZ-dCRXRO-disabled-false c-fvBNaZ-cyBLNz-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-cyBLNz-cv decaButton-root"
     role="button"
   >
     Label

@@ -27,9 +27,6 @@
       "error",
       { "newlines-between": "always", "alphabetize": { "order": "asc" } }
     ],
-    "sort-imports": [
-      "error",
-      { "ignoreDeclarationSort": true, "ignoreCase": true }
-    ]
+    "sort-imports":"off"
   }
 }

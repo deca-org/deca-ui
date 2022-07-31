@@ -1,5 +1,3 @@
-import Button from '@lib/Button/Button';
-import { styled } from '@lib/Theme';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
@@ -12,23 +10,36 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
-const Container = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'flex-end',
-  gap: '$2',
-});
+export const Solid = Template.bind({});
 
-export const Default = Template.bind({});
-Default.args = {
+Solid.args = {
   label: 'Email Address',
   size: 'lg',
   helperText: 'Please submit query',
+  variant: 'solid',
+  placeholder: 'e.g. johndoe@gmail.com',
+  focusColor: 'primary',
+  required: true,
+  disabled: false,
+  as: 'input',
+  maxWidth: false,
+  initialValue: '',
+  className: '',
 };
 
-export const ExampleTest = () => (
-  <Container>
-    <Input label="Email Address"></Input>
-    <Button variant="outlined">Send</Button>
-  </Container>
-);
+export const Outlined = Template.bind({});
+
+Outlined.args = {
+  label: 'Email Address',
+  size: 'lg',
+  helperText: 'Please submit query',
+  variant: 'outlined',
+  focusColor: 'primary',
+  placeholder: 'e.g. johndoe@gmail.com',
+  required: true,
+  disabled: false,
+  as: 'input',
+  maxWidth: false,
+  initialValue: '',
+  className: '',
+};

@@ -110,7 +110,7 @@ const StyledButton = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   boxSizing: 'border-box',
-  borderRadius: '$xs',
+  borderRadius: '$sm',
   borderWidth: '$normal',
   borderStyle: 'solid',
   cursor: 'pointer',

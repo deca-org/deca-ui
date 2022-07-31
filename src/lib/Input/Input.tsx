@@ -1,13 +1,20 @@
 import { CSS, StandardColors } from '@lib/Theme';
-import { Modify, useDOMRef } from '@lib/Utils';
-import React, { useState, useMemo, useRef, useImperativeHandle } from 'react';
+import { Modify } from '@lib/Utils';
+import clsx from 'clsx';
+import React, {
+  useId,
+  useRef,
+  useEffect,
+  useMemo,
+  useState,
+  useImperativeHandle,
+} from 'react';
 
 import {
   StyledInputMainContainer,
   StyledInputLabel,
   StyledInputHelperText,
   StyledInputContainer,
-  StyledInputIcon,
   StyledInput,
 } from './Input.styles';
 
@@ -31,16 +38,16 @@ export interface InputProps
     }
   > {
   /**
-   * Text label for the component
+   * Text label for the component.
    */
   label?: string;
   /**
-   * ClassName applied to the component
+   * ClassName applied to the component.
    * @default ''
    */
   className?: string;
   /**
-   * Disabled state applied to the component
+   * Disabled state applied to the component.
    * @default false
    */
   disabled?: boolean;
@@ -50,9 +57,13 @@ export interface InputProps
    */
   variant?: 'solid' | 'outlined';
   /**
-   * Changes which tag component outputs
+   * Changes which tag component outputs.
    */
   as?: keyof JSX.IntrinsicElements;
+  /**
+   * Placeholder text for component.
+   */
+  placeholder?: string;
   /**
    * Override default CSS style
    */
@@ -67,22 +78,6 @@ export interface InputProps
    * @default false
    */
   maxWidth?: boolean;
-  /**
-   * Icon on the left side of the component.
-   */
-  icon?: React.ReactNode;
-  /**
-   * Icon on the right side of the component.
-   */
-  iconRight?: React.ReactNode;
-  /**
-   * CSS applied to icon on the left side of the component.
-   */
-  iconLeftCss?: CSS;
-  /**
-   * CSS applied to icon on the right side of the component.
-   */
-  iconRightCss?: CSS;
   /**
    * Required input prop.
    * @default false
@@ -127,10 +122,7 @@ const Input = React.forwardRef(
       css,
       focusColor = 'primary',
       maxWidth = false,
-      icon,
-      iconRight,
-      iconLeftCss,
-      iconRightCss,
+      placeholder,
       required = false,
       helperText = '',
       value,
@@ -156,11 +148,13 @@ const Input = React.forwardRef(
     };
 
     const focusHandler = (e: React.FocusEvent<FormElement>) => {
+      if (disabled) return;
       setFocused(true);
       onFocus && onFocus(e);
     };
 
     const blurHandler = (e: React.FocusEvent<FormElement>) => {
+      if (disabled) return;
       setFocused(false);
       onBlur && onBlur(e);
     };
@@ -175,22 +169,64 @@ const Input = React.forwardRef(
         : 'default';
     }, [focused, disabled, selfValue]);
 
+    const isControlledComponent = useMemo(() => value !== undefined, [value]);
+
+    const inputId = useId();
+
+    useEffect(() => {
+      if (isControlledComponent) {
+        setSelfValue(value as string);
+      }
+    });
+
+    const preClass = 'decaInput';
+
     return (
-      <StyledInputMainContainer size={size}>
+      <StyledInputMainContainer
+        className={clsx(className, `${preClass}-root`)}
+        css={css}
+      >
         {label && (
-          <StyledInputLabel size={size} state={getState}>
+          <StyledInputLabel
+            size={size}
+            state={getState}
+            className={`${preClass}-label`}
+            variant={variant}
+            focusColor={focusColor}
+            htmlFor={inputId}
+          >
             {label}
           </StyledInputLabel>
         )}
-        <StyledInputContainer size={size} state={getState}>
+        <StyledInputContainer
+          size={size}
+          state={getState}
+          className={`${preClass}-wrap`}
+          variant={variant}
+          focusColor={focusColor}
+          maxWidth={maxWidth}
+        >
           <StyledInput
             onFocus={focusHandler}
             onBlur={blurHandler}
             onChange={changeHandler}
+            className={`${preClass}-input`}
+            variant={variant}
+            state={getState}
+            as={as}
+            value={selfValue}
+            required={required}
+            disabled={disabled}
+            placeholder={placeholder}
+            id={inputId}
+            {...props}
           ></StyledInput>
         </StyledInputContainer>
         {helperText && (
-          <StyledInputHelperText size={size} state={getState}>
+          <StyledInputHelperText
+            state={getState}
+            className={`${preClass}-helperText`}
+          >
             {helperText}
           </StyledInputHelperText>
         )}

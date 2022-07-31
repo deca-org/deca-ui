@@ -3,26 +3,71 @@ import { styled } from '@lib/Theme';
 export const StyledInputMainContainer = styled('div', {
   width: '100%',
   fontFamily: '$normal',
-  variants: {
-    size: {
-      sm: {
-        width: '$32',
-      },
-      md: {
-        width: '$35',
-      },
-      lg: {
-        width: '$35',
-      },
+  disabled: {
+    true: {
+      cursor: 'not-allowed',
     },
+    false: {},
   },
 });
 
-export const StyledInputLabel = styled('span', {
+export const StyledInputLabel = styled('label', {
+  display: 'inline-block',
   fontWeight: '$semibold',
   '-webkit-font-smoothing': 'antialiased',
   transition: '$default',
   ml: '$0',
+  mb: '$2',
+  mt: '0px',
+  compoundVariants: [
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'primary',
+      css: {
+        color: '$primary',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'secondary',
+      css: {
+        color: '$secondary',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'success',
+      css: {
+        color: '$lightGreen700',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'warning',
+      css: {
+        color: '$amber700',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'error',
+      css: {
+        color: '$red700',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'default',
+      css: {
+        color: '$gray800',
+      },
+    },
+  ],
   variants: {
     size: {
       sm: {
@@ -36,14 +81,23 @@ export const StyledInputLabel = styled('span', {
       },
     },
     state: {
-      focused: {
-        color: '$primary',
+      focused: {},
+      disabled: {
+        color: '$gray500',
       },
-      disabled: {},
       value: {},
-      default: {
-        color: '$gray800',
-      },
+      default: {},
+    },
+    variant: {
+      solid: {},
+      outlined: {},
+    },
+    focusColor: {
+      primary: {},
+      secondary: {},
+      success: {},
+      warning: {},
+      error: {},
     },
   },
 });
@@ -52,20 +106,107 @@ export const StyledInputHelperText = styled('p', {
   fontSize: '$footnote',
   color: '$gray600',
   lineHeight: '$0',
+  transition: '$default',
   m: '$n',
   ml: '$0',
+  mt: '$2',
+  variants: {
+    state: {
+      focused: {},
+      disabled: {
+        color: '$gray500',
+      },
+      value: {},
+      default: {
+        color: '$gray600',
+      },
+    },
+  },
 });
 
 export const StyledInputContainer = styled('div', {
   fontWeight: '$semibold',
-  borderRadius: '$xs',
+  borderRadius: '$sm',
   boxSizing: 'border-box',
   borderWidth: '$normal',
   borderStyle: 'solid',
   transition: '$default',
-  mt: '$1',
-  mb: '$2',
+  compoundVariants: [
+    {
+      variant: 'solid',
+      state: 'focused',
+      css: {
+        backgroundColor: '$gray300',
+        borderColor: '$gray300',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'primary',
+      css: {
+        borderColor: '$primary',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'secondary',
+      css: {
+        borderColor: '$secondary',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'success',
+      css: {
+        borderColor: '$lightGreen700',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'warning',
+      css: {
+        borderColor: '$amber700',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'focused',
+      focusColor: 'error',
+      css: {
+        borderColor: '$red700',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'disabled',
+      css: {
+        borderColor: '$gray500',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'value',
+      css: {},
+    },
+    {
+      variant: 'outlined',
+      state: 'default',
+      css: {
+        borderColor: '$gray700',
+      },
+    },
+  ],
   variants: {
+    maxWidth: {
+      true: {
+        width: '100%',
+      },
+      false: {},
+    },
     size: {
       sm: {
         height: '$6',
@@ -81,23 +222,32 @@ export const StyledInputContainer = styled('div', {
       },
     },
     state: {
-      focused: {
-        borderColor: '$primary',
+      focused: {},
+      disabled: {
+        cursor: 'not-allowed',
       },
-      disabled: {},
-      value: {
-        borderColor: '',
+      value: {},
+      default: {},
+    },
+    variant: {
+      solid: {
+        backgroundColor: '$gray200',
+        borderColor: '$gray200',
       },
-      default: {
-        borderColor: '$gray700',
-      },
+      outlined: {},
+    },
+    focusColor: {
+      primary: {},
+      secondary: {},
+      success: {},
+      warning: {},
+      error: {},
     },
   },
 });
-export const StyledInputIcon = styled('span', {});
 
 export const StyledInput = styled('input', {
-  borderRadius: '$xs',
+  borderRadius: '$sm',
   border: 'none',
   '&:focus': {
     outline: 0,
@@ -105,4 +255,36 @@ export const StyledInput = styled('input', {
   boxSizing: 'border-box',
   size: '100%',
   px: '$2',
+  transition: '$default',
+  '&::placeholder': {
+    color: '$gray600',
+    fontWeight: '$semibold',
+    opacity: 0.75,
+  },
+  compoundVariants: [
+    {
+      variant: 'solid',
+      state: 'focused',
+      css: {
+        backgroundColor: '$gray300',
+        borderColor: '$gray300',
+      },
+    },
+  ],
+  variants: {
+    variant: {
+      solid: {
+        backgroundColor: '$gray200',
+      },
+      outlined: {},
+    },
+    state: {
+      focused: {},
+      disabled: {
+        cursor: 'not-allowed',
+      },
+      value: {},
+      default: {},
+    },
+  },
 });
