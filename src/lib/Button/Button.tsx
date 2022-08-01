@@ -19,12 +19,12 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    */
   role?: string;
   /**
-   * ClassName applied to the component
+   * ClassName applied to the component.
    * @default ''
    */
   className?: string;
   /**
-   * Disabled state applied to the component
+   * Disabled state applied to the component.
    * @default false
    */
   disabled?: boolean;
@@ -38,11 +38,11 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Changes which tag component outputs
+   * Changes which tag component outputs.
    */
   as?: keyof JSX.IntrinsicElements;
   /**
-   * Override default CSS style
+   * Override default CSS style.
    */
   css?: CSS;
   /**
