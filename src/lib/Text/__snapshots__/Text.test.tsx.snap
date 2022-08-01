@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Text matches snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p decaText-root"
+  />
+</DocumentFragment>
+`;
+
+exports[`components/Text renders all sizes 1`] = `
+<DocumentFragment>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-icFWcZl-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-ikKUNrJ-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-ihlOZHJ-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-ierFqON-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-icHMTHd-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-icpZldy-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-ihbBHuI-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-ijQkWJT-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-ieqmpvd-css decaText-root"
+  >
+    Children
+  </p>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p c-lnBPRo-iejpLhE-css decaText-root"
+  >
+    Children
+  </p>
+</DocumentFragment>
+`;
+
+exports[`components/Text renders all variants 1`] = `
+<DocumentFragment>
+  <h1
+    class="c-lnBPRo c-lnBPRo-bcJtuO-as-h1 decaText-root"
+  >
+    Children
+  </h1>
+  <h2
+    class="c-lnBPRo c-lnBPRo-hCXHPK-as-h2 decaText-root"
+  >
+    Children
+  </h2>
+  <h3
+    class="c-lnBPRo c-lnBPRo-ifHRhm-as-h3 decaText-root"
+  >
+    Children
+  </h3>
+  <h4
+    class="c-lnBPRo c-lnBPRo-cIeppm-as-h4 decaText-root"
+  >
+    Children
+  </h4>
+  <h5
+    class="c-lnBPRo c-lnBPRo-cemeDe-as-h5 decaText-root"
+  >
+    Children
+  </h5>
+  <h6
+    class="c-lnBPRo c-lnBPRo-iEAsYa-as-h6 decaText-root"
+  >
+    Children
+  </h6>
+  <span
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-span decaText-root"
+  >
+    Children
+  </span>
+  <p
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-p decaText-root"
+  >
+    Children
+  </p>
+  <blockquote
+    class="c-lnBPRo c-lnBPRo-ljcLdJ-as-blockquote decaText-root"
+  >
+    Children
+  </blockquote>
+  <b
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-b decaText-root"
+  >
+    Children
+  </b>
+  <b
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-b decaText-root"
+  >
+    Children
+  </b>
+  <small
+    class="c-lnBPRo c-lnBPRo-eyaCWO-as-small decaText-root"
+  >
+    Children
+  </small>
+  <del
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-del decaText-root"
+  >
+    Children
+  </del>
+  <i
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-i decaText-root"
+  >
+    Children
+  </i>
+  <em
+    class="c-lnBPRo c-lnBPRo-kyRZQq-as-em decaText-root"
+  >
+    Children
+  </em>
+</DocumentFragment>
+`;
+
+exports[`components/Text renders sizes with variants 1`] = `
+<DocumentFragment>
+  <h1
+    class="c-lnBPRo c-lnBPRo-bcJtuO-as-h1 c-lnBPRo-ikKUNrJ-css decaText-root"
+  >
+    Children
+  </h1>
+</DocumentFragment>
+`;

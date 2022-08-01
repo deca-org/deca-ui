@@ -47,7 +47,22 @@ interface Props {
   /**
    * Custom size for the text.
    */
-  size?: string;
+  size?:
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'p'
+    | 'span'
+    | 'blockquote'
+    | 'b'
+    | 'small'
+    | 'del'
+    | 'i'
+    | 'em'
+    | string;
 }
 
 type NativeAttrs = Omit<React.HTMLAttributes<unknown>, keyof Props>;
