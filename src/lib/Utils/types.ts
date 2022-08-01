@@ -1,3 +1,6 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+import { theme, StitchesTheme } from '@lib/Theme';
+
 export type Modify<T, R> = Omit<T, keyof R> & R;
 
 export type ModifyDeep<A extends AnyObject, B extends DeepPartialAny<A>> = {
@@ -14,3 +17,17 @@ export type DeepPartialAny<T> = {
 };
 
 export type AnyObject = Record<string, any>;
+
+export type UnionToIntersection<U> = (
+  U extends any ? (k: U) => void : never
+) extends (k: infer I) => void
+  ? I
+  : never;
+
+export type Writeable<T> = { -readonly [P in keyof T]: T[P] };
+
+export type DeepWriteable<T> = {
+  -readonly [P in keyof T]: DeepWriteable<T[P]>;
+};
+
+export type ThemeKey<T extends keyof StitchesTheme> = keyof typeof theme[T];

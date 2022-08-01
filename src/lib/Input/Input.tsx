@@ -1,5 +1,5 @@
 import { CSS, StandardColors } from '@lib/Theme';
-import { Modify } from '@lib/Utils';
+import { Modify, UnionToIntersection } from '@lib/Utils';
 import clsx from 'clsx';
 import React, {
   useId,
@@ -134,7 +134,7 @@ const Input = React.forwardRef(
     }: InputProps,
     ref: React.Ref<FormElement | null>
   ) => {
-    const inputRef = useRef<HTMLInputElement & HTMLTextAreaElement>(null);
+    const inputRef = useRef<UnionToIntersection<FormElement>>(null);
 
     useImperativeHandle(ref, () => inputRef.current);
 

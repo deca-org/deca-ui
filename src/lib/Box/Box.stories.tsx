@@ -16,28 +16,6 @@ Default.args = {
   css: {
     br: '$xs',
     size: '$25',
-    bg: '$blue500',
-  },
-};
-
-export const WithChildren = Template.bind({});
-
-WithChildren.args = {
-  children: (
-    <Box
-      css={{
-        color: '$white',
-        dflex: 'center',
-        textAlign: 'center',
-        fontFamily: '$normal',
-      }}
-    >
-      <h2>Hello World</h2>
-    </Box>
-  ),
-  css: {
-    br: '$xs',
-    size: '$25',
-    bg: '$blue500',
+    bg: '$primary',
   },
 };
