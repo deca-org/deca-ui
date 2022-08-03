@@ -1,6 +1,5 @@
 import { CSS, StandardColors } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
-import { Check } from '@styled-icons/fa-solid/Check';
 import clsx from 'clsx';
 import React, { useId } from 'react';
 

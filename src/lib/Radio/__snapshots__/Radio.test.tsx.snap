@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Radio matches screenshot 1`] = `
+<DocumentFragment>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      id=":r0:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r0:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+      Label Text
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Radio renders all colors 1`] = `
+<DocumentFragment>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      id=":r1:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r1:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-bEiFsv-color-secondary c-cGYPsY-eZtkzt-cv decaRadio-input"
+      id=":r2:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r2:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-jftABy-color-success c-cGYPsY-jukiKY-cv decaRadio-input"
+      id=":r3:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r3:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-iPWTSD-color-warning c-cGYPsY-hiFhtX-cv decaRadio-input"
+      id=":r4:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r4:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-jbDGbB-color-error c-cGYPsY-kaiRoB-cv decaRadio-input"
+      id=":r5:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r5:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Radio renders all sizes 1`] = `
+<DocumentFragment>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      id=":r6:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-jLlnnO-size-sm c-hWUVHV-hqEieG-disabled-false"
+      for=":r6:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      id=":r7:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r7:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaRadio-root"
+  >
+    <input
+      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      id=":r8:"
+      type="radio"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-eVgjeN-size-lg c-hWUVHV-hqEieG-disabled-false"
+      for=":r8:"
+    >
+      <div
+        class="decaRadio-circle"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
