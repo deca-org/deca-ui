@@ -45,6 +45,10 @@ export interface RadioProps {
    * @default primary
    */
   color?: StandardColors;
+  /**
+   * The value assigned to the radio button
+   */
+  value?: string;
 }
 
 const Radio = React.forwardRef(
@@ -57,6 +61,7 @@ const Radio = React.forwardRef(
       as = 'label',
       css,
       color = 'primary',
+      value,
     }: RadioProps,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
@@ -76,6 +81,7 @@ const Radio = React.forwardRef(
           size={size}
           color={color}
           disabled={disabled}
+          value={value}
         />
         <StyledRadioLabel
           htmlFor={radioId}

@@ -47,7 +47,11 @@ export interface CheckboxProps {
    */
   color?: StandardColors;
   /**
-   * The current value of the checkbox.
+   * The value assigned to the checkbox
+   */
+  value?: string;
+  /**
+   * Whether or not the checkbox is checked.
    */
   checked?: boolean;
   /**
@@ -79,6 +83,7 @@ const Checkbox = React.forwardRef(
       checked,
       initialCheck = false,
       onChange,
+      value,
     }: CheckboxProps,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
@@ -115,6 +120,7 @@ const Checkbox = React.forwardRef(
           size={size}
           color={color}
           disabled={disabled}
+          value={value}
         />
         <StyledCheckboxLabel
           htmlFor={checkboxId}
