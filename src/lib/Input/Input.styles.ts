@@ -71,6 +71,7 @@ export const StyledInputLabel = styled('label', {
   variants: {
     size: {
       sm: {
+        mb: '$1',
         fontSize: '$footnote',
       },
       md: {
@@ -111,6 +112,13 @@ export const StyledInputHelperText = styled('p', {
   ml: '$0',
   mt: '$2',
   variants: {
+    size: {
+      sm: {
+        mt: '$1',
+      },
+      md: {},
+      lg: {},
+    },
     state: {
       focused: {},
       disabled: {
@@ -277,6 +285,13 @@ export const StyledInput = styled('input', {
         backgroundColor: '$gray200',
       },
       outlined: {},
+    },
+    size: {
+      sm: {
+        fontSize: '$footnote',
+      },
+      md: {},
+      lg: {},
     },
     state: {
       focused: {},

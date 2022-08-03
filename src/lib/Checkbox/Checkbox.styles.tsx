@@ -1,5 +1,5 @@
 import { styled, theme } from '@lib/Theme';
-import { darken, transparentize } from 'polished';
+import { darken } from 'polished';
 
 export const StyledCheckboxWrapper = styled('div', {
   boxSizing: 'border-box',
@@ -30,9 +30,6 @@ export const StyledCheckbox = styled('input', {
           bg: '$primary',
           borderColor: '$primary',
         },
-        '&:active + label::before': {
-          borderColor: darken(0.06, theme.colors.primary.value),
-        },
         '&:checked:active + label::before': {
           bg: darken(0.06, theme.colors.primary.value),
           borderColor: darken(0.06, theme.colors.primary.value),
@@ -46,9 +43,6 @@ export const StyledCheckbox = styled('input', {
         '&:checked + label::before': {
           bg: '$secondary',
           borderColor: '$secondary',
-        },
-        '&:active + label::before': {
-          borderColor: darken(0.06, theme.colors.secondary.value),
         },
         '&:checked:active + label::before': {
           bg: darken(0.06, theme.colors.secondary.value),
@@ -64,9 +58,6 @@ export const StyledCheckbox = styled('input', {
           bg: '$success',
           borderColor: '$success',
         },
-        '&:active + label::before': {
-          borderColor: darken(0.06, theme.colors.success.value),
-        },
         '&:checked:active + label::before': {
           bg: darken(0.06, theme.colors.success.value),
           borderColor: darken(0.06, theme.colors.success.value),
@@ -81,9 +72,6 @@ export const StyledCheckbox = styled('input', {
           bg: '$warning',
           borderColor: '$warning',
         },
-        '&:active + label::before': {
-          borderColor: darken(0.06, theme.colors.warning.value),
-        },
         '&:checked:active + label::before': {
           bg: darken(0.06, theme.colors.warning.value),
           borderColor: darken(0.06, theme.colors.warning.value),
@@ -97,9 +85,6 @@ export const StyledCheckbox = styled('input', {
         '&:checked + label::before': {
           bg: '$error',
           borderColor: '$error',
-        },
-        '&:active + label::before': {
-          borderColor: darken(0.06, theme.colors.error.value),
         },
         '&:checked:active + label::before': {
           bg: darken(0.06, theme.colors.error.value),
@@ -139,71 +124,9 @@ export const StyledCheckboxLabel = styled('label', {
   display: 'flex',
   alignItems: 'center',
   transition: '$default',
-  '&:hover::before': {
-    transition: '$default',
+  '&::before': {
+    borderColor: '$gray600',
   },
-  compoundVariants: [
-    {
-      color: 'primary',
-      disabled: false,
-      css: {
-        '&::before': {
-          borderColor: '$primary',
-        },
-        '&:hover::before': {
-          borderColor: darken(0.04, theme.colors.primary.value),
-        },
-      },
-    },
-    {
-      color: 'secondary',
-      disabled: false,
-      css: {
-        '&::before': {
-          borderColor: '$secondary',
-        },
-        '&:hover::before': {
-          borderColor: darken(0.04, theme.colors.secondary.value),
-        },
-      },
-    },
-    {
-      color: 'success',
-      disabled: false,
-      css: {
-        '&::before': {
-          borderColor: '$success',
-        },
-        '&:hover::before': {
-          borderColor: darken(0.04, theme.colors.success.value),
-        },
-      },
-    },
-    {
-      color: 'warning',
-      disabled: false,
-      css: {
-        '&::before': {
-          borderColor: '$warning',
-        },
-        '&:hover::before': {
-          borderColor: darken(0.04, theme.colors.warning.value),
-        },
-      },
-    },
-    {
-      color: 'error',
-      disabled: false,
-      css: {
-        '&::before': {
-          borderColor: '$error',
-        },
-        '&:hover::before': {
-          borderColor: darken(0.04, theme.colors.error.value),
-        },
-      },
-    },
-  ],
   variants: {
     size: {
       sm: {
@@ -282,7 +205,12 @@ export const StyledCheckboxLabel = styled('label', {
           borderColor: '$gray400',
         },
       },
-      false: {},
+      false: {
+        '&:hover::before': {
+          transition: '$default',
+          borderColor: darken(0.125, theme.colors.gray600.value),
+        },
+      },
     },
   },
 });

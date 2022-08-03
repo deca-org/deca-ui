@@ -20,6 +20,7 @@ Default.args = {
   maxWidth: false,
   variant: 'solid',
   role: 'button',
+  size: 'md',
 };
 
 export const IconButton = Template.bind({});

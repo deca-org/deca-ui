@@ -43,17 +43,3 @@ Outlined.args = {
   initialValue: '',
   className: '',
 };
-
-export const Controlled = () => {
-  const [value, setValue] = useState<string>();
-  return (
-    <Input
-      label="Controlled Input"
-      size="lg"
-      helperText="Please submit query"
-      variant="solid"
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-    />
-  );
-};

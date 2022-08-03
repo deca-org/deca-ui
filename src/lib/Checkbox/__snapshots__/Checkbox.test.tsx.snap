@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Checkbox matches screenshot 1`] = `
+<DocumentFragment>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      id=":r0:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r0:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+      Label Text
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Checkbox renders all colors 1`] = `
+<DocumentFragment>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      id=":r3:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r3:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-boBgEH-cv decaCheckbox-input"
+      id=":r4:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r4:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-hQZXdn-cv decaCheckbox-input"
+      id=":r5:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r5:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-dJTBcb-cv decaCheckbox-input"
+      id=":r6:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r6:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-iZGOuP-cv decaCheckbox-input"
+      id=":r7:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r7:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`components/Checkbox renders all sizes 1`] = `
+<DocumentFragment>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      id=":r8:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-khySDG-size-sm c-hWUVHV-hqEieG-disabled-false"
+      for=":r8:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      id=":r9:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      for=":r9:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+  <div
+    class="c-gidqah decaCheckbox-root"
+  >
+    <input
+      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      id=":ra:"
+      type="checkbox"
+    />
+    <label
+      class="c-hWUVHV c-hWUVHV-gluuiR-size-lg c-hWUVHV-hqEieG-disabled-false"
+      for=":ra:"
+    >
+      <svg
+        aria-hidden="true"
+        class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+          fill="currentColor"
+        />
+      </svg>
+    </label>
+  </div>
+</DocumentFragment>
+`;

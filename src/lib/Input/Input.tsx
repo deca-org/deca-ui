@@ -209,6 +209,7 @@ const Input = React.forwardRef(
             variant={variant}
             state={getState}
             as={as}
+            size={size}
             value={isControlledComponent ? value : selfValue}
             required={required}
             disabled={disabled}
@@ -219,6 +220,7 @@ const Input = React.forwardRef(
         </StyledInputContainer>
         {helperText && (
           <StyledInputHelperText
+            size={size}
             state={getState}
             className={`${preClass}-helperText`}
           >

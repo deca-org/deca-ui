@@ -30,21 +30,21 @@ exports[`components/Button renders all colors 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="c-jXjExk c-jXjExk-UIZmM-color-success c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-fMjTrh-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-cbktrZ-color-success c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-fMjTrh-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-jXjExk c-jXjExk-eNqAek-color-warning c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dKsfPN-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-fWqKPQ-color-warning c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-dKsfPN-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
     aria-disabled="false"
-    class="c-jXjExk c-jXjExk-dodmCG-color-error c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-gURxYt-cv decaButton-root"
+    class="c-jXjExk c-jXjExk-cgBQIK-color-error c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-disabled-false c-jXjExk-gURxYt-cv decaButton-root"
     role="button"
   >
     Label

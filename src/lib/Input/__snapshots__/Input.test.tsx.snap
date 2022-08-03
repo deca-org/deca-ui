@@ -109,7 +109,7 @@ exports[`components/Input renders all sizes 1`] = `
       class="c-epBthF c-epBthF-dQgSKX-size-sm c-epBthF-htQczz-variant-solid decaInput-wrap"
     >
       <input
-        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid decaInput-input"
+        class="c-gxYldF c-gxYldF-fOmxiH-variant-solid c-gxYldF-kGUnSj-size-sm decaInput-input"
         id=":r7:"
         value=""
       />

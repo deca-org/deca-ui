@@ -8,4 +8,24 @@ export default {
   component: Checkbox,
 } as ComponentMeta<typeof Checkbox>;
 
-export const Default = () => <Checkbox label="Hello world" size="sm" />;
+const Template: ComponentStory<typeof Checkbox> = (args) => (
+  <Checkbox {...args} />
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  label: 'Label',
+  size: 'md',
+  color: 'primary',
+  disabled: false,
+  css: {},
+  className: '',
+  initialCheck: true,
+  required: false,
+};
+
+export const NoLabel = Template.bind({});
+NoLabel.args = {
+  ...Default.args,
+  label: '',
+};
