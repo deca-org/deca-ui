@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import React, {
   useId,
   useRef,
-  useEffect,
   useMemo,
   useState,
   useImperativeHandle,
@@ -74,7 +73,7 @@ export interface InputProps
    */
   focusColor?: StandardColors;
   /**
-   * Set button width to 100%.
+   * Set input width to 100%.
    * @default false
    */
   maxWidth?: boolean;
@@ -141,9 +140,13 @@ const Input = React.forwardRef(
     const [selfValue, setSelfValue] = useState<string>(initialValue);
     const [focused, setFocused] = useState<boolean>(false);
 
+    const isControlledComponent = useMemo(() => value !== undefined, [value]);
+
     const changeHandler = (e: React.ChangeEvent<FormElement>) => {
       if (disabled) return;
-      setSelfValue(e.target.value);
+      if (!isControlledComponent) {
+        setSelfValue(e.target.value);
+      }
       onChange && onChange(e);
     };
 
@@ -164,20 +167,12 @@ const Input = React.forwardRef(
         ? 'focused'
         : disabled
         ? 'disabled'
-        : selfValue
+        : selfValue || value
         ? 'value'
         : 'default';
-    }, [focused, disabled, selfValue]);
-
-    const isControlledComponent = useMemo(() => value !== undefined, [value]);
+    }, [focused, disabled, selfValue, value]);
 
     const inputId = useId();
-
-    useEffect(() => {
-      if (isControlledComponent) {
-        setSelfValue(value as string);
-      }
-    });
 
     const preClass = 'decaInput';
 
@@ -214,7 +209,7 @@ const Input = React.forwardRef(
             variant={variant}
             state={getState}
             as={as}
-            value={selfValue}
+            value={isControlledComponent ? value : selfValue}
             required={required}
             disabled={disabled}
             placeholder={placeholder}

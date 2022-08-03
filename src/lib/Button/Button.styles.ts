@@ -18,8 +18,8 @@ const compoundVariantComposer = () => {
         css: {
           color: readableColor(
             darken(0.25, theme.colors[color[1]].value),
-            '#FFFFFF',
-            '#000000'
+            theme.colors.white.value,
+            theme.colors.black.value
           ),
           '&:hover': {
             borderColor: darken(0.04, theme.colors[color[1]].value),
@@ -38,8 +38,8 @@ const compoundVariantComposer = () => {
         css: {
           color: readableColor(
             darken(0.25, theme.colors[color[1]].value),
-            '#FFFFFF',
-            '#000000'
+            theme.colors.white.value,
+            theme.colors.black.value
           ),
         },
       },
@@ -159,19 +159,19 @@ const StyledButton = styled('button', {
         borderColor: '$secondary',
       },
       success: {
-        bg: '$lightGreen700',
-        color: '$lightGreen700',
-        borderColor: '$lightGreen700',
+        bg: '$success',
+        color: '$success',
+        borderColor: '$success',
       },
       warning: {
-        bg: '$amber700',
-        color: '$amber700',
-        borderColor: '$amber700',
+        bg: '$warning',
+        color: '$warning',
+        borderColor: '$warning',
       },
       error: {
-        bg: '$red700',
-        color: '$red700',
-        borderColor: '$red700',
+        bg: '$error',
+        color: '$error',
+        borderColor: '$error',
       },
     },
     size: {

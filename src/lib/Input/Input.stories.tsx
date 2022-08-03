@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import Input from './Input';
 
@@ -42,4 +42,18 @@ Outlined.args = {
   maxWidth: false,
   initialValue: '',
   className: '',
+};
+
+export const Controlled = () => {
+  const [value, setValue] = useState<string>();
+  return (
+    <Input
+      label="Controlled Input"
+      size="lg"
+      helperText="Please submit query"
+      variant="solid"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
 };

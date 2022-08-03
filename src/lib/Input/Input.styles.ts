@@ -41,7 +41,7 @@ export const StyledInputLabel = styled('label', {
       state: 'focused',
       focusColor: 'success',
       css: {
-        color: '$lightGreen700',
+        color: '$success',
       },
     },
     {
@@ -49,7 +49,7 @@ export const StyledInputLabel = styled('label', {
       state: 'focused',
       focusColor: 'warning',
       css: {
-        color: '$amber700',
+        color: '$warning',
       },
     },
     {
@@ -57,7 +57,7 @@ export const StyledInputLabel = styled('label', {
       state: 'focused',
       focusColor: 'error',
       css: {
-        color: '$red700',
+        color: '$error',
       },
     },
     {
@@ -161,7 +161,7 @@ export const StyledInputContainer = styled('div', {
       state: 'focused',
       focusColor: 'success',
       css: {
-        borderColor: '$lightGreen700',
+        borderColor: '$success',
       },
     },
     {
@@ -169,7 +169,7 @@ export const StyledInputContainer = styled('div', {
       state: 'focused',
       focusColor: 'warning',
       css: {
-        borderColor: '$amber700',
+        borderColor: '$warning',
       },
     },
     {
@@ -177,14 +177,14 @@ export const StyledInputContainer = styled('div', {
       state: 'focused',
       focusColor: 'error',
       css: {
-        borderColor: '$red700',
+        borderColor: '$error',
       },
     },
     {
       variant: 'outlined',
       state: 'disabled',
       css: {
-        borderColor: '$gray500',
+        borderColor: '$gray400',
       },
     },
     {
@@ -281,6 +281,9 @@ export const StyledInput = styled('input', {
     state: {
       focused: {},
       disabled: {
+        '&::placeholder': {
+          color: '$gray500',
+        },
         cursor: 'not-allowed',
       },
       value: {},
