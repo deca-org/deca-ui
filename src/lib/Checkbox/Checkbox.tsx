@@ -120,6 +120,7 @@ const Checkbox = React.forwardRef(
           size={size}
           color={color}
           disabled={disabled}
+          isDisabled={disabled}
           value={value}
         />
         <StyledCheckboxLabel
@@ -128,7 +129,7 @@ const Checkbox = React.forwardRef(
           size={size}
           as={as}
           color={color}
-          disabled={disabled}
+          isDisabled={disabled}
         >
           <Check className={`${preClass}-icon`} />
           {label && label}

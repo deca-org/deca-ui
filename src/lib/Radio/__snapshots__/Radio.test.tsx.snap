@@ -1,17 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Radio matches screenshot 1`] = `
+exports[`components/Radio matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
       id=":r0:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r0:"
     >
       <div
@@ -26,15 +27,16 @@ exports[`components/Radio matches screenshot 1`] = `
 exports[`components/Radio renders all colors 1`] = `
 <DocumentFragment>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
       id=":r1:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r1:"
     >
       <div
@@ -43,15 +45,16 @@ exports[`components/Radio renders all colors 1`] = `
     </label>
   </div>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-bEiFsv-color-secondary c-cGYPsY-eZtkzt-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-bEiFsv-color-secondary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-eZtkzt-cv decaRadio-input"
       id=":r2:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r2:"
     >
       <div
@@ -60,15 +63,16 @@ exports[`components/Radio renders all colors 1`] = `
     </label>
   </div>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-jftABy-color-success c-cGYPsY-jukiKY-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-jftABy-color-success c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-jukiKY-cv decaRadio-input"
       id=":r3:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r3:"
     >
       <div
@@ -77,15 +81,16 @@ exports[`components/Radio renders all colors 1`] = `
     </label>
   </div>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-iPWTSD-color-warning c-cGYPsY-hiFhtX-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-iPWTSD-color-warning c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hiFhtX-cv decaRadio-input"
       id=":r4:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r4:"
     >
       <div
@@ -94,15 +99,16 @@ exports[`components/Radio renders all colors 1`] = `
     </label>
   </div>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-jbDGbB-color-error c-cGYPsY-kaiRoB-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-jbDGbB-color-error c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-kaiRoB-cv decaRadio-input"
       id=":r5:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r5:"
     >
       <div
@@ -116,15 +122,16 @@ exports[`components/Radio renders all colors 1`] = `
 exports[`components/Radio renders all sizes 1`] = `
 <DocumentFragment>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
       id=":r6:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-jLlnnO-size-sm c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-jLlnnO-size-sm c-hWUVHV-hqEieG-isDisabled-false"
       for=":r6:"
     >
       <div
@@ -133,15 +140,16 @@ exports[`components/Radio renders all sizes 1`] = `
     </label>
   </div>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
       id=":r7:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r7:"
     >
       <div
@@ -150,15 +158,16 @@ exports[`components/Radio renders all sizes 1`] = `
     </label>
   </div>
   <div
-    class="c-gidqah decaRadio-root"
+    class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-cGYPsY c-cGYPsY-hIWLRp-color-primary c-cGYPsY-hDPvsb-cv decaRadio-input"
+      class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
       id=":r8:"
       type="radio"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-eVgjeN-size-lg c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-eVgjeN-size-lg c-hWUVHV-hqEieG-isDisabled-false"
       for=":r8:"
     >
       <div

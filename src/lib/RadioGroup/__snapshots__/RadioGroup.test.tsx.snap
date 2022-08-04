@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/RadioGroup matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="c-HwauS decaRadioGroup-root"
+  >
+    <div
+      class="c-cDEphG decaRadio-root"
+    >
+      <input
+        checked=""
+        class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
+        id=":r1:"
+        name=":r0:"
+        type="radio"
+        value="A"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r1:"
+      >
+        <div
+          class="decaRadio-circle"
+        />
+        Option A
+      </label>
+    </div>
+    <div
+      class="c-cDEphG decaRadio-root"
+    >
+      <input
+        class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
+        id=":r2:"
+        name=":r0:"
+        type="radio"
+        value="B"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r2:"
+      >
+        <div
+          class="decaRadio-circle"
+        />
+        Option B
+      </label>
+    </div>
+    <div
+      class="c-cDEphG decaRadio-root"
+    >
+      <input
+        class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
+        id=":r3:"
+        name=":r0:"
+        type="radio"
+        value="C"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r3:"
+      >
+        <div
+          class="decaRadio-circle"
+        />
+        Option C
+      </label>
+    </div>
+    <div
+      class="c-cDEphG decaRadio-root"
+    >
+      <input
+        class="c-iPCrfL c-iPCrfL-hIWLRp-color-primary c-iPCrfL-dFDuFW-isDisabled-false c-iPCrfL-hDPvsb-cv decaRadio-input"
+        id=":r4:"
+        name=":r0:"
+        type="radio"
+        value="D"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r4:"
+      >
+        <div
+          class="decaRadio-circle"
+        />
+        Option D
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

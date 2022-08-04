@@ -166,7 +166,7 @@ const Input = React.forwardRef(
       return focused
         ? 'focused'
         : disabled
-        ? 'disabled'
+        ? 'isDisabled'
         : selfValue || value
         ? 'value'
         : 'default';

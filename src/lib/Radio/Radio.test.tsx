@@ -5,7 +5,7 @@ import React from 'react';
 import Radio from './Radio';
 
 describe('components/Radio', () => {
-  it('matches screenshot', () => {
+  it('matches snapshot', () => {
     const { asFragment } = render(<Radio label="Label Text" />);
     expect(asFragment()).toMatchSnapshot();
   });

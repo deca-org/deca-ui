@@ -2,6 +2,7 @@ import { styled, theme } from '@lib/Theme';
 import { darken } from 'polished';
 
 export const StyledRadioWrapper = styled('div', {
+  position: 'relative',
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
@@ -14,16 +15,10 @@ export const StyledRadio = styled('input', {
   opacity: 0,
   position: 'absolute',
   transition: '$default',
-  '&:checked + label > div': {
-    visibility: 'visible',
-  },
-  '&:focus-visible + label::before': {
-    boxShadow: '$a11y',
-  },
   compoundVariants: [
     {
       color: 'primary',
-      disabled: false,
+      isDisabled: false,
       css: {
         '&:checked + label::before': {
           borderColor: '$primary',
@@ -35,7 +30,7 @@ export const StyledRadio = styled('input', {
     },
     {
       color: 'secondary',
-      disabled: false,
+      isDisabled: false,
       css: {
         '&:checked + label::before': {
           borderColor: '$secondary',
@@ -47,7 +42,7 @@ export const StyledRadio = styled('input', {
     },
     {
       color: 'success',
-      disabled: false,
+      isDisabled: false,
       css: {
         '&:checked + label::before': {
           borderColor: '$success',
@@ -59,7 +54,7 @@ export const StyledRadio = styled('input', {
     },
     {
       color: 'warning',
-      disabled: false,
+      isDisabled: false,
       css: {
         '&:checked + label::before': {
           borderColor: '$warning',
@@ -71,7 +66,7 @@ export const StyledRadio = styled('input', {
     },
     {
       color: 'error',
-      disabled: false,
+      isDisabled: false,
       css: {
         '&:checked + label::before': {
           borderColor: '$error',
@@ -115,8 +110,10 @@ export const StyledRadio = styled('input', {
         },
       },
     },
-    disabled: {
+
+    isDisabled: {
       true: {
+        pointerEvents: 'none',
         '&:checked + label::before': {
           borderColor: '$gray400',
         },
@@ -124,7 +121,14 @@ export const StyledRadio = styled('input', {
           bg: '$gray400',
         },
       },
-      false: {},
+      false: {
+        '&:focus-visible + label::before': {
+          boxShadow: '$a11y',
+        },
+        '&:checked + label > div': {
+          visibility: 'visible',
+        },
+      },
     },
   },
 });
@@ -210,7 +214,7 @@ export const StyledRadioLabel = styled('label', {
       warning: {},
       error: {},
     },
-    disabled: {
+    isDisabled: {
       true: {
         cursor: 'not-allowed',
         color: '$gray500',

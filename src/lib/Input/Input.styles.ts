@@ -3,7 +3,7 @@ import { styled } from '@lib/Theme';
 export const StyledInputMainContainer = styled('div', {
   width: '100%',
   fontFamily: '$normal',
-  disabled: {
+  isDisabled: {
     true: {
       cursor: 'not-allowed',
     },
@@ -83,7 +83,7 @@ export const StyledInputLabel = styled('label', {
     },
     state: {
       focused: {},
-      disabled: {
+      isDisabled: {
         color: '$gray500',
       },
       value: {},
@@ -121,7 +121,7 @@ export const StyledInputHelperText = styled('p', {
     },
     state: {
       focused: {},
-      disabled: {
+      isDisabled: {
         color: '$gray500',
       },
       value: {},
@@ -190,7 +190,7 @@ export const StyledInputContainer = styled('div', {
     },
     {
       variant: 'outlined',
-      state: 'disabled',
+      state: 'isDisabled',
       css: {
         borderColor: '$gray400',
       },
@@ -231,7 +231,7 @@ export const StyledInputContainer = styled('div', {
     },
     state: {
       focused: {},
-      disabled: {
+      isDisabled: {
         cursor: 'not-allowed',
       },
       value: {},
@@ -295,7 +295,7 @@ export const StyledInput = styled('input', {
     },
     state: {
       focused: {},
-      disabled: {
+      isDisabled: {
         '&::placeholder': {
           color: '$gray500',
         },

@@ -3,7 +3,7 @@ import { darken, readableColor, transparentize } from 'polished';
 
 const compoundVariantComposer = () => {
   const colorVariants: {
-    disabled?: boolean;
+    isDisabled?: boolean;
     color?: string;
     variant?: 'solid' | 'outlined' | 'ghost';
     css: CSS;
@@ -12,7 +12,7 @@ const compoundVariantComposer = () => {
   Object.entries(standardColors).map((color) => {
     colorVariants.push(
       {
-        disabled: false,
+        isDisabled: false,
         color: color[0],
         variant: 'solid',
         css: {
@@ -32,7 +32,7 @@ const compoundVariantComposer = () => {
         },
       },
       {
-        disabled: true,
+        isDisabled: true,
         color: color[0],
         variant: 'solid',
         css: {
@@ -44,7 +44,7 @@ const compoundVariantComposer = () => {
         },
       },
       {
-        disabled: false,
+        isDisabled: false,
         color: color[0],
         variant: 'outlined',
         css: {
@@ -62,7 +62,7 @@ const compoundVariantComposer = () => {
         },
       },
       {
-        disabled: true,
+        isDisabled: true,
         color: color[0],
         variant: 'outlined',
         css: {
@@ -70,7 +70,7 @@ const compoundVariantComposer = () => {
         },
       },
       {
-        disabled: false,
+        isDisabled: false,
         color: color[0],
         variant: 'ghost',
         css: {
@@ -89,7 +89,7 @@ const compoundVariantComposer = () => {
         },
       },
       {
-        disabled: true,
+        isDisabled: true,
         color: color[0],
         variant: 'ghost',
         css: {
@@ -200,7 +200,7 @@ const StyledButton = styled('button', {
       outlined: {},
       ghost: {},
     },
-    disabled: {
+    isDisabled: {
       true: {
         opacity: '50%',
         cursor: 'not-allowed',

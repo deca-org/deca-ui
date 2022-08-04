@@ -46,9 +46,29 @@ export interface RadioProps {
    */
   color?: StandardColors;
   /**
-   * The value assigned to the radio button
+   * The value assigned to the radio button.
    */
   value?: string;
+  /**
+   * Callback fired when a radio button is selected
+   */
+  onChange?(e: React.ChangeEvent<HTMLInputElement>): void;
+  /**
+   * Callback fired when a radio button is focused
+   */
+  onFocus?(e: React.ChangeEvent<HTMLInputElement>): void;
+  /**
+   * Name is used as an identifier in a form.
+   */
+  name?: string;
+  /**
+   *  Whether or not the checkbox is initially checked.
+   */
+  initialSelect?: boolean;
+  /**
+   * Whether or not the radio button is selected.
+   */
+  selected?: boolean;
 }
 
 const Radio = React.forwardRef(
@@ -62,6 +82,12 @@ const Radio = React.forwardRef(
       css,
       color = 'primary',
       value,
+      name,
+      onChange,
+      onFocus,
+      initialSelect,
+      selected,
+      ...props
     }: RadioProps,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
@@ -70,6 +96,16 @@ const Radio = React.forwardRef(
     const radioId = useId();
 
     const preClass = 'decaRadio';
+
+    const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (disabled) return;
+      onChange && onChange(e);
+    };
+
+    const focusHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (disabled) return;
+      onFocus && onFocus(e);
+    };
 
     return (
       <StyledRadioWrapper className={clsx(className, `${preClass}-root`)}>
@@ -81,7 +117,14 @@ const Radio = React.forwardRef(
           size={size}
           color={color}
           disabled={disabled}
+          isDisabled={disabled}
           value={value}
+          name={name}
+          onChange={changeHandler}
+          onFocus={focusHandler}
+          {...(initialSelect && { defaultChecked: initialSelect })}
+          {...(!initialSelect && { checked: selected })}
+          {...props}
         />
         <StyledRadioLabel
           htmlFor={radioId}
@@ -89,7 +132,7 @@ const Radio = React.forwardRef(
           size={size}
           as={as}
           color={color}
-          disabled={disabled}
+          isDisabled={disabled}
         >
           <div className={`${preClass}-circle`} />
           {label && label}

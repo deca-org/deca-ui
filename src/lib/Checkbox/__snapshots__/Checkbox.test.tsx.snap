@@ -6,12 +6,13 @@ exports[`components/Checkbox matches screenshot 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
       id=":r0:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r0:"
     >
       <svg
@@ -39,12 +40,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
       id=":r3:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r3:"
     >
       <svg
@@ -66,12 +68,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-boBgEH-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-boBgEH-cv decaCheckbox-input"
       id=":r4:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r4:"
     >
       <svg
@@ -93,12 +96,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-hQZXdn-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-hQZXdn-cv decaCheckbox-input"
       id=":r5:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r5:"
     >
       <svg
@@ -120,12 +124,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-dJTBcb-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-dJTBcb-cv decaCheckbox-input"
       id=":r6:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r6:"
     >
       <svg
@@ -147,12 +152,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-iZGOuP-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-iZGOuP-cv decaCheckbox-input"
       id=":r7:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r7:"
     >
       <svg
@@ -179,12 +185,13 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
       id=":r8:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-khySDG-size-sm c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-khySDG-size-sm c-hWUVHV-hqEieG-isDisabled-false"
       for=":r8:"
     >
       <svg
@@ -206,12 +213,13 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
       id=":r9:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r9:"
     >
       <svg
@@ -233,12 +241,13 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-fphAml c-fphAml-ewuscr-cv decaCheckbox-input"
+      class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
       id=":ra:"
       type="checkbox"
+      value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-gluuiR-size-lg c-hWUVHV-hqEieG-disabled-false"
+      class="c-hWUVHV c-hWUVHV-gluuiR-size-lg c-hWUVHV-hqEieG-isDisabled-false"
       for=":ra:"
     >
       <svg
