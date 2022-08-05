@@ -6,7 +6,7 @@ exports[`components/Radio matches snapshot 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hDPvsb-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
       id=":r0:"
       type="radio"
       value=""
@@ -30,7 +30,7 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hDPvsb-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
       id=":r1:"
       type="radio"
       value=""
@@ -48,7 +48,7 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-bEiFsv-color-secondary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eZtkzt-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-bEiFsv-color-secondary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-ddWzfo-cv decaRadio-input"
       id=":r2:"
       type="radio"
       value=""
@@ -125,7 +125,7 @@ exports[`components/Radio renders all sizes 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hDPvsb-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
       id=":r6:"
       type="radio"
       value=""
@@ -143,7 +143,7 @@ exports[`components/Radio renders all sizes 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hDPvsb-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
       id=":r7:"
       type="radio"
       value=""
@@ -161,7 +161,7 @@ exports[`components/Radio renders all sizes 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hDPvsb-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
       id=":r8:"
       type="radio"
       value=""

@@ -9,6 +9,7 @@ import {
   StyledCheckbox,
   StyledCheckboxLabel,
 } from './Checkbox.styles';
+import CheckboxGroup from './CheckboxGroup';
 
 /**
  * Checkboxes can be used to turn an option on or off
@@ -150,4 +151,13 @@ const Checkbox = React.forwardRef(
   }
 );
 
-export default Checkbox;
+type CheckboxComponent<
+  T,
+  P = Record<string, unknown>
+> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+> & {
+  Group: typeof CheckboxGroup;
+};
+
+export default Checkbox as CheckboxComponent<HTMLInputElement, CheckboxProps>;

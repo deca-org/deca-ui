@@ -8,6 +8,7 @@ import {
   StyledRadio,
   StyledRadioLabel,
 } from './Radio.styles';
+import RadioGroup from './RadioGroup';
 
 /**
  * Radio buttons allow the user to select one option from a set.
@@ -143,4 +144,13 @@ const Radio = React.forwardRef(
   }
 );
 
-export default Radio;
+type RadioComponent<
+  T,
+  P = Record<string, unknown>
+> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+> & {
+  Group: typeof RadioGroup;
+};
+
+export default Radio as RadioComponent<HTMLInputElement, RadioProps>;
