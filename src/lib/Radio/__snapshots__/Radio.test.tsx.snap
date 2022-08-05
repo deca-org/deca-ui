@@ -12,7 +12,7 @@ exports[`components/Radio matches snapshot 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false c-hWUVHV-jQVVMl-cv"
       for=":r0:"
     >
       <div
@@ -36,7 +36,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r1:"
     >
       <div
@@ -54,7 +54,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r2:"
     >
       <div
@@ -72,7 +72,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r3:"
     >
       <div
@@ -90,7 +90,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r4:"
     >
       <div
@@ -108,7 +108,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r5:"
     >
       <div
@@ -131,7 +131,7 @@ exports[`components/Radio renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-jLlnnO-size-sm c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-eBCXCa-size-sm c-hWUVHV-hqEieG-isDisabled-false"
       for=":r6:"
     >
       <div
@@ -149,7 +149,7 @@ exports[`components/Radio renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false"
       for=":r7:"
     >
       <div
@@ -167,7 +167,7 @@ exports[`components/Radio renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-eVgjeN-size-lg c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-hWUVHV c-hWUVHV-fSBxfe-size-lg c-hWUVHV-hqEieG-isDisabled-false"
       for=":r8:"
     >
       <div

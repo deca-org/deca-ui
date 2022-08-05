@@ -10,7 +10,7 @@ import {
 } from './Radio.styles';
 
 /**
- * Radio buttons allow the user to select one option from a set
+ * Radio buttons allow the user to select one option from a set.
  */
 export interface RadioProps {
   /**
@@ -133,6 +133,7 @@ const Radio = React.forwardRef(
           as={as}
           color={color}
           isDisabled={disabled}
+          hasLabel={label ? true : false}
         >
           <div className={`${preClass}-circle`} />
           {label && label}

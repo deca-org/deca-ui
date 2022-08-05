@@ -15,6 +15,9 @@ export const StyledRadio = styled('input', {
   opacity: 0,
   position: 'absolute',
   transition: '$default',
+  '&:checked + label > div': {
+    visibility: 'visible',
+  },
   compoundVariants: [
     {
       color: 'primary',
@@ -125,9 +128,6 @@ export const StyledRadio = styled('input', {
         '&:focus-visible + label::before': {
           boxShadow: '$a11y',
         },
-        '&:checked + label > div': {
-          visibility: 'visible',
-        },
       },
     },
   },
@@ -141,69 +141,79 @@ export const StyledRadioLabel = styled('label', {
   transition: '$default',
   '&::before': {
     borderColor: '$gray600',
+    br: '$pill',
+    borderStyle: 'solid',
+    borderWidth: '$normal',
+    transition: '$default',
+    content: '',
   },
+  '& div': {
+    br: '$pill',
+    position: 'absolute',
+    transition: '$default',
+    visibility: 'hidden',
+  },
+  compoundVariants: [
+    {
+      hasLabel: true,
+      size: 'sm',
+      css: {
+        '&::before': {
+          mr: '$1',
+        },
+      },
+    },
+    {
+      hasLabel: true,
+      size: 'md',
+      css: {
+        '&::before': {
+          mr: '$2',
+        },
+      },
+    },
+    {
+      hasLabel: true,
+      size: 'lg',
+      css: {
+        '&::before': {
+          mr: '$2',
+        },
+      },
+    },
+  ],
   variants: {
     size: {
       sm: {
         fontSize: '$caption',
         '& div': {
-          transition: '$default',
           size: '$1',
           ml: '$1',
-          position: 'absolute',
-          visibility: 'hidden',
           mt: 'calc($0 / 4)',
-          br: '$pill',
         },
         '&::before': {
-          transition: '$default',
-          content: '',
           size: '$2',
-          borderStyle: 'solid',
-          borderWidth: '$normal',
-          br: '$pill',
-          mr: '$1',
           mt: 'calc($0 / 4)',
         },
       },
       md: {
         fontSize: '$body',
         '& div': {
-          transition: '$default',
           size: '$2',
           ml: '$1',
-          position: 'absolute',
-          visibility: 'hidden',
-          br: '$pill',
         },
         '&::before': {
-          transition: '$default',
-          content: '',
           size: '$3',
-          borderStyle: 'solid',
-          borderWidth: '$normal',
-          br: '$pill',
-          mr: '$2',
         },
       },
       lg: {
         fontSize: '$bodyLg',
         '& div': {
-          transition: '$default',
           size: 'calc($3 * 0.925)',
           ml: 'calc($1 * 1.125)',
-          position: 'absolute',
-          visibility: 'hidden',
-          br: '$pill',
         },
         '&::before': {
-          transition: '$default',
-          content: '',
           size: '$4',
-          borderStyle: 'solid',
-          borderWidth: '$normal',
-          br: '$pill',
-          mr: '$2',
         },
       },
     },
@@ -232,6 +242,10 @@ export const StyledRadioLabel = styled('label', {
           borderColor: darken(0.125, theme.colors.gray600.value),
         },
       },
+    },
+    hasLabel: {
+      true: {},
+      false: {},
     },
   },
 });

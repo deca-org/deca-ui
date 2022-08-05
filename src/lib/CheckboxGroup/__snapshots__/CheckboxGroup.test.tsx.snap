@@ -12,11 +12,12 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
         checked=""
         class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
         id=":r1:"
+        name=":r0:"
         type="checkbox"
         value="A"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false c-kicqPj-jQVVMl-cv"
         for=":r1:"
       >
         <svg
@@ -42,11 +43,12 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
         checked=""
         class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
         id=":r2:"
+        name=":r0:"
         type="checkbox"
         value="B"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false c-kicqPj-jQVVMl-cv"
         for=":r2:"
       >
         <svg
@@ -71,11 +73,12 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
       <input
         class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
         id=":r3:"
+        name=":r0:"
         type="checkbox"
         value="C"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false c-kicqPj-jQVVMl-cv"
         for=":r3:"
       >
         <svg
@@ -100,11 +103,12 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
       <input
         class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
         id=":r4:"
+        name=":r0:"
         type="checkbox"
         value="D"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false c-kicqPj-jQVVMl-cv"
         for=":r4:"
       >
         <svg

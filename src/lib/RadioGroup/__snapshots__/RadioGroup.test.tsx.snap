@@ -17,7 +17,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
         value="A"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false c-hWUVHV-jQVVMl-cv"
         for=":r1:"
       >
         <div
@@ -37,7 +37,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
         value="B"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false c-hWUVHV-jQVVMl-cv"
         for=":r2:"
       >
         <div
@@ -57,7 +57,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
         value="C"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false c-hWUVHV-jQVVMl-cv"
         for=":r3:"
       >
         <div
@@ -77,7 +77,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
         value="D"
       />
       <label
-        class="c-hWUVHV c-hWUVHV-dCSosB-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        class="c-hWUVHV c-hWUVHV-ewkobi-size-md c-hWUVHV-hqEieG-isDisabled-false c-hWUVHV-jQVVMl-cv"
         for=":r4:"
       >
         <div

@@ -1,19 +1,17 @@
 import { CSS, StandardColors } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
-import { Check } from '@styled-icons/fa-solid/Check';
 import clsx from 'clsx';
 import React, { useId, useState, useMemo } from 'react';
 
 import {
-  StyledCheckboxWrapper,
-  StyledCheckbox,
-  StyledCheckboxLabel,
-} from './Checkbox.styles';
-
+  StyledSwitchWrapper,
+  StyledSwitchInput,
+  StyledSwitchLabel,
+} from './Switch.styles';
 /**
- * Checkboxes can be used to turn an option on or off
+ * Switches are an alternative to the checkbox component. You can switch between enabled or disabled states.
  */
-export interface CheckboxProps {
+export interface SwitchProps {
   /**
    * Size of the component.
    * @default md
@@ -42,24 +40,20 @@ export interface CheckboxProps {
    */
   css?: CSS;
   /**
-   * Color of checkbox when active.
+   * Color of radio button when active.
    * @default primary
    */
   color?: StandardColors;
   /**
-   * The value assigned to the checkbox
+   * The value assigned to the switch component.
    */
   value?: string;
   /**
-   * Whether or not the checkbox is checked.
-   */
-  checked?: boolean;
-  /**
-   * Function that executes when checkbox is checked or unchecked.
+   * Callback fired when a switch is enabled or disabled
    */
   onChange?(e: React.ChangeEvent<HTMLInputElement>): void;
   /**
-   * Callback fired when a checkbox is focused
+   * Callback fired when a switch is focused
    */
   onFocus?(e: React.ChangeEvent<HTMLInputElement>): void;
   /**
@@ -67,9 +61,13 @@ export interface CheckboxProps {
    */
   name?: string;
   /**
-   *  Whether or not the checkbox is initially checked.
+   *  Whether or not the switch is initially toggled.
    */
-  initialCheck?: boolean;
+  initialToggle?: boolean;
+  /**
+   * Whether or not the switch is toggled.
+   */
+  toggled?: boolean;
   /**
    * Required checkbox prop.
    * @default false
@@ -77,64 +75,64 @@ export interface CheckboxProps {
   required?: boolean;
 }
 
-const Checkbox = React.forwardRef(
+const Switch = React.forwardRef(
   (
     {
       size = 'md',
       label,
       className,
-      name,
       disabled = false,
       as = 'label',
       css,
       color = 'primary',
       required = false,
-      checked,
-      initialCheck = false,
+      toggled,
+      initialToggle = false,
       onChange,
+      name,
       value,
-    }: CheckboxProps,
+    }: SwitchProps,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
-    const checkboxRef = useDOMRef(ref);
+    const switchRef = useDOMRef(ref);
 
-    const [selfChecked, setSelfChecked] = useState<boolean>(initialCheck);
-    const checkboxId = useId();
+    const [selfToggled, setSelfToggled] = useState<boolean>(initialToggle);
+    const switchId = useId();
 
     const isControlledComponent = useMemo(
-      () => checked !== undefined,
-      [checked]
+      () => toggled !== undefined,
+      [toggled]
     );
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
       if (disabled) return;
       if (!isControlledComponent) {
-        setSelfChecked(e.target.checked);
+        setSelfToggled(e.target.checked);
       }
       onChange && onChange(e);
     };
 
-    const preClass = 'decaCheckbox';
+    const preClass = 'decaSwitch';
 
     return (
-      <StyledCheckboxWrapper className={clsx(className, `${preClass}-root`)}>
-        <StyledCheckbox
-          id={checkboxId}
+      <StyledSwitchWrapper className={clsx(className, `${preClass}-root`)}>
+        <StyledSwitchInput
+          id={switchId}
           type="checkbox"
           onChange={changeHandler}
-          checked={isControlledComponent ? checked : selfChecked}
-          ref={checkboxRef}
-          required={required}
-          className={`${preClass}-input`}
+          checked={isControlledComponent ? toggled : selfToggled}
+          ref={switchRef}
+          isDisabled={disabled}
           name={name}
           size={size}
-          color={color}
+          className={`${preClass}-input`}
           disabled={disabled}
-          isDisabled={disabled}
+          color={color}
+          required={required}
           value={value}
         />
-        <StyledCheckboxLabel
-          htmlFor={checkboxId}
+        <StyledSwitchLabel
+          htmlFor={switchId}
           css={css}
           size={size}
           as={as}
@@ -142,12 +140,11 @@ const Checkbox = React.forwardRef(
           isDisabled={disabled}
           hasLabel={label ? true : false}
         >
-          <Check className={`${preClass}-icon`} />
           {label && label}
-        </StyledCheckboxLabel>
-      </StyledCheckboxWrapper>
+        </StyledSwitchLabel>
+      </StyledSwitchWrapper>
     );
   }
 );
 
-export default Checkbox;
+export default Switch;

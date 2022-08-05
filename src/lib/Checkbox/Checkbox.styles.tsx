@@ -128,6 +128,38 @@ export const StyledCheckboxLabel = styled('label', {
   '&::before': {
     borderColor: '$gray600',
   },
+  '& svg': {
+    transition: '$default',
+  },
+  compoundVariants: [
+    {
+      hasLabel: true,
+      size: 'sm',
+      css: {
+        '&::before': {
+          mr: '$1',
+        },
+      },
+    },
+    {
+      hasLabel: true,
+      size: 'md',
+      css: {
+        '&::before': {
+          mr: '$2',
+        },
+      },
+    },
+    {
+      hasLabel: true,
+      size: 'lg',
+      css: {
+        '&::before': {
+          mr: '$2',
+        },
+      },
+    },
+  ],
   variants: {
     size: {
       sm: {
@@ -146,7 +178,6 @@ export const StyledCheckboxLabel = styled('label', {
           borderStyle: 'solid',
           borderWidth: '$normal',
           br: '$xs',
-          mr: '$1',
           mt: 'calc($0 / 4)',
         },
       },
@@ -165,7 +196,6 @@ export const StyledCheckboxLabel = styled('label', {
           borderStyle: 'solid',
           borderWidth: '$normal',
           br: '$xs',
-          mr: '$2',
         },
       },
       lg: {
@@ -183,7 +213,6 @@ export const StyledCheckboxLabel = styled('label', {
           borderStyle: 'solid',
           borderWidth: '$normal',
           br: '$xs',
-          mr: '$2',
         },
       },
     },
@@ -212,6 +241,10 @@ export const StyledCheckboxLabel = styled('label', {
           borderColor: darken(0.125, theme.colors.gray600.value),
         },
       },
+    },
+    hasLabel: {
+      true: {},
+      false: {},
     },
   },
 });

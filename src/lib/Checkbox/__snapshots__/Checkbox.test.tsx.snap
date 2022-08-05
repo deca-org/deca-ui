@@ -12,7 +12,7 @@ exports[`components/Checkbox matches screenshot 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false c-kicqPj-jQVVMl-cv"
       for=":r0:"
     >
       <svg
@@ -46,7 +46,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false"
       for=":r3:"
     >
       <svg
@@ -74,7 +74,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false"
       for=":r4:"
     >
       <svg
@@ -102,7 +102,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false"
       for=":r5:"
     >
       <svg
@@ -130,7 +130,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false"
       for=":r6:"
     >
       <svg
@@ -158,7 +158,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false"
       for=":r7:"
     >
       <svg
@@ -191,7 +191,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-khySDG-size-sm c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-gPIcnu-size-sm c-kicqPj-hqEieG-isDisabled-false"
       for=":r8:"
     >
       <svg
@@ -219,7 +219,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-eVJqzf-size-md c-kicqPj-hqEieG-isDisabled-false"
       for=":r9:"
     >
       <svg
@@ -247,7 +247,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-hWUVHV c-hWUVHV-gluuiR-size-lg c-hWUVHV-hqEieG-isDisabled-false"
+      class="c-kicqPj c-kicqPj-komCFO-size-lg c-kicqPj-hqEieG-isDisabled-false"
       for=":ra:"
     >
       <svg
