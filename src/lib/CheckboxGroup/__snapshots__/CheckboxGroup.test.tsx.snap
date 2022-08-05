@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/CheckboxGroup matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="c-HwauS decaCheckboxGroup-root"
+  >
+    <div
+      class="c-gidqah decaCheckbox-root"
+    >
+      <input
+        checked=""
+        class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
+        id=":r1:"
+        type="checkbox"
+        value="A"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r1:"
+      >
+        <svg
+          aria-hidden="true"
+          class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+          />
+        </svg>
+        Option A
+      </label>
+    </div>
+    <div
+      class="c-gidqah decaCheckbox-root"
+    >
+      <input
+        checked=""
+        class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
+        id=":r2:"
+        type="checkbox"
+        value="B"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r2:"
+      >
+        <svg
+          aria-hidden="true"
+          class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+          />
+        </svg>
+        Option B
+      </label>
+    </div>
+    <div
+      class="c-gidqah decaCheckbox-root"
+    >
+      <input
+        class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
+        id=":r3:"
+        type="checkbox"
+        value="C"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r3:"
+      >
+        <svg
+          aria-hidden="true"
+          class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+          />
+        </svg>
+        Option C
+      </label>
+    </div>
+    <div
+      class="c-gidqah decaCheckbox-root"
+    >
+      <input
+        class="c-dntDPv c-dntDPv-kueLmT-isDisabled-false c-dntDPv-ewuscr-cv decaCheckbox-input"
+        id=":r4:"
+        type="checkbox"
+        value="D"
+      />
+      <label
+        class="c-hWUVHV c-hWUVHV-dBZSDc-size-md c-hWUVHV-hqEieG-isDisabled-false"
+        for=":r4:"
+      >
+        <svg
+          aria-hidden="true"
+          class="StyledIconBase-ea9ulj-0 lbJwfL decaCheckbox-icon"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+          />
+        </svg>
+        Option D
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

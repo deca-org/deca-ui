@@ -59,6 +59,14 @@ export interface CheckboxProps {
    */
   onChange?(e: React.ChangeEvent<HTMLInputElement>): void;
   /**
+   * Callback fired when a checkbox is focused
+   */
+  onFocus?(e: React.ChangeEvent<HTMLInputElement>): void;
+  /**
+   * Name is used as an identifier in a form.
+   */
+  name?: string;
+  /**
    *  Whether or not the checkbox is initially checked.
    */
   initialCheck?: boolean;

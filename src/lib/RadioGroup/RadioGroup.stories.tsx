@@ -21,7 +21,7 @@ const Template: ComponentStory<typeof RadioGroup> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   defaultValue: 'A',
-  name: 'Hello World',
+  name: 'FormGroup-Radio',
   disabled: false,
   className: '',
   color: 'primary',
