@@ -6,7 +6,7 @@ exports[`components/Switch matches screenshot 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-eqVoqz-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jUykxI-color-primary decaSwitch-input"
       id=":r0:"
       type="checkbox"
       value=""
@@ -27,7 +27,7 @@ exports[`components/Switch renders all colors 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-eqVoqz-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jUykxI-color-primary decaSwitch-input"
       id=":r3:"
       type="checkbox"
       value=""
@@ -41,7 +41,7 @@ exports[`components/Switch renders all colors 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-fujDXd-color-secondary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jSzNM-color-secondary decaSwitch-input"
       id=":r4:"
       type="checkbox"
       value=""
@@ -102,7 +102,7 @@ exports[`components/Switch renders all sizes 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-jWLXHG-size-sm c-eZVbbP-eqVoqz-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-jWLXHG-size-sm c-eZVbbP-jUykxI-color-primary decaSwitch-input"
       id=":r8:"
       type="checkbox"
       value=""
@@ -116,7 +116,7 @@ exports[`components/Switch renders all sizes 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-eqVoqz-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jUykxI-color-primary decaSwitch-input"
       id=":r9:"
       type="checkbox"
       value=""
@@ -130,7 +130,7 @@ exports[`components/Switch renders all sizes 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-hPARGX-size-lg c-eZVbbP-eqVoqz-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-hPARGX-size-lg c-eZVbbP-jUykxI-color-primary decaSwitch-input"
       id=":ra:"
       type="checkbox"
       value=""

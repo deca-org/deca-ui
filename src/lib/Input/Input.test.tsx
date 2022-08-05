@@ -5,7 +5,7 @@ import React from 'react';
 import Input from './Input';
 
 describe('components/Input', () => {
-  it('matches screenshot', () => {
+  it('matches snapshot', () => {
     const { asFragment } = render(
       <Input
         helperText="Helper Text"
