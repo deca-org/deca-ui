@@ -5,8 +5,8 @@ import { rem } from 'polished';
 const baseTheme = {
   theme: {
     colors: {
-      primary: '#5C7CFA',
-      secondary: '#F9A825',
+      primary: '#339AF0',
+      secondary: '#F06595',
       success: '#37B24D',
       warning: '#FFA000',
       error: '#F03E3E',

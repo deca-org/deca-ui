@@ -141,5 +141,9 @@
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
     "exclude": []
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "react-popper": "^2.3.0"
   }
 }

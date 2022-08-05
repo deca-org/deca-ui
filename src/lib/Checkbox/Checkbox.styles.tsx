@@ -17,6 +17,7 @@ export const StyledCheckbox = styled('input', {
   '&:checked + label > svg': {
     visibility: 'visible',
     color: '$white',
+    opacity: 1,
   },
   compoundVariants: [
     {
@@ -129,6 +130,8 @@ export const StyledCheckboxLabel = styled('label', {
     borderColor: '$gray600',
   },
   '& svg': {
+    color: '$white',
+    opacity: 0,
     transition: '$default',
   },
   compoundVariants: [
