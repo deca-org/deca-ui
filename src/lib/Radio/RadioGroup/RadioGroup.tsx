@@ -110,6 +110,7 @@ const RadioGroup = React.forwardRef(
               disabled: disabled ? disabled : child.props.disabled,
               color,
               size,
+              ...child.props,
             });
           }
         )}
