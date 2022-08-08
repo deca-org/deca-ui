@@ -2,8 +2,10 @@ import {
   useFloating,
   offset,
   flip,
+  shift,
   autoUpdate,
   UseFloatingReturn,
+  Placement,
 } from '@floating-ui/react-dom';
 import React, {
   useState,
@@ -23,37 +25,51 @@ export interface PopoverProps {
    */
   children?: React.ReactNode[];
   /*
-   * if true, the component is shown.
+   * If true, the component is shown.
    */
   open?: boolean;
   /**
-   * Callback fired when component requests to be closed.
+   * State dispatcher function (setter in useState)
    */
-  onClose?(): void;
+  setOpen?: Dispatch<SetStateAction<boolean>>;
+  /**
+   * Placement of the popover component
+   * @default bottom
+   */
+  placement?: Placement;
+  /**
+   * determines what action needs to take place in order for popover to appear
+   * @default click
+   */
+  action?: 'click' | 'hover';
 }
 
 export interface IPopoverContext extends UseFloatingReturn {
   triggerRef?: React.Ref<HTMLElement | undefined>;
   open?: boolean;
-  onClose?(): void;
-  selfOpen: boolean;
-  setSelfOpen: Dispatch<SetStateAction<boolean>>;
-  isControlledComponent: boolean;
+  setOpen?: Dispatch<SetStateAction<boolean>>;
   mainComponentRef: React.Ref<HTMLDivElement>;
+  action: 'click' | 'hover';
 }
 
 export const PopoverContext = React.createContext<IPopoverContext | null>(null);
 
 const Popover = React.forwardRef(
   (
-    { children, open, onClose }: PopoverProps,
+    {
+      children,
+      open,
+      setOpen,
+      placement = 'bottom',
+      action = 'click',
+    }: PopoverProps,
     ref: React.Ref<HTMLDivElement>
   ) => {
     const floatingProps = useFloating({
-      placement: 'bottom',
+      placement: placement,
       whileElementsMounted: autoUpdate,
       strategy: 'absolute',
-      middleware: [offset(10), flip()],
+      middleware: [offset(10), flip(), shift()],
     });
 
     const [selfOpen, setSelfOpen] = useState<boolean>(false);
@@ -64,15 +80,23 @@ const Popover = React.forwardRef(
 
     const isScrolling = () => {
       if (window.scrollY !== scrollPos) {
-        isControlledComponent ? onClose && onClose() : setSelfOpen(false);
+        isControlledComponent ? setOpen && setOpen(false) : setSelfOpen(false);
         setScrollPos(window.scrollY);
+      }
+    };
+
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        isControlledComponent ? setOpen && setOpen(false) : setSelfOpen(false);
       }
     };
 
     useEffect(() => {
       window.addEventListener('scroll', isScrolling);
+      window.addEventListener('keydown', handleEsc);
       return () => {
         window.removeEventListener('scroll', isScrolling);
+        window.removeEventListener('keydown', handleEsc);
       };
     }, []);
 
@@ -85,12 +109,10 @@ const Popover = React.forwardRef(
         value={{
           ...floatingProps,
           triggerRef: triggerRef,
-          open: open,
-          onClose: onClose,
-          isControlledComponent,
-          selfOpen,
-          setSelfOpen,
+          open: isControlledComponent ? open : selfOpen,
+          setOpen: isControlledComponent ? setOpen : setSelfOpen,
           mainComponentRef: ref,
+          action,
         }}
       >
         {trigger}

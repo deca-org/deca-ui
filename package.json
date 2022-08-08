@@ -90,6 +90,7 @@
     "polished": "^4.2.2",
     "prettier": "^2.1.1",
     "react": "^18.2.0",
+    "resize-observer-polyfill": "^1.5.1",
     "standard-version": "^9.0.0",
     "styled-icons": "^10.45.0",
     "ts-jest": "^28.0.7",
@@ -144,6 +145,7 @@
   },
   "dependencies": {
     "@floating-ui/react-dom": "^1.0.0",
-    "@floating-ui/react-dom-interactions": "^0.9.1"
+    "@floating-ui/react-dom-interactions": "^0.9.1",
+    "@react-spring/web": "^9.5.2"
   }
 }

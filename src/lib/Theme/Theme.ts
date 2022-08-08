@@ -321,6 +321,7 @@ const baseTheme = {
       pill: '9999px',
     },
     shadows: {
+      default: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
       a11y: '0 0 0 3px rgba(66,153,225,0.6)',
     },
     zIndices: {

@@ -1,4 +1,5 @@
 import { mergeRefs, useClickOutside } from '@lib/Utils';
+import { useTransition } from '@react-spring/web';
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -19,26 +20,48 @@ const PopoverContent = ({ children }: PopoverContentProps) => {
   const context = useContext(PopoverContext) as IPopoverContext;
 
   const contentRef = useClickOutside(() => {
-    if (context.isControlledComponent) {
-      context.onClose && context.onClose();
-    } else {
-      context.setSelfOpen(false);
-    }
+    context.setOpen && context.setOpen(false);
   }, [context.triggerRef]);
 
-  const open = context.isControlledComponent ? context.open : context.selfOpen;
+  const transition = useTransition(context.open, {
+    from: {
+      scale: 0.75,
+      opacity: 0,
+    },
+    enter: {
+      scale: 1,
+      opacity: 1,
+    },
+    leave: {
+      scale: 0.75,
+      opacity: 0,
+    },
+    config: {
+      tension: 400,
+      friction: 19,
+    },
+  });
+
   return ReactDOM.createPortal(
-    open && (
-      <StyledPopoverOverlay
-        ref={mergeRefs(context.mainComponentRef, context.floating, contentRef)}
-        css={{
-          position: context.strategy,
-          top: context.y ?? 0,
-          left: context.x ?? 0,
-        }}
-      >
-        {children}
-      </StyledPopoverOverlay>
+    transition(
+      (style, item) =>
+        item && (
+          <StyledPopoverOverlay
+            style={style as any}
+            ref={mergeRefs(
+              context.mainComponentRef,
+              context.floating,
+              contentRef
+            )}
+            css={{
+              position: context.strategy,
+              top: context.y ?? 0,
+              left: context.x ?? 0,
+            }}
+          >
+            {children}
+          </StyledPopoverOverlay>
+        )
     ),
     document.querySelector('body') as Element
   );

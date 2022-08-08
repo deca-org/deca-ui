@@ -11,6 +11,17 @@ exports[`components/Button matches screenshot 1`] = `
 </DocumentFragment>
 `;
 
+exports[`components/Button matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-isDisabled-false c-jXjExk-dXGhuR-cv decaButton-root"
+    role="button"
+  >
+    Label
+  </button>
+</DocumentFragment>
+`;
+
 exports[`components/Button renders all colors 1`] = `
 <DocumentFragment>
   <button

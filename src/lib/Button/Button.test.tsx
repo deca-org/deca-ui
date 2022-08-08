@@ -11,7 +11,7 @@ describe('components/Button', () => {
     expect(getByText('Label')).toBeInTheDocument();
   });
 
-  it('matches screenshot', () => {
+  it('matches snapshot', () => {
     const { asFragment } = render(<Button>Label</Button>);
     expect(asFragment()).toMatchSnapshot();
   });

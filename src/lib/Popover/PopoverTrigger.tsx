@@ -20,16 +20,34 @@ const PopoverTrigger = ({ children }: PopoverTriggerProps) => {
   // enforce single child
   const child: any = React.Children.only(children);
 
-  const extendedOnClick = () => {
-    child.onClick && child.onClick();
-    context.setSelfOpen((prevState) => !prevState);
-  };
+  if (context.action === 'click') {
+    const extendedOnClick = () => {
+      child.onClick && child.onClick();
+      context.setOpen && context.setOpen((prevState) => !prevState);
+    };
 
-  return React.cloneElement(child, {
-    onClick: extendedOnClick,
-    ref: mergeRefs(context.reference, child.ref, context.triggerRef),
-    ...child.props,
-  });
+    return React.cloneElement(child, {
+      onClick: extendedOnClick,
+      ref: mergeRefs(context.reference, child.ref, context.triggerRef),
+      ...child.props,
+    });
+  } else {
+    const extendedOnMouseEnter = () => {
+      child.onMouseEnter && child.onMouseEnter();
+      context.setOpen && context.setOpen(true);
+    };
+
+    const extendedOnMouseLeave = () => {
+      child.onMouseLeave && child.onMouseLeave();
+      context.setOpen && context.setOpen(false);
+    };
+
+    return React.cloneElement(child, {
+      onMouseEnter: extendedOnMouseEnter,
+      onMouseLeave: extendedOnMouseLeave,
+      ref: mergeRefs(context.reference, child.ref, context.triggerRef),
+    });
+  }
 };
 
 export default PopoverTrigger;
