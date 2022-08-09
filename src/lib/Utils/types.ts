@@ -1,4 +1,3 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 import { theme, StitchesTheme } from '@lib/Theme';
 
 export type Modify<T, R> = Omit<T, keyof R> & R;

@@ -1,7 +1,8 @@
 import { styled } from '@lib/Theme';
 import { animated } from '@react-spring/web';
 
-export const StyledPopoverOverlay = styled(animated.div, {
+export const StyledPopover = styled(animated.div, {
+  bg: '$white',
   fontFamily: '$normal',
   p: '$3',
   boxShadow: '$default',

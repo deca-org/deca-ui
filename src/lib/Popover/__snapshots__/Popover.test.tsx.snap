@@ -10,14 +10,3 @@ exports[`components/Popover matches snapshot 1`] = `
   </button>
 </DocumentFragment>
 `;
-
-exports[`components/Popover matches snpashot 1`] = `
-<DocumentFragment>
-  <button
-    class="c-jXjExk c-jXjExk-jsOpSy-color-primary c-jXjExk-sKeyg-size-md c-jXjExk-dCRXRO-isDisabled-false c-jXjExk-dXGhuR-cv decaButton-root"
-    role="button"
-  >
-    Open Popover
-  </button>
-</DocumentFragment>
-`;

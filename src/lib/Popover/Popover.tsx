@@ -7,6 +7,8 @@ import {
   UseFloatingReturn,
   Placement,
 } from '@floating-ui/react-dom';
+import { CSS } from '@lib/Theme';
+import { useDOMRef } from '@lib/Utils';
 import React, {
   useState,
   useEffect,
@@ -42,14 +44,25 @@ export interface PopoverProps {
    * @default click
    */
   action?: 'click' | 'hover';
+  /**
+   * Override default CSS style.
+   */
+  css?: CSS;
+  /**
+   * ClassName applied to the component.
+   * @default ''
+   */
+  className?: string;
 }
 
 export interface IPopoverContext extends UseFloatingReturn {
   triggerRef?: React.Ref<HTMLElement | undefined>;
   open?: boolean;
   setOpen?: Dispatch<SetStateAction<boolean>>;
-  mainComponentRef: React.Ref<HTMLDivElement>;
+  mainComponentRef: React.Ref<HTMLDivElement> | null;
   action: 'click' | 'hover';
+  css?: CSS;
+  className?: string;
 }
 
 export const PopoverContext = React.createContext<IPopoverContext | null>(null);
@@ -62,8 +75,10 @@ const Popover = React.forwardRef(
       setOpen,
       placement = 'bottom',
       action = 'click',
+      css,
+      className = '',
     }: PopoverProps,
-    ref: React.Ref<HTMLDivElement>
+    ref: React.Ref<HTMLDivElement | null>
   ) => {
     const floatingProps = useFloating({
       placement: placement,
@@ -102,6 +117,7 @@ const Popover = React.forwardRef(
 
     const [trigger, content] = React.Children.toArray(children);
 
+    const popoverRef = useDOMRef(ref);
     const triggerRef = React.useRef();
 
     return (
@@ -111,8 +127,10 @@ const Popover = React.forwardRef(
           triggerRef: triggerRef,
           open: isControlledComponent ? open : selfOpen,
           setOpen: isControlledComponent ? setOpen : setSelfOpen,
-          mainComponentRef: ref,
+          mainComponentRef: popoverRef,
           action,
+          css,
+          className,
         }}
       >
         {trigger}

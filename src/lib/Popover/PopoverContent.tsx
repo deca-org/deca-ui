@@ -1,10 +1,11 @@
 import { mergeRefs, useClickOutside } from '@lib/Utils';
 import { useTransition } from '@react-spring/web';
+import clsx from 'clsx';
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 
 import { PopoverContext, IPopoverContext } from './Popover';
-import { StyledPopoverOverlay } from './Popover.styles';
+import { StyledPopover } from './Popover.styles';
 
 /**
  * PopoverContent contains the content shown when the trigger is executed
@@ -19,7 +20,7 @@ export interface PopoverContentProps {
 const PopoverContent = ({ children }: PopoverContentProps) => {
   const context = useContext(PopoverContext) as IPopoverContext;
 
-  const contentRef = useClickOutside(() => {
+  const clickOutsideRef = useClickOutside(() => {
     context.setOpen && context.setOpen(false);
   }, [context.triggerRef]);
 
@@ -42,25 +43,28 @@ const PopoverContent = ({ children }: PopoverContentProps) => {
     },
   });
 
+  const preClass = 'decaPopover';
   return ReactDOM.createPortal(
     transition(
       (style, item) =>
         item && (
-          <StyledPopoverOverlay
-            style={style as any}
+          <StyledPopover
+            style={style}
             ref={mergeRefs(
               context.mainComponentRef,
               context.floating,
-              contentRef
+              clickOutsideRef
             )}
             css={{
               position: context.strategy,
               top: context.y ?? 0,
               left: context.x ?? 0,
+              ...context.css,
             }}
+            className={clsx(context.className, `${preClass}-root`)}
           >
             {children}
-          </StyledPopoverOverlay>
+          </StyledPopover>
         )
     ),
     document.querySelector('body') as Element
