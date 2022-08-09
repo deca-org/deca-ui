@@ -24,6 +24,16 @@ const StyledButtonIcon = styled('span', {
         ml: '$1',
       },
     },
+    {
+      isSingle: true,
+      size: 'sm',
+      css: {
+        '& svg': {
+          height: 'calc(100% - $0)',
+          width: '100%',
+        },
+      },
+    },
   ],
   variants: {
     size: {
@@ -49,7 +59,7 @@ const StyledButtonIcon = styled('span', {
     isSingle: {
       true: {
         '& svg': {
-          height: 'calc(100% - $1)',
+          height: 'calc(100% - $2)',
           width: '100%',
         },
       },
