@@ -2,6 +2,7 @@ import { styled, theme } from '@lib/Theme';
 import { darken, readableColor } from 'polished';
 
 export const StyledBadge = styled('span', {
+  transition: '$default',
   fontFamily: '$normal',
   fontWeight: '$bold',
   variants: {

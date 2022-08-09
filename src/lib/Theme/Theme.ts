@@ -5,11 +5,12 @@ import { rem } from 'polished';
 const baseTheme = {
   theme: {
     colors: {
-      primary: '#339AF0',
+      primary: '#228BE6',
       secondary: '#F06595',
       success: '#37B24D',
       warning: '#FFA000',
       error: '#F03E3E',
+      neutral: '#868E96',
       black: '#000000',
       white: '#FFFFFF',
       transparent: '#FFFFFF00',
@@ -264,14 +265,14 @@ const baseTheme = {
       h5: rem(23),
       h6: rem(19),
       bodyLg: rem(18),
-      body: rem(16),
+      body: rem(14),
       caption: rem(13),
       footnote: rem(11),
     },
     fonts: {
       normal:
-        'Roboto, Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
-      mono: 'SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace',
+        '-apple-system, BlinkMacSystemFont, Segoe UI,Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;',
+      mono: "Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono','Courier New', monospace;",
     },
     fontWeights: {
       hairline: 100,
@@ -444,17 +445,10 @@ export type StandardColors =
 
 export type AllColors = keyof typeof theme.colors;
 
-export type StandardColorValues =
-  | 'primary'
-  | 'secondary'
-  | 'lightGreen700'
-  | 'amber700'
-  | 'red700';
-
-export const standardColors: Record<StandardColors, AllColors> = {
-  primary: 'primary',
-  secondary: 'secondary',
-  success: 'lightGreen700',
-  warning: 'amber700',
-  error: 'red700',
-};
+export const standardColors: Array<StandardColors> = [
+  'primary',
+  'secondary',
+  'success',
+  'warning',
+  'error',
+];

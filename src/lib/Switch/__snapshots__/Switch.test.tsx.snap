@@ -12,7 +12,7 @@ exports[`components/Switch matches screenshot 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md c-cBVJpg-jQVVMl-cv"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md c-cBVJpg-jQVVMl-cv"
       for=":r0:"
     >
       Label Text
@@ -33,7 +33,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
       for=":r3:"
     />
   </div>
@@ -47,7 +47,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
       for=":r4:"
     />
   </div>
@@ -61,7 +61,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
       for=":r5:"
     />
   </div>
@@ -75,7 +75,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
       for=":r6:"
     />
   </div>
@@ -89,7 +89,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
       for=":r7:"
     />
   </div>
@@ -108,7 +108,7 @@ exports[`components/Switch renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ipHRvc-size-sm"
+      class="c-cBVJpg c-cBVJpg-gsgECY-size-sm"
       for=":r8:"
     />
   </div>
@@ -122,7 +122,7 @@ exports[`components/Switch renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-cBwwJf-size-md"
+      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
       for=":r9:"
     />
   </div>

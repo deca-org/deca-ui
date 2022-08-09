@@ -17,43 +17,41 @@ describe('components/Popover', () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
-  describe('renders popover content only when action takes place', () => {
-    it('click action', () => {
-      const utils = render(
-        <Popover>
-          <Popover.Trigger>
-            <Button>Open Popover</Button>
-          </Popover.Trigger>
-          <Popover.Content>content</Popover.Content>
-        </Popover>
-      );
-      expect(screen.queryByText('content')).toBe(null);
-      const popoverTrigger = utils.getByText('Open Popover');
-      act(() => {
-        popoverTrigger.click();
-      });
-      expect(screen.queryByText('content')).not.toBe(null);
+  it('click action', () => {
+    const utils = render(
+      <Popover>
+        <Popover.Trigger>
+          <Button>Open Popover</Button>
+        </Popover.Trigger>
+        <Popover.Content>content</Popover.Content>
+      </Popover>
+    );
+    expect(screen.queryByText('content')).toBe(null);
+    const popoverTrigger = utils.getByText('Open Popover');
+    act(() => {
+      popoverTrigger.click();
     });
-    it('hover action', async () => {
-      const utils = render(
-        <Popover action="hover">
-          <Popover.Trigger>
-            <Button>Open Popover</Button>
-          </Popover.Trigger>
-          <Popover.Content>content</Popover.Content>
-        </Popover>
-      );
-      expect(screen.queryByText('content')).toBe(null);
-      const popoverTrigger = utils.getByText('Open Popover');
-      act(() => {
-        fireEvent.mouseEnter(popoverTrigger);
-      });
-      expect(screen.queryByText('content')).not.toBe(null);
-      act(() => {
-        fireEvent.mouseLeave(popoverTrigger);
-      });
-      await act(async () => new Promise((r) => setTimeout(r, 1000)));
-      expect(screen.queryByText('content')).toBe(null);
+    expect(screen.queryByText('content')).not.toBe(null);
+  });
+  it('hover action', async () => {
+    const utils = render(
+      <Popover action="hover">
+        <Popover.Trigger>
+          <Button>Open Popover</Button>
+        </Popover.Trigger>
+        <Popover.Content>content</Popover.Content>
+      </Popover>
+    );
+    expect(screen.queryByText('content')).toBe(null);
+    const popoverTrigger = utils.getByText('Open Popover');
+    act(() => {
+      fireEvent.mouseEnter(popoverTrigger);
     });
+    expect(screen.queryByText('content')).not.toBe(null);
+    act(() => {
+      fireEvent.mouseLeave(popoverTrigger);
+    });
+    await act(async () => new Promise((r) => setTimeout(r, 1000)));
+    expect(screen.queryByText('content')).toBe(null);
   });
 });

@@ -92,6 +92,12 @@ const StyledText = styled('p', {
         fontWeight: '$black',
       },
     },
+    center: {
+      true: {
+        textAlign: 'center',
+      },
+      false: {},
+    },
   },
 });
 

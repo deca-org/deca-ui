@@ -14,57 +14,14 @@ const StyledButtonIcon = styled('span', {
       isSingle: false,
       side: 'left',
       css: {
-        mr: '$2',
-      },
-    },
-    {
-      isSingle: false,
-      side: 'right',
-      css: {
-        ml: '$2',
-      },
-    },
-    {
-      isSingle: false,
-      side: 'left',
-      size: 'sm',
-      css: {
         mr: '$1',
       },
     },
     {
       isSingle: false,
       side: 'right',
-      size: 'sm',
       css: {
         ml: '$1',
-      },
-    },
-    {
-      isSingle: true,
-      size: 'sm',
-      css: {
-        '& svg': {
-          width: '$3',
-        },
-      },
-    },
-    {
-      isSingle: true,
-      size: 'md',
-      css: {
-        '& svg': {
-          width: '$4',
-        },
-      },
-    },
-    {
-      isSingle: true,
-      size: 'lg',
-      css: {
-        '& svg': {
-          width: '$5',
-        },
       },
     },
   ],
@@ -72,22 +29,30 @@ const StyledButtonIcon = styled('span', {
     size: {
       sm: {
         '& svg': {
-          width: '$3',
+          height: 'calc(100% - $1)',
+          width: '100%',
         },
       },
       md: {
         '& svg': {
-          width: '$4',
+          height: 'calc(100% - $2)',
+          width: '100%',
         },
       },
       lg: {
         '& svg': {
-          width: '$5',
+          height: 'calc(100% - $3)',
+          width: '100%',
         },
       },
     },
     isSingle: {
-      true: {},
+      true: {
+        '& svg': {
+          height: 'calc(100% - $1)',
+          width: '100%',
+        },
+      },
       false: {},
     },
     side: {

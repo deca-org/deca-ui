@@ -161,8 +161,8 @@ export const StyledSwitchLabel = styled('label', {
           height: '$3',
         },
         '&::after': {
-          left: 'calc($0 + ($space$0 / 2))',
-          size: '$2',
+          left: 'calc($0 + $space$0)',
+          size: 'calc($2 - ($space$0 / 3))',
         },
       },
       md: {
@@ -172,8 +172,8 @@ export const StyledSwitchLabel = styled('label', {
           height: '$4',
         },
         '&::after': {
-          left: 'calc($0 + ($space$0 / 2))',
-          size: '$3',
+          left: 'calc($0 + ($space$0 * 1.1))',
+          size: 'calc($3 - ($space$0 / 2))',
         },
       },
       lg: {

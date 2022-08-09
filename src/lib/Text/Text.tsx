@@ -63,6 +63,11 @@ interface Props {
     | 'i'
     | 'em'
     | string;
+
+  /**
+   * Center text.
+   */
+  center?: boolean;
 }
 
 type NativeAttrs = Omit<React.HTMLAttributes<unknown>, keyof Props>;
@@ -71,7 +76,7 @@ export type TextProps = Props & NativeAttrs;
 
 const Text = React.forwardRef(
   (
-    { as = 'p', css, children, weight, size, ...textProps }: TextProps,
+    { as = 'p', css, children, weight, size, center, ...textProps }: TextProps,
     ref: React.Ref<TextElement | null>
   ) => {
     const textRef = useRef<UnionToIntersection<TextElement>>(null);
@@ -120,6 +125,7 @@ const Text = React.forwardRef(
         className={`${preClass}-root`}
         ref={textRef}
         weight={weight}
+        center={center}
         {...textProps}
       >
         {children}

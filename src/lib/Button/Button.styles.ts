@@ -5,39 +5,39 @@ const compoundVariantComposer = () => {
   const colorVariants: {
     isDisabled?: boolean;
     color?: string;
-    variant?: 'solid' | 'outlined' | 'ghost';
+    variant?: 'solid' | 'outlined' | 'ghost' | 'flat';
     css: CSS;
   }[] = [];
 
-  Object.entries(standardColors).map((color) => {
+  standardColors.map((color) => {
     colorVariants.push(
       {
         isDisabled: false,
-        color: color[0],
+        color: color,
         variant: 'solid',
         css: {
           color: readableColor(
-            darken(0.25, theme.colors[color[1]].value),
+            darken(0.25, theme.colors[color].value),
             theme.colors.white.value,
             theme.colors.black.value
           ),
           '&:hover': {
-            borderColor: darken(0.04, theme.colors[color[1]].value),
-            bg: darken(0.04, theme.colors[color[1]].value),
+            borderColor: darken(0.04, theme.colors[color].value),
+            bg: darken(0.04, theme.colors[color].value),
           },
           '&:active': {
-            borderColor: darken(0.09, theme.colors[color[1]].value),
-            bg: darken(0.09, theme.colors[color[1]].value),
+            borderColor: darken(0.09, theme.colors[color].value),
+            bg: darken(0.09, theme.colors[color].value),
           },
         },
       },
       {
         isDisabled: true,
-        color: color[0],
+        color: color,
         variant: 'solid',
         css: {
           color: readableColor(
-            darken(0.25, theme.colors[color[1]].value),
+            darken(0.25, theme.colors[color].value),
             theme.colors.white.value,
             theme.colors.black.value
           ),
@@ -45,25 +45,25 @@ const compoundVariantComposer = () => {
       },
       {
         isDisabled: false,
-        color: color[0],
+        color: color,
         variant: 'outlined',
         css: {
           bg: '$transparent',
           '&:hover': {
             borderColor: 'CurrentColor',
-            color: darken(0.04, theme.colors[color[1]].value),
-            bg: transparentize(0.85, theme.colors[color[1]].value),
+            color: darken(0.04, theme.colors[color].value),
+            bg: transparentize(0.85, theme.colors[color].value),
           },
           '&:active': {
             borderColor: 'CurrentColor',
-            color: darken(0.09, theme.colors[color[1]].value),
-            bg: transparentize(0.78, theme.colors[color[1]].value),
+            color: darken(0.09, theme.colors[color].value),
+            bg: transparentize(0.78, theme.colors[color].value),
           },
         },
       },
       {
         isDisabled: true,
-        color: color[0],
+        color: color,
         variant: 'outlined',
         css: {
           bg: '$transparent',
@@ -71,30 +71,59 @@ const compoundVariantComposer = () => {
       },
       {
         isDisabled: false,
-        color: color[0],
+        color: color,
         variant: 'ghost',
         css: {
           bg: '$transparent',
           borderColor: '$transparent',
           '&:hover': {
-            color: darken(0.04, theme.colors[color[1]].value),
-            borderColor: transparentize(0.99, theme.colors[color[1]].value),
-            bg: transparentize(0.85, theme.colors[color[1]].value),
+            color: darken(0.04, theme.colors[color].value),
+            borderColor: transparentize(0.99, theme.colors[color].value),
+            bg: transparentize(0.85, theme.colors[color].value),
           },
           '&:active': {
-            color: darken(0.09, theme.colors[color[1]].value),
-            borderColor: transparentize(0.99, theme.colors[color[1]].value),
-            bg: transparentize(0.78, theme.colors[color[1]].value),
+            color: darken(0.09, theme.colors[color].value),
+            borderColor: transparentize(0.99, theme.colors[color].value),
+            bg: transparentize(0.78, theme.colors[color].value),
           },
         },
       },
       {
         isDisabled: true,
-        color: color[0],
+        color: color,
         variant: 'ghost',
         css: {
           bg: '$transparent',
           borderColor: '$transparent',
+        },
+      },
+      {
+        isDisabled: false,
+        color: color,
+        variant: 'flat',
+        css: {
+          color: color,
+          bg: transparentize(0.9, theme.colors[color].value),
+          borderColor: transparentize(1, theme.colors[color].value),
+          '&:hover': {
+            color: darken(0.04, theme.colors[color].value),
+            borderColor: transparentize(0.99, theme.colors[color].value),
+            bg: transparentize(0.85, theme.colors[color].value),
+          },
+          '&:active': {
+            color: darken(0.09, theme.colors[color].value),
+            borderColor: transparentize(0.99, theme.colors[color].value),
+            bg: transparentize(0.78, theme.colors[color].value),
+          },
+        },
+      },
+      {
+        isDisabled: true,
+        color: color,
+        variant: 'flat',
+        css: {
+          bg: transparentize(0.9, theme.colors[color].value),
+          borderColor: transparentize(1, theme.colors[color].value),
         },
       }
     );
@@ -110,7 +139,6 @@ const StyledButton = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   boxSizing: 'border-box',
-  borderRadius: '$sm',
   borderWidth: '$normal',
   borderStyle: 'solid',
   cursor: 'pointer',
@@ -199,6 +227,7 @@ const StyledButton = styled('button', {
       solid: {},
       outlined: {},
       ghost: {},
+      flat: {},
     },
     isDisabled: {
       true: {
@@ -212,6 +241,14 @@ const StyledButton = styled('button', {
     maxWidth: {
       true: {
         width: '100%',
+      },
+    },
+    pill: {
+      true: {
+        borderRadius: '$pill',
+      },
+      false: {
+        borderRadius: '$sm',
       },
     },
   },

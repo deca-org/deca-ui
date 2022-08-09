@@ -53,6 +53,7 @@ describe('components/Button', () => {
         <Button variant="solid">Label</Button>
         <Button variant="outlined">Label</Button>
         <Button variant="ghost">Label</Button>
+        <Button variant="flat">Label</Button>
       </>
     );
     expect(asFragment()).toMatchSnapshot();

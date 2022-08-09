@@ -49,7 +49,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    * The variant to use.
    * @default solid
    */
-  variant?: 'solid' | 'outlined' | 'ghost';
+  variant?: 'solid' | 'outlined' | 'ghost' | 'flat';
   /**
    * Color to use.
    * @default primary
@@ -76,6 +76,10 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    * CSS applied to icon on the right side of the component.
    */
   iconRightCss?: CSS;
+  /**
+   * Have button be pill shaped
+   */
+  pill?: boolean;
 }
 
 const Button = React.forwardRef(
@@ -96,6 +100,7 @@ const Button = React.forwardRef(
       maxWidth = false,
       className = '',
       children,
+      pill = false,
       ...btnProps
     }: ButtonProps,
     ref: React.Ref<HTMLButtonElement | null>
@@ -137,6 +142,7 @@ const Button = React.forwardRef(
         className={clsx(className, `${preClass}-root`)}
         ref={buttonRef}
         singleIcon={singleIcon}
+        pill={pill}
         {...btnProps}
       >
         {(icon && hasText) || (icon && iconRight) ? (

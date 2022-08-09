@@ -3,7 +3,7 @@
 exports[`components/Badge matches snapshot 1`] = `
 <DocumentFragment>
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-cmSFZU-color-primary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-cmSFZU-color-primary decaBadge-root"
   />
 </DocumentFragment>
 `;
@@ -11,19 +11,19 @@ exports[`components/Badge matches snapshot 1`] = `
 exports[`components/Badge renders all colors 1`] = `
 <DocumentFragment>
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-cmSFZU-color-primary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-cmSFZU-color-primary decaBadge-root"
   />
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-eVPjO-color-secondary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-eVPjO-color-secondary decaBadge-root"
   />
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-gkSmNj-color-success decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-gkSmNj-color-success decaBadge-root"
   />
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-iuTjpG-color-warning decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-iuTjpG-color-warning decaBadge-root"
   />
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-biZWLQ-color-error decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-biZWLQ-color-error decaBadge-root"
   />
 </DocumentFragment>
 `;
@@ -31,13 +31,13 @@ exports[`components/Badge renders all colors 1`] = `
 exports[`components/Badge renders all sizes 1`] = `
 <DocumentFragment>
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-ioXeqN-size-sm c-crcrmp-cmSFZU-color-primary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-ioXeqN-size-sm c-eCAFWP-cmSFZU-color-primary decaBadge-root"
   />
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-VfgCA-size-md c-crcrmp-cmSFZU-color-primary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-VfgCA-size-md c-eCAFWP-cmSFZU-color-primary decaBadge-root"
   />
   <span
-    class="c-crcrmp c-crcrmp-fzQAVN-pill-false c-crcrmp-YKOjF-size-lg c-crcrmp-cmSFZU-color-primary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-fzQAVN-pill-false c-eCAFWP-YKOjF-size-lg c-eCAFWP-cmSFZU-color-primary decaBadge-root"
   />
 </DocumentFragment>
 `;
@@ -45,7 +45,7 @@ exports[`components/Badge renders all sizes 1`] = `
 exports[`components/Badge renders pill option 1`] = `
 <DocumentFragment>
   <span
-    class="c-crcrmp c-crcrmp-euJLgm-pill-true c-crcrmp-VfgCA-size-md c-crcrmp-cmSFZU-color-primary decaBadge-root"
+    class="c-eCAFWP c-eCAFWP-euJLgm-pill-true c-eCAFWP-VfgCA-size-md c-eCAFWP-cmSFZU-color-primary decaBadge-root"
   />
 </DocumentFragment>
 `;

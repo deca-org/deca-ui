@@ -64,7 +64,14 @@ export const StyledInputLabel = styled('label', {
       variant: 'outlined',
       state: 'default',
       css: {
-        color: '$gray800',
+        color: '$gray600',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'value',
+      css: {
+        color: '$gray600',
       },
     },
   ],
@@ -124,7 +131,9 @@ export const StyledInputHelperText = styled('p', {
       isDisabled: {
         color: '$gray500',
       },
-      value: {},
+      value: {
+        color: '$gray600',
+      },
       default: {
         color: '$gray600',
       },
@@ -133,7 +142,7 @@ export const StyledInputHelperText = styled('p', {
 });
 
 export const StyledInputContainer = styled('div', {
-  fontWeight: '$semibold',
+  fontWeight: '$medium',
   borderRadius: '$sm',
   boxSizing: 'border-box',
   borderWidth: '$normal',
@@ -198,13 +207,15 @@ export const StyledInputContainer = styled('div', {
     {
       variant: 'outlined',
       state: 'value',
-      css: {},
+      css: {
+        borderColor: '$gray400',
+      },
     },
     {
       variant: 'outlined',
       state: 'default',
       css: {
-        borderColor: '$gray700',
+        borderColor: '$gray400',
       },
     },
   ],
@@ -265,8 +276,7 @@ export const StyledInput = styled('input', {
   px: '$2',
   transition: '$default',
   '&::placeholder': {
-    color: '$gray600',
-    fontWeight: '$semibold',
+    color: '$gray700',
     opacity: 0.75,
   },
   compoundVariants: [
@@ -290,8 +300,12 @@ export const StyledInput = styled('input', {
       sm: {
         fontSize: '$footnote',
       },
-      md: {},
-      lg: {},
+      md: {
+        fontSize: '$body',
+      },
+      lg: {
+        fontSize: '$body',
+      },
     },
     state: {
       focused: {},
