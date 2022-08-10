@@ -1,8 +1,7 @@
 import '@testing-library/jest-dom';
+import Modal from '@lib/Modal';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-
-import Modal from './Modal';
 
 describe('components/Modal', () => {
   global.ResizeObserver = require('resize-observer-polyfill');
@@ -17,5 +16,15 @@ describe('components/Modal', () => {
   it('does not render text when modal is closed', () => {
     render(<Modal>content</Modal>);
     expect(screen.queryByText('content')).toBe(null);
+  });
+  it('modal components all render correctly', () => {
+    const { asFragment } = render(
+      <Modal open>
+        <Modal.Header>Header component</Modal.Header>
+        <Modal.Body>Header component</Modal.Body>
+        <Modal.Footer>Header component</Modal.Footer>
+      </Modal>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -16,8 +16,81 @@ export const StyledModal = styled(animated.div, {
   position: 'fixed',
   bg: '$white',
   fontFamily: '$normal',
-  p: '$3',
   boxShadow: '$default',
   br: '$sm',
   zIndex: '$max',
+  variants: {
+    noPadding: {
+      true: {
+        p: '$n',
+      },
+      false: {
+        p: '$3',
+      },
+    },
+  },
+});
+
+export const StyledModalFlexbox = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  variants: {
+    autoGap: {
+      true: {
+        gap: '$4',
+      },
+      false: {
+        gap: '$n',
+      },
+    },
+  },
+});
+
+export const StyledModalHeader = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  variants: {
+    autoGap: {
+      true: {
+        gap: '$2',
+      },
+      false: {
+        gap: '$n',
+      },
+    },
+  },
+});
+
+export const StyledModalBody = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  variants: {
+    autoGap: {
+      true: {
+        gap: '$2',
+      },
+      false: {
+        gap: '$n',
+      },
+    },
+  },
+});
+
+export const StyledModalFooter = styled('div', {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  flexDirection: 'row',
+  variants: {
+    autoGap: {
+      true: {
+        gap: '$2',
+      },
+      false: {
+        gap: '$n',
+      },
+    },
+  },
 });

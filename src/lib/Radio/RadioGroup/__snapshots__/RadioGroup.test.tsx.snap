@@ -10,7 +10,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
     >
       <input
         checked=""
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
         id=":r1:"
         name=":r0:"
         type="radio"
@@ -30,7 +30,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       class="c-cDEphG decaRadio-root"
     >
       <input
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
         id=":r2:"
         name=":r0:"
         type="radio"
@@ -50,7 +50,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       class="c-cDEphG decaRadio-root"
     >
       <input
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
         id=":r3:"
         name=":r0:"
         type="radio"
@@ -70,7 +70,7 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       class="c-cDEphG decaRadio-root"
     >
       <input
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hjfCuE-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
         id=":r4:"
         name=":r0:"
         type="radio"

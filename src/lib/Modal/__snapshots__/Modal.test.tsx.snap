@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/Modal matches snapshot 1`] = `<DocumentFragment />`;
+
+exports[`components/Modal modal components all render correctly 1`] = `<DocumentFragment />`;

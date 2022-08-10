@@ -6,13 +6,13 @@ exports[`components/Switch matches screenshot 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jUykxI-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-ifemMa-color-primary decaSwitch-input"
       id=":r0:"
       type="checkbox"
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md c-cBVJpg-jQVVMl-cv"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md c-cBVJpg-jQVVMl-cv"
       for=":r0:"
     >
       Label Text
@@ -27,13 +27,13 @@ exports[`components/Switch renders all colors 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jUykxI-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-ifemMa-color-primary decaSwitch-input"
       id=":r3:"
       type="checkbox"
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md"
       for=":r3:"
     />
   </div>
@@ -47,7 +47,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md"
       for=":r4:"
     />
   </div>
@@ -61,7 +61,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md"
       for=":r5:"
     />
   </div>
@@ -75,7 +75,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md"
       for=":r6:"
     />
   </div>
@@ -89,7 +89,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md"
       for=":r7:"
     />
   </div>
@@ -102,13 +102,13 @@ exports[`components/Switch renders all sizes 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-jWLXHG-size-sm c-eZVbbP-jUykxI-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-jWLXHG-size-sm c-eZVbbP-ifemMa-color-primary decaSwitch-input"
       id=":r8:"
       type="checkbox"
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-gsgECY-size-sm"
+      class="c-cBVJpg c-cBVJpg-kNuBnU-size-sm"
       for=":r8:"
     />
   </div>
@@ -116,13 +116,13 @@ exports[`components/Switch renders all sizes 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jUykxI-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-ifemMa-color-primary decaSwitch-input"
       id=":r9:"
       type="checkbox"
       value=""
     />
     <label
-      class="c-cBVJpg c-cBVJpg-ebKNpv-size-md"
+      class="c-cBVJpg c-cBVJpg-dXRywA-size-md"
       for=":r9:"
     />
   </div>
@@ -130,7 +130,7 @@ exports[`components/Switch renders all sizes 1`] = `
     class="c-gidqah decaSwitch-root"
   >
     <input
-      class="c-eZVbbP c-eZVbbP-hPARGX-size-lg c-eZVbbP-jUykxI-color-primary decaSwitch-input"
+      class="c-eZVbbP c-eZVbbP-hPARGX-size-lg c-eZVbbP-ifemMa-color-primary decaSwitch-input"
       id=":ra:"
       type="checkbox"
       value=""

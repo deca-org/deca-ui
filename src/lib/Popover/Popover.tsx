@@ -7,7 +7,6 @@ import {
   UseFloatingReturn,
   Placement,
 } from '@floating-ui/react-dom';
-import { CSS } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
 import React, {
   useState,
@@ -44,15 +43,6 @@ export interface PopoverProps {
    * @default click
    */
   action?: 'click' | 'hover';
-  /**
-   * Override default CSS style.
-   */
-  css?: CSS;
-  /**
-   * ClassName applied to the component.
-   * @default ''
-   */
-  className?: string;
 }
 
 export interface IPopoverContext extends UseFloatingReturn {
@@ -61,8 +51,6 @@ export interface IPopoverContext extends UseFloatingReturn {
   setOpen?: Dispatch<SetStateAction<boolean>>;
   mainComponentRef: React.Ref<HTMLDivElement> | null;
   action: 'click' | 'hover';
-  css?: CSS;
-  className?: string;
 }
 
 export const PopoverContext = React.createContext<IPopoverContext | null>(null);
@@ -75,8 +63,6 @@ const Popover = React.forwardRef(
       setOpen,
       placement = 'bottom',
       action = 'click',
-      css,
-      className = '',
     }: PopoverProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
@@ -129,8 +115,6 @@ const Popover = React.forwardRef(
           setOpen: isControlledComponent ? setOpen : setSelfOpen,
           mainComponentRef: popoverRef,
           action,
-          css,
-          className,
         }}
       >
         {trigger}

@@ -3,7 +3,7 @@
 exports[`components/Button matches snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dXGhuR-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iDvDeR-cv decaButton-root"
     role="button"
   >
     Label
@@ -14,7 +14,7 @@ exports[`components/Button matches snapshot 1`] = `
 exports[`components/Button renders all colors 1`] = `
 <DocumentFragment>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dXGhuR-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iDvDeR-cv decaButton-root"
     role="button"
   >
     Label
@@ -49,19 +49,19 @@ exports[`components/Button renders all colors 1`] = `
 exports[`components/Button renders all sizes 1`] = `
 <DocumentFragment>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-cmVdgU-size-sm c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dXGhuR-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-cmVdgU-size-sm c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iDvDeR-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dXGhuR-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iDvDeR-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-lXiLo-size-lg c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dXGhuR-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-lXiLo-size-lg c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iDvDeR-cv decaButton-root"
     role="button"
   >
     Label
@@ -72,19 +72,25 @@ exports[`components/Button renders all sizes 1`] = `
 exports[`components/Button renders all variants 1`] = `
 <DocumentFragment>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dXGhuR-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iDvDeR-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-kJTZqu-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-iLqsvF-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-dEccxv-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-fPnwvc-cv decaButton-root"
+    role="button"
+  >
+    Label
+  </button>
+  <button
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-fSTVLk-cv decaButton-root"
     role="button"
   >
     Label

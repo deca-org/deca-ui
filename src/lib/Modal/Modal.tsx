@@ -2,13 +2,20 @@ import Box from '@lib/Box';
 import Button from '@lib/Button';
 import { CSS } from '@lib/Theme';
 import { useDOMRef, mergeRefs, useClickOutside } from '@lib/Utils';
-import { useTransition } from '@react-spring/web';
+import { animated, useTransition } from '@react-spring/web';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 import clsx from 'clsx';
 import React, { useEffect, SetStateAction, Dispatch } from 'react';
 import ReactDOM from 'react-dom';
 
-import { StyledModal, StyledModalOverlay } from './Modal.styles';
+import {
+  StyledModal,
+  StyledModalFlexbox,
+  StyledModalOverlay,
+} from './Modal.styles';
+import ModalBody from './ModalBody';
+import ModalFooter from './ModalFooter';
+import ModalHeader from './ModalHeader';
 
 export interface ModalProps {
   /**
@@ -33,13 +40,28 @@ export interface ModalProps {
    */
   className?: string;
   /**
-   * Have close button appear at the top right corner of the modal
+   * Have close button appear at the top right corner of the modal.
    */
   closeButton?: boolean;
+  /**
+   * Have gap between all elements.
+   * @default true
+   */
+  autoGap?: boolean;
+  /**
+   * Remove padding applied to Modal component.
+   * @default false
+   */
+  noPadding?: boolean;
+  /**
+   * Changes which tag component outputs.
+   */
+  as?: keyof JSX.IntrinsicElements;
 }
 
 export interface IModalContext {
   setOpen?: Dispatch<SetStateAction<boolean>>;
+  autoGap?: boolean;
 }
 
 export const ModalContext = React.createContext<IModalContext | null>(null);
@@ -53,6 +75,9 @@ const Modal = React.forwardRef(
       css,
       className = '',
       closeButton = false,
+      autoGap = true,
+      noPadding = false,
+      as = 'div',
     }: ModalProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
@@ -119,7 +144,7 @@ const Modal = React.forwardRef(
       transition(
         (style, item) =>
           item && (
-            <ModalContext.Provider value={{ setOpen }}>
+            <ModalContext.Provider value={{ setOpen, autoGap }}>
               {overlayTransition(
                 (overlayStyle, overlayItem) =>
                   overlayItem && <StyledModalOverlay style={overlayStyle} />
@@ -129,6 +154,8 @@ const Modal = React.forwardRef(
                 style={style}
                 className={clsx(className, `${preClass}-root`)}
                 css={css}
+                noPadding={noPadding}
+                as={animated[as as keyof JSX.IntrinsicElements]}
               >
                 {closeButton && (
                   <Box
@@ -142,8 +169,8 @@ const Modal = React.forwardRef(
                       pill
                       icon={<CloseOutline />}
                       css={{
-                        mr: '-$3',
-                        mt: '-$3',
+                        mr: noPadding ? '-$0' : '-$3',
+                        mt: noPadding ? '-$0' : '-$3',
                         p: '$n',
                         bg: 'transparent',
                         color: '$gray500',
@@ -160,7 +187,9 @@ const Modal = React.forwardRef(
                     />
                   </Box>
                 )}
-                {children}
+                <StyledModalFlexbox autoGap={autoGap}>
+                  {children}
+                </StyledModalFlexbox>
               </StyledModal>
             </ModalContext.Provider>
           )
@@ -170,4 +199,15 @@ const Modal = React.forwardRef(
   }
 );
 
-export default Modal;
+type ModalComponent<
+  T,
+  P = Record<string, unknown>
+> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+> & {
+  Header: typeof ModalHeader;
+  Body: typeof ModalBody;
+  Footer: typeof ModalFooter;
+};
+
+export default Modal as ModalComponent<HTMLDivElement, ModalProps>;

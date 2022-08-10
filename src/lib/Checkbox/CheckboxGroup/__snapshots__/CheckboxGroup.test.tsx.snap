@@ -10,7 +10,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
     >
       <input
         checked=""
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
         id=":r1:"
         name=":r0:"
         type="checkbox"
@@ -41,7 +41,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
     >
       <input
         checked=""
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
         id=":r2:"
         name=":r0:"
         type="checkbox"
@@ -71,7 +71,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
       class="c-gidqah decaCheckbox-root"
     >
       <input
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
         id=":r3:"
         name=":r0:"
         type="checkbox"
@@ -101,7 +101,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
       class="c-gidqah decaCheckbox-root"
     >
       <input
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
         id=":r4:"
         name=":r0:"
         type="checkbox"

@@ -6,7 +6,7 @@ exports[`components/Checkbox matches screenshot 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
       id=":r0:"
       type="checkbox"
       value=""
@@ -40,7 +40,7 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
       id=":r3:"
       type="checkbox"
       value=""
@@ -185,7 +185,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
       id=":r8:"
       type="checkbox"
       value=""
@@ -213,7 +213,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
       id=":r9:"
       type="checkbox"
       value=""
@@ -241,7 +241,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fjVQOz-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hAPajf-cv decaCheckbox-input"
       id=":ra:"
       type="checkbox"
       value=""

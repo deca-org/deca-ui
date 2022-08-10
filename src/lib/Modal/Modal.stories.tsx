@@ -1,9 +1,8 @@
-import Box from '@lib/Box';
-import Input from '@lib/Input';
-import Text from '@lib/Text';
 import Button from '@lib/Button';
+import Input from '@lib/Input';
 import Modal from '@lib/Modal';
-import { ComponentMeta } from '@storybook/react';
+import Text from '@lib/Text';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React, { useState } from 'react';
 
 export default {
@@ -11,34 +10,36 @@ export default {
   component: Modal,
 } as ComponentMeta<typeof Modal>;
 
-export const Default = () => {
+const Template: ComponentStory<typeof Modal> = (args) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <Button onClick={() => setOpen(true)}>Open Modal</Button>
-      <Modal closeButton open={open} setOpen={setOpen}>
-        <Text as="p" size="$h6" center>
-          Welcome to <b>DecaUI</b>
-        </Text>
-        <Box
-          css={{
-            display: 'flex',
-            flexDirection: 'column',
-            my: '$4',
-            gap: '$2',
-          }}
-        >
+      <Modal closeButton open={open} setOpen={setOpen} {...args}>
+        <Modal.Header>
+          <Text as="p" size="$h6" center>
+            Welcome to <b>DecaUI</b>
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
           <Input variant="outlined" placeholder="Email Address" size="lg" />
           <Input variant="outlined" placeholder="Password" size="lg" />
-        </Box>
-        <Box css={{ display: 'flex', gap: '$2', justifyContent: 'flex-end' }}>
+        </Modal.Body>
+        <Modal.Footer>
           <Button variant="flat" color="error" onClick={() => setOpen(false)}>
             Close
           </Button>
           <Button>Sign Up</Button>
-        </Box>
+        </Modal.Footer>
       </Modal>
     </>
   );
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  noPadding: false,
+  autoGap: true,
+  closeButton: true,
 };

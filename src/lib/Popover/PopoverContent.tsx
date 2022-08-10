@@ -1,5 +1,6 @@
+import { CSS } from '@lib/Theme';
 import { mergeRefs, useClickOutside } from '@lib/Utils';
-import { useTransition } from '@react-spring/web';
+import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
@@ -15,9 +16,27 @@ export interface PopoverContentProps {
    * The content of the component.
    */
   children?: React.ReactNode | undefined;
+  /**
+   * Override default CSS style.
+   */
+  css?: CSS;
+  /**
+   * ClassName applied to the component.
+   * @default ''
+   */
+  className?: string;
+  /**
+   * Changes which tag component outputs.
+   */
+  as?: keyof JSX.IntrinsicElements;
 }
 
-const PopoverContent = ({ children }: PopoverContentProps) => {
+const PopoverContent = ({
+  children,
+  css,
+  className = '',
+  as = 'div',
+}: PopoverContentProps) => {
   const context = useContext(PopoverContext) as IPopoverContext;
 
   const clickOutsideRef = useClickOutside(() => {
@@ -38,7 +57,7 @@ const PopoverContent = ({ children }: PopoverContentProps) => {
       opacity: 0,
     },
     config: {
-      tension: 400,
+      tension: 300,
       friction: 19,
     },
   });
@@ -59,9 +78,10 @@ const PopoverContent = ({ children }: PopoverContentProps) => {
               position: context.strategy,
               top: context.y ?? 0,
               left: context.x ?? 0,
-              ...context.css,
+              ...css,
             }}
-            className={clsx(context.className, `${preClass}-root`)}
+            className={clsx(className, `${preClass}-root`)}
+            as={animated[as as keyof JSX.IntrinsicElements]}
           >
             {children}
           </StyledPopover>
