@@ -1,4 +1,5 @@
-import { CSS, standardColors, styled, theme } from '@lib/Theme';
+import { CSS, standardColors, styled } from '@lib/Theme';
+import { getColor } from '@lib/Utils';
 import { darken, readableColor, transparentize } from 'polished';
 
 const compoundVariantComposer = () => {
@@ -17,17 +18,17 @@ const compoundVariantComposer = () => {
         variant: 'solid',
         css: {
           color: readableColor(
-            darken(0.25, theme.colors[color].value),
-            theme.colors.white.value,
-            theme.colors.black.value
+            darken(0.25, getColor(color)),
+            getColor('white'),
+            getColor('black')
           ),
           '&:hover': {
-            borderColor: darken(0.04, theme.colors[color].value),
-            bg: darken(0.04, theme.colors[color].value),
+            borderColor: darken(0.04, getColor(color)),
+            bg: darken(0.04, getColor(color)),
           },
           '&:active': {
-            borderColor: darken(0.09, theme.colors[color].value),
-            bg: darken(0.09, theme.colors[color].value),
+            borderColor: darken(0.09, getColor(color)),
+            bg: darken(0.09, getColor(color)),
           },
         },
       },
@@ -37,9 +38,9 @@ const compoundVariantComposer = () => {
         variant: 'solid',
         css: {
           color: readableColor(
-            darken(0.25, theme.colors[color].value),
-            theme.colors.white.value,
-            theme.colors.black.value
+            darken(0.25, getColor(color)),
+            getColor('white'),
+            getColor('black')
           ),
         },
       },
@@ -51,13 +52,13 @@ const compoundVariantComposer = () => {
           bg: '$transparent',
           '&:hover': {
             borderColor: 'CurrentColor',
-            color: darken(0.04, theme.colors[color].value),
-            bg: transparentize(0.85, theme.colors[color].value),
+            color: darken(0.04, getColor(color)),
+            bg: transparentize(0.85, getColor(color)),
           },
           '&:active': {
             borderColor: 'CurrentColor',
-            color: darken(0.09, theme.colors[color].value),
-            bg: transparentize(0.78, theme.colors[color].value),
+            color: darken(0.09, getColor(color)),
+            bg: transparentize(0.78, getColor(color)),
           },
         },
       },
@@ -77,14 +78,14 @@ const compoundVariantComposer = () => {
           bg: '$transparent',
           borderColor: '$transparent',
           '&:hover': {
-            color: darken(0.04, theme.colors[color].value),
-            borderColor: transparentize(0.99, theme.colors[color].value),
-            bg: transparentize(0.85, theme.colors[color].value),
+            color: darken(0.04, getColor(color)),
+            borderColor: transparentize(0.99, getColor(color)),
+            bg: transparentize(0.85, getColor(color)),
           },
           '&:active': {
-            color: darken(0.09, theme.colors[color].value),
-            borderColor: transparentize(0.99, theme.colors[color].value),
-            bg: transparentize(0.78, theme.colors[color].value),
+            color: darken(0.09, getColor(color)),
+            borderColor: transparentize(0.99, getColor(color)),
+            bg: transparentize(0.78, getColor(color)),
           },
         },
       },
@@ -103,17 +104,17 @@ const compoundVariantComposer = () => {
         variant: 'flat',
         css: {
           color: color,
-          bg: transparentize(0.9, theme.colors[color].value),
-          borderColor: transparentize(1, theme.colors[color].value),
+          bg: transparentize(0.9, getColor(color)),
+          borderColor: transparentize(1, getColor(color)),
           '&:hover': {
-            color: darken(0.04, theme.colors[color].value),
-            borderColor: transparentize(0.99, theme.colors[color].value),
-            bg: transparentize(0.85, theme.colors[color].value),
+            color: darken(0.04, getColor(color)),
+            borderColor: transparentize(0.99, getColor(color)),
+            bg: transparentize(0.85, getColor(color)),
           },
           '&:active': {
-            color: darken(0.09, theme.colors[color].value),
-            borderColor: transparentize(0.99, theme.colors[color].value),
-            bg: transparentize(0.78, theme.colors[color].value),
+            color: darken(0.09, getColor(color)),
+            borderColor: transparentize(0.99, getColor(color)),
+            bg: transparentize(0.78, getColor(color)),
           },
         },
       },
@@ -122,8 +123,8 @@ const compoundVariantComposer = () => {
         color: color,
         variant: 'flat',
         css: {
-          bg: transparentize(0.9, theme.colors[color].value),
-          borderColor: transparentize(1, theme.colors[color].value),
+          bg: transparentize(0.9, getColor(color)),
+          borderColor: transparentize(1, getColor(color)),
         },
       }
     );

@@ -2,7 +2,7 @@ import { createStitches } from '@stitches/react';
 import type * as Stitches from '@stitches/react';
 import { rem } from 'polished';
 
-const baseTheme = {
+export const baseTheme = {
   theme: {
     colors: {
       primary: '#228BE6',
@@ -428,12 +428,13 @@ const baseTheme = {
 
 const stitches = createStitches(baseTheme);
 
-export const createThemeBase = stitches.createTheme;
+export const createTheme = stitches.createTheme;
 export const styled = stitches.styled;
 export const css = stitches.css;
 export const globalCss = stitches.globalCss;
 export const theme = stitches.theme;
 export const config = stitches.config;
+
 export type CSS = Stitches.CSS<typeof config>;
 export type StitchesTheme = typeof theme;
 export type StandardColors =

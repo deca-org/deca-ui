@@ -146,6 +146,8 @@
   "dependencies": {
     "@floating-ui/react-dom": "^1.0.0",
     "@floating-ui/react-dom-interactions": "^0.9.1",
-    "@react-spring/web": "^9.5.2"
+    "@react-spring/web": "^9.5.2",
+    "deepmerge": "^4.2.2",
+    "react-aria": "^3.18.0"
   }
 }

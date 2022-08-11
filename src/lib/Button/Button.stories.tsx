@@ -1,3 +1,4 @@
+import { DecaUIProvider } from '@lib/Theme';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { PurchaseTagAlt } from '@styled-icons/boxicons-solid/PurchaseTagAlt';
 import React from 'react';
