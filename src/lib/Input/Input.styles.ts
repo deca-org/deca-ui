@@ -292,7 +292,8 @@ export const StyledInput = styled('input', {
   },
   boxSizing: 'border-box',
   size: '100%',
-  px: '$2',
+  paddingRight: 'calc($2 * 1.5)',
+  paddingLeft: 'calc($2 * 1.5)',
   transition: '$default',
   '&::placeholder': {
     color: '$gray700',
