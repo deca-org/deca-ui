@@ -159,6 +159,7 @@ export const StyledInputContainer = styled('div', {
   borderWidth: '$normal',
   borderStyle: 'solid',
   transition: '$default',
+  bg: '$white',
   compoundVariants: [
     {
       variant: 'solid',

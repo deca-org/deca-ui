@@ -12,10 +12,10 @@ exports[`components/Input matches snapshot 1`] = `
       Label Text
     </label>
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r0:"
         placeholder="Placeholder Text"
         value=""
@@ -36,10 +36,10 @@ exports[`components/Input renders all colors 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r2:"
         value=""
       />
@@ -49,10 +49,10 @@ exports[`components/Input renders all colors 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r3:"
         value=""
       />
@@ -62,10 +62,10 @@ exports[`components/Input renders all colors 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r4:"
         value=""
       />
@@ -75,10 +75,10 @@ exports[`components/Input renders all colors 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r5:"
         value=""
       />
@@ -88,10 +88,10 @@ exports[`components/Input renders all colors 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r6:"
         value=""
       />
@@ -106,10 +106,10 @@ exports[`components/Input renders all sizes 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-dQgSKX-size-sm c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-dQgSKX-size-sm c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-kGUnSj-size-sm decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-kGUnSj-size-sm c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r7:"
         value=""
       />
@@ -119,10 +119,10 @@ exports[`components/Input renders all sizes 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r8:"
         value=""
       />
@@ -132,10 +132,10 @@ exports[`components/Input renders all sizes 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-jeReyr-size-lg c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-jeReyr-size-lg c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-lg decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-lg c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":r9:"
         value=""
       />
@@ -150,10 +150,10 @@ exports[`components/Input renders all variants 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-htQczz-variant-solid decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-htQczz-variant-solid c-fecgkr-cycqzJ-pill-false decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-fOmxiH-variant-solid c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-fOmxiH-variant-solid c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":ra:"
         value=""
       />
@@ -163,10 +163,10 @@ exports[`components/Input renders all variants 1`] = `
     class="c-iHFHGs decaInput-root"
   >
     <div
-      class="c-cYPkXD c-cYPkXD-fEWyJT-size-md c-cYPkXD-dBEtCv-cv decaInput-wrap"
+      class="c-fecgkr c-fecgkr-fEWyJT-size-md c-fecgkr-cycqzJ-pill-false c-fecgkr-dBEtCv-cv decaInput-wrap"
     >
       <input
-        class="c-gLLVjy c-gLLVjy-iTudIJ-size-md decaInput-input"
+        class="c-PHTdy c-PHTdy-iTudIJ-size-md c-PHTdy-cycqzJ-pill-false decaInput-input"
         id=":rb:"
         value=""
       />
