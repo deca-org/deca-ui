@@ -30,7 +30,7 @@ export const WithChildren = () => (
       fontFamily: '$normal',
       bg: '$primary',
       color: '$white',
-      width: '$35',
+      width: 'calc($35 * 1.75)',
       p: '$4',
       br: '$lg',
       linearGradient: '20deg, $blue900, $blue500',
