@@ -120,7 +120,6 @@
     "singleQuote": true
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/setupTests.ts"],
     "preset": "ts-jest",
     "verbose": true,
     "testPathIgnorePatterns": [
@@ -140,7 +139,8 @@
     ],
     "moduleNameMapper": {
       "^@lib/(.*)": "<rootDir>/src/lib/$1"
-    }
+    },
+    "setupFilesAfterEnv": ["<rootDir>/setupTests.ts"]
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",

@@ -106,16 +106,19 @@ export const StyledSwitchInput = styled('input', {
 
 export const StyledSwitchLabel = styled('label', {
   position: 'relative',
+  boxSizing: 'content-box',
   display: 'flex',
   alignItems: 'center',
   cursor: 'pointer',
   '&::before': {
+    boxSizing: 'content-box',
     content: '',
     bg: '$gray300',
     br: '$pill',
     transition: '$default',
   },
   '&::after': {
+    boxSizing: 'content-box',
     position: 'absolute',
     content: '',
     bg: '$white',
