@@ -1,5 +1,6 @@
 import Button from '@lib/Button';
 import Popover from '@lib/Popover';
+import { DecaUIProvider } from '@lib/Theme';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
@@ -22,3 +23,23 @@ Default.args = {
   placement: 'bottom',
   action: 'click',
 };
+
+export const WithTheme = Template.bind({});
+
+WithTheme.args = { ...Default.args };
+WithTheme.decorators = [
+  (Story) => (
+    <DecaUIProvider
+      theme={{
+        colors: {
+          primary: '$green600',
+        },
+        radii: {
+          sm: '15px',
+        },
+      }}
+    >
+      <Story />
+    </DecaUIProvider>
+  ),
+];

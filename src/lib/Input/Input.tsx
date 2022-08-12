@@ -107,6 +107,10 @@ export interface InputProps
    * Function that executes when input is just out of focus.
    */
   onBlur?(e: React.FocusEvent<FormElement>): void;
+  /**
+   * Have input be pill shaped
+   */
+  pill?: boolean;
 }
 
 const Input = React.forwardRef(
@@ -129,6 +133,7 @@ const Input = React.forwardRef(
       onChange,
       onFocus,
       onBlur,
+      pill = false,
       ...props
     }: InputProps,
     ref: React.Ref<FormElement | null>
@@ -189,6 +194,7 @@ const Input = React.forwardRef(
             variant={variant}
             focusColor={focusColor}
             htmlFor={inputId}
+            pill={pill}
           >
             {label}
           </StyledInputLabel>
@@ -200,6 +206,7 @@ const Input = React.forwardRef(
           variant={variant}
           focusColor={focusColor}
           maxWidth={maxWidth}
+          pill={pill}
         >
           <StyledInput
             onFocus={focusHandler}
@@ -215,6 +222,7 @@ const Input = React.forwardRef(
             disabled={disabled}
             placeholder={placeholder}
             id={inputId}
+            pill={pill}
             {...props}
           ></StyledInput>
         </StyledInputContainer>
@@ -223,6 +231,7 @@ const Input = React.forwardRef(
             size={size}
             state={getState}
             className={`${preClass}-helperText`}
+            pill={pill}
           >
             {helperText}
           </StyledInputHelperText>

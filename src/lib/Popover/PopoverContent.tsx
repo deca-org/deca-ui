@@ -87,7 +87,9 @@ const PopoverContent = ({
           </StyledPopover>
         )
     ),
-    document.querySelector('body') as Element
+    document.getElementById('decaUI-provider')
+      ? (document.getElementById('decaUI-provider') as Element)
+      : (document.querySelector('body') as Element)
   );
 };
 

@@ -107,6 +107,12 @@ export const StyledInputLabel = styled('label', {
       warning: {},
       error: {},
     },
+    pill: {
+      true: {
+        ml: '$2',
+      },
+      false: {},
+    },
   },
 });
 
@@ -138,12 +144,17 @@ export const StyledInputHelperText = styled('p', {
         color: '$gray600',
       },
     },
+    pill: {
+      true: {
+        ml: '$2',
+      },
+      false: {},
+    },
   },
 });
 
 export const StyledInputContainer = styled('div', {
   fontWeight: '$medium',
-  borderRadius: '$sm',
   boxSizing: 'border-box',
   borderWidth: '$normal',
   borderStyle: 'solid',
@@ -262,11 +273,18 @@ export const StyledInputContainer = styled('div', {
       warning: {},
       error: {},
     },
+    pill: {
+      true: {
+        borderRadius: '$pill',
+      },
+      false: {
+        borderRadius: '$sm',
+      },
+    },
   },
 });
 
 export const StyledInput = styled('input', {
-  borderRadius: '$sm',
   border: 'none',
   '&:focus': {
     outline: 0,
@@ -317,6 +335,15 @@ export const StyledInput = styled('input', {
       },
       value: {},
       default: {},
+    },
+    pill: {
+      true: {
+        px: '$3',
+        borderRadius: '$pill',
+      },
+      false: {
+        borderRadius: '$sm',
+      },
     },
   },
 });

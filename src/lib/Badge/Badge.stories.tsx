@@ -1,3 +1,4 @@
+import { DecaUIProvider } from '@lib/Theme';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
@@ -19,3 +20,23 @@ Default.args = {
   css: {},
   className: '',
 };
+
+export const WithTheme = Template.bind({});
+
+WithTheme.args = { ...Default.args };
+WithTheme.decorators = [
+  (Story) => (
+    <DecaUIProvider
+      theme={{
+        colors: {
+          primary: '$green600',
+        },
+        radii: {
+          sm: '10px',
+        },
+      }}
+    >
+      <Story />
+    </DecaUIProvider>
+  ),
+];

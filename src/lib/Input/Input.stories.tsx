@@ -26,6 +26,7 @@ Solid.args = {
   maxWidth: false,
   initialValue: '',
   className: '',
+  pill: false,
 };
 
 export const Outlined = Template.bind({});
@@ -43,6 +44,7 @@ Outlined.args = {
   maxWidth: false,
   initialValue: '',
   className: '',
+  pill: false,
 };
 
 export const WithTheme = Template.bind({});
