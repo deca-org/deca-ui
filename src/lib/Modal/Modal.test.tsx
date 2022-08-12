@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import Modal from '@lib/Modal';
 import { render, screen } from '@testing-library/react';
 import React from 'react';

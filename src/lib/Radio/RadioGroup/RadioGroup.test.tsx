@@ -1,6 +1,6 @@
+import '@testing-library/jest-dom';
 import Radio from '@lib/Radio';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 

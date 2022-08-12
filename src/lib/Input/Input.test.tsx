@@ -1,5 +1,4 @@
 import { render, fireEvent, act } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import React from 'react';
 
 import Input from './Input';

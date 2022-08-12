@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import Button from '@lib/Button';
 import Popover from '@lib/Popover';
 import { render, fireEvent, act, screen } from '@testing-library/react';

@@ -120,6 +120,7 @@
     "singleQuote": true
   },
   "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/setupTests.ts"],
     "preset": "ts-jest",
     "verbose": true,
     "testPathIgnorePatterns": [
