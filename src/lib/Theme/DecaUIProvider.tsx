@@ -42,6 +42,10 @@ export interface DecaUIProviderProps {
    * Do not add CSS baseline.
    */
   noBaseline?: boolean;
+  /**
+   * Is the provider being used at the highest level of the React App
+   */
+  root?: boolean;
 }
 
 const globalBaseline = globalCss({
@@ -105,7 +109,7 @@ const globalBaseline = globalCss({
 
 const DecaUIProvider: React.FC<
   React.PropsWithChildren<DecaUIProviderProps>
-> = ({ theme, children, noBaseline }) => {
+> = ({ theme, children, noBaseline, root = true }) => {
   const modifiedTheme = useMemo(() => {
     if (theme && theme.colors) {
       return {
@@ -122,6 +126,10 @@ const DecaUIProvider: React.FC<
   }
 
   const userTheme = useMemo(() => createTheme(modifiedTheme as Theme), [theme]);
+
+  if (!root) {
+    return <div className={theme && userTheme}>{children}</div>;
+  }
 
   return (
     <SSRProvider>
