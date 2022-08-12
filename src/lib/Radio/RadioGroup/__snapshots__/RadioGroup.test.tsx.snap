@@ -10,14 +10,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
     >
       <input
         checked=""
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
         id=":r1:"
         name=":r0:"
         type="radio"
         value="A"
       />
       <label
-        class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false c-fEnYKK-jQVVMl-cv"
+        class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
         for=":r1:"
       >
         <div
@@ -30,14 +30,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       class="c-cDEphG decaRadio-root"
     >
       <input
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
         id=":r2:"
         name=":r0:"
         type="radio"
         value="B"
       />
       <label
-        class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false c-fEnYKK-jQVVMl-cv"
+        class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
         for=":r2:"
       >
         <div
@@ -50,14 +50,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       class="c-cDEphG decaRadio-root"
     >
       <input
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
         id=":r3:"
         name=":r0:"
         type="radio"
         value="C"
       />
       <label
-        class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false c-fEnYKK-jQVVMl-cv"
+        class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
         for=":r3:"
       >
         <div
@@ -70,14 +70,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       class="c-cDEphG decaRadio-root"
     >
       <input
-        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+        class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
         id=":r4:"
         name=":r0:"
         type="radio"
         value="D"
       />
       <label
-        class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false c-fEnYKK-jQVVMl-cv"
+        class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
         for=":r4:"
       >
         <div

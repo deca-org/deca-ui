@@ -1,5 +1,4 @@
-import { styled, theme } from '@lib/Theme';
-import { darken, readableColor } from 'polished';
+import { styled } from '@lib/Theme';
 
 export const StyledBadge = styled('span', {
   transition: '$default',
@@ -35,43 +34,23 @@ export const StyledBadge = styled('span', {
     color: {
       primary: {
         bg: '$primary',
-        color: readableColor(
-          darken(0.25, theme.colors.primary.value),
-          theme.colors.white.value,
-          theme.colors.black.value
-        ),
+        color: '$primary-readable',
       },
       secondary: {
         bg: '$secondary',
-        color: readableColor(
-          darken(0.25, theme.colors.secondary.value),
-          theme.colors.white.value,
-          theme.colors.black.value
-        ),
+        color: '$secondary-readable',
       },
       success: {
         bg: '$success',
-        color: readableColor(
-          darken(0.25, theme.colors.success.value),
-          theme.colors.white.value,
-          theme.colors.black.value
-        ),
+        color: '$success-readable',
       },
       warning: {
         bg: '$warning',
-        color: readableColor(
-          darken(0.25, theme.colors.warning.value),
-          theme.colors.white.value,
-          theme.colors.black.value
-        ),
+        color: '$warning-readable',
       },
       error: {
         bg: '$error',
-        color: readableColor(
-          darken(0.25, theme.colors.error.value),
-          theme.colors.white.value,
-          theme.colors.black.value
-        ),
+        color: '$error-readable',
       },
     },
   },

@@ -6,13 +6,13 @@ exports[`components/Radio matches snapshot 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
       id=":r0:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false c-fEnYKK-jQVVMl-cv"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
       for=":r0:"
     >
       <div
@@ -30,13 +30,13 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
       id=":r1:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r1:"
     >
       <div
@@ -48,13 +48,13 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-bEiFsv-color-secondary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-ddWzfo-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-bEiFsv-color-secondary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-ekuowN-cv decaRadio-input"
       id=":r2:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r2:"
     >
       <div
@@ -66,13 +66,13 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-jftABy-color-success c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-jukiKY-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-jftABy-color-success c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eWAPfR-cv decaRadio-input"
       id=":r3:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r3:"
     >
       <div
@@ -84,13 +84,13 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-iPWTSD-color-warning c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-hiFhtX-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-iPWTSD-color-warning c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-cKVzQN-cv decaRadio-input"
       id=":r4:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r4:"
     >
       <div
@@ -102,13 +102,13 @@ exports[`components/Radio renders all colors 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-jbDGbB-color-error c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-kaiRoB-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-jbDGbB-color-error c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-evnrkN-cv decaRadio-input"
       id=":r5:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r5:"
     >
       <div
@@ -125,13 +125,13 @@ exports[`components/Radio renders all sizes 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
       id=":r6:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-biyOBk-size-sm c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-biyOBk-size-sm c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r6:"
     >
       <div
@@ -143,13 +143,13 @@ exports[`components/Radio renders all sizes 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
       id=":r7:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-boLhOk-size-md c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r7:"
     >
       <div
@@ -161,13 +161,13 @@ exports[`components/Radio renders all sizes 1`] = `
     class="c-cDEphG decaRadio-root"
   >
     <input
-      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-XrqFS-cv decaRadio-input"
+      class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
       id=":r8:"
       type="radio"
       value=""
     />
     <label
-      class="c-fEnYKK c-fEnYKK-kTBHts-size-lg c-fEnYKK-hqEieG-isDisabled-false"
+      class="c-gpKKJQ c-gpKKJQ-fEMOrJ-size-lg c-gpKKJQ-hqEieG-isDisabled-false"
       for=":r8:"
     >
       <div

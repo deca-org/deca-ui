@@ -1,5 +1,5 @@
-import { cssVar } from 'polished';
+import { theme } from '@lib/Theme';
 
-export const getColor = (varColor: string): string => {
-  return cssVar(`--colors-${varColor}`) as string;
+export const getStaticColor = (varColor: string): string => {
+  return theme.colors[varColor as keyof typeof theme.colors].value;
 };

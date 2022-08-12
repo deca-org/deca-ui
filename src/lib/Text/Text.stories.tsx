@@ -1,3 +1,4 @@
+import { DecaUIProvider } from '@lib/Theme';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
@@ -37,3 +38,20 @@ export const Typescale = () => {
     </>
   );
 };
+
+export const WithTheme = Template.bind({});
+
+WithTheme.args = { ...Header.args };
+WithTheme.decorators = [
+  (Story) => (
+    <DecaUIProvider
+      theme={{
+        fonts: {
+          normal: 'Times New Roman',
+        },
+      }}
+    >
+      <Story />
+    </DecaUIProvider>
+  ),
+];

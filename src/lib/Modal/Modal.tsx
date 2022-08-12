@@ -194,7 +194,9 @@ const Modal = React.forwardRef(
             </ModalContext.Provider>
           )
       ),
-      document.querySelector('body') as Element
+      document.getElementById('decaUI-provider')
+        ? (document.getElementById('decaUI-provider') as Element)
+        : (document.querySelector('body') as Element)
     );
   }
 );

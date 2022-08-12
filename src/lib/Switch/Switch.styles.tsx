@@ -1,5 +1,4 @@
-import { styled, theme } from '@lib/Theme';
-import { darken } from 'polished';
+import { styled } from '@lib/Theme';
 
 export const StyledSwitchWrapper = styled('div', {
   boxSizing: 'border-box',
@@ -58,7 +57,7 @@ export const StyledSwitchInput = styled('input', {
           bg: '$primary',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.primary.value),
+          bg: '$primary-darken-1',
         },
       },
       secondary: {
@@ -66,7 +65,7 @@ export const StyledSwitchInput = styled('input', {
           bg: '$secondary',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.secondary.value),
+          bg: '$secondary-darken-1',
         },
       },
       success: {
@@ -74,7 +73,7 @@ export const StyledSwitchInput = styled('input', {
           bg: '$success',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.success.value),
+          bg: '$success-darken-1',
         },
       },
       warning: {
@@ -82,7 +81,7 @@ export const StyledSwitchInput = styled('input', {
           bg: '$warning',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.warning.value),
+          bg: '$warning-darken-1',
         },
       },
       error: {
@@ -90,7 +89,7 @@ export const StyledSwitchInput = styled('input', {
           bg: '$error',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.error.value),
+          bg: '$error-darken-1',
         },
       },
     },

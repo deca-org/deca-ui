@@ -1,6 +1,4 @@
 import { CSS, standardColors, styled } from '@lib/Theme';
-import { getColor } from '@lib/Utils';
-import { darken, readableColor, transparentize } from 'polished';
 
 const compoundVariantComposer = () => {
   const colorVariants: {
@@ -17,18 +15,14 @@ const compoundVariantComposer = () => {
         color: color,
         variant: 'solid',
         css: {
-          color: readableColor(
-            darken(0.25, getColor(color)),
-            getColor('white'),
-            getColor('black')
-          ),
+          color: `$${color}-readable`,
           '&:hover': {
-            borderColor: darken(0.04, getColor(color)),
-            bg: darken(0.04, getColor(color)),
+            borderColor: `$${color}-darken-1`,
+            bg: `$${color}-darken-1`,
           },
           '&:active': {
-            borderColor: darken(0.09, getColor(color)),
-            bg: darken(0.09, getColor(color)),
+            borderColor: `$${color}-darken-2`,
+            bg: `$${color}-darken-2`,
           },
         },
       },
@@ -37,11 +31,7 @@ const compoundVariantComposer = () => {
         color: color,
         variant: 'solid',
         css: {
-          color: readableColor(
-            darken(0.25, getColor(color)),
-            getColor('white'),
-            getColor('black')
-          ),
+          color: `$${color}-readable`,
         },
       },
       {
@@ -52,13 +42,13 @@ const compoundVariantComposer = () => {
           bg: '$transparent',
           '&:hover': {
             borderColor: 'CurrentColor',
-            color: darken(0.04, getColor(color)),
-            bg: transparentize(0.85, getColor(color)),
+            color: `$${color}-darken-1`,
+            bg: `$${color}-lighten-2`,
           },
           '&:active': {
             borderColor: 'CurrentColor',
-            color: darken(0.09, getColor(color)),
-            bg: transparentize(0.78, getColor(color)),
+            color: `$${color}-darken-2`,
+            bg: `$${color}-lighten-1`,
           },
         },
       },
@@ -78,14 +68,14 @@ const compoundVariantComposer = () => {
           bg: '$transparent',
           borderColor: '$transparent',
           '&:hover': {
-            color: darken(0.04, getColor(color)),
-            borderColor: transparentize(0.99, getColor(color)),
-            bg: transparentize(0.85, getColor(color)),
+            color: `$${color}-darken-1`,
+            borderColor: `$${color}-lighten-4`,
+            bg: `$${color}-lighten-2`,
           },
           '&:active': {
-            color: darken(0.09, getColor(color)),
-            borderColor: transparentize(0.99, getColor(color)),
-            bg: transparentize(0.78, getColor(color)),
+            color: `$${color}-darken-2`,
+            borderColor: `$${color}-lighten-4`,
+            bg: `$${color}-lighten-1`,
           },
         },
       },
@@ -104,17 +94,17 @@ const compoundVariantComposer = () => {
         variant: 'flat',
         css: {
           color: color,
-          bg: transparentize(0.9, getColor(color)),
-          borderColor: transparentize(1, getColor(color)),
+          bg: `$${color}-lighten-3`,
+          borderColor: `$${color}-lighten-4`,
           '&:hover': {
-            color: darken(0.04, getColor(color)),
-            borderColor: transparentize(0.99, getColor(color)),
-            bg: transparentize(0.85, getColor(color)),
+            color: `$${color}-darken-1`,
+            borderColor: `$${color}-lighten-4`,
+            bg: `$${color}-lighten-2`,
           },
           '&:active': {
-            color: darken(0.09, getColor(color)),
-            borderColor: transparentize(0.99, getColor(color)),
-            bg: transparentize(0.78, getColor(color)),
+            color: `$${color}-darken-2`,
+            borderColor: `$${color}-lighten-4`,
+            bg: `$${color}-lighten-1`,
           },
         },
       },
@@ -123,8 +113,8 @@ const compoundVariantComposer = () => {
         color: color,
         variant: 'flat',
         css: {
-          bg: transparentize(0.9, getColor(color)),
-          borderColor: transparentize(1, getColor(color)),
+          bg: `$${color}-lighten-3`,
+          borderColor: `$${color}-lighten-4`,
         },
       }
     );

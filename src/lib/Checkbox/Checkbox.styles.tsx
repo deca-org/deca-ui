@@ -1,4 +1,5 @@
-import { styled, theme } from '@lib/Theme';
+import { styled } from '@lib/Theme';
+import { getStaticColor } from '@lib/Utils';
 import { darken } from 'polished';
 
 export const StyledCheckboxWrapper = styled('div', {
@@ -29,8 +30,8 @@ export const StyledCheckbox = styled('input', {
           borderColor: '$primary',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.primary.value),
-          borderColor: darken(0.06, theme.colors.primary.value),
+          bg: '$primary-darken-1',
+          borderColor: '$primary-darken-1',
         },
       },
     },
@@ -43,8 +44,8 @@ export const StyledCheckbox = styled('input', {
           borderColor: '$secondary',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.secondary.value),
-          borderColor: darken(0.06, theme.colors.secondary.value),
+          bg: '$secondary-darken-1',
+          borderColor: '$secondary-darken-1',
         },
       },
     },
@@ -57,8 +58,8 @@ export const StyledCheckbox = styled('input', {
           borderColor: '$success',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.success.value),
-          borderColor: darken(0.06, theme.colors.success.value),
+          bg: '$success-darken-1',
+          borderColor: '$success-darken-1',
         },
       },
     },
@@ -71,8 +72,8 @@ export const StyledCheckbox = styled('input', {
           borderColor: '$warning',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.warning.value),
-          borderColor: darken(0.06, theme.colors.warning.value),
+          bg: '$warning-darken-1',
+          borderColor: '$warning-darken-1',
         },
       },
     },
@@ -85,8 +86,8 @@ export const StyledCheckbox = styled('input', {
           borderColor: '$error',
         },
         '&:checked:active + label::before': {
-          bg: darken(0.06, theme.colors.error.value),
-          borderColor: darken(0.06, theme.colors.error.value),
+          bg: '$error-darken-1',
+          borderColor: '$error-darken-1',
         },
       },
     },
@@ -127,6 +128,7 @@ export const StyledCheckboxLabel = styled('label', {
   alignItems: 'center',
   transition: '$default',
   '&::before': {
+    boxSizing: 'content-box',
     borderColor: '$gray600',
   },
   '& svg': {
@@ -241,7 +243,7 @@ export const StyledCheckboxLabel = styled('label', {
       false: {
         '&:hover::before': {
           transition: '$default',
-          borderColor: darken(0.125, theme.colors.gray600.value),
+          borderColor: darken(0.125, getStaticColor('gray600')),
         },
       },
     },

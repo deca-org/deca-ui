@@ -22,6 +22,7 @@ Default.args = {
   variant: 'solid',
   role: 'button',
   size: 'md',
+  pill: false,
 };
 
 export const IconButton = Template.bind({});
@@ -42,3 +43,23 @@ RightSideIconWithLabel.args = {
   ...Default.args,
   iconRight: <PurchaseTagAlt />,
 };
+
+export const WithTheme = Template.bind({});
+
+WithTheme.args = { ...Default.args };
+WithTheme.decorators = [
+  (Story) => (
+    <DecaUIProvider
+      theme={{
+        colors: {
+          primary: '$green600',
+        },
+        radii: {
+          sm: '15px',
+        },
+      }}
+    >
+      <Story />
+    </DecaUIProvider>
+  ),
+];
