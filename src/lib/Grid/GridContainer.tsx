@@ -3,6 +3,7 @@ import { useDOMRef } from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
+import { Cols, GridProps } from './Grid';
 import { StyledGridContainer } from './Grid.styles';
 
 /**
@@ -40,11 +41,26 @@ export interface GridContainerProps extends React.ComponentPropsWithRef<'div'> {
     | 'space-between'
     | 'space-around'
     | 'space-evenly';
-
   /**
    * AlignItems css prop.
    */
   alignItems?: 'flex-start' | 'center' | 'flex-end';
+  /**
+   * How many columns should be taken up by each item on xs breakpoint
+   */
+  xs?: Cols;
+  /**
+   * How many columns should be taken up by each item on sm breakpoint
+   */
+  sm?: Cols;
+  /**
+   * How many columns should be taken up by each item on md breakpoint
+   */
+  md?: Cols;
+  /**
+   * How many columns should be taken up by each item on lg breakpoint
+   */
+  lg?: Cols;
 }
 
 const GridContainer = React.forwardRef(
@@ -57,6 +73,10 @@ const GridContainer = React.forwardRef(
       spacing = 'sm',
       justifyContent,
       alignItems,
+      xs,
+      sm,
+      md,
+      lg,
       ...gridContainerProps
     }: GridContainerProps,
     ref: React.Ref<HTMLDivElement | null>
@@ -75,7 +95,17 @@ const GridContainer = React.forwardRef(
         alignItems={alignItems}
         {...gridContainerProps}
       >
-        {children}
+        {React.Children.map(
+          children as React.ReactElement<GridProps>,
+          (child: React.ReactElement<GridProps>) => {
+            return React.cloneElement(child, {
+              xs,
+              sm,
+              md,
+              lg,
+            });
+          }
+        )}
       </StyledGridContainer>
     );
   }

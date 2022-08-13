@@ -6,7 +6,7 @@ import React from 'react';
 import { StyledGridItem } from './Grid.styles';
 import GridContainer from './GridContainer';
 
-type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+export type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 /**
  * The Grid component acts as a child to the GridContainer component
  */
