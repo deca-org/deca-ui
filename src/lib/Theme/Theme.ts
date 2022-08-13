@@ -301,6 +301,7 @@ export const baseTheme = {
       33: rem(200),
       34: rem(224),
       35: rem(256),
+      36: rem(320),
     },
     fontSizes: {
       h1: rem(48),
@@ -382,13 +383,13 @@ export const baseTheme = {
     transitions: {
       default: 'all 250ms ease',
     },
-    media: {
-      xs: '650px',
-      sm: '960px',
-      md: '1280px',
-      lg: '1400px',
-      xl: '1920px',
-    },
+  },
+  media: {
+    xs: '(min-width: 0px)',
+    sm: '(min-width: 600px)',
+    md: '(min-width: 900px)',
+    lg: '(min-width: 1200px)',
+    xl: '(min-width: 1536px)',
   },
   utils: {
     // Abbreviated margin properties

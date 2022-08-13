@@ -1,8 +1,9 @@
 import { CSS } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
+import clsx from 'clsx';
 import React from 'react';
 
-import StyledBox from './Box.styles';
+import { StyledBox } from './Box.styles';
 
 /**
  * The Box component serves as a wrapper component
@@ -20,11 +21,16 @@ export interface BoxProps extends React.ComponentPropsWithRef<'div'> {
    * The content of the component.
    */
   children?: React.ReactNode | undefined;
+  /**
+   * ClassName applied to the component.
+   * @default ''
+   */
+  className?: string;
 }
 
 const Box = React.forwardRef(
   (
-    { as = 'div', css, children, ...boxProps }: BoxProps,
+    { as = 'div', css, children, className = '', ...boxProps }: BoxProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const boxRef = useDOMRef(ref);
@@ -35,7 +41,7 @@ const Box = React.forwardRef(
       <StyledBox
         as={as}
         css={css}
-        className={`${preClass}-root`}
+        className={clsx(className, `${preClass}-root`)}
         ref={boxRef}
         {...boxProps}
       >
