@@ -7,13 +7,13 @@ exports[`components/Radio matches snapshot 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-      id=":r0:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
-      for=":r0:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -31,13 +31,13 @@ exports[`components/Radio renders all colors 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-      id=":r1:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r1:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -49,13 +49,13 @@ exports[`components/Radio renders all colors 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-bEiFsv-color-secondary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-ekuowN-cv decaRadio-input"
-      id=":r2:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r2:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -67,13 +67,13 @@ exports[`components/Radio renders all colors 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-jftABy-color-success c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eWAPfR-cv decaRadio-input"
-      id=":r3:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r3:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -85,13 +85,13 @@ exports[`components/Radio renders all colors 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-iPWTSD-color-warning c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-cKVzQN-cv decaRadio-input"
-      id=":r4:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r4:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -103,13 +103,13 @@ exports[`components/Radio renders all colors 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-jbDGbB-color-error c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-evnrkN-cv decaRadio-input"
-      id=":r5:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r5:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -126,13 +126,13 @@ exports[`components/Radio renders all sizes 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-      id=":r6:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-biyOBk-size-sm c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r6:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -144,13 +144,13 @@ exports[`components/Radio renders all sizes 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-      id=":r7:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r7:"
+      for="1"
     >
       <div
         class="decaRadio-circle"
@@ -162,13 +162,13 @@ exports[`components/Radio renders all sizes 1`] = `
   >
     <input
       class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-      id=":r8:"
+      id="1"
       type="radio"
       value=""
     />
     <label
       class="c-gpKKJQ c-gpKKJQ-fEMOrJ-size-lg c-gpKKJQ-hqEieG-isDisabled-false"
-      for=":r8:"
+      for="1"
     >
       <div
         class="decaRadio-circle"

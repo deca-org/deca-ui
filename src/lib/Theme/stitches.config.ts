@@ -381,8 +381,7 @@ export const baseTheme = {
       max: '9999',
     },
     transitions: {
-      default:
-        'all 250ms ease, width 1ms, height 1ms, padding 1ms, margin 1ms, font-size 1ms',
+      default: 'all 250ms ease',
     },
   },
   media: {

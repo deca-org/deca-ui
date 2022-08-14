@@ -1,13 +1,7 @@
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, UnionToIntersection } from '@lib/Utils';
+import { Modify, UnionToIntersection, uuid } from '@lib/Utils';
 import clsx from 'clsx';
-import React, {
-  useId,
-  useRef,
-  useMemo,
-  useState,
-  useImperativeHandle,
-} from 'react';
+import React, { useRef, useMemo, useState, useImperativeHandle } from 'react';
 
 import {
   StyledInputMainContainer,
@@ -177,7 +171,7 @@ const Input = React.forwardRef(
         : 'default';
     }, [focused, disabled, selfValue, value]);
 
-    const inputId = useId();
+    const inputId = uuid('input');
 
     const preClass = 'decaInput';
 

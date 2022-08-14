@@ -1,8 +1,7 @@
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
-import { Check } from '@styled-icons/fa-solid/Check';
+import { Modify, useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
-import React, { useId, useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 
 import {
   StyledCheckboxWrapper,
@@ -14,12 +13,17 @@ import CheckboxGroup from './CheckboxGroup';
 /**
  * Checkboxes can be used to turn an option on or off
  */
-export interface CheckboxProps {
-  /**
-   * Size of the component.
-   * @default md
-   */
-  size?: 'sm' | 'md' | 'lg';
+export interface CheckboxProps
+  extends Modify<
+    React.ComponentPropsWithRef<'input'>,
+    {
+      /**
+       * Size of the component.
+       * @default md
+       */
+      size?: 'sm' | 'md' | 'lg';
+    }
+  > {
   /**
    * Text label for the component.
    */
@@ -78,6 +82,21 @@ export interface CheckboxProps {
   required?: boolean;
 }
 
+const Check = () => (
+  <svg
+    viewBox="0 0 512 512"
+    aria-hidden="true"
+    focusable="false"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="currentColor"
+      d="m173.898 439.404-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+    ></path>
+  </svg>
+);
+
 const Checkbox = React.forwardRef(
   (
     {
@@ -94,13 +113,21 @@ const Checkbox = React.forwardRef(
       initialCheck = false,
       onChange,
       value,
+      ...props
     }: CheckboxProps,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
     const checkboxRef = useDOMRef(ref);
 
     const [selfChecked, setSelfChecked] = useState<boolean>(initialCheck);
-    const checkboxId = useId();
+
+    const checkboxId = useMemo(() => {
+      if (props.id) {
+        return props.id;
+      } else {
+        return uuid();
+      }
+    }, [props.id]);
 
     const isControlledComponent = useMemo(
       () => checked !== undefined,
@@ -133,6 +160,7 @@ const Checkbox = React.forwardRef(
           disabled={disabled}
           isDisabled={disabled}
           value={value}
+          {...props}
         />
         <StyledCheckboxLabel
           htmlFor={checkboxId}
@@ -143,7 +171,7 @@ const Checkbox = React.forwardRef(
           isDisabled={disabled}
           hasLabel={label ? true : false}
         >
-          <Check className={`${preClass}-icon`} />
+          <Check />
           {label && label}
         </StyledCheckboxLabel>
       </StyledCheckboxWrapper>

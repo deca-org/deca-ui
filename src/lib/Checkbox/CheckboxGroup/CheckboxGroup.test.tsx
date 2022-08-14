@@ -20,10 +20,10 @@ describe('components/CheckboxGroup', () => {
     const user = userEvent.setup();
     render(
       <Checkbox.Group defaultValue={['A', 'B']}>
-        <Checkbox value="A" label="Option A" />
-        <Checkbox value="B" label="Option B" />
-        <Checkbox value="C" label="Option C" />
-        <Checkbox value="D" label="Option D" />
+        <Checkbox id="A" value="A" label="Option A" />
+        <Checkbox id="B" value="B" label="Option B" />
+        <Checkbox id="C" value="C" label="Option C" />
+        <Checkbox id="D" value="D" label="Option D" />
       </Checkbox.Group>
     );
 
@@ -41,10 +41,10 @@ describe('components/CheckboxGroup', () => {
         value={value}
         onChange={(e) => (value = [...value, e.target.value])}
       >
-        <Checkbox value="A" label="Option A" />
-        <Checkbox value="B" label="Option B" />
-        <Checkbox value="C" label="Option C" />
-        <Checkbox value="D" label="Option D" />
+        <Checkbox id="A" value="A" label="Option A" />
+        <Checkbox id="B" value="B" label="Option B" />
+        <Checkbox id="C" value="C" label="Option C" />
+        <Checkbox id="D" value="D" label="Option D" />
       </Checkbox.Group>
     );
 

@@ -4,7 +4,7 @@
   "parserOptions": { "project": ["./tsconfig.json", "./setupTests.ts"], "warnOnUnsupportedTypeScriptVersion": false
   },
   "env": { "es6": true },
-  "ignorePatterns": ["node_modules", "build", "coverage"],
+  "ignorePatterns": ["node_modules", "build", "coverage", "setupTests.ts"],
   "plugins": ["import", "eslint-comments", "jest-dom", "testing-library"],
   "extends": [
     "eslint:recommended",

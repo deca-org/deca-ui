@@ -1,8 +1,8 @@
 import { RadioProps } from '@lib/Radio';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
-import React, { useId, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import { StyledRadioGroupWrapper } from './RadioGroup.styles';
 
@@ -80,7 +80,7 @@ const RadioGroup = React.forwardRef(
   ) => {
     const radioGroupRef = useDOMRef(ref);
 
-    const presetId = useId();
+    const presetId = uuid('radio');
 
     const getName = useMemo(() => {
       if (name) {

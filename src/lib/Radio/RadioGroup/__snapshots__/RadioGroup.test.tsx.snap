@@ -11,14 +11,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
       <input
         checked=""
         class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-        id=":r1:"
-        name=":r0:"
+        id="1"
+        name="radio-1"
         type="radio"
         value="A"
       />
       <label
         class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
-        for=":r1:"
+        for="1"
       >
         <div
           class="decaRadio-circle"
@@ -31,14 +31,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
     >
       <input
         class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-        id=":r2:"
-        name=":r0:"
+        id="1"
+        name="radio-1"
         type="radio"
         value="B"
       />
       <label
         class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
-        for=":r2:"
+        for="1"
       >
         <div
           class="decaRadio-circle"
@@ -51,14 +51,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
     >
       <input
         class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-        id=":r3:"
-        name=":r0:"
+        id="1"
+        name="radio-1"
         type="radio"
         value="C"
       />
       <label
         class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
-        for=":r3:"
+        for="1"
       >
         <div
           class="decaRadio-circle"
@@ -71,14 +71,14 @@ exports[`components/RadioGroup matches snapshot 1`] = `
     >
       <input
         class="c-iIDhYW c-iIDhYW-hIWLRp-color-primary c-iIDhYW-kueLmT-isDisabled-false c-iIDhYW-eDpIpt-cv decaRadio-input"
-        id=":r4:"
-        name=":r0:"
+        id="1"
+        name="radio-1"
         type="radio"
         value="D"
       />
       <label
         class="c-gpKKJQ c-gpKKJQ-boLhOk-size-md c-gpKKJQ-hqEieG-isDisabled-false c-gpKKJQ-jQVVMl-cv"
-        for=":r4:"
+        for="1"
       >
         <div
           class="decaRadio-circle"

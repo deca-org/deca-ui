@@ -1,7 +1,7 @@
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
-import React, { useId, useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 
 import {
   StyledSwitchWrapper,
@@ -97,7 +97,8 @@ const Switch = React.forwardRef(
     const switchRef = useDOMRef(ref);
 
     const [selfToggled, setSelfToggled] = useState<boolean>(initialToggle);
-    const switchId = useId();
+
+    const switchId = uuid('switch');
 
     const isControlledComponent = useMemo(
       () => toggled !== undefined,

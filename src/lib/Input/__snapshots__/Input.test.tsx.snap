@@ -7,7 +7,7 @@ exports[`components/Input matches snapshot 1`] = `
   >
     <label
       class="c-hHEPWm c-hHEPWm-cNhXCf-size-md decaInput-label"
-      for=":r0:"
+      for="input-1"
     >
       Label Text
     </label>
@@ -16,7 +16,7 @@ exports[`components/Input matches snapshot 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r0:"
+        id="input-1"
         placeholder="Placeholder Text"
         value=""
       />
@@ -40,7 +40,7 @@ exports[`components/Input renders all colors 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r2:"
+        id="input-1"
         value=""
       />
     </div>
@@ -53,7 +53,7 @@ exports[`components/Input renders all colors 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r3:"
+        id="input-1"
         value=""
       />
     </div>
@@ -66,7 +66,7 @@ exports[`components/Input renders all colors 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r4:"
+        id="input-1"
         value=""
       />
     </div>
@@ -79,7 +79,7 @@ exports[`components/Input renders all colors 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r5:"
+        id="input-1"
         value=""
       />
     </div>
@@ -92,7 +92,7 @@ exports[`components/Input renders all colors 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r6:"
+        id="input-1"
         value=""
       />
     </div>
@@ -110,7 +110,7 @@ exports[`components/Input renders all sizes 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-kGUnSj-size-sm c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r7:"
+        id="input-1"
         value=""
       />
     </div>
@@ -123,7 +123,7 @@ exports[`components/Input renders all sizes 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r8:"
+        id="input-1"
         value=""
       />
     </div>
@@ -136,7 +136,7 @@ exports[`components/Input renders all sizes 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-lg c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":r9:"
+        id="input-1"
         value=""
       />
     </div>
@@ -154,7 +154,7 @@ exports[`components/Input renders all variants 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-fOmxiH-variant-solid c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":ra:"
+        id="input-1"
         value=""
       />
     </div>
@@ -167,7 +167,7 @@ exports[`components/Input renders all variants 1`] = `
     >
       <input
         class="c-hJfaMF c-hJfaMF-iTudIJ-size-md c-hJfaMF-cycqzJ-pill-false decaInput-input"
-        id=":rb:"
+        id="input-1"
         value=""
       />
     </div>

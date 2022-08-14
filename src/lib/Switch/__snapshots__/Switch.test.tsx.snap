@@ -7,13 +7,13 @@ exports[`components/Switch matches screenshot 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-esaJkh-color-primary decaSwitch-input"
-      id=":r0:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md c-euMWhK-jQVVMl-cv"
-      for=":r0:"
+      for="switch-1"
     >
       Label Text
     </label>
@@ -28,13 +28,13 @@ exports[`components/Switch renders all colors 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-esaJkh-color-primary decaSwitch-input"
-      id=":r3:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md"
-      for=":r3:"
+      for="switch-1"
     />
   </div>
   <div
@@ -42,13 +42,13 @@ exports[`components/Switch renders all colors 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-gfACsx-color-secondary decaSwitch-input"
-      id=":r4:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md"
-      for=":r4:"
+      for="switch-1"
     />
   </div>
   <div
@@ -56,13 +56,13 @@ exports[`components/Switch renders all colors 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-jYLLl-color-success decaSwitch-input"
-      id=":r5:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md"
-      for=":r5:"
+      for="switch-1"
     />
   </div>
   <div
@@ -70,13 +70,13 @@ exports[`components/Switch renders all colors 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-dKPMtd-color-warning decaSwitch-input"
-      id=":r6:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md"
-      for=":r6:"
+      for="switch-1"
     />
   </div>
   <div
@@ -84,13 +84,13 @@ exports[`components/Switch renders all colors 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-hPZWBd-color-error decaSwitch-input"
-      id=":r7:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md"
-      for=":r7:"
+      for="switch-1"
     />
   </div>
 </DocumentFragment>
@@ -103,13 +103,13 @@ exports[`components/Switch renders all sizes 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-jWLXHG-size-sm c-eZVbbP-esaJkh-color-primary decaSwitch-input"
-      id=":r8:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-kNuBnU-size-sm"
-      for=":r8:"
+      for="switch-1"
     />
   </div>
   <div
@@ -117,13 +117,13 @@ exports[`components/Switch renders all sizes 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-ejeiXn-size-md c-eZVbbP-esaJkh-color-primary decaSwitch-input"
-      id=":r9:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-dXRywA-size-md"
-      for=":r9:"
+      for="switch-1"
     />
   </div>
   <div
@@ -131,13 +131,13 @@ exports[`components/Switch renders all sizes 1`] = `
   >
     <input
       class="c-eZVbbP c-eZVbbP-hPARGX-size-lg c-eZVbbP-esaJkh-color-primary decaSwitch-input"
-      id=":ra:"
+      id="switch-1"
       type="checkbox"
       value=""
     />
     <label
       class="c-euMWhK c-euMWhK-duUVkS-size-lg"
-      for=":ra:"
+      for="switch-1"
     />
   </div>
 </DocumentFragment>

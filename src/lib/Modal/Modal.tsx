@@ -3,7 +3,6 @@ import Button from '@lib/Button';
 import { CSS } from '@lib/Theme/stitches.config';
 import { useDOMRef, mergeRefs, useClickOutside } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
-import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 import clsx from 'clsx';
 import React, { useEffect, SetStateAction, Dispatch } from 'react';
 import ReactDOM from 'react-dom';
@@ -65,6 +64,23 @@ export interface IModalContext {
 }
 
 export const ModalContext = React.createContext<IModalContext | null>(null);
+
+const CloseButton = () => (
+  <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    focusable="false"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g data-name="Layer 2">
+      <path
+        d="M13.41 12l4.3-4.29a1 1 0 10-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 00-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 000 1.42 1 1 0 001.42 0l4.29-4.3 4.29 4.3a1 1 0 001.42 0 1 1 0 000-1.42z"
+        data-name="close"
+      ></path>
+    </g>
+  </svg>
+);
 
 const Modal = React.forwardRef(
   (
@@ -167,7 +183,7 @@ const Modal = React.forwardRef(
                     <Button
                       variant="ghost"
                       pill
-                      icon={<CloseOutline />}
+                      icon={<CloseButton />}
                       css={{
                         mr: noPadding ? '-$0' : '-$3',
                         mt: noPadding ? '-$0' : '-$3',

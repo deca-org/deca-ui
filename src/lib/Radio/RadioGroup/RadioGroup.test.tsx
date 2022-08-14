@@ -20,10 +20,10 @@ describe('components/RadioGroup', () => {
     const user = userEvent.setup();
     render(
       <Radio.Group defaultValue="A">
-        <Radio value="A" label="Option A" />
-        <Radio value="B" label="Option B" />
-        <Radio value="C" label="Option C" />
-        <Radio value="D" label="Option D" />
+        <Radio id="A" value="A" label="Option A" />
+        <Radio id="B" value="B" label="Option B" />
+        <Radio id="C" value="C" label="Option C" />
+        <Radio id="D" value="D" label="Option D" />
       </Radio.Group>
     );
 
@@ -37,10 +37,10 @@ describe('components/RadioGroup', () => {
 
     render(
       <Radio.Group value={value} onChange={(e) => (value = e.target.value)}>
-        <Radio value="A" label="Option A" />
-        <Radio value="B" label="Option B" />
-        <Radio value="C" label="Option C" />
-        <Radio value="D" label="Option D" />
+        <Radio id="A" value="A" label="Option A" />
+        <Radio id="B" value="B" label="Option B" />
+        <Radio id="C" value="C" label="Option C" />
+        <Radio id="D" value="D" label="Option D" />
       </Radio.Group>
     );
 

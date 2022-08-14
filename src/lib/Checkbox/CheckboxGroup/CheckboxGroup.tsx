@@ -1,8 +1,8 @@
 import { CheckboxProps } from '@lib/Checkbox';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
-import React, { useId, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import { StyledCheckboxGroupWrapper } from './CheckboxGroup.styles';
 
@@ -80,7 +80,7 @@ const CheckboxGroup = React.forwardRef(
   ) => {
     const checkboxGroupRef = useDOMRef(ref);
 
-    const presetId = useId();
+    const presetId = uuid('checkbox');
 
     const getName = useMemo(() => {
       if (name) {

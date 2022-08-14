@@ -1,7 +1,7 @@
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { Modify, useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
-import React, { useId } from 'react';
+import React, { useMemo } from 'react';
 
 import {
   StyledRadioWrapper,
@@ -13,12 +13,17 @@ import RadioGroup from './RadioGroup';
 /**
  * Radio buttons allow the user to select one option from a set.
  */
-export interface RadioProps {
-  /**
-   * Size of the component.
-   * @default md
-   */
-  size?: 'sm' | 'md' | 'lg';
+export interface RadioProps
+  extends Modify<
+    React.ComponentPropsWithRef<'input'>,
+    {
+      /**
+       * Size of the component.
+       * @default md
+       */
+      size?: 'sm' | 'md' | 'lg';
+    }
+  > {
   /**
    * Text label for the component.
    */
@@ -94,7 +99,13 @@ const Radio = React.forwardRef(
   ) => {
     const radioRef = useDOMRef(ref);
 
-    const radioId = useId();
+    const radioId = useMemo(() => {
+      if (props.id) {
+        return props.id;
+      } else {
+        return uuid();
+      }
+    }, [props.id]);
 
     const preClass = 'decaRadio';
 
