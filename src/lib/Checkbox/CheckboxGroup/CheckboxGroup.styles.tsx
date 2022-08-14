@@ -1,4 +1,4 @@
-import { styled } from '@lib/Theme';
+import { styled } from '@lib/Theme/stitches.config';
 
 export const StyledCheckboxGroupWrapper = styled('div', {
   position: 'relative',

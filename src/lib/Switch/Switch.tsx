@@ -1,4 +1,4 @@
-import { CSS, StandardColors } from '@lib/Theme';
+import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { useDOMRef } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useId, useState, useMemo } from 'react';

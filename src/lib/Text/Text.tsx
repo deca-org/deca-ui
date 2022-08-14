@@ -1,4 +1,4 @@
-import { CSS } from '@lib/Theme';
+import { CSS } from '@lib/Theme/stitches.config';
 import { UnionToIntersection, ThemeKey } from '@lib/Utils';
 import React, { useRef, useImperativeHandle, useMemo } from 'react';
 

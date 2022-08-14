@@ -2,7 +2,7 @@ import { createPalette } from '@lib/Utils';
 import React, { useMemo } from 'react';
 import { SSRProvider } from 'react-aria';
 
-import { createTheme, globalCss } from './Theme';
+import { createTheme, globalCss } from './stitches.config';
 
 type ThemeValue = { [token in number | string]: boolean | number | string };
 

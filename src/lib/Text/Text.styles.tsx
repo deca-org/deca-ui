@@ -1,4 +1,4 @@
-import { styled } from '@lib/Theme';
+import { styled } from '@lib/Theme/stitches.config';
 
 const StyledText = styled('p', {
   fontFamily: '$normal',

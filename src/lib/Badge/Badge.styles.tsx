@@ -1,4 +1,4 @@
-import { styled } from '@lib/Theme';
+import { styled } from '@lib/Theme/stitches.config';
 
 export const StyledBadge = styled('span', {
   transition: '$default',

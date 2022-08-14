@@ -1,4 +1,4 @@
-import { styled, theme } from '@lib/Theme';
+import { styled, theme } from '@lib/Theme/stitches.config';
 import { animated } from '@react-spring/web';
 import { transparentize } from 'polished';
 

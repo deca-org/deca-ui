@@ -1,4 +1,4 @@
-import { styled } from '@lib/Theme';
+import { styled } from '@lib/Theme/stitches.config';
 import { getStaticColor } from '@lib/Utils';
 import { darken } from 'polished';
 

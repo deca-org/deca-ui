@@ -1,6 +1,6 @@
 import Box from '@lib/Box';
 import Button from '@lib/Button';
-import { CSS } from '@lib/Theme';
+import { CSS } from '@lib/Theme/stitches.config';
 import { useDOMRef, mergeRefs, useClickOutside } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';

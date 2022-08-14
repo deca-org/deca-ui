@@ -1,4 +1,4 @@
-import { CSS, StandardColors } from '@lib/Theme';
+import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { Modify, UnionToIntersection } from '@lib/Utils';
 import clsx from 'clsx';
 import React, {

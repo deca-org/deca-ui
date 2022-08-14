@@ -1,4 +1,4 @@
-import { CSS, standardColors, styled } from '@lib/Theme';
+import { CSS, standardColors, styled } from '@lib/Theme/stitches.config';
 
 const compoundVariantComposer = () => {
   const colorVariants: {

@@ -1,4 +1,4 @@
-import { theme, StitchesTheme } from '@lib/Theme';
+import { theme, StitchesTheme } from '@lib/Theme/stitches.config';
 
 export type Modify<T, R> = Omit<T, keyof R> & R;
 

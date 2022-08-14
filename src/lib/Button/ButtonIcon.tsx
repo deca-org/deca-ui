@@ -1,4 +1,4 @@
-import { CSS, styled } from '@lib/Theme';
+import { CSS, styled } from '@lib/Theme/stitches.config';
 import React from 'react';
 
 const StyledButtonIcon = styled('span', {

@@ -1,4 +1,4 @@
-import { theme } from '@lib/Theme';
+import { theme } from '@lib/Theme/stitches.config';
 import { darken, transparentize, readableColor } from 'polished';
 
 export const getStaticColor = (varColor: string): string => {

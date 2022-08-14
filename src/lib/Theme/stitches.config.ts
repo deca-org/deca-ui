@@ -381,7 +381,8 @@ export const baseTheme = {
       max: '9999',
     },
     transitions: {
-      default: 'all 250ms ease',
+      default:
+        'all 250ms ease, width 1ms, height 1ms, padding 1ms, margin 1ms, font-size 1ms',
     },
   },
   media: {
@@ -480,6 +481,7 @@ export const css = stitches.css;
 export const globalCss = stitches.globalCss;
 export const theme = stitches.theme;
 export const config = stitches.config;
+export const getCssText = stitches.getCssText;
 
 export type CSS = Stitches.CSS<typeof config>;
 export type StitchesTheme = typeof theme;
