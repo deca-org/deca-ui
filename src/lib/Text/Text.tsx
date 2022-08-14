@@ -13,7 +13,7 @@ type TextElement =
 /**
  * The Text component is the used to render text and paragraphs within an interface
  */
-interface Props {
+export interface TextProps {
   /**
    * Changes which tag component outputs.
    */
@@ -69,10 +69,6 @@ interface Props {
    */
   center?: boolean;
 }
-
-type NativeAttrs = Omit<React.HTMLAttributes<unknown>, keyof Props>;
-
-export type TextProps = Props & NativeAttrs;
 
 const Text = React.forwardRef(
   (
