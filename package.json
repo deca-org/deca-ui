@@ -1,11 +1,11 @@
 {
   "name": "@deca-ui/react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "deca-ui is an easily configurable UI library for React.js",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/HerilS/deca-ui",
+  "repository": "https://github.com/deca-org/deca-ui",
   "author": "herilsaha",
   "license": "MIT",
   "keywords": [],
