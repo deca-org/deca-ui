@@ -383,13 +383,25 @@ export const baseTheme = {
     transitions: {
       default: 'all 250ms ease',
     },
+    breakpoints: {
+      xs: '650px',
+      sm: '960px',
+      md: '1280px',
+      lg: '1400px',
+      xl: '1920px',
+    },
   },
   media: {
-    xs: '(min-width: 0px)',
-    sm: '(min-width: 600px)',
-    md: '(min-width: 900px)',
-    lg: '(min-width: 1200px)',
-    xl: '(min-width: 1536px)',
+    xs: '(min-width: 650px)',
+    sm: '(min-width: 960px)',
+    md: '(min-width: 1280px)',
+    lg: '(min-width: 1400px)',
+    xl: '(min-width: 1920px)',
+    xsMax: '(max-width: 650px)',
+    smMax: '(max-width: 960px)',
+    mdMax: '(max-width: 1280px)',
+    lgMax: '(max-width: 1400px)',
+    xlMax: '(max-width: 1920px)',
   },
   utils: {
     // Abbreviated margin properties

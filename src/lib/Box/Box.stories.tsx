@@ -1,7 +1,6 @@
+import Text from '@lib/Text';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-
-import Text from '../Text';
 
 import Box from './Box';
 
