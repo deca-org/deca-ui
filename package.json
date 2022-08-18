@@ -1,6 +1,6 @@
 {
   "name": "@deca-ui/react",
-  "version": "0.0.5",
+  "version": "0.0.5-development",
   "description": "deca-ui is an easily configurable UI library for React.js",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
@@ -37,7 +37,8 @@
     "prepare-release": "run-s reset-hard test doc:html version doc:publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\""
+    "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
+    "semantic-release": "semantic-release --branches main"
   },
   "engines": {
     "node": ">=10"
@@ -101,7 +102,8 @@
     "tsconfig-paths": "^4.1.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typedoc": "^0.23.10",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "semantic-release": "^19.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
