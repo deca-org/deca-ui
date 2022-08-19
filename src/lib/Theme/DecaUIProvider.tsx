@@ -1,3 +1,4 @@
+import { styled } from '@lib/Theme/stitches.config';
 import { createPalette } from '@lib/Utils';
 import React, { useMemo } from 'react';
 import { SSRProvider } from 'react-aria';
@@ -30,6 +31,11 @@ export type Theme<T = Record<string, unknown>> = {
 };
 
 export interface DecaUIProviderProps {
+  /**
+   * Set dark or light mode.
+   * @default light
+   */
+  mode?: 'light' | 'dark';
   /**
    * Custom theme object.
    */
@@ -107,9 +113,11 @@ const globalBaseline = globalCss({
   },
 });
 
+const ThemeProvider = styled('div', {});
+
 const DecaUIProvider: React.FC<
   React.PropsWithChildren<DecaUIProviderProps>
-> = ({ theme, children, noBaseline, root = true }) => {
+> = ({ mode, theme, children, noBaseline, root = true }) => {
   const modifiedTheme = useMemo(() => {
     if (theme && theme.colors) {
       return {
@@ -127,15 +135,30 @@ const DecaUIProvider: React.FC<
 
   const userTheme = useMemo(() => createTheme(modifiedTheme as Theme), [theme]);
 
+  const userMode = useMemo(() => {
+    const modeOptions = ['light', 'dark'];
+    if (mode && modeOptions.includes(mode)) {
+      return {
+        colorScheme: mode,
+      };
+    } else {
+      return {};
+    }
+  }, [mode]);
+
   if (!root) {
     return <div className={theme && userTheme}>{children}</div>;
   }
 
   return (
     <SSRProvider>
-      <div className={theme && userTheme} id="decaUI-provider">
+      <ThemeProvider
+        className={theme && userTheme}
+        id="decaUI-provider"
+        css={userMode}
+      >
         {children}
-      </div>
+      </ThemeProvider>
     </SSRProvider>
   );
 };

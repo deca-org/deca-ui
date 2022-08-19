@@ -1,4 +1,12 @@
 export const parameters = {
+  backgrounds: {
+    values: [
+      {
+        name: 'dark',
+        value: '#000000',
+      },
+    ],
+  },
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
@@ -7,4 +15,3 @@ export const parameters = {
     },
   },
 };
-
