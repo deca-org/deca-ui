@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Generate Release Body
-        run: npx extract-changelog-release > RELEASE_BODY.md
+        run: npm run extract-changelog > RELEASE_BODY.md
       - name: Publish to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
