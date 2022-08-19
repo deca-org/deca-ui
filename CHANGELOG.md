@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.7](https://github.com/deca-org/deca-ui/compare/v1.2.6...v1.2.7) (2022-08-19)
+
+
+### Bug Fixes
+
+* **workflows/main.yml:** added conditional statement for release from tag ([fda8b16](https://github.com/deca-org/deca-ui/commit/fda8b16190b02c89c7f66d363e1e0aac96217301))
+* **workflows/main.yml:** fix npm publish authentication problem ([6b46fa0](https://github.com/deca-org/deca-ui/commit/6b46fa0b4b3aa951b703188a15d4c40b6fb86b64))
+* **workflows/main.yml:** fixed syntax error ([a4e8d36](https://github.com/deca-org/deca-ui/commit/a4e8d36bd1639bcbab9a9f3793b8608022482aaa))
+* **workflows/main.yml:** fixed typo ([e831106](https://github.com/deca-org/deca-ui/commit/e831106751a71466707e0532c505f0f2e408bb23))
+* **workflows/main.yml:** get latest tag ([38dfa88](https://github.com/deca-org/deca-ui/commit/38dfa88319bfb7ba2026d609c89117008b7006a5))
+* **workflows/main.yml:** test for duplicate release or error ([08174a2](https://github.com/deca-org/deca-ui/commit/08174a27e7646e178a9fd2c40e86007b779fe16e))
+* **workflows/main.yml:** testing just publish job ([7e0ff9a](https://github.com/deca-org/deca-ui/commit/7e0ff9ad405de6d8a679959870ca29a1e812d982))
+* **workflows/main.yml:** used npm script instead of npx ([1bd0fa7](https://github.com/deca-org/deca-ui/commit/1bd0fa73fb0c3ae85be32939a3efcb4acb65c133))
+
 ### [1.2.6](https://github.com/deca-org/deca-ui/compare/v1.2.5...v1.2.6) (2022-08-19)
 
 
