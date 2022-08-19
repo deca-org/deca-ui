@@ -1,6 +1,6 @@
 {
   "name": "@deca-ui/react",
-  "version": "0.0.5-development",
+  "version": "0.0.0-development",
   "description": "deca-ui is an easily configurable UI library for React.js",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
