@@ -38,7 +38,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
-    "commit": "git-cz && standard-version",
+    "commit": "git-cz && standard-version && git push --follow-tags origin main",
     "bump": "standard-version"
   },
   "engines": {
