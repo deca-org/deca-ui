@@ -39,7 +39,7 @@
     "build-storybook": "build-storybook",
     "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
     "commit": "git-cz",
-    "release": "git push --follow-tags origin main",
+    "release": "standard-version && git push --follow-tags origin main",
     "bump": "standard-version",
     "extract-changelog": "extract-changelog-release"
   },
