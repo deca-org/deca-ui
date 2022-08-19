@@ -1,6 +1,6 @@
 {
   "name": "@deca-ui/react",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "deca-ui is an easily configurable UI library for React.js",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
@@ -38,7 +38,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
-    "semantic-release": "semantic-release"
+    "commit": "git-cz",
+    "release": "standard-version"
   },
   "engines": {
     "node": ">=10"
@@ -93,7 +94,7 @@
     "react-dom": "^18.2.0",
     "resize-observer-polyfill": "^1.5.1",
     "rimraf": "^3.0.2",
-    "standard-version": "^9.0.0",
+    "standard-version": "^9.5.0",
     "styled-components": "^5.3.5",
     "styled-icons": "^10.45.0",
     "ts-jest": "^28.0.7",
@@ -102,8 +103,7 @@
     "tsconfig-paths": "^4.1.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typedoc": "^0.23.10",
-    "typescript": "^4.0.2",
-    "semantic-release": "^19.0.3"
+    "typescript": "^4.0.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -166,12 +166,5 @@
     "polished": "^4.2.2",
     "react-aria": "^3.18.0",
     "uuid": "^8.3.2"
-  },
-  "release": {
-    "branches": ["main"]
-  },
-  "private": false,
-  "publishConfig": {
-    "access": "public"
   }
 }
