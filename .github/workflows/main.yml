@@ -25,12 +25,18 @@ jobs:
         with:
           access: "public"
           token: ${{ secrets.NPM_TOKEN }}
-      - name: 'Get Latest tag'
-        id: latesttag
+      - name: 'Get Latest Tag'
+        id: latestTag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      - name: 'Get Latest Release'
+        id: latestRelease
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: ${{ github.repository }}
       - name: Create GitHub Release
+        if: ${{ steps.latestTag.outputs.tag != steps.latestRelease.outputs.release }}
         uses: ncipollo/release-action@v1
         with:
           bodyFile: "RELEASE_BODY.md"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.latesttag.outputs.tag }}
+          tag: ${{ steps.latestTag.outputs.tag }}
