@@ -38,8 +38,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
-    "commit": "git-cz",
-    "release": "standard-version"
+    "commit": "git-cz && standard-version",
+    "bump": "standard-version"
   },
   "engines": {
     "node": ">=10"
