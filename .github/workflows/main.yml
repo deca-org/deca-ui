@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -47,9 +49,12 @@ jobs:
         with:
           access: "public"
           token: ${{ secrets.NPM_TOKEN }}
-
+      - name: 'Get Latest tag'
+        id: latesttag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
         with:
           bodyFile: "RELEASE_BODY.md"
           token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.latesttag.outputs.tag }}
