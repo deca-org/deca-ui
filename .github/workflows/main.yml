@@ -39,7 +39,7 @@ jobs:
       - name: Install Packages
         run: npm ci
       - name: Build
-        run: npm build
+        run: npm run build
       - name: Generate Release Body
         run: npx extract-changelog-release > RELEASE_BODY.md
       - name: Publish to NPM
