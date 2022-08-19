@@ -38,7 +38,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "spellcheck": "cspell \"{README.md,.github/*.md,src/**/*.ts}\"",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "node": ">=10"
@@ -166,5 +166,12 @@
     "polished": "^4.2.2",
     "react-aria": "^3.18.0",
     "uuid": "^8.3.2"
+  },
+  "release": {
+    "branches": ["main"]
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
