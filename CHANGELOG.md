@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.6](https://github.com/deca-org/deca-ui/compare/v1.2.5...v1.2.6) (2022-08-19)
+
+
+### Bug Fixes
+
+* **workflows/main.yml:** fixed problem with build command in workflow ([10bd23c](https://github.com/deca-org/deca-ui/commit/10bd23c5d6f05a3152ff728d5177938ade98f36f))
+
 ### [1.2.5](https://github.com/deca-org/deca-ui/compare/v1.2.4...v1.2.5) (2022-08-19)
 
 
