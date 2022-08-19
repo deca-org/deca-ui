@@ -2,8 +2,7 @@ name: CI/CD
 on: [push]
 jobs:
   quality:
-    runs-on: ubuntu-latest
-    strategy:
+    runs-on: ubuntu-latest strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
     steps:
@@ -43,7 +42,7 @@ jobs:
       - name: Generate Release Body
         run: npx extract-changelog-release > RELEASE_BODY.md
       - name: Publish to NPM
-      - uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
 
