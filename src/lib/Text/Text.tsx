@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
 import { UnionToIntersection, ThemeKey } from '@lib/Utils';
 import React, { useRef, useImperativeHandle, useMemo } from 'react';
@@ -114,6 +115,8 @@ const Text = React.forwardRef(
       return css;
     }, [css, size]);
 
+    const { dark } = React.useContext(ThemeContext);
+
     return (
       <StyledText
         as={as}
@@ -122,6 +125,7 @@ const Text = React.forwardRef(
         ref={textRef}
         weight={weight}
         center={center}
+        isDark={dark}
         {...textProps}
       >
         {children}

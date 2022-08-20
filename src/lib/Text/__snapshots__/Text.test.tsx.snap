@@ -3,7 +3,7 @@
 exports[`components/Text matches snapshot 1`] = `
 <DocumentFragment>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p decaText-root"
   />
 </DocumentFragment>
 `;
@@ -11,52 +11,52 @@ exports[`components/Text matches snapshot 1`] = `
 exports[`components/Text renders all sizes 1`] = `
 <DocumentFragment>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-icFWcZl-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-icFWcZl-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-ikKUNrJ-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-ikKUNrJ-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-ihlOZHJ-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-ihlOZHJ-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-ierFqON-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-ierFqON-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-icHMTHd-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-icHMTHd-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-icpZldy-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-icpZldy-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-ihbBHuI-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-ihbBHuI-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-ijQkWJT-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-ijQkWJT-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-ieqmpvd-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-ieqmpvd-css decaText-root"
   >
     Children
   </p>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p c-fDICNC-iejpLhE-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p c-lnBPRo-iejpLhE-css decaText-root"
   >
     Children
   </p>
@@ -66,77 +66,77 @@ exports[`components/Text renders all sizes 1`] = `
 exports[`components/Text renders all variants 1`] = `
 <DocumentFragment>
   <h1
-    class="c-fDICNC c-fDICNC-cFWcZl-as-h1 decaText-root"
+    class="c-lnBPRo c-lnBPRo-cFWcZl-as-h1 decaText-root"
   >
     Children
   </h1>
   <h2
-    class="c-fDICNC c-fDICNC-kKUNrJ-as-h2 decaText-root"
+    class="c-lnBPRo c-lnBPRo-kKUNrJ-as-h2 decaText-root"
   >
     Children
   </h2>
   <h3
-    class="c-fDICNC c-fDICNC-hlOZHJ-as-h3 decaText-root"
+    class="c-lnBPRo c-lnBPRo-hlOZHJ-as-h3 decaText-root"
   >
     Children
   </h3>
   <h4
-    class="c-fDICNC c-fDICNC-erFqON-as-h4 decaText-root"
+    class="c-lnBPRo c-lnBPRo-erFqON-as-h4 decaText-root"
   >
     Children
   </h4>
   <h5
-    class="c-fDICNC c-fDICNC-cHMTHd-as-h5 decaText-root"
+    class="c-lnBPRo c-lnBPRo-cHMTHd-as-h5 decaText-root"
   >
     Children
   </h5>
   <h6
-    class="c-fDICNC c-fDICNC-cpZldy-as-h6 decaText-root"
+    class="c-lnBPRo c-lnBPRo-cpZldy-as-h6 decaText-root"
   >
     Children
   </h6>
   <span
-    class="c-fDICNC c-fDICNC-jQkWJT-as-span decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-span decaText-root"
   >
     Children
   </span>
   <p
-    class="c-fDICNC c-fDICNC-jQkWJT-as-p decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-p decaText-root"
   >
     Children
   </p>
   <blockquote
-    class="c-fDICNC c-fDICNC-hfgHhY-as-blockquote decaText-root"
+    class="c-lnBPRo c-lnBPRo-hfgHhY-as-blockquote decaText-root"
   >
     Children
   </blockquote>
   <b
-    class="c-fDICNC c-fDICNC-jQkWJT-as-b decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-b decaText-root"
   >
     Children
   </b>
   <b
-    class="c-fDICNC c-fDICNC-jQkWJT-as-b decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-b decaText-root"
   >
     Children
   </b>
   <small
-    class="c-fDICNC c-fDICNC-IpkNQ-as-small decaText-root"
+    class="c-lnBPRo c-lnBPRo-IpkNQ-as-small decaText-root"
   >
     Children
   </small>
   <del
-    class="c-fDICNC c-fDICNC-jQkWJT-as-del decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-del decaText-root"
   >
     Children
   </del>
   <i
-    class="c-fDICNC c-fDICNC-jQkWJT-as-i decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-i decaText-root"
   >
     Children
   </i>
   <em
-    class="c-fDICNC c-fDICNC-jQkWJT-as-em decaText-root"
+    class="c-lnBPRo c-lnBPRo-jQkWJT-as-em decaText-root"
   >
     Children
   </em>
@@ -146,7 +146,7 @@ exports[`components/Text renders all variants 1`] = `
 exports[`components/Text renders sizes with variants 1`] = `
 <DocumentFragment>
   <h1
-    class="c-fDICNC c-fDICNC-cFWcZl-as-h1 c-fDICNC-ikKUNrJ-css decaText-root"
+    class="c-lnBPRo c-lnBPRo-cFWcZl-as-h1 c-lnBPRo-ikKUNrJ-css decaText-root"
   >
     Children
   </h1>

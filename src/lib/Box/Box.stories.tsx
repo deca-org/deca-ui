@@ -35,9 +35,7 @@ export const WithChildren = () => (
       linearGradient: '20deg, $blue900, $blue500',
     }}
   >
-    <Text as="h4" css={{ mb: '$2' }}>
-      {showcaseText}
-    </Text>
+    <Text as="h4">{showcaseText}</Text>
     <Text>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend
       rhoncus ligula, eget porta enim aliquam nec. Suspendisse ultrices lorem
