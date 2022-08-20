@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
 import { mergeRefs, useClickOutside } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
@@ -63,6 +64,9 @@ const PopoverContent = ({
   });
 
   const preClass = 'decaPopover';
+
+  const { dark } = React.useContext(ThemeContext);
+
   return ReactDOM.createPortal(
     transition(
       (style, item) =>
@@ -82,6 +86,7 @@ const PopoverContent = ({
             }}
             className={clsx(className, `${preClass}-root`)}
             as={animated[as as keyof JSX.IntrinsicElements]}
+            isDark={dark}
           >
             {children}
           </StyledPopover>
