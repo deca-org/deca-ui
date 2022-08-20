@@ -3,6 +3,7 @@ import { styled } from '@lib/Theme/stitches.config';
 const StyledText = styled('p', {
   fontFamily: '$normal',
   m: '$n',
+  color: '$text',
   variants: {
     as: {
       h1: {
