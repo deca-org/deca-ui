@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/deca-org/deca-ui/compare/v1.2.7...v1.3.0) (2022-08-20)
+
+
+### Features
+
+* **components/button:** added dark mode to button component ([fa89846](https://github.com/deca-org/deca-ui/commit/fa89846dc2d69a3ed6aa24d3ab075523c1cd548c))
+* **components/checkbox:** added darkmode to checkbox component ([3d15297](https://github.com/deca-org/deca-ui/commit/3d15297d535ce718466f2edfece2059d077e481d))
+* **components/decauiprovider:** added dark mode option to theme provider ([c16d02e](https://github.com/deca-org/deca-ui/commit/c16d02e4c187623fb8740ef7e4b2e0604707ebdf))
+* **components/input:** added dark mode to input component ([7bbe723](https://github.com/deca-org/deca-ui/commit/7bbe723ac9ae6312f8f2642e8ec2da653d440ff2))
+* **components/modal:** added dark mode to modal component ([e4cdf03](https://github.com/deca-org/deca-ui/commit/e4cdf0321684e75eec52f3888ec8d3ee42c356ec))
+* **components/popover:** added dark mode to popover component ([77755cb](https://github.com/deca-org/deca-ui/commit/77755cbe3ef0c19c7bc91a9cfcebf5f08b269ea3))
+* **components/radio:** added dark mode to radio button ([516d467](https://github.com/deca-org/deca-ui/commit/516d46748004d92a1856592d15bde8daa066e063))
+* **components/switch:** added dark mode to switch component ([d6f549f](https://github.com/deca-org/deca-ui/commit/d6f549f62e3ee8b62d00ace2881f7d4ab9e205b5))
+* **components/text:** added dark mode to text component ([317023b](https://github.com/deca-org/deca-ui/commit/317023b9bead5628650765181219d186f80a9e71))
+
+
+### Bug Fixes
+
+* **components/checkbox:** fixed disabled state on checkbox component when dark mode is enabled ([d88faad](https://github.com/deca-org/deca-ui/commit/d88faade93005465f26bbe68decf6074c74dcc8a))
+
 ### [1.2.7](https://github.com/deca-org/deca-ui/compare/v1.2.6...v1.2.7) (2022-08-19)
 
 
