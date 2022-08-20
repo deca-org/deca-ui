@@ -135,6 +135,7 @@ export const StyledRadio = styled('input', {
 });
 
 export const StyledRadioLabel = styled('label', {
+  color: '$text',
   position: 'relative',
   cursor: 'pointer',
   display: 'flex',

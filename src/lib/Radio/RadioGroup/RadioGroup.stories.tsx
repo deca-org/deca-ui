@@ -51,3 +51,16 @@ WithTheme.decorators = [
     </DecaUIProvider>
   ),
 ];
+
+export const DarkMode = Template.bind({});
+
+DarkMode.args = { ...Default.args };
+DarkMode.parameters = { backgrounds: { default: 'dark' } };
+
+DarkMode.decorators = [
+  (Story) => (
+    <DecaUIProvider mode="dark">
+      <Story />
+    </DecaUIProvider>
+  ),
+];
