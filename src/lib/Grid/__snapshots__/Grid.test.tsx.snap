@@ -6,17 +6,17 @@ exports[`components/Grid all sizes render properly on grid container 1`] = `
     class="c-kvxVqY c-kvxVqY-kUXYyw-spacing-sm decaGridContainer-root"
   >
     <div
-      class="c-kuhmNX c-kuhmNX-fmotQb-xs-4 c-kuhmNX-ljzXQY-sm-2 c-kuhmNX-cJCNcg-md-1 c-kuhmNX-jQcxwM-lg-12 decaGrid-root"
+      class="c-kuhmNX c-kuhmNX-fpiCCm-xs-4 c-kuhmNX-lnBoGF-sm-2 c-kuhmNX-cIjxSP-md-1 c-kuhmNX-jPndny-lg-12 c-kuhmNX-fbbhNI-xl-3 decaGrid-root"
     >
       1
     </div>
     <div
-      class="c-kuhmNX c-kuhmNX-fmotQb-xs-4 c-kuhmNX-ljzXQY-sm-2 c-kuhmNX-cJCNcg-md-1 c-kuhmNX-jQcxwM-lg-12 decaGrid-root"
+      class="c-kuhmNX c-kuhmNX-fpiCCm-xs-4 c-kuhmNX-lnBoGF-sm-2 c-kuhmNX-cIjxSP-md-1 c-kuhmNX-jPndny-lg-12 c-kuhmNX-fbbhNI-xl-3 decaGrid-root"
     >
       2
     </div>
     <div
-      class="c-kuhmNX c-kuhmNX-fmotQb-xs-4 c-kuhmNX-ljzXQY-sm-2 c-kuhmNX-cJCNcg-md-1 c-kuhmNX-jQcxwM-lg-12 decaGrid-root"
+      class="c-kuhmNX c-kuhmNX-fpiCCm-xs-4 c-kuhmNX-lnBoGF-sm-2 c-kuhmNX-cIjxSP-md-1 c-kuhmNX-jPndny-lg-12 c-kuhmNX-fbbhNI-xl-3 decaGrid-root"
     >
       3
     </div>

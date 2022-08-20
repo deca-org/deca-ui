@@ -54,10 +54,11 @@ export const StyledGridItem = styled('div', {
   display: 'block',
   boxSizing: 'border-box',
   variants: {
-    xs: colComposer('xs'),
-    sm: colComposer('sm'),
-    md: colComposer('md'),
-    lg: colComposer('lg'),
+    xs: colComposer('n'),
+    sm: colComposer('xs'),
+    md: colComposer('sm'),
+    lg: colComposer('md'),
+    xl: colComposer('lg'),
   },
 });
 

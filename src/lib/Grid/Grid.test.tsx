@@ -28,7 +28,7 @@ describe('components/Grid', () => {
   });
   it('all sizes render properly on grid container', () => {
     const { asFragment } = render(
-      <Grid.Container xs={4} sm={2} md={1} lg={12}>
+      <Grid.Container xs={4} sm={2} md={1} lg={12} xl={3}>
         <Grid>1</Grid>
         <Grid>2</Grid>
         <Grid>3</Grid>
@@ -39,7 +39,7 @@ describe('components/Grid', () => {
   it('all sizes render properly on grid item', () => {
     const { asFragment } = render(
       <Grid.Container>
-        <Grid xs={4} sm={2} md={1} lg={12}>
+        <Grid xs={4} sm={2} md={1} lg={12} xl={3}>
           1
         </Grid>
         <Grid>2</Grid>

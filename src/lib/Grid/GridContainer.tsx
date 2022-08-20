@@ -46,21 +46,25 @@ export interface GridContainerProps extends React.ComponentPropsWithRef<'div'> {
    */
   alignItems?: 'flex-start' | 'center' | 'flex-end';
   /**
-   * How many columns should be taken up by each item on xs breakpoint
+   * How many columns should be taken up by item from breakpoints n-xs
    */
   xs?: Cols;
   /**
-   * How many columns should be taken up by each item on sm breakpoint
+   * How many columns should be taken up by item from breakpoints xs-sm
    */
   sm?: Cols;
   /**
-   * How many columns should be taken up by each item on md breakpoint
+   * How many columns should be taken up by item from breakpoints sm-md
    */
   md?: Cols;
   /**
-   * How many columns should be taken up by each item on lg breakpoint
+   * How many columns should be taken up by item from breakpoints md-lg
    */
   lg?: Cols;
+  /**
+   * How many columns should be taken up by item after max lg breakpoint
+   */
+  xl?: Cols;
 }
 
 const GridContainer = React.forwardRef(
@@ -77,6 +81,7 @@ const GridContainer = React.forwardRef(
       sm,
       md,
       lg,
+      xl,
       ...gridContainerProps
     }: GridContainerProps,
     ref: React.Ref<HTMLDivElement | null>
@@ -103,6 +108,7 @@ const GridContainer = React.forwardRef(
               sm,
               md,
               lg,
+              xl,
             });
           }
         )}

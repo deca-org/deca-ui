@@ -29,21 +29,25 @@ export interface GridProps extends React.ComponentPropsWithRef<'div'> {
    */
   className?: string;
   /**
-   * How many columns should be taken up by item on xs breakpoint
+   * How many columns should be taken up by item from breakpoints n-xs
    */
   xs?: Cols;
   /**
-   * How many columns should be taken up by item on sm breakpoint
+   * How many columns should be taken up by item from breakpoints xs-sm
    */
   sm?: Cols;
   /**
-   * How many columns should be taken up by item on md breakpoint
+   * How many columns should be taken up by item from breakpoints sm-md
    */
   md?: Cols;
   /**
-   * How many columns should be taken up by item on lg breakpoint
+   * How many columns should be taken up by item from breakpoints md-lg
    */
   lg?: Cols;
+  /**
+   * How many columns should be taken up by item after max lg breakpoint
+   */
+  xl?: Cols;
 }
 
 const Grid = React.forwardRef(
@@ -57,6 +61,7 @@ const Grid = React.forwardRef(
       sm,
       md,
       lg,
+      xl,
       ...gridProps
     }: GridProps,
     ref: React.Ref<HTMLDivElement | null>
@@ -74,6 +79,7 @@ const Grid = React.forwardRef(
         sm={sm}
         md={md}
         lg={lg}
+        xl={xl}
         {...gridProps}
       >
         {children}

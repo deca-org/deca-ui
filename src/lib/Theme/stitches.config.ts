@@ -410,6 +410,7 @@ export const baseTheme = {
       default: 'all 250ms ease',
     },
     breakpoints: {
+      n: '0px',
       xs: '650px',
       sm: '960px',
       md: '1280px',
@@ -418,6 +419,7 @@ export const baseTheme = {
     },
   },
   media: {
+    n: '(min-width: 0px)',
     xs: '(min-width: 650px)',
     sm: '(min-width: 960px)',
     md: '(min-width: 1280px)',

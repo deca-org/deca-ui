@@ -77,18 +77,23 @@ const Template: ComponentStory<typeof Grid> = (args: any) => (
     <Grid.Container
       justifyContent={args.justifyContent}
       alignItems={args.alignItems}
+      xs={args.xs}
+      sm={args.sm}
+      md={args.md}
+      lg={args.lg}
+      xl={args.xl}
       {...args}
     >
-      <Grid xs={args.xs} sm={args.sm} md={args.md} lg={args.lg}>
+      <Grid>
         <ExampleBox>1</ExampleBox>
       </Grid>
-      <Grid xs={args.xs} sm={args.sm} md={args.md} lg={args.lg}>
+      <Grid>
         <ExampleBox>2</ExampleBox>
       </Grid>
-      <Grid xs={args.xs} sm={args.sm} md={args.md} lg={args.lg}>
+      <Grid>
         <ExampleBox>3</ExampleBox>
       </Grid>
-      <Grid xs={args.xs} sm={args.sm} md={args.md} lg={args.lg}>
+      <Grid>
         <ExampleBox>4</ExampleBox>
       </Grid>
     </Grid.Container>
@@ -102,8 +107,9 @@ export const Default = Template.bind({});
   spacing: 'sm',
   xs: 12,
   sm: 6,
-  md: 3,
-  lg: 1,
+  md: 4,
+  lg: 3,
+  xl: 1,
 };
 
 export const WithGridRuler = Template.bind({});
