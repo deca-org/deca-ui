@@ -28,6 +28,14 @@ export const StyledModal = styled(animated.div, {
         p: '$3',
       },
     },
+    isDark: {
+      true: {
+        bg: '$popperDarkBg',
+      },
+      false: {
+        bg: '$popperLightBg',
+      },
+    },
   },
 });
 
@@ -48,6 +56,7 @@ export const StyledModalFlexbox = styled('div', {
 });
 
 export const StyledModalHeader = styled('div', {
+  color: '$text',
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',

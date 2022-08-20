@@ -20,7 +20,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <DecaUIProvider mode="light">
+    // adds provider for stories that do not contain it
+    // (only to see changes made to component by css reset)
+    <DecaUIProvider root={false}>
       <Story />
     </DecaUIProvider>
   ),

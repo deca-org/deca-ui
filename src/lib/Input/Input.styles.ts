@@ -298,8 +298,24 @@ export const StyledInputContainer = styled('div', {
     },
     {
       variant: 'outlined',
+      state: 'value',
+      isDark: true,
+      css: {
+        borderColor: '$gray800',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'default',
+      isDark: true,
+      css: {
+        borderColor: '$gray800',
+      },
+    },
+    {
+      variant: 'outlined',
       state: 'isDisabled',
-      isDark: 'true',
+      isDark: true,
       css: {
         borderColor: '$gray800',
       },
@@ -307,7 +323,7 @@ export const StyledInputContainer = styled('div', {
     {
       variant: 'solid',
       state: 'isDisabled',
-      isDark: 'true',
+      isDark: true,
       css: {
         borderColor: '$gray900',
       },
