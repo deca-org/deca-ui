@@ -38,7 +38,7 @@ export const StyledCheckbox = styled('input', {
       isDark: false,
       css: {
         '&:checked + label::before': {
-          opacity: '50%',
+          opacity: '55%',
         },
         '&:checked + label > svg': {
           opacity: '90%',

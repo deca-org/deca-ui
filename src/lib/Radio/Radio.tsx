@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { Modify, useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
@@ -119,6 +120,8 @@ const Radio = React.forwardRef(
       onFocus && onFocus(e);
     };
 
+    const { dark } = React.useContext(ThemeContext);
+
     return (
       <StyledRadioWrapper className={clsx(className, `${preClass}-root`)}>
         <StyledRadio
@@ -134,6 +137,7 @@ const Radio = React.forwardRef(
           name={name}
           onChange={changeHandler}
           onFocus={focusHandler}
+          isDark={dark}
           {...(initialSelect && { defaultChecked: initialSelect })}
           {...(!initialSelect && { checked: selected })}
           {...props}
@@ -146,6 +150,7 @@ const Radio = React.forwardRef(
           color={color}
           isDisabled={disabled}
           hasLabel={label ? true : false}
+          isDark={dark}
         >
           <div className={`${preClass}-circle`} />
           {label && label}
