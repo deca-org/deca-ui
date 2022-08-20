@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { Modify, useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
@@ -144,6 +145,8 @@ const Checkbox = React.forwardRef(
 
     const preClass = 'decaCheckbox';
 
+    const { dark } = React.useContext(ThemeContext);
+
     return (
       <StyledCheckboxWrapper className={clsx(className, `${preClass}-root`)}>
         <StyledCheckbox
@@ -160,6 +163,7 @@ const Checkbox = React.forwardRef(
           disabled={disabled}
           isDisabled={disabled}
           value={value}
+          isDark={dark}
           {...props}
         />
         <StyledCheckboxLabel
@@ -170,6 +174,7 @@ const Checkbox = React.forwardRef(
           color={color}
           isDisabled={disabled}
           hasLabel={label ? true : false}
+          isDark={dark}
         >
           <Check />
           {label && label}

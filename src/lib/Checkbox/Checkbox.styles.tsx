@@ -22,72 +22,26 @@ export const StyledCheckbox = styled('input', {
   },
   compoundVariants: [
     {
-      color: 'primary',
-      isDisabled: false,
+      isDisabled: true,
+      isDark: true,
       css: {
         '&:checked + label::before': {
-          bg: '$primary',
-          borderColor: '$primary',
+          opacity: '50%',
         },
-        '&:checked:active + label::before': {
-          bg: '$primary-darken-1',
-          borderColor: '$primary-darken-1',
+        '&:checked + label > svg': {
+          opacity: '30%',
         },
       },
     },
     {
-      color: 'secondary',
-      isDisabled: false,
+      isDisabled: true,
+      isDark: false,
       css: {
         '&:checked + label::before': {
-          bg: '$secondary',
-          borderColor: '$secondary',
+          opacity: '50%',
         },
-        '&:checked:active + label::before': {
-          bg: '$secondary-darken-1',
-          borderColor: '$secondary-darken-1',
-        },
-      },
-    },
-    {
-      color: 'success',
-      isDisabled: false,
-      css: {
-        '&:checked + label::before': {
-          bg: '$success',
-          borderColor: '$success',
-        },
-        '&:checked:active + label::before': {
-          bg: '$success-darken-1',
-          borderColor: '$success-darken-1',
-        },
-      },
-    },
-    {
-      color: 'warning',
-      isDisabled: false,
-      css: {
-        '&:checked + label::before': {
-          bg: '$warning',
-          borderColor: '$warning',
-        },
-        '&:checked:active + label::before': {
-          bg: '$warning-darken-1',
-          borderColor: '$warning-darken-1',
-        },
-      },
-    },
-    {
-      color: 'error',
-      isDisabled: false,
-      css: {
-        '&:checked + label::before': {
-          bg: '$error',
-          borderColor: '$error',
-        },
-        '&:checked:active + label::before': {
-          bg: '$error-darken-1',
-          borderColor: '$error-darken-1',
+        '&:checked + label > svg': {
+          opacity: '90%',
         },
       },
     },
@@ -99,24 +53,68 @@ export const StyledCheckbox = styled('input', {
       lg: {},
     },
     color: {
-      primary: {},
-      secondary: {},
-      success: {},
-      warning: {},
-      error: {},
-    },
-    isDisabled: {
-      true: {
+      primary: {
         '&:checked + label::before': {
-          bg: '$gray400',
-          borderColor: '$gray400',
+          bg: '$primary',
+          borderColor: '$primary',
+        },
+        '&:checked:active + label::before': {
+          bg: '$primary-darken-1',
+          borderColor: '$primary-darken-1',
         },
       },
+      secondary: {
+        '&:checked + label::before': {
+          bg: '$secondary',
+          borderColor: '$secondary',
+        },
+        '&:checked:active + label::before': {
+          bg: '$secondary-darken-1',
+          borderColor: '$secondary-darken-1',
+        },
+      },
+      success: {
+        '&:checked + label::before': {
+          bg: '$success',
+          borderColor: '$success',
+        },
+        '&:checked:active + label::before': {
+          bg: '$success-darken-1',
+          borderColor: '$success-darken-1',
+        },
+      },
+      warning: {
+        '&:checked + label::before': {
+          bg: '$warning',
+          borderColor: '$warning',
+        },
+        '&:checked:active + label::before': {
+          bg: '$warning-darken-1',
+          borderColor: '$warning-darken-1',
+        },
+      },
+      error: {
+        '&:checked + label::before': {
+          bg: '$error',
+          borderColor: '$error',
+        },
+        '&:checked:active + label::before': {
+          bg: '$error-darken-1',
+          borderColor: '$error-darken-1',
+        },
+      },
+    },
+    isDisabled: {
+      true: {},
       false: {
         '&:focus-visible + label::before': {
           boxShadow: '$a11y',
         },
       },
+    },
+    isDark: {
+      true: {},
+      false: {},
     },
   },
 });
@@ -162,6 +160,27 @@ export const StyledCheckboxLabel = styled('label', {
       css: {
         '&::before': {
           mr: '$2',
+        },
+      },
+    },
+    {
+      isDisabled: true,
+      isDark: true,
+      css: {
+        color: '$gray700',
+        '&::before': {
+          borderColor: '$gray700',
+        },
+      },
+    },
+
+    {
+      isDisabled: true,
+      isDark: false,
+      css: {
+        color: '$gray500',
+        '&::before': {
+          borderColor: '$gray400',
         },
       },
     },
@@ -232,14 +251,10 @@ export const StyledCheckboxLabel = styled('label', {
     isDisabled: {
       true: {
         cursor: 'not-allowed',
-        color: '$gray500',
         '-webkit-user-select': 'none',
         '-moz-user-select': 'none',
         '-ms-user-select': 'none',
         userSelect: 'none',
-        '&::before': {
-          borderColor: '$gray400',
-        },
       },
       false: {
         '&:hover::before': {
@@ -249,6 +264,10 @@ export const StyledCheckboxLabel = styled('label', {
       },
     },
     hasLabel: {
+      true: {},
+      false: {},
+    },
+    isDark: {
       true: {},
       false: {},
     },
