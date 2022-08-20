@@ -6,13 +6,13 @@ exports[`components/Checkbox matches screenshot 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false c-kmmngW-jQVVMl-cv"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
       for="1"
     >
       <svg
@@ -39,13 +39,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -66,13 +66,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-eqqmAr-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-eqqmAr-color-secondary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -93,13 +93,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-keGbpD-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-keGbpD-color-success c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -120,13 +120,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-hjDOGz-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-hjDOGz-color-warning c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -147,13 +147,13 @@ exports[`components/Checkbox renders all colors 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-XCpOj-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-XCpOj-color-error c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -179,13 +179,13 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-gPIcnu-size-sm c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-gPIcnu-size-sm c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -206,13 +206,13 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -233,13 +233,13 @@ exports[`components/Checkbox renders all sizes 1`] = `
     class="c-gidqah decaCheckbox-root"
   >
     <input
-      class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+      class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
       id="1"
       type="checkbox"
       value=""
     />
     <label
-      class="c-kmmngW c-kmmngW-komCFO-size-lg c-kmmngW-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-komCFO-size-lg c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg

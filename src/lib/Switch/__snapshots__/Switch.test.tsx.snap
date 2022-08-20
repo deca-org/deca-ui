@@ -12,7 +12,7 @@ exports[`components/Switch matches screenshot 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md c-euMWhK-jQVVMl-cv"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false c-dhssrN-jQVVMl-cv"
       for="switch-1"
     >
       Label Text
@@ -33,7 +33,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -47,7 +47,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -61,7 +61,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -75,7 +75,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -89,7 +89,7 @@ exports[`components/Switch renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -108,7 +108,7 @@ exports[`components/Switch renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-kNuBnU-size-sm"
+      class="c-dhssrN c-dhssrN-kNuBnU-size-sm c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -122,7 +122,7 @@ exports[`components/Switch renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-dXRywA-size-md"
+      class="c-dhssrN c-dhssrN-dXRywA-size-md c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
@@ -136,7 +136,7 @@ exports[`components/Switch renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-euMWhK c-euMWhK-duUVkS-size-lg"
+      class="c-dhssrN c-dhssrN-duUVkS-size-lg c-dhssrN-TIRgJ-isDark-false"
       for="switch-1"
     />
   </div>
