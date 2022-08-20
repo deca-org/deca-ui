@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { useDOMRef, uuid } from '@lib/Utils';
 import clsx from 'clsx';
@@ -115,6 +116,8 @@ const Switch = React.forwardRef(
 
     const preClass = 'decaSwitch';
 
+    const { dark } = React.useContext(ThemeContext);
+
     return (
       <StyledSwitchWrapper className={clsx(className, `${preClass}-root`)}>
         <StyledSwitchInput
@@ -131,6 +134,7 @@ const Switch = React.forwardRef(
           color={color}
           required={required}
           value={value}
+          isDark={dark}
         />
         <StyledSwitchLabel
           htmlFor={switchId}
@@ -140,6 +144,7 @@ const Switch = React.forwardRef(
           color={color}
           isDisabled={disabled}
           hasLabel={label ? true : false}
+          isDark={dark}
         >
           {label && label}
         </StyledSwitchLabel>

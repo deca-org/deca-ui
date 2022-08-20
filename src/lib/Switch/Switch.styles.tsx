@@ -15,6 +15,32 @@ export const StyledSwitchInput = styled('input', {
   '&:focus-visible + label::before': {
     boxShadow: '$a11y',
   },
+  compoundVariants: [
+    {
+      isDark: true,
+      isDisabled: true,
+      css: {
+        '&:checked + label::before': {
+          bg: '$gray700',
+        },
+        '&:checked:active + label::before': {
+          bg: '$gray700',
+        },
+      },
+    },
+    {
+      isDark: false,
+      isDisabled: true,
+      css: {
+        '&:checked + label::before': {
+          bg: '$gray200',
+        },
+        '&:checked:active + label::before': {
+          bg: '$gray200',
+        },
+      },
+    },
+  ],
   variants: {
     size: {
       sm: {
@@ -94,17 +120,18 @@ export const StyledSwitchInput = styled('input', {
       },
     },
     isDisabled: {
-      true: {
-        '&:checked + label::before': {
-          bg: '$gray200',
-        },
-      },
+      true: {},
+      false: {},
+    },
+    isDark: {
+      true: {},
       false: {},
     },
   },
 });
 
 export const StyledSwitchLabel = styled('label', {
+  color: '$text',
   position: 'relative',
   boxSizing: 'content-box',
   display: 'flex',
@@ -113,7 +140,6 @@ export const StyledSwitchLabel = styled('label', {
   '&::before': {
     boxSizing: 'content-box',
     content: '',
-    bg: '$gray300',
     br: '$pill',
     transition: '$default',
   },
@@ -121,7 +147,6 @@ export const StyledSwitchLabel = styled('label', {
     boxSizing: 'content-box',
     position: 'absolute',
     content: '',
-    bg: '$white',
     br: '$pill',
     transition: '$default',
   },
@@ -150,6 +175,31 @@ export const StyledSwitchLabel = styled('label', {
       css: {
         '&::before': {
           mr: '$2',
+        },
+      },
+    },
+    {
+      isDark: true,
+      isDisabled: true,
+      css: {
+        '&::before': {
+          bg: '$gray700',
+        },
+        '&::after': {
+          opacity: '40%',
+          bg: '$gray600',
+        },
+      },
+    },
+    {
+      isDark: false,
+      isDisabled: true,
+      css: {
+        '&::before': {
+          bg: '$gray200',
+        },
+        '&::after': {
+          bg: '$gray400',
         },
       },
     },
@@ -200,18 +250,30 @@ export const StyledSwitchLabel = styled('label', {
     isDisabled: {
       true: {
         cursor: 'not-allowed',
-        '&::before': {
-          bg: '$gray200',
-        },
-        '&::after': {
-          bg: '$gray400',
-        },
       },
       false: {},
     },
     hasLabel: {
       true: {},
       false: {},
+    },
+    isDark: {
+      true: {
+        '&::before': {
+          bg: '$gray800',
+        },
+        '&::after': {
+          bg: '$black',
+        },
+      },
+      false: {
+        '&::before': {
+          bg: '$gray300',
+        },
+        '&::after': {
+          bg: '$white',
+        },
+      },
     },
   },
 });
