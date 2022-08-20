@@ -14,7 +14,6 @@ export const StyledModalOverlay = styled(animated.div, {
 
 export const StyledModal = styled(animated.div, {
   position: 'fixed',
-  bg: '$white',
   fontFamily: '$normal',
   boxShadow: '$default',
   br: '$sm',
