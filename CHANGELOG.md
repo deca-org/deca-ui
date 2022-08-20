@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/deca-org/deca-ui/compare/v1.2.7...v1.4.0) (2022-08-20)
+
+
+### Features
+
+* **components/button:** added dark mode to button component ([3a6b37e](https://github.com/deca-org/deca-ui/commit/3a6b37e8c5addf4e07d65930f5de7054b12f1fed))
+* **components/checkbox:** added darkmode to checkbox component ([6298e78](https://github.com/deca-org/deca-ui/commit/6298e78be9ba5a1b7fdae6d1181125ba57a245c2))
+* **components/decauiprovider:** added dark mode option to theme provider ([26b9764](https://github.com/deca-org/deca-ui/commit/26b976456df5d5ca457af7d73fed80c4a6cb8099))
+* **components/input:** added dark mode to input component ([f5accc6](https://github.com/deca-org/deca-ui/commit/f5accc65ebeb9868402044b3fb94b047326af66f))
+* **components/modal:** added dark mode to modal component ([e702a0e](https://github.com/deca-org/deca-ui/commit/e702a0e8d5a971b251b06c797a6db732bcd87e4f))
+* **components/popover:** added dark mode to popover component ([1de2411](https://github.com/deca-org/deca-ui/commit/1de241146b24a62f1b164086fa45f24a97a7f913))
+* **components/radio:** added dark mode to radio button ([9ff6ee7](https://github.com/deca-org/deca-ui/commit/9ff6ee723ec15e9780330b7cba23e266b3d83e4d))
+* **components/switch:** added dark mode to switch component ([1d925fb](https://github.com/deca-org/deca-ui/commit/1d925fb8558ded1472722a7624c67ea77b4d84db))
+* **components/text:** added dark mode to text component ([12c6459](https://github.com/deca-org/deca-ui/commit/12c6459c0d74332e87e681a401ee23f012f90c05))
+
+
+### Bug Fixes
+
+* **components/checkbox:** fixed disabled state on checkbox component when dark mode is enabled ([b6281f9](https://github.com/deca-org/deca-ui/commit/b6281f928aa1bf7cd6e8ef4058a978cff99ac9c2))
+* **components/grid:** fixed styling issue that occured with grid when scaled from 0px to xs bp ([7c0d1cf](https://github.com/deca-org/deca-ui/commit/7c0d1cf9d9e80a918be01de24a1bca576dde160a))
+
 ## [1.3.0](https://github.com/deca-org/deca-ui/compare/v1.2.7...v1.3.0) (2022-08-20)
 
 
