@@ -21,62 +21,28 @@ export const StyledRadio = styled('input', {
   },
   compoundVariants: [
     {
-      color: 'primary',
-      isDisabled: false,
+      isDisabled: true,
+      isDark: false,
       css: {
-        '&:checked + label::before': {
-          borderColor: '$primary',
+        pointerEvents: 'none',
+        '& + label::before': {
+          opacity: '60%',
         },
-        '&:checked:active + label::before': {
-          borderColor: '$primary-darken-1',
+        '&:checked + label > div': {
+          opacity: '50%',
         },
       },
     },
     {
-      color: 'secondary',
-      isDisabled: false,
+      isDisabled: true,
+      isDark: true,
       css: {
-        '&:checked + label::before': {
-          borderColor: '$secondary',
+        pointerEvents: 'none',
+        '& + label::before': {
+          opacity: '35%',
         },
-        '&:checked:active + label::before': {
-          borderColor: '$secondary-darken-1',
-        },
-      },
-    },
-    {
-      color: 'success',
-      isDisabled: false,
-      css: {
-        '&:checked + label::before': {
-          borderColor: '$success',
-        },
-        '&:checked:active + label::before': {
-          borderColor: '$success-darken-1',
-        },
-      },
-    },
-    {
-      color: 'warning',
-      isDisabled: false,
-      css: {
-        '&:checked + label::before': {
-          borderColor: '$warning',
-        },
-        '&:checked:active + label::before': {
-          borderColor: '$warning-darken-1',
-        },
-      },
-    },
-    {
-      color: 'error',
-      isDisabled: false,
-      css: {
-        '&:checked + label::before': {
-          borderColor: '$error',
-        },
-        '&:checked:active + label::before': {
-          borderColor: '$error-darken-1',
+        '&:checked + label > div': {
+          opacity: '35%',
         },
       },
     },
@@ -92,44 +58,70 @@ export const StyledRadio = styled('input', {
         '&:checked + label > div': {
           bg: '$primary',
         },
+        '&:checked + label::before': {
+          borderColor: '$primary',
+        },
+        '&:checked:active + label::before': {
+          borderColor: '$primary-darken-1',
+        },
       },
       secondary: {
         '&:checked + label > div': {
           bg: '$secondary',
+        },
+        '&:checked + label::before': {
+          borderColor: '$secondary',
+        },
+        '&:checked:active + label::before': {
+          borderColor: '$secondary-darken-1',
         },
       },
       success: {
         '&:checked + label > div': {
           bg: '$success',
         },
+        '&:checked + label::before': {
+          borderColor: '$success',
+        },
+        '&:checked:active + label::before': {
+          borderColor: '$success-darken-1',
+        },
       },
       warning: {
         '&:checked + label > div': {
           bg: '$warning',
+        },
+        '&:checked + label::before': {
+          borderColor: '$warning',
+        },
+        '&:checked:active + label::before': {
+          borderColor: '$warning-darken-1',
         },
       },
       error: {
         '&:checked + label > div': {
           bg: '$error',
         },
+        '&:checked + label::before': {
+          borderColor: '$error',
+        },
+        '&:checked:active + label::before': {
+          borderColor: '$error-darken-1',
+        },
       },
     },
 
     isDisabled: {
-      true: {
-        pointerEvents: 'none',
-        '&:checked + label::before': {
-          borderColor: '$gray400',
-        },
-        '&:checked + label > div': {
-          bg: '$gray400',
-        },
-      },
+      true: {},
       false: {
         '&:focus-visible + label::before': {
           boxShadow: '$a11y',
         },
       },
+    },
+    isDark: {
+      true: {},
+      false: {},
     },
   },
 });
@@ -157,6 +149,20 @@ export const StyledRadioLabel = styled('label', {
     visibility: 'hidden',
   },
   compoundVariants: [
+    {
+      isDisabled: true,
+      isDark: true,
+      css: {
+        color: '$gray700',
+      },
+    },
+    {
+      isDisabled: true,
+      isDark: false,
+      css: {
+        color: '$gray500',
+      },
+    },
     {
       hasLabel: true,
       size: 'sm',
@@ -247,6 +253,10 @@ export const StyledRadioLabel = styled('label', {
       },
     },
     hasLabel: {
+      true: {},
+      false: {},
+    },
+    isDark: {
       true: {},
       false: {},
     },
