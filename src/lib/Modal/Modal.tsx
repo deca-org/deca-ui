@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import Box from '@lib/Box';
 import Button from '@lib/Button';
 import { CSS } from '@lib/Theme/stitches.config';
@@ -156,6 +157,8 @@ const Modal = React.forwardRef(
 
     const preClass = 'decaModal';
 
+    const { dark } = React.useContext(ThemeContext);
+
     return ReactDOM.createPortal(
       transition(
         (style, item) =>
@@ -172,6 +175,7 @@ const Modal = React.forwardRef(
                 css={css}
                 noPadding={noPadding}
                 as={animated[as as keyof JSX.IntrinsicElements]}
+                isDark={dark}
               >
                 {closeButton && (
                   <Box
@@ -189,13 +193,14 @@ const Modal = React.forwardRef(
                         mt: noPadding ? '-$0' : '-$3',
                         p: '$n',
                         bg: 'transparent',
-                        color: '$gray500',
+                        color: dark ? '$gray700' : '$gray500',
                         '&:hover': {
                           color: '$gray600',
                           bg: 'transparent',
+                          borderColor: '$transparent',
                         },
                         '&:focus': {
-                          color: '$gray700',
+                          color: dark ? '$gray500' : '$gray700',
                           bg: 'transparent',
                         },
                       }}

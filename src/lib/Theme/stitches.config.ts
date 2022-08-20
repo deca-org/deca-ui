@@ -80,6 +80,10 @@ export const baseTheme = {
       neutral: '#868E96',
       black: '#000000',
       white: '#FFFFFF',
+      // reserved colors for popover and modal component
+      popperDarkBg: '#131415',
+      popperLightBg: '$white',
+
       transparent: '#FFFFFF00',
       brown900: '#3E2723',
       brown800: '#4E342E',
