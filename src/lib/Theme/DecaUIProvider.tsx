@@ -33,7 +33,6 @@ export type Theme<T = Record<string, unknown>> = {
 export interface DecaUIProviderProps {
   /**
    * Set dark or light mode.
-   * @default light
    */
   mode?: 'light' | 'dark';
   /**
@@ -113,6 +112,8 @@ const globalBaseline = globalCss({
   },
 });
 
+export const ThemeContext = React.createContext({ dark: false });
+
 const ThemeProvider = styled('div', {});
 
 const DecaUIProvider: React.FC<
@@ -136,14 +137,7 @@ const DecaUIProvider: React.FC<
   const userTheme = useMemo(() => createTheme(modifiedTheme as Theme), [theme]);
 
   const userMode = useMemo(() => {
-    const modeOptions = ['light', 'dark'];
-    if (mode && modeOptions.includes(mode)) {
-      return {
-        colorScheme: mode,
-      };
-    } else {
-      return {};
-    }
+    return mode === 'dark' ? true : false;
   }, [mode]);
 
   if (!root) {
@@ -152,13 +146,11 @@ const DecaUIProvider: React.FC<
 
   return (
     <SSRProvider>
-      <ThemeProvider
-        className={theme && userTheme}
-        id="decaUI-provider"
-        css={userMode}
-      >
-        {children}
-      </ThemeProvider>
+      <ThemeContext.Provider value={{ dark: userMode }}>
+        <ThemeProvider className={theme && userTheme} id="decaUI-provider">
+          {children}
+        </ThemeProvider>
+      </ThemeContext.Provider>
     </SSRProvider>
   );
 };

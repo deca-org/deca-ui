@@ -423,6 +423,7 @@ export const baseTheme = {
     mdMax: '(max-width: 1280px)',
     lgMax: '(max-width: 1400px)',
     xlMax: '(max-width: 1920px)',
+    dark: '(prefers-color-scheme: dark)',
   },
   utils: {
     // Abbreviated margin properties

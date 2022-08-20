@@ -1,4 +1,4 @@
-import { CSS, StandardColors } from '@lib/Theme';
+import { CSS, StandardColors, ThemeContext } from '@lib/Theme';
 import { useDOMRef } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
@@ -127,6 +127,8 @@ const Button = React.forwardRef(
 
     const preClass = 'decaButton';
 
+    const { dark } = React.useContext(ThemeContext);
+
     return (
       <StyledButton
         role={role}
@@ -143,6 +145,7 @@ const Button = React.forwardRef(
         ref={buttonRef}
         singleIcon={singleIcon}
         pill={pill}
+        isDark={dark}
         {...btnProps}
       >
         {(icon && hasText) || (icon && iconRight) ? (
