@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/deca-org/deca-ui/compare/v1.4.0...v1.4.1) (2022-08-20)
+
+
+### Bug Fixes
+
+* **package.json:** seperated bump and release commands more safely ([ecea034](https://github.com/deca-org/deca-ui/commit/ecea034f5af901df3c290bb0ce73e71b44374a6e))
+
 ## [1.4.0](https://github.com/deca-org/deca-ui/compare/v1.2.7...v1.4.0) (2022-08-20)
 
 
