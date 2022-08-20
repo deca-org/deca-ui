@@ -1,3 +1,5 @@
+import { DecaUIProvider } from '@lib/Theme';
+
 export const parameters = {
   backgrounds: {
     values: [
@@ -15,3 +17,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <DecaUIProvider mode="light">
+      <Story />
+    </DecaUIProvider>
+  ),
+];
