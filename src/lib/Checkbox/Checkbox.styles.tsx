@@ -122,6 +122,7 @@ export const StyledCheckbox = styled('input', {
 });
 
 export const StyledCheckboxLabel = styled('label', {
+  color: '$text',
   position: 'relative',
   cursor: 'pointer',
   display: 'flex',

@@ -119,14 +119,21 @@ const ThemeProvider = styled('div', {});
 const DecaUIProvider: React.FC<
   React.PropsWithChildren<DecaUIProviderProps>
 > = ({ mode, theme, children, noBaseline, root = true }) => {
+  const darkMode = useMemo(() => {
+    return mode === 'dark' ? true : false;
+  }, [mode]);
+
   const modifiedTheme = useMemo(() => {
     if (theme && theme.colors) {
       return {
         ...theme,
-        colors: createPalette(theme.colors as Record<string, string>),
+        colors: {
+          ...createPalette(theme.colors as Record<string, string>),
+          text: darkMode ? '$white' : '$black',
+        },
       };
     } else {
-      return theme;
+      return { ...theme, colors: { text: darkMode ? '$white' : '$black' } };
     }
   }, [theme]);
 
@@ -136,18 +143,14 @@ const DecaUIProvider: React.FC<
 
   const userTheme = useMemo(() => createTheme(modifiedTheme as Theme), [theme]);
 
-  const userMode = useMemo(() => {
-    return mode === 'dark' ? true : false;
-  }, [mode]);
-
   if (!root) {
     return <div className={theme && userTheme}>{children}</div>;
   }
 
   return (
     <SSRProvider>
-      <ThemeContext.Provider value={{ dark: userMode }}>
-        <ThemeProvider className={theme && userTheme} id="decaUI-provider">
+      <ThemeContext.Provider value={{ dark: darkMode }}>
+        <ThemeProvider className={userTheme} id="decaUI-provider">
           {children}
         </ThemeProvider>
       </ThemeContext.Provider>

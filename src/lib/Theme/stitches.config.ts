@@ -5,6 +5,7 @@ import { rem } from 'polished';
 export const baseTheme = {
   theme: {
     colors: {
+      text: '$black',
       // generated with createPalette function
       primary: '#228BE6',
       'primary-darken-1': '#187dd4',
