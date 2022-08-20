@@ -19,6 +19,7 @@ export const StyledInputLabel = styled('label', {
   ml: '$0',
   mb: '$2',
   mt: '0px',
+  color: '$text',
   compoundVariants: [
     {
       variant: 'outlined',
@@ -64,14 +65,21 @@ export const StyledInputLabel = styled('label', {
       variant: 'outlined',
       state: 'default',
       css: {
-        color: '$gray600',
+        color: '$text',
       },
     },
     {
       variant: 'outlined',
       state: 'value',
       css: {
-        color: '$gray600',
+        color: '$text',
+      },
+    },
+    {
+      state: 'isDisabled',
+      isDark: 'true',
+      css: {
+        color: '$gray700',
       },
     },
   ],
@@ -113,6 +121,10 @@ export const StyledInputLabel = styled('label', {
       },
       false: {},
     },
+    isDark: {
+      true: {},
+      false: {},
+    },
   },
 });
 
@@ -124,6 +136,29 @@ export const StyledInputHelperText = styled('p', {
   m: '$n',
   ml: '$0',
   mt: '$2',
+  compoundVariants: [
+    {
+      state: 'isDisabled',
+      isDark: true,
+      css: {
+        color: '$gray700',
+      },
+    },
+    {
+      state: 'value',
+      isDark: true,
+      css: {
+        color: '$text',
+      },
+    },
+    {
+      state: 'default',
+      isDark: true,
+      css: {
+        color: '$text',
+      },
+    },
+  ],
   variants: {
     size: {
       sm: {
@@ -150,6 +185,12 @@ export const StyledInputHelperText = styled('p', {
       },
       false: {},
     },
+    isDark: {
+      true: {
+        color: '$text',
+      },
+      false: {},
+    },
   },
 });
 
@@ -159,14 +200,39 @@ export const StyledInputContainer = styled('div', {
   borderWidth: '$normal',
   borderStyle: 'solid',
   transition: '$default',
-  bg: '$white',
   compoundVariants: [
     {
       variant: 'solid',
+      isDark: false,
+      css: {
+        backgroundColor: '$gray200',
+        borderColor: '$gray200',
+      },
+    },
+    {
+      variant: 'solid',
       state: 'focused',
+      isDark: false,
       css: {
         backgroundColor: '$gray300',
         borderColor: '$gray300',
+      },
+    },
+    {
+      variant: 'solid',
+      isDark: true,
+      css: {
+        backgroundColor: '$gray900',
+        borderColor: '$gray900',
+      },
+    },
+    {
+      variant: 'solid',
+      state: 'focused',
+      isDark: true,
+      css: {
+        backgroundColor: '$gray800',
+        borderColor: '$gray800',
       },
     },
     {
@@ -230,6 +296,22 @@ export const StyledInputContainer = styled('div', {
         borderColor: '$gray400',
       },
     },
+    {
+      variant: 'outlined',
+      state: 'isDisabled',
+      isDark: 'true',
+      css: {
+        borderColor: '$gray800',
+      },
+    },
+    {
+      variant: 'solid',
+      state: 'isDisabled',
+      isDark: 'true',
+      css: {
+        borderColor: '$gray900',
+      },
+    },
   ],
   variants: {
     maxWidth: {
@@ -261,10 +343,7 @@ export const StyledInputContainer = styled('div', {
       default: {},
     },
     variant: {
-      solid: {
-        backgroundColor: '$gray200',
-        borderColor: '$gray200',
-      },
+      solid: {},
       outlined: {},
     },
     focusColor: {
@@ -282,10 +361,16 @@ export const StyledInputContainer = styled('div', {
         borderRadius: '$sm',
       },
     },
+    isDark: {
+      true: {},
+      false: {},
+    },
   },
 });
 
 export const StyledInput = styled('input', {
+  color: '$text',
+  bg: '$transparent',
   border: 'none',
   '&:focus': {
     outline: 0,
@@ -302,18 +387,62 @@ export const StyledInput = styled('input', {
   compoundVariants: [
     {
       variant: 'solid',
+      isDark: false,
+      css: {
+        backgroundColor: '$gray200',
+      },
+    },
+    {
+      variant: 'solid',
       state: 'focused',
+      isDark: false,
       css: {
         backgroundColor: '$gray300',
         borderColor: '$gray300',
       },
     },
+    {
+      variant: 'solid',
+      isDark: true,
+      css: {
+        backgroundColor: '$gray900',
+      },
+    },
+    {
+      variant: 'solid',
+      state: 'focused',
+      isDark: true,
+      css: {
+        backgroundColor: '$gray800',
+        borderColor: '$gray800',
+      },
+    },
+    {
+      variant: 'outlined',
+      state: 'isDisabled',
+      isDark: true,
+      css: {
+        '&::placeholder': {
+          color: '$gray600',
+        },
+        cursor: 'not-allowed',
+      },
+    },
+    {
+      variant: 'solid',
+      state: 'isDisabled',
+      isDark: true,
+      css: {
+        '&::placeholder': {
+          color: '$gray700',
+        },
+        cursor: 'not-allowed',
+      },
+    },
   ],
   variants: {
     variant: {
-      solid: {
-        backgroundColor: '$gray200',
-      },
+      solid: {},
       outlined: {},
     },
     size: {
@@ -346,6 +475,14 @@ export const StyledInput = styled('input', {
       false: {
         borderRadius: '$sm',
       },
+    },
+    isDark: {
+      true: {
+        '&::placeholder': {
+          color: '$gray100',
+        },
+      },
+      false: {},
     },
   },
 });

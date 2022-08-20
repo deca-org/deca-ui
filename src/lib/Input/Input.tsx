@@ -1,3 +1,4 @@
+import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { Modify, UnionToIntersection, uuid } from '@lib/Utils';
 import clsx from 'clsx';
@@ -175,6 +176,8 @@ const Input = React.forwardRef(
 
     const preClass = 'decaInput';
 
+    const { dark } = React.useContext(ThemeContext);
+
     return (
       <StyledInputMainContainer
         className={clsx(className, `${preClass}-root`)}
@@ -189,6 +192,7 @@ const Input = React.forwardRef(
             focusColor={focusColor}
             htmlFor={inputId}
             pill={pill}
+            isDark={dark}
           >
             {label}
           </StyledInputLabel>
@@ -201,6 +205,7 @@ const Input = React.forwardRef(
           focusColor={focusColor}
           maxWidth={maxWidth}
           pill={pill}
+          isDark={dark}
         >
           <StyledInput
             onFocus={focusHandler}
@@ -217,6 +222,7 @@ const Input = React.forwardRef(
             placeholder={placeholder}
             id={inputId}
             pill={pill}
+            isDark={dark}
             {...props}
           ></StyledInput>
         </StyledInputContainer>
@@ -226,6 +232,7 @@ const Input = React.forwardRef(
             state={getState}
             className={`${preClass}-helperText`}
             pill={pill}
+            isDark={dark}
           >
             {helperText}
           </StyledInputHelperText>
