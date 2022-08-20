@@ -10,14 +10,14 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
     >
       <input
         checked=""
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
         id="1"
         name="checkbox-1"
         type="checkbox"
         value="A"
       />
       <label
-        class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false c-kmmngW-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg
@@ -40,14 +40,14 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
     >
       <input
         checked=""
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
         id="1"
         name="checkbox-1"
         type="checkbox"
         value="B"
       />
       <label
-        class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false c-kmmngW-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg
@@ -69,14 +69,14 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
       class="c-gidqah decaCheckbox-root"
     >
       <input
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
         id="1"
         name="checkbox-1"
         type="checkbox"
         value="C"
       />
       <label
-        class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false c-kmmngW-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg
@@ -98,14 +98,14 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
       class="c-gidqah decaCheckbox-root"
     >
       <input
-        class="c-eCNcrt c-eCNcrt-kueLmT-isDisabled-false c-eCNcrt-fdUhn-cv decaCheckbox-input"
+        class="c-eCNcrt c-eCNcrt-fdUhn-color-primary c-eCNcrt-kueLmT-isDisabled-false decaCheckbox-input"
         id="1"
         name="checkbox-1"
         type="checkbox"
         value="D"
       />
       <label
-        class="c-kmmngW c-kmmngW-eVJqzf-size-md c-kmmngW-hqEieG-isDisabled-false c-kmmngW-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg

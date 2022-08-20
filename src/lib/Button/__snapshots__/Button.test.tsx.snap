@@ -78,19 +78,19 @@ exports[`components/Button renders all variants 1`] = `
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-fGnyoC-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-fdQTW-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-eOmxKX-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-hSqWZv-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-bHOyhf-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-kJLEgH-cv decaButton-root"
     role="button"
   >
     Label
