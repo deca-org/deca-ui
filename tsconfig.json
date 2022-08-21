@@ -3,7 +3,7 @@
     "incremental": true,
     "target": "es2017",
     "outDir": "build/main",
-    "rootDirs": ["src", "cypress/support"],
+    "rootDirs": ["src"],
     "moduleResolution": "node",
     "module": "commonjs",
     "declaration": true,
@@ -39,14 +39,14 @@
     // "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
 
     "lib": ["es2017", "dom"],
-    "types": ["node", "jest", "cypress"],
-    "typeRoots": ["node_modules/@types", "src/types", "cypress/support/component.ts"],
+    "types": ["node", "jest"],
+    "typeRoots": ["node_modules/@types", "src/types"],
     "baseUrl": "./",
     "paths": {
       "@lib/*": ["./src/lib/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.test.tsx", "src/**/*.stories.tsx", "cypress/support/component.ts"],
-  "exclude": ["node_modules/**"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.test.tsx", "src/**/*.stories.tsx"],
+  "exclude": ["node_modules/**", "cypress", "cypress.config.ts", "src/**/*.cy.tsx"],
   "compileOnSave": false
 }
