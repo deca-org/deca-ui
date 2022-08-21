@@ -1,4 +1,4 @@
-import { mergeRefs } from '@lib/Utils';
+import { mergeRefs, __DEV__ } from '@lib/Utils';
 import React, { useContext } from 'react';
 
 import { PopoverContext, IPopoverContext } from './Popover';
@@ -49,5 +49,9 @@ const PopoverTrigger = ({ children }: PopoverTriggerProps) => {
     });
   }
 };
+
+if (__DEV__) {
+  PopoverTrigger.displayName = 'DecaUI.PopoverTrigger';
+}
 
 export default PopoverTrigger;

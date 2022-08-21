@@ -1,5 +1,5 @@
 import { styled } from '@lib/Theme/stitches.config';
-import { createPalette } from '@lib/Utils';
+import { createPalette, __DEV__ } from '@lib/Utils';
 import React, { useMemo } from 'react';
 import { SSRProvider } from 'react-aria';
 
@@ -157,5 +157,9 @@ const DecaUIProvider: React.FC<
     </SSRProvider>
   );
 };
+
+if (__DEV__) {
+  DecaUIProvider.displayName = 'DecaUI.Provider';
+}
 
 export default DecaUIProvider;

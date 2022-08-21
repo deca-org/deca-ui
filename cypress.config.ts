@@ -5,8 +5,6 @@ export default defineConfig({
     devServer: {
       framework: 'react',
       bundler: 'vite',
-      // @ts-ignore
-      viteConfig: './cypress/vite.config',
     },
   },
 });

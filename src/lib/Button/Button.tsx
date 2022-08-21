@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
@@ -200,5 +200,9 @@ const Button = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Button.displayName = 'DecaUI.Button';
+}
 
 export default Button;

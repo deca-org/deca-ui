@@ -1,6 +1,6 @@
 import { CheckboxProps } from '@lib/Checkbox';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, uuid } from '@lib/Utils';
+import { useDOMRef, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
@@ -119,5 +119,9 @@ const CheckboxGroup = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  CheckboxGroup.displayName = 'DecaUI.CheckboxGroup';
+}
 
 export default CheckboxGroup;

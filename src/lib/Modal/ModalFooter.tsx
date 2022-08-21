@@ -1,5 +1,5 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 
@@ -56,5 +56,9 @@ const ModalFooter = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  ModalFooter.displayName = 'DecaUI.ModalFooter';
+}
 
 export default ModalFooter;

@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, useDOMRef, uuid } from '@lib/Utils';
+import { Modify, useDOMRef, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useState, useMemo } from 'react';
 
@@ -192,5 +192,9 @@ type CheckboxComponent<
 > & {
   Group: typeof CheckboxGroup;
 };
+
+if (__DEV__) {
+  Checkbox.displayName = 'DecaUI.Checkbox';
+}
 
 export default Checkbox as CheckboxComponent<HTMLInputElement, CheckboxProps>;

@@ -7,7 +7,7 @@ import {
   UseFloatingReturn,
   Placement,
 } from '@floating-ui/react-dom';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import React, {
   useState,
   useEffect,
@@ -133,5 +133,9 @@ type PopoverComponent<
   Trigger: typeof PopoverTrigger;
   Content: typeof PopoverContent;
 };
+
+if (__DEV__) {
+  Popover.displayName = 'DecaUI.Popover';
+}
 
 export default Popover as PopoverComponent<HTMLDivElement, PopoverProps>;

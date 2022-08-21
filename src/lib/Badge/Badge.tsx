@@ -1,5 +1,5 @@
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -73,5 +73,9 @@ const Badge = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Badge.displayName = 'DecaUI.Badge';
+}
 
 export default Badge;

@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, uuid } from '@lib/Utils';
+import { useDOMRef, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useState, useMemo } from 'react';
 
@@ -152,5 +152,9 @@ const Switch = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Switch.displayName = 'DecaUI.Switch';
+}
 
 export default Switch;

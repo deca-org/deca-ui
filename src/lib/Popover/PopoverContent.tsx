@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
-import { mergeRefs, useClickOutside } from '@lib/Utils';
+import { mergeRefs, useClickOutside, __DEV__ } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
@@ -97,5 +97,9 @@ const PopoverContent = ({
       : (document.querySelector('body') as Element)
   );
 };
+
+if (__DEV__) {
+  PopoverContent.displayName = 'DecaUI.PopoverContent';
+}
 
 export default PopoverContent;

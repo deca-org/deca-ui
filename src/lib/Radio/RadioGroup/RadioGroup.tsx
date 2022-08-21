@@ -1,6 +1,6 @@
 import { RadioProps } from '@lib/Radio';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, uuid } from '@lib/Utils';
+import { useDOMRef, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
@@ -118,5 +118,9 @@ const RadioGroup = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  RadioGroup.displayName = 'DecaUI.RadioGroup';
+}
 
 export default RadioGroup;

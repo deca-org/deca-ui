@@ -1,5 +1,5 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -50,5 +50,9 @@ const Box = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Box.displayName = 'DecaUI.Box';
+}
 
 export default Box;

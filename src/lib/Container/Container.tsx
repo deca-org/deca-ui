@@ -1,5 +1,5 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -75,5 +75,9 @@ const Container = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Container.displayName = 'DecaUI.Container';
+}
 
 export default Container;

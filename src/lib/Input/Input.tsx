@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, UnionToIntersection, uuid } from '@lib/Utils';
+import { Modify, UnionToIntersection, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useRef, useMemo, useState, useImperativeHandle } from 'react';
 
@@ -241,5 +241,9 @@ const Input = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Input.displayName = 'DecaUI.Input';
+}
 
 export default Input;

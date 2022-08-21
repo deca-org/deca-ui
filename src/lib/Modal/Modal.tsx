@@ -2,7 +2,7 @@ import { ThemeContext } from '@lib/Theme';
 import Box from '@lib/Box';
 import Button from '@lib/Button';
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, mergeRefs, useClickOutside } from '@lib/Utils';
+import { useDOMRef, mergeRefs, useClickOutside, __DEV__ } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
 import React, { useEffect, SetStateAction, Dispatch } from 'react';
@@ -232,5 +232,9 @@ type ModalComponent<
   Body: typeof ModalBody;
   Footer: typeof ModalFooter;
 };
+
+if (__DEV__) {
+  Modal.displayName = 'DecaUI.Modal';
+}
 
 export default Modal as ModalComponent<HTMLDivElement, ModalProps>;

@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
-import { UnionToIntersection, ThemeKey } from '@lib/Utils';
+import { UnionToIntersection, ThemeKey, __DEV__ } from '@lib/Utils';
 import React, { useRef, useImperativeHandle, useMemo } from 'react';
 
 import StyledText from './Text.styles';
@@ -133,5 +133,9 @@ const Text = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  Text.displayName = 'DecaUI.Text';
+}
 
 export default Text;

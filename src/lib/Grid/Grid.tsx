@@ -1,5 +1,5 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -96,5 +96,9 @@ type GridComponent<
 > & {
   Container: typeof GridContainer;
 };
+
+if (__DEV__) {
+  Grid.displayName = 'DecaUI.Grid';
+}
 
 export default Grid as GridComponent<HTMLDivElement, GridProps>;

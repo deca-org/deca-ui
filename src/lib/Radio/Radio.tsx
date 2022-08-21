@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, useDOMRef, uuid } from '@lib/Utils';
+import { Modify, useDOMRef, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
@@ -168,5 +168,9 @@ type RadioComponent<
 > & {
   Group: typeof RadioGroup;
 };
+
+if (__DEV__) {
+  Radio.displayName = 'DecaUI.Radio';
+}
 
 export default Radio as RadioComponent<HTMLInputElement, RadioProps>;
