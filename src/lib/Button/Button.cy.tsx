@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+import _cyp from '../../../cypress';
 import React from 'react';
 import Button from './Button';
 
