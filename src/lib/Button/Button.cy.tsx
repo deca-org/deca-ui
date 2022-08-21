@@ -1,4 +1,4 @@
-/// <reference types="../../../cypress" />
+/// <reference types="Cypress" />
 import React from 'react';
 import Button from './Button';
 
