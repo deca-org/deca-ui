@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.module.json",
+  "exclude": [
+    "../src/**/*.cy.tsx",
+    "../src/**/*.test.tsx",
+    "../src/**/*.stories.tsx"
+  ]
+}

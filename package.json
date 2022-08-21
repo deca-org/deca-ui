@@ -12,8 +12,8 @@
   "scripts": {
     "clean": "rimraf build",
     "build": "npm run clean && run-p build:*",
-    "build:main": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
-    "build:module": "tsc -p tsconfig.module.build.json && tsc-alias -p tsconfig.module.build.json",
+    "build:main": "tsc -p config/tsconfig.build.json && tsc-alias -p config/tsconfig.build.json",
+    "build:module": "tsc -p config/tsconfig.module.build.json && tsc-alias -p config/tsconfig.module.build.json",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:lint": "eslint src --ext .ts --fix",
