@@ -1,5 +1,5 @@
 import { theme } from '@lib/Theme/stitches.config';
-import { darken, transparentize, readableColor, cssVar } from 'polished';
+import { darken, transparentize, readableColor } from 'polished';
 
 export const getStaticColor = (varColor: string): string => {
   return theme.colors[varColor as keyof typeof theme.colors].value;
@@ -69,10 +69,10 @@ export const createPalette = (colorObj: Record<string, string>) => {
   return Object.fromEntries(modifiedColors);
 };
 
-export default function hexRgb(
+export const hexRgb = (
   hex: string,
   options: Record<string, string | number> = {}
-): Record<string, number> {
+): Record<string, number> => {
   const hexCharacters = 'a-f\\d';
   const match3or4Hex = `#?[${hexCharacters}]{3}[${hexCharacters}]?`;
   const match6or8Hex = `#?[${hexCharacters}]{6}([${hexCharacters}]{2})?`;
@@ -111,21 +111,4 @@ export default function hexRgb(
     typeof options.alpha === 'number' ? options.alpha : alphaFromHex;
 
   return { red, green, blue, alpha };
-}
-
-// test-color (returns rgb color for cypress testing)
-export const tc = (color: string) => {
-  const cssColor = cssVar(`--colors-${color}`);
-  if ((cssColor as string).charAt(0) === '#') {
-    const rgbObj = hexRgb(cssColor as string);
-    const r = rgbObj.red;
-    const g = rgbObj.green;
-    const b = rgbObj.blue;
-    const a = rgbObj.alpha;
-    if ((cssColor as string).length > 7) {
-      return `rgba(${r}, ${g}, ${b}, ${a})`;
-    }
-    return `rgb(${r}, ${g}, ${b})`;
-  }
-  return cssColor;
 };
