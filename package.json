@@ -144,7 +144,8 @@
     "verbose": true,
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/build/"
+      "<rootDir>/build/",
+      "<rootDir>/src/lib/Utils/test.ts"
     ],
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/coverage/jest",

@@ -44,6 +44,7 @@ WithTheme.decorators = [
       }}
     >
       <Story />
+      <Checkbox size="sm" />
     </DecaUIProvider>
   ),
 ];
