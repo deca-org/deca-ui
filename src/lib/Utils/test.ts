@@ -24,21 +24,41 @@ export class Test {
     return cssColor;
   }
 
-  // turn rem to px
   static size(inputSize: string) {
-    const cssSize = cssVar(`--sizes-${inputSize}`);
-    return remToPx(cssSize);
+    const inputArr = inputSize.split(' ');
+    if (inputArr.length === 1) {
+      const cssSpace = cssVar(`--sizes-${inputSize}`);
+      return remToPx(cssSpace);
+    }
+    for (let i = 0; i < inputArr.length; i++) {
+      if (Number.isInteger(parseInt(inputArr[i]))) {
+        inputArr[i] = (cssVar(`--sizes-${inputArr[i]}`) as string).slice(0, -3);
+      }
+    }
+    return eval(inputArr.join('')) * 16 + 'px';
   }
 
-  // turn rem to px
   static space(inputSpace: string) {
-    const cssSpace = cssVar(`--space-${inputSpace}`);
-    return remToPx(cssSpace);
+    const inputArr = inputSpace.split(' ');
+    if (inputArr.length === 1) {
+      const cssSpace = cssVar(`--space-${inputSpace}`);
+      return remToPx(cssSpace);
+    }
+    for (let i = 0; i < inputArr.length; i++) {
+      if (Number.isInteger(parseInt(inputArr[i]))) {
+        inputArr[i] = (cssVar(`--space-${inputArr[i]}`) as string).slice(0, -3);
+      }
+    }
+    return eval(inputArr.join('')) * 16 + 'px';
   }
 
-  // turn rem to px
   static fontSize(inputFontSize: string) {
     const cssFontSize = cssVar(`--fontSizes-${inputFontSize}`);
     return remToPx(cssFontSize);
+  }
+
+  static borderRadius(inputBorderRadius: string) {
+    const cssBorderRadius = cssVar(`--radii-${inputBorderRadius}`);
+    return cssBorderRadius;
   }
 }

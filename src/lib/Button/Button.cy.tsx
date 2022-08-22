@@ -1,7 +1,7 @@
 import { Test } from '../Utils';
 import _cyp from '../../../cypress';
 import React from 'react';
-import DecaUIProvider from '../Theme';
+import DecaUIProvider, { standardColors } from '../Theme';
 import Button from './Button';
 
 interface CSSTestComposerProps {
@@ -50,25 +50,32 @@ const CSSTestComposer = ({
   });
 };
 
-const allColors = ['primary', 'secondary', 'success', 'warning', 'error'];
 describe('components/button', () => {
+  it('pill', () => {
+    cy.mount(<Button pill>Button</Button>);
+    cy.get('button').should(
+      'have.css',
+      'border-radius',
+      Test.borderRadius('pill')
+    );
+  });
   describe('sizes', () => {
     it('sm', () => {
-      cy.mount(<Button size="sm">Label</Button>);
+      cy.mount(<Button size="sm">Button</Button>);
       cy.get('button').should('have.css', 'paddingLeft', Test.space('2'));
       cy.get('button').should('have.css', 'paddingRight', Test.space('2'));
       cy.get('button').should('have.css', 'height', Test.size('6'));
       cy.get('button').should('have.css', 'fontSize', Test.fontSize('caption'));
     });
     it('md', () => {
-      cy.mount(<Button size="md">Label</Button>);
+      cy.mount(<Button size="md">Button</Button>);
       cy.get('button').should('have.css', 'paddingLeft', Test.space('3'));
       cy.get('button').should('have.css', 'paddingRight', Test.space('3'));
       cy.get('button').should('have.css', 'height', Test.size('9'));
       cy.get('button').should('have.css', 'fontSize', Test.fontSize('body'));
     });
     it('lg', () => {
-      cy.mount(<Button size="lg">Label</Button>);
+      cy.mount(<Button size="lg">Button</Button>);
       cy.get('button').should('have.css', 'paddingLeft', Test.space('4'));
       cy.get('button').should('have.css', 'paddingRight', Test.space('4'));
       cy.get('button').should('have.css', 'height', Test.size('10'));
@@ -77,7 +84,7 @@ describe('components/button', () => {
   });
   describe('variants', () => {
     describe('solid variant', () => {
-      allColors.map((color) => {
+      standardColors.map((color) => {
         describe(color, () => {
           CSSTestComposer({
             component: (
@@ -93,7 +100,7 @@ describe('components/button', () => {
       });
     });
     describe('outlined variant', () => {
-      allColors.map((color) => {
+      standardColors.map((color) => {
         describe(color, () => {
           CSSTestComposer({
             component: (
@@ -109,7 +116,7 @@ describe('components/button', () => {
       });
     });
     describe('ghost variant', () => {
-      allColors.map((color) => {
+      standardColors.map((color) => {
         describe(color, () => {
           CSSTestComposer({
             component: (
@@ -125,7 +132,7 @@ describe('components/button', () => {
       });
     });
     describe('flat variant', () => {
-      allColors.map((color) => {
+      standardColors.map((color) => {
         describe(color, () => {
           CSSTestComposer({
             component: (
@@ -142,7 +149,7 @@ describe('components/button', () => {
     });
     describe('dark mode', () => {
       describe('flat variant', () => {
-        allColors.map((color) => {
+        standardColors.map((color) => {
           describe(color, () => {
             CSSTestComposer({
               component: (
