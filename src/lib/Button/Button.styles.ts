@@ -266,11 +266,11 @@ const StyledButton = styled('button', {
     },
     isDisabled: {
       true: {
-        opacity: '50%',
+        opacity: 0.5,
         cursor: 'not-allowed',
       },
       false: {
-        opacity: '100%',
+        opacity: 1,
       },
     },
     maxWidth: {

@@ -3,7 +3,7 @@
 exports[`components/Popover matches snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-dCRXRO-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-ePLPad-cv decaButton-root"
+    class="c-jkTMls c-jkTMls-jsOpSy-color-primary c-jkTMls-sKeyg-size-md c-jkTMls-bDGmTT-isDisabled-false c-jkTMls-cycqzJ-pill-false c-jkTMls-ePLPad-cv decaButton-root"
     role="button"
   >
     Open Popover

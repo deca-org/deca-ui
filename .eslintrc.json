@@ -8,6 +8,7 @@
   "plugins": ["import", "eslint-comments", "jest-dom", "testing-library"],
   "extends": [
     "eslint:recommended",
+    "plugin:cypress/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",

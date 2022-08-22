@@ -1,5 +1,5 @@
 import { theme } from '@lib/Theme/stitches.config';
-import { darken, transparentize, readableColor } from 'polished';
+import { darken, transparentize, readableColor, cssVar } from 'polished';
 
 export const getStaticColor = (varColor: string): string => {
   return theme.colors[varColor as keyof typeof theme.colors].value;
@@ -67,4 +67,65 @@ export const createPalette = (colorObj: Record<string, string>) => {
     modifiedColors.push(...generatePalette(color));
   });
   return Object.fromEntries(modifiedColors);
+};
+
+export default function hexRgb(
+  hex: string,
+  options: Record<string, string | number> = {}
+): Record<string, number> {
+  const hexCharacters = 'a-f\\d';
+  const match3or4Hex = `#?[${hexCharacters}]{3}[${hexCharacters}]?`;
+  const match6or8Hex = `#?[${hexCharacters}]{6}([${hexCharacters}]{2})?`;
+  const nonHexChars = new RegExp(`[^#${hexCharacters}]`, 'gi');
+  const validHexSize = new RegExp(`^${match3or4Hex}$|^${match6or8Hex}$`, 'i');
+  if (
+    typeof hex !== 'string' ||
+    nonHexChars.test(hex) ||
+    !validHexSize.test(hex)
+  ) {
+    throw new TypeError('Expected a valid hex string');
+  }
+
+  hex = hex.replace(/^#/, '');
+  let alphaFromHex = 1;
+
+  if (hex.length === 8) {
+    alphaFromHex = Number.parseInt(hex.slice(6, 8), 16) / 255;
+    hex = hex.slice(0, 6);
+  }
+
+  if (hex.length === 4) {
+    alphaFromHex = Number.parseInt(hex.slice(3, 4).repeat(2), 16) / 255;
+    hex = hex.slice(0, 3);
+  }
+
+  if (hex.length === 3) {
+    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+  }
+
+  const number = Number.parseInt(hex, 16);
+  const red = number >> 16;
+  const green = (number >> 8) & 255;
+  const blue = number & 255;
+  const alpha =
+    typeof options.alpha === 'number' ? options.alpha : alphaFromHex;
+
+  return { red, green, blue, alpha };
+}
+
+// test-color (returns rgb color for cypress testing)
+export const tc = (color: string) => {
+  const cssColor = cssVar(`--colors-${color}`);
+  if ((cssColor as string).charAt(0) === '#') {
+    const rgbObj = hexRgb(cssColor as string);
+    const r = rgbObj.red;
+    const g = rgbObj.green;
+    const b = rgbObj.blue;
+    const a = rgbObj.alpha;
+    if ((cssColor as string).length > 7) {
+      return `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+  return cssColor;
 };
