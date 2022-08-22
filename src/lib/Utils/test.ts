@@ -61,4 +61,9 @@ export class Test {
     const cssBorderRadius = cssVar(`--radii-${inputBorderRadius}`);
     return cssBorderRadius;
   }
+
+  static font(inputFont: string) {
+    const cssFont = cssVar(`--fonts-${inputFont}`);
+    return cssFont;
+  }
 }
