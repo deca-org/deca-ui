@@ -47,7 +47,7 @@ const CSSTestComposer = ({
 };
 
 const allColors = ['primary', 'secondary', 'success', 'warning', 'error'];
-describe('e2e/button', () => {
+describe('components/button', () => {
   describe('solid variant', () => {
     allColors.map((color) => {
       describe(color, () => {
