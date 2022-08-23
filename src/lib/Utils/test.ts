@@ -66,4 +66,9 @@ export class Test {
     const cssFont = cssVar(`--fonts-${inputFont}`);
     return cssFont;
   }
+
+  static breakpoint(inputBreakpoint: string) {
+    const cssBreakpoint = cssVar(`--breakpoints-${inputBreakpoint}`);
+    return parseInt((cssBreakpoint as string).slice(0, -2));
+  }
 }

@@ -1,6 +1,43 @@
-import { styled } from '@lib/Theme/stitches.config';
+import { CSS, styled, standardColors } from '@lib/Theme/stitches.config';
 import { getStaticColor } from '@lib/Utils';
 import { darken } from 'polished';
+
+const compoundVariantComposer = () => {
+  const colorVariants: {
+    isDisabled?: boolean;
+    color?: string;
+    isDark?: boolean;
+    css: CSS;
+  }[] = [];
+
+  standardColors.map((color) => {
+    colorVariants.push(
+      {
+        isDisabled: true,
+        isDark: false,
+        color: color,
+        css: {
+          '&:checked:active + label::before': {
+            bg: `$${color}`,
+            borderColor: `$${color}`,
+          },
+        },
+      },
+      {
+        isDisabled: true,
+        isDark: true,
+        color: color,
+        css: {
+          '&:checked:active + label::before': {
+            bg: `$${color}`,
+            borderColor: `$${color}`,
+          },
+        },
+      }
+    );
+  });
+  return colorVariants;
+};
 
 export const StyledCheckboxWrapper = styled('div', {
   boxSizing: 'border-box',
@@ -21,6 +58,7 @@ export const StyledCheckbox = styled('input', {
     opacity: 1,
   },
   compoundVariants: [
+    ...compoundVariantComposer(),
     {
       isDisabled: true,
       isDark: true,
