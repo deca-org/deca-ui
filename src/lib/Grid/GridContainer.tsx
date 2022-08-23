@@ -1,7 +1,7 @@
 import { CSS } from '@lib/Theme/stitches.config';
 import { useDOMRef } from '@lib/Utils';
 import clsx from 'clsx';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import { Cols, GridProps } from './Grid';
 import { StyledGridContainer } from './Grid.styles';
@@ -104,11 +104,11 @@ const GridContainer = React.forwardRef(
           children as React.ReactElement<GridProps>,
           (child: React.ReactElement<GridProps>) => {
             return React.cloneElement(child, {
-              xs,
-              sm,
-              md,
-              lg,
-              xl,
+              xs: child.props.xs ? child.props.xs : xs,
+              sm: child.props.sm ? child.props.sm : sm,
+              md: child.props.md ? child.props.md : md,
+              lg: child.props.lg ? child.props.lg : lg,
+              xl: child.props.xl ? child.props.xl : xl,
             });
           }
         )}

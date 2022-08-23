@@ -5,10 +5,10 @@ import { transparentize } from 'polished';
 const colComposer = (breakpoint: string) => {
   const cols = [];
   for (let i = 1; i < 13; i++) {
-    cols.push([
-      i,
-      { [`@${breakpoint}`]: { flexBasis: `calc(${i}/12 * 100%)` } },
-    ]);
+    // chrome sometimes rounds css values to 4 OR 5 so css calc cannot be used because it
+    // messes with cypress tests
+    const baseColVal = ((i / 12) * 100).toFixed(4) + '%';
+    cols.push([i, { [`@${breakpoint}`]: { flexBasis: baseColVal } }]);
   }
   return Object.fromEntries(cols);
 };

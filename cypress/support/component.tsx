@@ -24,6 +24,8 @@ Cypress.Commands.add('mount', (component: React.ReactElement, options = {}) => {
   return mount(wrapped, options);
 });
 
+Cypress.Commands.add('baseMount', mount);
+
 function unquote(str: string) {
   return str.replace(/(^")|("$)/g, '');
 }

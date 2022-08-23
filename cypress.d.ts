@@ -7,6 +7,7 @@ export {};
 declare global {
   namespace Cypress {
     interface Chainable {
+      baseMount: typeof mount;
       mount: typeof mount;
       before(value: string): any;
       after(value: string): any;
