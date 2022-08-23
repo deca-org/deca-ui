@@ -1,7 +1,7 @@
 import { cssVar } from 'polished';
 import { hexRgb } from './color';
 
-const remToPx = (remVal: string | number) => {
+export const remToPx = (remVal: string | number) => {
   return parseFloat((remVal as string).slice(0, -3)) * 16 + 'px';
 };
 
@@ -70,5 +70,15 @@ export class Test {
   static breakpoint(inputBreakpoint: string) {
     const cssBreakpoint = cssVar(`--breakpoints-${inputBreakpoint}`);
     return parseInt((cssBreakpoint as string).slice(0, -2));
+  }
+
+  static lineHeight(inputLineHeight: string) {
+    const cssLineHeight = cssVar(`--lineHeights-${inputLineHeight}`);
+    return remToPx(cssLineHeight);
+  }
+
+  static fontWeight(inputFontWeight: string) {
+    const cssFontWeight = cssVar(`--fontWeights-${inputFontWeight}`);
+    return cssFontWeight;
   }
 }
