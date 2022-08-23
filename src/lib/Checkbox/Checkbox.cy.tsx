@@ -1,4 +1,4 @@
-import DecaUIProvider, { standardColors } from '../Theme';
+import { standardColors } from '../Theme';
 import { Test } from '../Utils';
 import _cyp from '../../../cypress';
 import React from 'react';

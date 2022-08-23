@@ -35,7 +35,14 @@ export interface ModalFooterProps {
 
 const ModalFooter = React.forwardRef(
   (
-    { children, className = '', css, as = 'div', autoGap }: ModalFooterProps,
+    {
+      children,
+      className = '',
+      css,
+      as = 'div',
+      autoGap,
+      ...props
+    }: ModalFooterProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const context = useContext(ModalContext) as IModalContext;
@@ -50,6 +57,7 @@ const ModalFooter = React.forwardRef(
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}
+        {...props}
       >
         {children}
       </StyledModalFooter>
