@@ -35,7 +35,14 @@ export interface ModalHeaderProps {
 
 const ModalHeader = React.forwardRef(
   (
-    { children, className = '', css, as = 'div', autoGap }: ModalHeaderProps,
+    {
+      children,
+      className = '',
+      css,
+      as = 'div',
+      autoGap,
+      ...props
+    }: ModalHeaderProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const context = useContext(ModalContext) as IModalContext;
@@ -50,6 +57,7 @@ const ModalHeader = React.forwardRef(
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}
+        {...props}
       >
         {children}
       </StyledModalHeader>

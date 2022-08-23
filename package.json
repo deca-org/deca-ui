@@ -1,6 +1,6 @@
 {
   "name": "@deca-ui/react",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "deca-ui is an easily configurable UI library for React.js",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
@@ -144,7 +144,8 @@
     "verbose": true,
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/build/"
+      "<rootDir>/build/",
+      "<rootDir>/src/lib/Utils/test.ts"
     ],
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/coverage/jest",

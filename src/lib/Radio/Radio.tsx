@@ -26,6 +26,11 @@ export interface RadioProps
     }
   > {
   /**
+   * Size of the component.
+   * @default md
+   */
+  size?: 'sm' | 'md' | 'lg';
+  /**
    * Text label for the component.
    */
   label?: string;

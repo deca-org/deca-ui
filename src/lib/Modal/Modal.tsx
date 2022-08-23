@@ -95,6 +95,7 @@ const Modal = React.forwardRef(
       autoGap = true,
       noPadding = false,
       as = 'div',
+      ...props
     }: ModalProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
@@ -176,6 +177,7 @@ const Modal = React.forwardRef(
                 noPadding={noPadding}
                 as={animated[as as keyof JSX.IntrinsicElements]}
                 isDark={dark}
+                {...props}
               >
                 {closeButton && (
                   <Box
@@ -208,7 +210,10 @@ const Modal = React.forwardRef(
                     />
                   </Box>
                 )}
-                <StyledModalFlexbox autoGap={autoGap}>
+                <StyledModalFlexbox
+                  className={`${preClass}-flexbox`}
+                  autoGap={autoGap}
+                >
                   {children}
                 </StyledModalFlexbox>
               </StyledModal>
