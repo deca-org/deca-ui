@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/deca-org/deca-ui/compare/v1.4.2...v1.4.3) (2022-08-23)
+
+
+### Bug Fixes
+
+* **components/grid:** fixed problem where grid item props did not override grid container props ([b900f18](https://github.com/deca-org/deca-ui/commit/b900f18f102765251d185a74a0580cba21268a73))
+
 ### [1.4.2](https://github.com/deca-org/deca-ui/compare/v1.4.1...v1.4.2) (2022-08-20)
 
 
