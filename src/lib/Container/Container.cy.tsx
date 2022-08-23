@@ -20,7 +20,7 @@ const ContainerItem = () => (
 
 const WINDOW_PADDING = 100;
 
-describe('components/container', () => {
+describe('components/Container', () => {
   const selector = '[data-testid="test.container"]';
   it('fluid', () => {
     cy.baseMount(

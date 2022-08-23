@@ -9,7 +9,7 @@ interface CSSTestComposerProps {
   bg: string;
   borderColor: string;
   color: string;
-  disabledComponent?: React.ReactNode;
+  darkMode?: boolean;
 }
 
 const CSSTestComposer = ({
@@ -17,18 +17,19 @@ const CSSTestComposer = ({
   bg,
   borderColor,
   color,
-  disabledComponent,
+  darkMode = false,
 }: CSSTestComposerProps) => {
+  const mount = darkMode ? 'darkMount' : 'mount';
   it('base', () => {
-    cy.mount(component);
+    cy[mount](component);
     cy.get('button').should('have.css', 'cursor', 'pointer');
   });
   it('background-color', () => {
-    cy.mount(component);
+    cy[mount](component);
     cy.get('button').should('have.css', 'background-color', Test.color(bg));
   });
   it('border-color', () => {
-    cy.mount(component);
+    cy[mount](component);
     cy.get('button').should(
       'have.css',
       'border-color',
@@ -36,21 +37,17 @@ const CSSTestComposer = ({
     );
   });
   it('text color', () => {
-    cy.mount(component);
+    cy[mount](component);
     cy.get('button').should('have.css', 'color', Test.color(color));
   });
   it('disabled state', () => {
-    cy.mount(
-      disabledComponent
-        ? disabledComponent
-        : React.cloneElement(component, { disabled: true })
-    );
+    cy[mount](React.cloneElement(component, { disabled: true }));
     cy.get('button').should('have.css', 'opacity', '0.5');
     cy.get('button').should('have.css', 'cursor', 'not-allowed');
   });
 };
 
-describe('components/button', () => {
+describe('components/Button', () => {
   it('pill', () => {
     cy.mount(<Button pill>Button</Button>);
     cy.get('button').should(
@@ -153,22 +150,14 @@ describe('components/button', () => {
           describe(color, () => {
             CSSTestComposer({
               component: (
-                <DecaUIProvider mode="dark">
-                  <Button variant="flat" color={color}>
-                    Button
-                  </Button>
-                </DecaUIProvider>
-              ),
-              disabledComponent: (
-                <DecaUIProvider mode="dark">
-                  <Button variant="flat" color={color} disabled>
-                    Button
-                  </Button>
-                </DecaUIProvider>
+                <Button variant="flat" color={color}>
+                  Button
+                </Button>
               ),
               bg: `${color}-lighten-5`,
               borderColor: `${color}-lighten-8`,
               color: color,
+              darkMode: true,
             });
           });
         });

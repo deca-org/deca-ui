@@ -4,7 +4,7 @@ import React from 'react';
 import Badge from './Badge';
 import { standardColors } from '../Theme';
 
-describe('components/badge', () => {
+describe('components/Badge', () => {
   const selector = '[data-testid="test.badge"]';
   it('pill', () => {
     cy.mount(

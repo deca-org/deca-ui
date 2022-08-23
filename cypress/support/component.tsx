@@ -14,7 +14,7 @@ Cypress.Commands.add('mount', (component: React.ReactElement, options = {}) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          bg: component?.props?.mode === 'dark' ? '$black' : '$white',
+          bg: '$white',
         }}
       >
         <Box css={{ display: 'block' }}>{component}</Box>
@@ -23,6 +23,28 @@ Cypress.Commands.add('mount', (component: React.ReactElement, options = {}) => {
   );
   return mount(wrapped, options);
 });
+
+Cypress.Commands.add(
+  'darkMount',
+  (component: React.ReactElement, options = {}) => {
+    const wrapped = (
+      <DecaUIProvider mode="dark">
+        <Box
+          css={{
+            height: '500px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            bg: '$black',
+          }}
+        >
+          <Box css={{ display: 'block' }}>{component}</Box>
+        </Box>
+      </DecaUIProvider>
+    );
+    return mount(wrapped, options);
+  }
+);
 
 Cypress.Commands.add('baseMount', mount);
 

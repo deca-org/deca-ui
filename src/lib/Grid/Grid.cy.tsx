@@ -92,7 +92,7 @@ const containerColCheck = (
   }
 };
 
-describe('components/grid', () => {
+describe('components/Grid', () => {
   describe('flexbox properties', () => {
     it('flex-wrap', () => {
       cy.baseMount(<GridComposer />);

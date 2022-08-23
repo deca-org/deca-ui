@@ -4,7 +4,7 @@ import _cyp from '../../../cypress';
 import React from 'react';
 import Checkbox from './Checkbox';
 
-describe('components/checkbox', () => {
+describe('components/Checkbox', () => {
   describe('before click', () => {
     it('border-color', () => {
       cy.mount(<Checkbox label="Label" />);
@@ -109,21 +109,12 @@ describe('components/checkbox', () => {
 
   describe('dark mode', () => {
     it('label color', () => {
-      cy.mount(
-        <DecaUIProvider mode="dark">
-          <Checkbox label="Label" />
-        </DecaUIProvider>
-      );
+      cy.darkMount(<Checkbox label="Label" />);
       cy.get('label').should('have.css', 'color', Test.color('white'));
     });
 
     it('disabled state', () => {
-      cy.mount(
-        <DecaUIProvider mode="dark">
-          <Checkbox label="Label" initialCheck disabled />
-        </DecaUIProvider>
-      );
-
+      cy.darkMount(<Checkbox label="Label" initialCheck disabled />);
       cy.get('label').before('opacity').should('eq', '0.5');
       cy.get('svg').should('have.css', 'opacity', '0.3');
     });
