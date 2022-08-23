@@ -10,6 +10,7 @@ import Modal, {
 import Button from '../Button';
 import Text from '../Text';
 import Input from '../Input';
+import DecaUIProvider from '../Theme';
 
 interface ModalComposerProps extends ModalProps {
   header?: ModalHeaderProps;
@@ -40,6 +41,16 @@ const ModalComposer = (props: ModalComposerProps) => (
 const modalSelector = '[data-testid="test.modal"]';
 
 describe('components/Modal', () => {
+  describe('base', () => {
+    it('background-color', () => {
+      cy.mount(<ModalComposer open={true} />);
+      cy.get(modalSelector).should(
+        'have.css',
+        'background-color',
+        Test.color('white')
+      );
+    });
+  });
   describe('state', () => {
     it('not exist in DOM when not open', () => {
       cy.mount(<ModalComposer open={false} />);

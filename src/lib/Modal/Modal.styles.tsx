@@ -18,6 +18,7 @@ export const StyledModal = styled(animated.div, {
   boxShadow: '$default',
   br: '$sm',
   zIndex: '$max',
+  color: '$text',
   variants: {
     noPadding: {
       true: {
@@ -72,6 +73,7 @@ export const StyledModalHeader = styled('div', {
 });
 
 export const StyledModalBody = styled('div', {
+  color: '$text',
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
@@ -88,6 +90,7 @@ export const StyledModalBody = styled('div', {
 });
 
 export const StyledModalFooter = styled('div', {
+  color: '$text',
   display: 'flex',
   justifyContent: 'flex-end',
   flexDirection: 'row',
