@@ -388,7 +388,7 @@ export const baseTheme = {
       md: '12px',
       base: '14px',
       lg: '14px',
-      xl: '18px',
+      xl: '45px',
       squared: '33%',
       rounded: '50%',
       pill: '9999px',

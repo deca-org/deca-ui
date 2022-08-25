@@ -10,22 +10,20 @@ export const StyledContainer = styled('div', {
         px: '$n',
       },
       sm: {
-        px: '$1',
-      },
-      md: {
         px: '$2',
       },
-      lg: {
+      md: {
         px: '$3',
       },
-    },
-    fluid: {
-      true: {
-        maxWidth: '100%',
+      lg: {
+        px: '$4',
       },
     },
     responsive: {
       true: {
+        '@n': {
+          maxWidth: '$breakpoints$xs',
+        },
         '@xs': {
           maxWidth: '$breakpoints$xs',
         },
@@ -33,14 +31,19 @@ export const StyledContainer = styled('div', {
           maxWidth: '$breakpoints$sm',
         },
         '@md': {
-          maxWidth: '$breakpoints$md',
+          maxWidth: '$breakpoints$sm',
         },
         '@lg': {
-          maxWidth: '$breakpoints$lg',
+          maxWidth: '$breakpoints$md',
         },
         '@xl': {
-          maxWidth: '$breakpoints$xl',
+          maxWidth: '$breakpoints$lg',
         },
+      },
+    },
+    fluid: {
+      true: {
+        maxWidth: '100%',
       },
     },
   },

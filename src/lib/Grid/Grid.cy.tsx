@@ -57,8 +57,13 @@ const containerSelector = '[data-testid="test.gridContainer"]';
 const itemSelector = (itemNumber: number) =>
   `[data-testid="test.gridItem${itemNumber}"]`;
 
-const parseFlexBasis = (flexBasisAmount: number) =>
-  parseFloat(((flexBasisAmount / 12) * 100).toFixed(4)) + '%';
+const parseFlexBasis = (flexBasisAmount: number) => {
+  if (flexBasisAmount === 1) {
+    return parseFloat(((flexBasisAmount / 12) * 100).toFixed(5)) + '%';
+  } else {
+    return parseFloat(((flexBasisAmount / 12) * 100).toFixed(4)) + '%';
+  }
+};
 
 const containerColCheck = (
   startingBreakpoint: string,

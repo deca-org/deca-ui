@@ -18,8 +18,6 @@ const ContainerItem = () => (
   </Box>
 );
 
-const WINDOW_PADDING = 100;
-
 describe('components/Container', () => {
   const selector = '[data-testid="test.container"]';
   it('fluid', () => {
@@ -46,8 +44,8 @@ describe('components/Container', () => {
           <ContainerItem />
         </Container>
       );
-      cy.get(selector).should('have.css', 'padding-left', Test.space('1'));
-      cy.get(selector).should('have.css', 'padding-right', Test.space('1'));
+      cy.get(selector).should('have.css', 'padding-left', Test.space('2'));
+      cy.get(selector).should('have.css', 'padding-right', Test.space('2'));
     });
     it('md', () => {
       cy.baseMount(
@@ -55,8 +53,8 @@ describe('components/Container', () => {
           <ContainerItem />
         </Container>
       );
-      cy.get(selector).should('have.css', 'padding-left', Test.space('2'));
-      cy.get(selector).should('have.css', 'padding-right', Test.space('2'));
+      cy.get(selector).should('have.css', 'padding-left', Test.space('3'));
+      cy.get(selector).should('have.css', 'padding-right', Test.space('3'));
     });
     it('lg', () => {
       cy.baseMount(
@@ -64,13 +62,13 @@ describe('components/Container', () => {
           <ContainerItem />
         </Container>
       );
-      cy.get(selector).should('have.css', 'padding-left', Test.space('3'));
-      cy.get(selector).should('have.css', 'padding-right', Test.space('3'));
+      cy.get(selector).should('have.css', 'padding-left', Test.space('4'));
+      cy.get(selector).should('have.css', 'padding-right', Test.space('4'));
     });
   });
   describe('breakpoints', () => {
     it('xs', () => {
-      cy.viewport(Test.breakpoint('xs') + WINDOW_PADDING, 500);
+      cy.viewport(300, 500);
       cy.baseMount(
         <Container data-testid="test.container">
           <ContainerItem />
@@ -83,7 +81,7 @@ describe('components/Container', () => {
       );
     });
     it('sm', () => {
-      cy.viewport(Test.breakpoint('sm') + WINDOW_PADDING, 500);
+      cy.viewport(Test.breakpoint('sm'), 500);
       cy.baseMount(
         <Container data-testid="test.container">
           <ContainerItem />
@@ -96,7 +94,20 @@ describe('components/Container', () => {
       );
     });
     it('md', () => {
-      cy.viewport(Test.breakpoint('md') + WINDOW_PADDING, 500);
+      cy.viewport(Test.breakpoint('md'), 500);
+      cy.baseMount(
+        <Container data-testid="test.container">
+          <ContainerItem />
+        </Container>
+      );
+      cy.get(selector).should(
+        'have.css',
+        'max-width',
+        Test.breakpoint('sm') + 'px'
+      );
+    });
+    it('lg', () => {
+      cy.viewport(Test.breakpoint('lg'), 500);
       cy.baseMount(
         <Container data-testid="test.container">
           <ContainerItem />
@@ -108,8 +119,8 @@ describe('components/Container', () => {
         Test.breakpoint('md') + 'px'
       );
     });
-    it('lg', () => {
-      cy.viewport(Test.breakpoint('lg') + WINDOW_PADDING, 500);
+    it('xl', () => {
+      cy.viewport(Test.breakpoint('xl'), 500);
       cy.baseMount(
         <Container data-testid="test.container">
           <ContainerItem />
@@ -119,19 +130,6 @@ describe('components/Container', () => {
         'have.css',
         'max-width',
         Test.breakpoint('lg') + 'px'
-      );
-    });
-    it('xl', () => {
-      cy.viewport(Test.breakpoint('xl') + WINDOW_PADDING, 500);
-      cy.baseMount(
-        <Container data-testid="test.container">
-          <ContainerItem />
-        </Container>
-      );
-      cy.get(selector).should(
-        'have.css',
-        'max-width',
-        Test.breakpoint('xl') + 'px'
       );
     });
   });

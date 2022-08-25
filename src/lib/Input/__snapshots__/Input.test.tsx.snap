@@ -3,7 +3,7 @@
 exports[`components/Input matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <label
       class="c-fdMnTA c-fdMnTA-cNhXCf-size-md decaInput-label"
@@ -33,7 +33,7 @@ exports[`components/Input matches snapshot 1`] = `
 exports[`components/Input renders all colors 1`] = `
 <DocumentFragment>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -46,7 +46,7 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -59,7 +59,7 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -72,7 +72,7 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -85,7 +85,7 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -103,7 +103,7 @@ exports[`components/Input renders all colors 1`] = `
 exports[`components/Input renders all sizes 1`] = `
 <DocumentFragment>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dQgSKX-size-sm decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-dQgSKX-size-sm c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -116,7 +116,7 @@ exports[`components/Input renders all sizes 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -129,7 +129,7 @@ exports[`components/Input renders all sizes 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-jeReyr-size-lg decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-jeReyr-size-lg c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -147,7 +147,7 @@ exports[`components/Input renders all sizes 1`] = `
 exports[`components/Input renders all variants 1`] = `
 <DocumentFragment>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
@@ -160,7 +160,7 @@ exports[`components/Input renders all variants 1`] = `
     </div>
   </div>
   <div
-    class="c-iHFHGs decaInput-root"
+    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
   >
     <div
       class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-dBEtCv-cv decaInput-wrap"

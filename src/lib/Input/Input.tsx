@@ -187,6 +187,7 @@ const Input = React.forwardRef(
       <StyledInputMainContainer
         className={clsx(className, `${preClass}-root`)}
         css={css}
+        size={size}
       >
         {label && (
           <StyledInputLabel

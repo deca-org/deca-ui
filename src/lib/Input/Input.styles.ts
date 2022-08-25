@@ -3,11 +3,27 @@ import { styled } from '@lib/Theme/stitches.config';
 export const StyledInputMainContainer = styled('div', {
   width: '100%',
   fontFamily: '$normal',
-  isDisabled: {
-    true: {
-      cursor: 'not-allowed',
+  variants: {
+    isDisabled: {
+      true: {
+        cursor: 'not-allowed',
+      },
+      false: {},
     },
-    false: {},
+    size: {
+      sm: {
+        height: '$6',
+        width: '$32',
+      },
+      md: {
+        height: '$9',
+        width: '$35',
+      },
+      lg: {
+        height: '$10',
+        width: '$35',
+      },
+    },
   },
 });
 
