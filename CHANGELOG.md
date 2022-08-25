@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.4](https://github.com/deca-org/deca-ui/compare/v1.4.3...v1.4.4) (2022-08-25)
+
+
+### Bug Fixes
+
+* **components/grid:** fixed issue where max-width was zero on xs breakpoint ([9be7afe](https://github.com/deca-org/deca-ui/commit/9be7afee227704d0980cd324a3b2d85731198f70))
+
 ### [1.4.3](https://github.com/deca-org/deca-ui/compare/v1.4.2...v1.4.3) (2022-08-23)
 
 
