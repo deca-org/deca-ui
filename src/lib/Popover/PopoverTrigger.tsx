@@ -22,27 +22,28 @@ const PopoverTrigger = ({ children }: PopoverTriggerProps) => {
 
   if (context.action === 'click') {
     const extendedOnClick = () => {
-      child.onClick && child.onClick();
       context.setOpen && context.setOpen((prevState) => !prevState);
+      child.props.onClick && child.props.onClick();
     };
 
     return React.cloneElement(child, {
+      ...child.props,
       onClick: extendedOnClick,
       ref: mergeRefs(context.reference, child.ref, context.triggerRef),
-      ...child.props,
     });
   } else {
     const extendedOnMouseEnter = () => {
-      child.onMouseEnter && child.onMouseEnter();
       context.setOpen && context.setOpen(true);
+      child.props.onMouseEnter && child.props.onMouseEnter();
     };
 
     const extendedOnMouseLeave = () => {
-      child.onMouseLeave && child.onMouseLeave();
       context.setOpen && context.setOpen(false);
+      child.props.onMouseLeave && child.props.onMouseLeave();
     };
 
     return React.cloneElement(child, {
+      ...child.props,
       onMouseEnter: extendedOnMouseEnter,
       onMouseLeave: extendedOnMouseLeave,
       ref: mergeRefs(context.reference, child.ref, context.triggerRef),

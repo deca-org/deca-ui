@@ -7,6 +7,7 @@ export const StyledPopover = styled(animated.div, {
   boxShadow: '$default',
   br: '$sm',
   color: '$text',
+  zIndex: '$5',
   variants: {
     isDark: {
       true: {

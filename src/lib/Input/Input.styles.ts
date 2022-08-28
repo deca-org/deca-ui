@@ -3,7 +3,36 @@ import { styled } from '@lib/Theme/stitches.config';
 export const StyledInputMainContainer = styled('div', {
   width: '100%',
   fontFamily: '$normal',
+  compoundVariants: [
+    {
+      size: 'sm',
+      maxWidth: false,
+      css: {
+        width: '$32',
+      },
+    },
+    {
+      size: 'md',
+      maxWidth: false,
+      css: {
+        width: '$35',
+      },
+    },
+    {
+      size: 'lg',
+      maxWidth: false,
+      css: {
+        width: '$35',
+      },
+    },
+  ],
   variants: {
+    maxWidth: {
+      true: {
+        width: '100%',
+      },
+      false: {},
+    },
     isDisabled: {
       true: {
         cursor: 'not-allowed',
@@ -13,15 +42,12 @@ export const StyledInputMainContainer = styled('div', {
     size: {
       sm: {
         height: '$6',
-        width: '$32',
       },
       md: {
         height: '$9',
-        width: '$35',
       },
       lg: {
         height: '$10',
-        width: '$35',
       },
     },
   },
@@ -344,6 +370,30 @@ export const StyledInputContainer = styled('div', {
         borderColor: '$gray900',
       },
     },
+    {
+      size: 'sm',
+      maxWidth: false,
+      css: {
+        height: '$6',
+        width: '$32',
+      },
+    },
+    {
+      size: 'md',
+      maxWidth: false,
+      css: {
+        height: '$9',
+        width: '$35',
+      },
+    },
+    {
+      size: 'lg',
+      maxWidth: false,
+      css: {
+        height: '$10',
+        width: '$35',
+      },
+    },
   ],
   variants: {
     maxWidth: {
@@ -355,15 +405,12 @@ export const StyledInputContainer = styled('div', {
     size: {
       sm: {
         height: '$6',
-        width: '$32',
       },
       md: {
         height: '$9',
-        width: '$35',
       },
       lg: {
         height: '$10',
-        width: '$35',
       },
     },
     state: {

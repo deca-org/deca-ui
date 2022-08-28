@@ -167,6 +167,7 @@ const compoundVariantComposer = () => {
 };
 
 const StyledButton = styled('button', {
+  flexShrink: 0,
   whiteSpace: 'nowrap',
   fontWeight: '$semibold',
   fontFamily: '$normal',

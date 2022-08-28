@@ -66,6 +66,7 @@ const ExampleBox = ({ children }: { children: React.ReactNode }) => (
       fontWeight: '$bold',
       border: '$indigo700 solid 1px',
       m: '$n',
+      dflex: 'center',
     }}
   >
     {children}
@@ -73,7 +74,7 @@ const ExampleBox = ({ children }: { children: React.ReactNode }) => (
 );
 
 const Template: ComponentStory<typeof Grid> = (args: any) => (
-  <Box>
+  <Box css={{ overflow: 'hidden' }}>
     <Grid.Container
       justifyContent={args.justifyContent}
       alignItems={args.alignItems}
@@ -109,7 +110,7 @@ export const Default = Template.bind({});
   sm: 6,
   md: 4,
   lg: 3,
-  xl: 1,
+  xl: 2,
 };
 
 export const WithGridRuler = Template.bind({});

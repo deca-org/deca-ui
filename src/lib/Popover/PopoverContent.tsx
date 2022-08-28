@@ -3,7 +3,7 @@ import { CSS } from '@lib/Theme/stitches.config';
 import { mergeRefs, useClickOutside, __DEV__ } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
 import { PopoverContext, IPopoverContext } from './Popover';
@@ -67,35 +67,44 @@ const PopoverContent = ({
 
   const { dark } = React.useContext(ThemeContext);
 
-  return ReactDOM.createPortal(
-    transition(
-      (style, item) =>
-        item && (
-          <StyledPopover
-            style={style}
-            ref={mergeRefs(
-              context.mainComponentRef,
-              context.floating,
-              clickOutsideRef
-            )}
-            css={{
-              position: context.strategy,
-              top: context.y ?? 0,
-              left: context.x ?? 0,
-              ...css,
-            }}
-            className={clsx(className, `${preClass}-root`)}
-            as={animated[as as keyof JSX.IntrinsicElements]}
-            isDark={dark}
-          >
-            {children}
-          </StyledPopover>
-        )
-    ),
-    document.getElementById('decaUI-provider')
-      ? (document.getElementById('decaUI-provider') as Element)
-      : (document.querySelector('body') as Element)
-  );
+  const [DOM, setDOM] = useState(false);
+
+  useEffect(() => {
+    setDOM(true);
+  }, []);
+
+  if (DOM) {
+    return ReactDOM.createPortal(
+      transition(
+        (style, item) =>
+          item && (
+            <StyledPopover
+              style={style}
+              ref={mergeRefs(
+                context.mainComponentRef,
+                context.floating,
+                clickOutsideRef
+              )}
+              css={{
+                position: context.strategy,
+                top: context.y ?? 0,
+                left: context.x ?? 0,
+                ...css,
+              }}
+              className={clsx(className, `${preClass}-root`)}
+              as={animated[as as keyof JSX.IntrinsicElements]}
+              isDark={dark}
+            >
+              {children}
+            </StyledPopover>
+          )
+      ),
+      document.getElementById('decaUI-provider')
+        ? (document.getElementById('decaUI-provider') as Element)
+        : (document.querySelector('body') as Element)
+    );
+  }
+  return <></>;
 };
 
 if (__DEV__) {

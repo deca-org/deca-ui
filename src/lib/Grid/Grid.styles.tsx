@@ -5,16 +5,30 @@ import { transparentize } from 'polished';
 const colComposer = (breakpoint: string) => {
   const cols = [];
   for (let i = 1; i < 13; i++) {
-    cols.push([
-      i,
-      {
-        [`@${breakpoint}`]: {
-          flexBasis: `calc((${i} / 12) * 100%)`,
-          maxWidth: `calc((${i} / 12) * 100%)`,
-          flexGrow: 0,
+    // TODO: figure out why lg (non-important) and xl doesnt render when applied to ONLY the GridContainer
+    if (breakpoint === 'md') {
+      cols.push([
+        i,
+        {
+          [`@${breakpoint}`]: {
+            flexBasis: `calc((${i} / 12) * 100%)!important`,
+            maxWidth: `calc((${i} / 12) * 100%)!important`,
+            flexGrow: '0!important',
+          },
         },
-      },
-    ]);
+      ]);
+    } else {
+      cols.push([
+        i,
+        {
+          [`@${breakpoint}`]: {
+            flexBasis: `calc((${i} / 12) * 100%)`,
+            maxWidth: `calc((${i} / 12) * 100%)`,
+            flexGrow: 0,
+          },
+        },
+      ]);
+    }
   }
   return Object.fromEntries(cols);
 };
@@ -90,15 +104,15 @@ export const StyledGridContainer = styled('div', {
         },
       },
       md: {
-        m: '-$2',
-        [`& > ${StyledGridItem}`]: {
-          p: '$2',
-        },
-      },
-      lg: {
         m: '-$3',
         [`& > ${StyledGridItem}`]: {
           p: '$3',
+        },
+      },
+      lg: {
+        m: '-$5',
+        [`& > ${StyledGridItem}`]: {
+          p: '$5',
         },
       },
     },
@@ -122,10 +136,10 @@ export const StyledGridRuler = styled('div', {
         gap: 'calc($1 * 2)',
       },
       md: {
-        gap: 'calc($2 * 2)',
+        gap: 'calc($3 * 2)',
       },
       lg: {
-        gap: 'calc($3 * 2)',
+        gap: 'calc($5 * 2)',
       },
     },
   },

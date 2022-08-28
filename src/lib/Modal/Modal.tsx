@@ -5,7 +5,7 @@ import { CSS } from '@lib/Theme/stitches.config';
 import { useDOMRef, mergeRefs, useClickOutside, __DEV__ } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
-import React, { useEffect, SetStateAction, Dispatch } from 'react';
+import React, { useEffect, useState, SetStateAction, Dispatch } from 'react';
 import ReactDOM from 'react-dom';
 
 import {
@@ -160,70 +160,79 @@ const Modal = React.forwardRef(
 
     const { dark } = React.useContext(ThemeContext);
 
-    return ReactDOM.createPortal(
-      transition(
-        (style, item) =>
-          item && (
-            <ModalContext.Provider value={{ setOpen, autoGap }}>
-              {overlayTransition(
-                (overlayStyle, overlayItem) =>
-                  overlayItem && <StyledModalOverlay style={overlayStyle} />
-              )}
-              <StyledModal
-                ref={mergeRefs(modalRef, clickOutsideRef)}
-                style={style}
-                className={clsx(className, `${preClass}-root`)}
-                css={css}
-                noPadding={noPadding}
-                as={animated[as as keyof JSX.IntrinsicElements]}
-                isDark={dark}
-                {...props}
-              >
-                {closeButton && (
-                  <Box
-                    css={{
-                      display: 'flex',
-                      justifyContent: 'flex-end',
-                    }}
-                  >
-                    <Button
-                      variant="ghost"
-                      pill
-                      icon={<CloseButton />}
-                      css={{
-                        mr: noPadding ? '-$0' : '-$3',
-                        mt: noPadding ? '-$0' : '-$3',
-                        p: '$n',
-                        bg: 'transparent',
-                        color: dark ? '$gray700' : '$gray500',
-                        '&:hover': {
-                          color: '$gray600',
-                          bg: 'transparent',
-                          borderColor: '$transparent',
-                        },
-                        '&:focus': {
-                          color: dark ? '$gray500' : '$gray700',
-                          bg: 'transparent',
-                        },
-                      }}
-                      onClick={() => setOpen && setOpen(false)}
-                    />
-                  </Box>
+    const [DOM, setDOM] = useState(false);
+
+    useEffect(() => {
+      setDOM(true);
+    }, []);
+
+    if (DOM) {
+      return ReactDOM.createPortal(
+        transition(
+          (style, item) =>
+            item && (
+              <ModalContext.Provider value={{ setOpen, autoGap }}>
+                {overlayTransition(
+                  (overlayStyle, overlayItem) =>
+                    overlayItem && <StyledModalOverlay style={overlayStyle} />
                 )}
-                <StyledModalFlexbox
-                  className={`${preClass}-flexbox`}
-                  autoGap={autoGap}
+                <StyledModal
+                  ref={mergeRefs(modalRef, clickOutsideRef)}
+                  style={style}
+                  className={clsx(className, `${preClass}-root`)}
+                  css={css}
+                  noPadding={noPadding}
+                  as={animated[as as keyof JSX.IntrinsicElements]}
+                  isDark={dark}
+                  {...props}
                 >
-                  {children}
-                </StyledModalFlexbox>
-              </StyledModal>
-            </ModalContext.Provider>
-          )
-      ),
-      document.getElementById('decaUI-provider')
-        ? (document.getElementById('decaUI-provider') as Element)
-        : (document.querySelector('body') as Element)
-    );
+                  {closeButton && (
+                    <Box
+                      css={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                      }}
+                    >
+                      <Button
+                        variant="ghost"
+                        pill
+                        icon={<CloseButton />}
+                        css={{
+                          mr: noPadding ? '-$0' : '-$3',
+                          mt: noPadding ? '-$0' : '-$3',
+                          p: '$n',
+                          bg: 'transparent',
+                          color: dark ? '$gray700' : '$gray500',
+                          '&:hover': {
+                            color: '$gray600',
+                            bg: 'transparent',
+                            borderColor: '$transparent',
+                          },
+                          '&:focus': {
+                            color: dark ? '$gray500' : '$gray700',
+                            bg: 'transparent',
+                          },
+                        }}
+                        onClick={() => setOpen && setOpen(false)}
+                      />
+                    </Box>
+                  )}
+                  <StyledModalFlexbox
+                    className={`${preClass}-flexbox`}
+                    autoGap={autoGap}
+                  >
+                    {children}
+                  </StyledModalFlexbox>
+                </StyledModal>
+              </ModalContext.Provider>
+            )
+        ),
+        document.getElementById('decaUI-provider')
+          ? (document.getElementById('decaUI-provider') as Element)
+          : (document.querySelector('body') as Element)
+      );
+    }
+    return <></>;
   }
 );
 

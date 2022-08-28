@@ -30,20 +30,20 @@ const StyledText = styled('p', {
         lineHeight: '$2',
       },
       p: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
       },
       span: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
       },
       blockquote: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
         ml: '$4',
       },
       b: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
       },
       small: {
@@ -51,15 +51,15 @@ const StyledText = styled('p', {
         lineHeight: '$0',
       },
       del: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
       },
       i: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
       },
       em: {
-        fontSize: '$body',
+        fontSize: '$bodyLg',
         lineHeight: '$1',
       },
     },

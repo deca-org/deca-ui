@@ -1,6 +1,6 @@
 import {
   useFloating,
-  offset,
+  offset as floatingOffset,
   flip,
   shift,
   autoUpdate,
@@ -39,10 +39,15 @@ export interface PopoverProps {
    */
   placement?: Placement;
   /**
-   * determines what action needs to take place in order for popover to appear
+   * Determines what action needs to take place in order for popover to appear
    * @default click
    */
   action?: 'click' | 'hover';
+  /**
+   * How far away PopoverContent should be away from PopoverTrigger when opened
+   * @default 10
+   */
+  offset?: number;
 }
 
 export interface IPopoverContext extends UseFloatingReturn {
@@ -63,6 +68,7 @@ const Popover = React.forwardRef(
       setOpen,
       placement = 'bottom',
       action = 'click',
+      offset = 10,
     }: PopoverProps,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
@@ -70,7 +76,7 @@ const Popover = React.forwardRef(
       placement: placement,
       whileElementsMounted: autoUpdate,
       strategy: 'absolute',
-      middleware: [offset(10), flip(), shift()],
+      middleware: [floatingOffset(offset), flip(), shift()],
     });
 
     const [selfOpen, setSelfOpen] = useState<boolean>(false);
