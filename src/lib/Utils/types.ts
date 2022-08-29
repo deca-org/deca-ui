@@ -1,5 +1,3 @@
-import { theme, StitchesTheme } from '@lib/Theme/stitches.config';
-
 export type Modify<T, R> = Omit<T, keyof R> & R;
 
 export type ModifyDeep<A extends AnyObject, B extends DeepPartialAny<A>> = {
@@ -28,5 +26,3 @@ export type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 export type DeepWriteable<T> = {
   -readonly [P in keyof T]: DeepWriteable<T[P]>;
 };
-
-export type ThemeKey<T extends keyof StitchesTheme> = keyof typeof theme[T];

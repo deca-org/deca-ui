@@ -529,10 +529,10 @@ export const StyledInput = styled('input', {
         fontSize: '$footnote',
       },
       md: {
-        fontSize: '$body',
+        fontSize: '$bodySm',
       },
       lg: {
-        fontSize: '$body',
+        fontSize: '$bodySm',
       },
     },
     state: {

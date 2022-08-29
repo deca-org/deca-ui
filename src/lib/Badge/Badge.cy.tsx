@@ -37,7 +37,7 @@ describe('components/Badge', () => {
           Label
         </Badge>
       );
-      cy.get(selector).should('have.css', 'fontSize', Test.fontSize('body'));
+      cy.get(selector).should('have.css', 'fontSize', Test.fontSize('bodySm'));
       cy.get(selector).should('have.css', 'paddingTop', Test.space('1'));
       cy.get(selector).should('have.css', 'paddingBottom', Test.space('1'));
       cy.get(selector).should('have.css', 'paddingLeft', Test.space('3 - 1'));
@@ -49,7 +49,7 @@ describe('components/Badge', () => {
           Label
         </Badge>
       );
-      cy.get(selector).should('have.css', 'fontSize', Test.fontSize('bodyLg'));
+      cy.get(selector).should('have.css', 'fontSize', Test.fontSize('body'));
       cy.get(selector).should('have.css', 'paddingTop', Test.space('1'));
       cy.get(selector).should('have.css', 'paddingBottom', Test.space('1'));
       cy.get(selector).should('have.css', 'paddingLeft', Test.space('3'));

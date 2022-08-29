@@ -29,23 +29,27 @@ export interface GridProps extends React.ComponentPropsWithRef<'div'> {
    */
   className?: string;
   /**
-   * How many columns should be taken up by item from breakpoints n-xs
+   * How many columns should be taken up by item initially
+   */
+  n?: Cols;
+  /**
+   * How many columns should be taken up by item on xs breakpoint
    */
   xs?: Cols;
   /**
-   * How many columns should be taken up by item from breakpoints xs-sm
+   * How many columns should be taken up by item on sm breakpoint
    */
   sm?: Cols;
   /**
-   * How many columns should be taken up by item from breakpoints sm-md
+   * How many columns should be taken up by item on md breakpoint
    */
   md?: Cols;
   /**
-   * How many columns should be taken up by item from breakpoints md-lg
+   * How many columns should be taken up by item on lg breakpoint
    */
   lg?: Cols;
   /**
-   * How many columns should be taken up by item after max lg breakpoint
+   * How many columns should be taken up by item on xl breakpoint
    */
   xl?: Cols;
 }
@@ -57,6 +61,7 @@ const Grid = React.forwardRef(
       css,
       className = '',
       children,
+      n,
       xs,
       sm,
       md,
@@ -69,17 +74,28 @@ const Grid = React.forwardRef(
     const gridRef = useDOMRef(ref);
     const preClass = 'decaGrid';
 
+    const genGridItemCss = (breakpoint?: number) => ({
+      flexBasis: `calc((${breakpoint} / 12) * 100%)`,
+      maxWidth: `calc((${breakpoint} / 12) * 100%)`,
+    });
+
+    const getCss = {
+      flexGrow: 0,
+      '@n': genGridItemCss(n),
+      '@xs': genGridItemCss(xs),
+      '@sm': genGridItemCss(sm),
+      '@md': genGridItemCss(md),
+      '@lg': genGridItemCss(lg),
+      '@xl': genGridItemCss(xl),
+      ...css,
+    };
+
     return (
       <StyledGridItem
         as={as}
-        css={css}
+        css={getCss}
         className={clsx(className, `${preClass}-root`)}
         ref={gridRef}
-        xs={xs}
-        sm={sm}
-        md={md}
-        lg={lg}
-        xl={xl}
         {...gridProps}
       >
         {children}

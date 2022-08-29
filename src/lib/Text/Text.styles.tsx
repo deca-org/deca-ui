@@ -30,20 +30,20 @@ const StyledText = styled('p', {
         lineHeight: '$2',
       },
       p: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
       },
       span: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
       },
       blockquote: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
         ml: '$4',
       },
       b: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
       },
       small: {
@@ -51,16 +51,94 @@ const StyledText = styled('p', {
         lineHeight: '$0',
       },
       del: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
       },
       i: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
       },
       em: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         lineHeight: '$1',
+      },
+    },
+    size: {
+      h1: {
+        fontSize: '$h1',
+        lineHeight: '$6',
+        fontWeight: 'bold',
+      },
+      h2: {
+        fontSize: '$h2',
+        lineHeight: '$5',
+        fontWeight: 'bold',
+      },
+      h3: {
+        fontSize: '$h3',
+        lineHeight: '$4',
+        fontWeight: 'bold',
+      },
+      h4: {
+        fontSize: '$h4',
+        lineHeight: '$3',
+        fontWeight: 'bold',
+      },
+      h5: {
+        fontSize: '$h5',
+        lineHeight: '$2',
+        fontWeight: 'bold',
+      },
+      h6: {
+        fontSize: '$h6',
+        lineHeight: '$2',
+        fontWeight: 'bold',
+      },
+      body: {
+        fontSize: '$body',
+        lineHeight: '$1',
+        fontWeight: 'normal',
+      },
+      bodySm: {
+        fontSize: '$bodySm',
+        lineHeight: '$1',
+        fontWeight: 'normal',
+      },
+      caption: {
+        fontSize: '$caption',
+        lineHeight: '$1',
+        fontWeight: 'normal',
+      },
+      footnote: {
+        fontSize: '$footnote',
+        lineHeight: '$0',
+        fontWeight: 'normal',
+      },
+    },
+    lineHeight: {
+      n: {
+        lineHeight: '$n',
+      },
+      0: {
+        lineHeight: '$0',
+      },
+      1: {
+        lineHeight: '$1',
+      },
+      2: {
+        lineHeight: '$2',
+      },
+      3: {
+        lineHeight: '$3',
+      },
+      4: {
+        lineHeight: '$4',
+      },
+      5: {
+        lineHeight: '$5',
+      },
+      6: {
+        lineHeight: '$6',
       },
     },
     weight: {

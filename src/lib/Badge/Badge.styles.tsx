@@ -20,13 +20,13 @@ export const StyledBadge = styled('span', {
         px: '$2',
       },
       md: {
-        fontSize: '$body',
+        fontSize: '$bodySm',
         py: '$1',
         paddingRight: 'calc($3 - $1)',
         paddingLeft: 'calc($3 - $1)',
       },
       lg: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         py: '$1',
         px: '$3',
       },

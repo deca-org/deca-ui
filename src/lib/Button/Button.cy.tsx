@@ -69,14 +69,14 @@ describe('components/Button', () => {
       cy.get('button').should('have.css', 'paddingLeft', Test.space('3'));
       cy.get('button').should('have.css', 'paddingRight', Test.space('3'));
       cy.get('button').should('have.css', 'height', Test.size('9'));
-      cy.get('button').should('have.css', 'fontSize', Test.fontSize('body'));
+      cy.get('button').should('have.css', 'fontSize', Test.fontSize('bodySm'));
     });
     it('lg', () => {
       cy.mount(<Button size="lg">Button</Button>);
       cy.get('button').should('have.css', 'paddingLeft', Test.space('4'));
       cy.get('button').should('have.css', 'paddingRight', Test.space('4'));
       cy.get('button').should('have.css', 'height', Test.size('10'));
-      cy.get('button').should('have.css', 'fontSize', Test.fontSize('bodyLg'));
+      cy.get('button').should('have.css', 'fontSize', Test.fontSize('body'));
     });
   });
   describe('variants', () => {

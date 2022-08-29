@@ -218,7 +218,7 @@ export const StyledSwitchLabel = styled('label', {
         },
       },
       md: {
-        fontSize: '$body',
+        fontSize: '$bodySm',
         '&::before': {
           width: '$8',
           height: '$4',
@@ -229,7 +229,7 @@ export const StyledSwitchLabel = styled('label', {
         },
       },
       lg: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         '&::before': {
           width: '$9',
           height: '$5',

@@ -206,7 +206,7 @@ export const StyledRadioLabel = styled('label', {
         },
       },
       md: {
-        fontSize: '$body',
+        fontSize: '$bodySm',
         '& div': {
           size: '$2',
           ml: '$1',
@@ -216,7 +216,7 @@ export const StyledRadioLabel = styled('label', {
         },
       },
       lg: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         '& div': {
           size: '$3',
           ml: '$1',

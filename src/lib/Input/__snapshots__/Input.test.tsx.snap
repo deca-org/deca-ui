@@ -3,7 +3,7 @@
 exports[`components/Input matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <label
       class="c-fdMnTA c-fdMnTA-cNhXCf-size-md decaInput-label"
@@ -12,10 +12,10 @@ exports[`components/Input matches snapshot 1`] = `
       Label Text
     </label>
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         placeholder="Placeholder Text"
         value=""
@@ -33,65 +33,65 @@ exports[`components/Input matches snapshot 1`] = `
 exports[`components/Input renders all colors 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
@@ -103,10 +103,10 @@ exports[`components/Input renders all colors 1`] = `
 exports[`components/Input renders all sizes 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-dQgSKX-size-sm decaInput-root"
+    class="c-dxhRnB c-dxhRnB-jigqbG-size-sm decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-dQgSKX-size-sm c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-jigqbG-size-sm c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dQgSKX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-kGUnSj-size-sm c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -116,26 +116,26 @@ exports[`components/Input renders all sizes 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-jeReyr-size-lg decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dBFJVN-size-lg decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-jeReyr-size-lg c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-dBFJVN-size-lg c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-jeReyr-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-lg c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-lg c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
@@ -147,26 +147,26 @@ exports[`components/Input renders all sizes 1`] = `
 exports[`components/Input renders all variants 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
         id="input-1"
         value=""
       />
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-fEWyJT-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-fEWyJT-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-dBEtCv-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-dBEtCv-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
     >
       <input
-        class="c-dlVhqe c-dlVhqe-iTudIJ-size-md c-dlVhqe-cycqzJ-pill-false decaInput-input"
+        class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false decaInput-input"
         id="input-1"
         value=""
       />

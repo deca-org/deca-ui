@@ -78,6 +78,7 @@ const Template: ComponentStory<typeof Grid> = (args: any) => (
     <Grid.Container
       justifyContent={args.justifyContent}
       alignItems={args.alignItems}
+      n={args.n}
       xs={args.xs}
       sm={args.sm}
       md={args.md}
@@ -106,6 +107,7 @@ export const Default = Template.bind({});
   justifyContent: 'center',
   alignItems: 'flex-start',
   spacing: 'sm',
+  n: 12,
   xs: 12,
   sm: 6,
   md: 4,

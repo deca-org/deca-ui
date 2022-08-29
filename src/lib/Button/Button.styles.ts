@@ -247,12 +247,12 @@ const StyledButton = styled('button', {
       },
       md: {
         px: '$3',
-        fontSize: '$body',
+        fontSize: '$bodySm',
         height: '$9',
       },
       lg: {
         px: '$4',
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         height: '$10',
       },
     },

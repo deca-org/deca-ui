@@ -1,7 +1,7 @@
 import { Test } from '../Utils';
 import _cyp from '../../../cypress';
 import React from 'react';
-import Text from './Text';
+import Text, { TextLineHeight, TextWeight } from './Text';
 
 const allWeights = [
   'hairline',
@@ -15,6 +15,8 @@ const allWeights = [
   'black',
 ];
 
+const allLineHeights = ['n', '0', '1', '2', '3', '4', '5', '6'];
+
 describe('components/Text', () => {
   describe('base', () => {
     it('no margin', () => {
@@ -26,7 +28,7 @@ describe('components/Text', () => {
       cy.get('h1').should('have.css', 'color', Test.color('black'));
     });
   });
-  describe('sizes', () => {
+  describe('as', () => {
     it('h1', () => {
       cy.mount(<Text as="h1">Hello World</Text>);
       cy.get('h1').should('have.css', 'font-size', Test.fontSize('h1'));
@@ -107,11 +109,62 @@ describe('components/Text', () => {
       cy.get('em').should('have.css', 'line-height', Test.lineHeight('1'));
     });
   });
+  describe('size', () => {
+    it('h1 with size p', () => {
+      cy.mount(
+        <Text as="h1" size="body">
+          Hello World
+        </Text>
+      );
+      cy.get('h1').should('have.css', 'font-size', Test.fontSize('body'));
+      cy.get('h1').should('have.css', 'line-height', Test.lineHeight('1'));
+      cy.get('h1').should('have.css', 'font-weight', Test.fontWeight('normal'));
+    });
+    it('weight overrides size weight', () => {
+      cy.mount(
+        <Text as="h1" size="body" weight="hairline">
+          Hello World
+        </Text>
+      );
+      cy.get('h1').should('have.css', 'font-size', Test.fontSize('body'));
+      cy.get('h1').should('have.css', 'line-height', Test.lineHeight('1'));
+      cy.get('h1').should(
+        'have.css',
+        'font-weight',
+        Test.fontWeight('hairline')
+      );
+    });
+    it('lineHeight overrides size lineHeight', () => {
+      cy.mount(
+        <Text as="h1" size="body" lineHeight="4">
+          Hello World
+        </Text>
+      );
+      cy.get('h1').should('have.css', 'font-size', Test.fontSize('body'));
+      cy.get('h1').should('have.css', 'line-height', Test.lineHeight('4'));
+    });
+  });
+  describe('lineHeight', () => {
+    allLineHeights.map((lineHeight) =>
+      it(lineHeight, () => {
+        cy.mount(
+          <Text as="p" lineHeight={lineHeight as TextLineHeight}>
+            Hello World
+          </Text>
+        );
+        cy.get('p').should(
+          'have.css',
+          'line-height',
+          Test.lineHeight(lineHeight)
+        );
+      })
+    );
+  });
   describe('font-weights', () => {
     allWeights.map((weight) =>
       it(weight, () => {
         cy.mount(
-          <Text as="p" weight={weight}>
+          <Text as="p" weight={weight as TextWeight}>
             Hello World
           </Text>
         );

@@ -3,7 +3,7 @@
 exports[`components/Button matches snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-ePLPad-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-ePLPad-cv decaButton-root"
     role="button"
   >
     Label
@@ -14,31 +14,31 @@ exports[`components/Button matches snapshot 1`] = `
 exports[`components/Button renders all colors 1`] = `
 <DocumentFragment>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-ePLPad-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-ePLPad-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-bmmCCE-color-secondary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-gCieqL-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-bmmCCE-color-secondary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-gCieqL-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-cbktrZ-color-success c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-kkCveC-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-cbktrZ-color-success c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-kkCveC-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-fWqKPQ-color-warning c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-dQlwmf-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-fWqKPQ-color-warning c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-dQlwmf-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-cgBQIK-color-error c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-bAuLhl-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-cgBQIK-color-error c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-bAuLhl-cv decaButton-root"
     role="button"
   >
     Label
@@ -49,19 +49,19 @@ exports[`components/Button renders all colors 1`] = `
 exports[`components/Button renders all sizes 1`] = `
 <DocumentFragment>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-cmVdgU-size-sm c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-ePLPad-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-cmVdgU-size-sm c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-ePLPad-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-ePLPad-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-ePLPad-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-lXiLo-size-lg c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-ePLPad-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-eIDFyj-size-lg c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-ePLPad-cv decaButton-root"
     role="button"
   >
     Label
@@ -72,25 +72,25 @@ exports[`components/Button renders all sizes 1`] = `
 exports[`components/Button renders all variants 1`] = `
 <DocumentFragment>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-ePLPad-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-ePLPad-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-fdQTW-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-fdQTW-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-hSqWZv-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-hSqWZv-cv decaButton-root"
     role="button"
   >
     Label
   </button>
   <button
-    class="c-fGhvCU c-fGhvCU-jsOpSy-color-primary c-fGhvCU-sKeyg-size-md c-fGhvCU-bDGmTT-isDisabled-false c-fGhvCU-cycqzJ-pill-false c-fGhvCU-kJLEgH-cv decaButton-root"
+    class="c-hpqThE c-hpqThE-jsOpSy-color-primary c-hpqThE-dcPSsq-size-md c-hpqThE-bDGmTT-isDisabled-false c-hpqThE-cycqzJ-pill-false c-hpqThE-kJLEgH-cv decaButton-root"
     role="button"
   >
     Label

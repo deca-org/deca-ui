@@ -12,7 +12,7 @@ exports[`components/Radio matches snapshot 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false c-jponNy-jQVVMl-cv"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false c-jponNy-jQVVMl-cv"
       for="1"
     >
       <div
@@ -36,7 +36,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div
@@ -54,7 +54,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div
@@ -72,7 +72,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div
@@ -90,7 +90,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div
@@ -108,7 +108,7 @@ exports[`components/Radio renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div
@@ -149,7 +149,7 @@ exports[`components/Radio renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-boLhOk-size-md c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-cCGZrG-size-md c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div
@@ -167,7 +167,7 @@ exports[`components/Radio renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-jponNy c-jponNy-fEMOrJ-size-lg c-jponNy-hqEieG-isDisabled-false"
+      class="c-jponNy c-jponNy-fNoFLO-size-lg c-jponNy-hqEieG-isDisabled-false"
       for="1"
     >
       <div

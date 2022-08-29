@@ -12,7 +12,7 @@ exports[`components/Checkbox matches screenshot 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
       for="1"
     >
       <svg
@@ -45,7 +45,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -72,7 +72,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -99,7 +99,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -126,7 +126,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -153,7 +153,7 @@ exports[`components/Checkbox renders all colors 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -212,7 +212,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg
@@ -239,7 +239,7 @@ exports[`components/Checkbox renders all sizes 1`] = `
       value=""
     />
     <label
-      class="c-flUSLM c-flUSLM-komCFO-size-lg c-flUSLM-hqEieG-isDisabled-false"
+      class="c-flUSLM c-flUSLM-duufjB-size-lg c-flUSLM-hqEieG-isDisabled-false"
       for="1"
     >
       <svg

@@ -77,7 +77,7 @@ describe('components/Checkbox', () => {
       cy.get('label').before('width').should('eq', Test.size('3'));
       cy.get('label').before('height').should('eq', Test.size('3'));
       cy.get('label').before('margin-right').should('eq', Test.space('2'));
-      cy.get('label').should('have.css', 'font-size', Test.fontSize('body'));
+      cy.get('label').should('have.css', 'font-size', Test.fontSize('bodySm'));
       cy.get('svg').should('have.css', 'width', Test.size('2'));
     });
     it('lg', () => {
@@ -85,7 +85,7 @@ describe('components/Checkbox', () => {
       cy.get('label').before('width').should('eq', Test.size('4'));
       cy.get('label').before('height').should('eq', Test.size('4'));
       cy.get('label').before('margin-right').should('eq', Test.space('2'));
-      cy.get('label').should('have.css', 'font-size', Test.fontSize('bodyLg'));
+      cy.get('label').should('have.css', 'font-size', Test.fontSize('body'));
       cy.get('svg').should('have.css', 'width', Test.size('3'));
     });
   });

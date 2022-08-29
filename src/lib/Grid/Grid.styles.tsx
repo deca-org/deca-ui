@@ -2,37 +2,6 @@ import { styled } from '@lib/Theme/stitches.config';
 import { getStaticColor } from '@lib/Utils';
 import { transparentize } from 'polished';
 
-const colComposer = (breakpoint: string) => {
-  const cols = [];
-  for (let i = 1; i < 13; i++) {
-    // TODO: figure out why lg (non-important) and xl doesnt render when applied to ONLY the GridContainer
-    if (breakpoint === 'md') {
-      cols.push([
-        i,
-        {
-          [`@${breakpoint}`]: {
-            flexBasis: `calc((${i} / 12) * 100%)!important`,
-            maxWidth: `calc((${i} / 12) * 100%)!important`,
-            flexGrow: '0!important',
-          },
-        },
-      ]);
-    } else {
-      cols.push([
-        i,
-        {
-          [`@${breakpoint}`]: {
-            flexBasis: `calc((${i} / 12) * 100%)`,
-            maxWidth: `calc((${i} / 12) * 100%)`,
-            flexGrow: 0,
-          },
-        },
-      ]);
-    }
-  }
-  return Object.fromEntries(cols);
-};
-
 const justifyContentComposer = () => {
   const options = [
     'flex-start',
@@ -73,13 +42,6 @@ const alignItemsComposer = () => {
 export const StyledGridItem = styled('div', {
   display: 'block',
   boxSizing: 'border-box',
-  variants: {
-    xs: colComposer('n'),
-    sm: colComposer('xs'),
-    md: colComposer('sm'),
-    lg: colComposer('md'),
-    xl: colComposer('lg'),
-  },
 });
 
 export const StyledGridContainer = styled('div', {

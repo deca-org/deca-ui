@@ -46,23 +46,27 @@ export interface GridContainerProps extends React.ComponentPropsWithRef<'div'> {
    */
   alignItems?: 'flex-start' | 'center' | 'flex-end';
   /**
-   * How many columns should be taken up by item from breakpoints n-xs
+   * How many columns should be taken up by item initially
+   */
+  n?: Cols;
+  /**
+   * How many columns should be taken up by item on xs breakpoint
    */
   xs?: Cols;
   /**
-   * How many columns should be taken up by item from breakpoints xs-sm
+   * How many columns should be taken up by item on sm breakpoint
    */
   sm?: Cols;
   /**
-   * How many columns should be taken up by item from breakpoints sm-md
+   * How many columns should be taken up by item on md breakpoint
    */
   md?: Cols;
   /**
-   * How many columns should be taken up by item from breakpoints md-lg
+   * How many columns should be taken up by item on lg breakpoint
    */
   lg?: Cols;
   /**
-   * How many columns should be taken up by item after max lg breakpoint
+   * How many columns should be taken up by item on xl breakpoint
    */
   xl?: Cols;
 }
@@ -77,6 +81,7 @@ const GridContainer = React.forwardRef(
       spacing = 'sm',
       justifyContent,
       alignItems,
+      n,
       xs,
       sm,
       md,
@@ -104,6 +109,7 @@ const GridContainer = React.forwardRef(
           children as React.ReactElement<GridProps>,
           (child: React.ReactElement<GridProps>) => {
             return React.cloneElement(child, {
+              n: child.props.n ? child.props.n : n,
               xs: child.props.xs ? child.props.xs : xs,
               sm: child.props.sm ? child.props.sm : sm,
               md: child.props.md ? child.props.md : md,

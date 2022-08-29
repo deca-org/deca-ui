@@ -17,7 +17,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
         value="A"
       />
       <label
-        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg
@@ -47,7 +47,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
         value="B"
       />
       <label
-        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg
@@ -76,7 +76,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
         value="C"
       />
       <label
-        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg
@@ -105,7 +105,7 @@ exports[`components/CheckboxGroup matches snapshot 1`] = `
         value="D"
       />
       <label
-        class="c-flUSLM c-flUSLM-eVJqzf-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
+        class="c-flUSLM c-flUSLM-ijjbfZ-size-md c-flUSLM-hqEieG-isDisabled-false c-flUSLM-jQVVMl-cv"
         for="1"
       >
         <svg

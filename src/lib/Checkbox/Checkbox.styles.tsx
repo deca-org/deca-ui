@@ -245,7 +245,7 @@ export const StyledCheckboxLabel = styled('label', {
         },
       },
       md: {
-        fontSize: '$body',
+        fontSize: '$bodySm',
         '& svg': {
           width: '$2',
           ml: '$1',
@@ -262,7 +262,7 @@ export const StyledCheckboxLabel = styled('label', {
         },
       },
       lg: {
-        fontSize: '$bodyLg',
+        fontSize: '$body',
         '& svg': {
           width: '$3',
           ml: '$1',
