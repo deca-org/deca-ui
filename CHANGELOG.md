@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.5](https://github.com/deca-org/deca-ui/compare/v1.4.4...v1.4.5) (2022-08-29)
+
+
+### Bug Fixes
+
+* **components/grid:** fixed grid component breakpoints not being rendered properly ([9b6302f](https://github.com/deca-org/deca-ui/commit/9b6302fd0ddf1829ce442da543c84348b576ef2d))
+* **popover & modal:** ssr fix ([5a5f996](https://github.com/deca-org/deca-ui/commit/5a5f9962f8f256edbf73ac05f2c86254371637f0))
+
 ### [1.4.4](https://github.com/deca-org/deca-ui/compare/v1.4.3...v1.4.4) (2022-08-25)
 
 
