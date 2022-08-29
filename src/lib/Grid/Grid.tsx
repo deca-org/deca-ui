@@ -74,20 +74,39 @@ const Grid = React.forwardRef(
     const gridRef = useDOMRef(ref);
     const preClass = 'decaGrid';
 
-    const genGridItemCss = (breakpoint?: number) => ({
-      flexBasis: `calc((${breakpoint} / 12) * 100%)`,
-      maxWidth: `calc((${breakpoint} / 12) * 100%)`,
-    });
+    const genGridItemCss = (breakpoint?: number, bp?: CSS) => {
+      if (bp) {
+        return {
+          flexBasis: `calc((${breakpoint} / 12) * 100%)`,
+          maxWidth: `calc((${breakpoint} / 12) * 100%)`,
+          ...bp,
+        };
+      }
+      return {
+        flexBasis: `calc((${breakpoint} / 12) * 100%)`,
+        maxWidth: `calc((${breakpoint} / 12) * 100%)`,
+      };
+    };
+
+    const {
+      '@n': cssN,
+      '@xs': cssXs,
+      '@sm': cssSm,
+      '@md': cssMd,
+      '@lg': cssLg,
+      '@xl': cssXl,
+      ...otherCss
+    } = (css as CSS) || {};
 
     const getCss = {
       flexGrow: 0,
-      '@n': genGridItemCss(n),
-      '@xs': genGridItemCss(xs),
-      '@sm': genGridItemCss(sm),
-      '@md': genGridItemCss(md),
-      '@lg': genGridItemCss(lg),
-      '@xl': genGridItemCss(xl),
-      ...css,
+      '@n': genGridItemCss(n, cssN),
+      '@xs': genGridItemCss(xs, cssXs),
+      '@sm': genGridItemCss(sm, cssSm),
+      '@md': genGridItemCss(md, cssMd),
+      '@lg': genGridItemCss(lg, cssLg),
+      '@xl': genGridItemCss(xl, cssXl),
+      ...otherCss,
     };
 
     return (

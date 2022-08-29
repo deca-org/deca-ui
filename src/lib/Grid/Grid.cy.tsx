@@ -9,10 +9,10 @@ const GridItemBox = ({ children }) => (
     css={{
       bg: '$indigo500',
       color: '$white',
-      fontFamily: '$normal',
       width: '100%',
       p: '$1',
       textAlign: 'center',
+      fontFamily: 'inherit',
     }}
   >
     {children}
@@ -127,6 +127,36 @@ const containerColCheck = (breakpoint: string) => {
       }
     });
   }
+};
+
+const breakpointCSSCheck = () => {
+  const allBreakpoints = ['n', 'xs', 'sm', 'md', 'lg', 'xl'];
+  allBreakpoints.map((i) => {
+    it(i, () => {
+      const composerProps = { [i]: 6 };
+      cy.viewport(Test.breakpoint(i), 500);
+      cy.baseMount(
+        <Grid.Container data-testid="test.gridContainer" {...composerProps}>
+          <Grid
+            data-testid="test.gridItem1"
+            css={{
+              [`@${i}`]: {
+                fontFamily: 'Arial',
+              },
+            }}
+          >
+            <GridItemBox>Item 1</GridItemBox>
+          </Grid>
+        </Grid.Container>
+      );
+      cy.get(itemSelector(1)).should('have.css', 'font-family', 'Arial');
+      cy.get(itemSelector(1)).should(
+        'have.css',
+        'flexBasis',
+        parseFlexBasis(6)
+      );
+    });
+  });
 };
 
 describe('components/Grid', () => {
@@ -407,5 +437,32 @@ describe('components/Grid', () => {
         cy.get(itemSelector(i)).should('have.css', 'padding', Test.space('5'));
       }
     });
+  });
+  describe('custom css should not component breakpoints', () => {
+    it('general css', () => {
+      cy.viewport(Test.breakpoint('xs'), 500);
+      cy.baseMount(
+        <Grid.Container data-testid="test.gridContainer" n={12} xs={6} sm={3}>
+          <Grid
+            data-testid="test.gridItem1"
+            css={{
+              fontFamily: 'Arial',
+            }}
+          >
+            <GridItemBox>Item 1</GridItemBox>
+          </Grid>
+        </Grid.Container>
+      );
+      cy.get(itemSelector(1)).should('have.css', 'font-family', 'Arial');
+      cy.get(itemSelector(1)).should(
+        'have.css',
+        'flexBasis',
+        parseFlexBasis(6)
+      );
+    });
+    describe(
+      'input breakpoints should not override system breakpoints',
+      breakpointCSSCheck
+    );
   });
 });
