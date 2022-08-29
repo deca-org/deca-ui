@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.6](https://github.com/deca-org/deca-ui/compare/v1.4.5...v1.4.6) (2022-08-29)
+
+
+### Bug Fixes
+
+* **components/grid:** fixed issue where custom css would override necessary css ([26fc928](https://github.com/deca-org/deca-ui/commit/26fc92859ee6a9d183b0d3dde93588ee5e365392))
+
 ### [1.4.5](https://github.com/deca-org/deca-ui/compare/v1.4.4...v1.4.5) (2022-08-29)
 
 
