@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.9](https://github.com/deca-org/deca-ui/compare/v1.4.8...v1.4.9) (2022-08-30)
+
+
+### Bug Fixes
+
+* **components/text:** added mono prop so user does not have to manually change font-family ([bdb7cf9](https://github.com/deca-org/deca-ui/commit/bdb7cf9f2d2dd5efc3575e6b7d3a85d5a0e4ea3e))
+
 ### [1.4.8](https://github.com/deca-org/deca-ui/compare/v1.4.7...v1.4.8) (2022-08-30)
 
 
