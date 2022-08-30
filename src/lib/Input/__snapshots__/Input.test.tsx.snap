@@ -3,7 +3,7 @@
 exports[`components/Input matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <label
       class="c-fdMnTA c-fdMnTA-cNhXCf-size-md decaInput-label"
@@ -12,7 +12,7 @@ exports[`components/Input matches snapshot 1`] = `
       Label Text
     </label>
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -33,10 +33,10 @@ exports[`components/Input matches snapshot 1`] = `
 exports[`components/Input renders all colors 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -46,10 +46,10 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -59,10 +59,10 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -72,10 +72,10 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -85,10 +85,10 @@ exports[`components/Input renders all colors 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -103,10 +103,10 @@ exports[`components/Input renders all colors 1`] = `
 exports[`components/Input renders all sizes 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-jigqbG-size-sm decaInput-root"
+    class="c-dxhRnB c-dxhRnB-llZTNE-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-jigqbG-size-sm c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dQgSKX-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-jigqbG-size-sm c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-llZTNE-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-kGUnSj-size-sm c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -116,10 +116,10 @@ exports[`components/Input renders all sizes 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -129,10 +129,10 @@ exports[`components/Input renders all sizes 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-dBFJVN-size-lg decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-dBFJVN-size-lg c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-jeReyr-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-dBFJVN-size-lg c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-lg c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -147,10 +147,10 @@ exports[`components/Input renders all sizes 1`] = `
 exports[`components/Input renders all variants 1`] = `
 <DocumentFragment>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-htQczz-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false c-dlVhqe-fOmxiH-cv decaInput-input"
@@ -160,10 +160,10 @@ exports[`components/Input renders all variants 1`] = `
     </div>
   </div>
   <div
-    class="c-dxhRnB c-dxhRnB-hlHOLx-size-md decaInput-root"
+    class="c-dxhRnB c-dxhRnB-dbfLtX-cv decaInput-root"
   >
     <div
-      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-dBEtCv-cv c-hQCSiP-fEWyJT-cv decaInput-wrap"
+      class="c-hQCSiP c-hQCSiP-hlHOLx-size-md c-hQCSiP-cycqzJ-pill-false c-hQCSiP-dBEtCv-cv c-hQCSiP-dbfLtX-cv decaInput-wrap"
     >
       <input
         class="c-dlVhqe c-dlVhqe-bxpJOv-size-md c-dlVhqe-cycqzJ-pill-false decaInput-input"

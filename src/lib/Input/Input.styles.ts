@@ -40,15 +40,9 @@ export const StyledInputMainContainer = styled('div', {
       false: {},
     },
     size: {
-      sm: {
-        height: '$6',
-      },
-      md: {
-        height: '$9',
-      },
-      lg: {
-        height: '$10',
-      },
+      sm: {},
+      md: {},
+      lg: {},
     },
   },
 });
@@ -374,7 +368,6 @@ export const StyledInputContainer = styled('div', {
       size: 'sm',
       maxWidth: false,
       css: {
-        height: '$6',
         width: '$32',
       },
     },
@@ -382,7 +375,6 @@ export const StyledInputContainer = styled('div', {
       size: 'md',
       maxWidth: false,
       css: {
-        height: '$9',
         width: '$35',
       },
     },
@@ -390,7 +382,6 @@ export const StyledInputContainer = styled('div', {
       size: 'lg',
       maxWidth: false,
       css: {
-        height: '$10',
         width: '$35',
       },
     },

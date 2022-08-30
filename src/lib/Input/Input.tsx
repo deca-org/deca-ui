@@ -188,6 +188,7 @@ const Input = React.forwardRef(
         className={clsx(className, `${preClass}-root`)}
         css={css}
         size={size}
+        maxWidth={maxWidth}
       >
         {label && (
           <StyledInputLabel
