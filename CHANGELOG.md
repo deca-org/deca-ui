@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.7](https://github.com/deca-org/deca-ui/compare/v1.4.6...v1.4.7) (2022-08-30)
+
+
+### Bug Fixes
+
+* **components/input:** fixed width not being applied to root container to input ([417c2e6](https://github.com/deca-org/deca-ui/commit/417c2e6f94b0a253c83c9f1c8edfd6fe4b275957))
+
 ### [1.4.6](https://github.com/deca-org/deca-ui/compare/v1.4.5...v1.4.6) (2022-08-29)
 
 
