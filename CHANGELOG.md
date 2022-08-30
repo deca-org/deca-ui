@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.10](https://github.com/deca-org/deca-ui/compare/v1.4.9...v1.4.10) (2022-08-30)
+
+
+### Bug Fixes
+
+* **components/text:** removed automatic text weighting when sizing text ([b2d9c4b](https://github.com/deca-org/deca-ui/commit/b2d9c4b9d798a8d12db89f16f8e55ae4060286bd))
+
 ### [1.4.9](https://github.com/deca-org/deca-ui/compare/v1.4.8...v1.4.9) (2022-08-30)
 
 
