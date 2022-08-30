@@ -30,7 +30,7 @@ export const Typescale = () => {
       <Text as="h4">{showcaseText}</Text>
       <Text as="h5">{showcaseText}</Text>
       <Text as="h6">{showcaseText}</Text>
-      <Text as="p" size="$bodyLg">
+      <Text as="p" size="body">
         {showcaseText}
       </Text>
       <Text as="p">{showcaseText}</Text>

@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
-import { UnionToIntersection, __DEV__ } from '@lib/Utils';
+import { AnyObject, UnionToIntersection, __DEV__ } from '@lib/Utils';
 import React, { useRef, useImperativeHandle } from 'react';
 
 import StyledText from './Text.styles';
@@ -48,7 +48,8 @@ export type TextSize =
   | 'body'
   | 'bodySm'
   | 'caption'
-  | 'footnote';
+  | 'footnote'
+  | AnyObject;
 
 export type TextLineHeight = 'n' | '0' | '1' | '2' | '3' | '4' | '5' | '6';
 
