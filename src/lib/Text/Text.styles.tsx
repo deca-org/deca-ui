@@ -1,7 +1,6 @@
 import { styled } from '@lib/Theme/stitches.config';
 
 const StyledText = styled('p', {
-  fontFamily: '$normal',
   m: '$n',
   variants: {
     as: {
@@ -181,6 +180,14 @@ const StyledText = styled('p', {
         color: '$text',
       },
       false: {},
+    },
+    mono: {
+      true: {
+        fontFamily: '$mono',
+      },
+      false: {
+        fontFamily: '$normal',
+      },
     },
   },
 });

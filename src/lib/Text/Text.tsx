@@ -85,6 +85,11 @@ export interface TextProps {
    * Custom line height for the text.
    */
   lineHeight?: TextLineHeight;
+  /**
+   * Should text be mono font-family.
+   * @default false;
+   */
+  mono?: boolean;
 }
 
 const Text = React.forwardRef(
@@ -97,6 +102,7 @@ const Text = React.forwardRef(
       size,
       lineHeight,
       center,
+      mono = false,
       ...textProps
     }: TextProps,
     ref: React.Ref<TextElement | null>
@@ -120,6 +126,7 @@ const Text = React.forwardRef(
         size={size}
         isDark={dark}
         lineHeight={lineHeight}
+        mono={mono}
         {...textProps}
       >
         {children}

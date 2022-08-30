@@ -19,6 +19,7 @@ Header.args = {
   as: 'h1',
   children: showcaseText,
   size: 'h1',
+  mono: false,
 };
 
 export const Typescale = () => {
