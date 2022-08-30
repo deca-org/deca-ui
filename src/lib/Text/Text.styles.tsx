@@ -3,6 +3,35 @@ import { styled } from '@lib/Theme/stitches.config';
 const StyledText = styled('p', {
   m: '$n',
   variants: {
+    weight: {
+      hairline: {
+        fontWeight: '$hairline',
+      },
+      thin: {
+        fontWeight: '$thin',
+      },
+      light: {
+        fontWeight: '$light',
+      },
+      normal: {
+        fontWeight: '$normal',
+      },
+      medium: {
+        fontWeight: '$medium',
+      },
+      semibold: {
+        fontWeight: '$semibold',
+      },
+      bold: {
+        fontWeight: '$bold',
+      },
+      extrabold: {
+        fontWeight: '$extrabold',
+      },
+      black: {
+        fontWeight: '$black',
+      },
+    },
     as: {
       h1: {
         fontSize: '$h1',
@@ -66,52 +95,42 @@ const StyledText = styled('p', {
       h1: {
         fontSize: '$h1',
         lineHeight: '$6',
-        fontWeight: 'bold',
       },
       h2: {
         fontSize: '$h2',
         lineHeight: '$5',
-        fontWeight: 'bold',
       },
       h3: {
         fontSize: '$h3',
         lineHeight: '$4',
-        fontWeight: 'bold',
       },
       h4: {
         fontSize: '$h4',
         lineHeight: '$3',
-        fontWeight: 'bold',
       },
       h5: {
         fontSize: '$h5',
         lineHeight: '$2',
-        fontWeight: 'bold',
       },
       h6: {
         fontSize: '$h6',
         lineHeight: '$2',
-        fontWeight: 'bold',
       },
       body: {
         fontSize: '$body',
         lineHeight: '$1',
-        fontWeight: 'normal',
       },
       bodySm: {
         fontSize: '$bodySm',
         lineHeight: '$1',
-        fontWeight: 'normal',
       },
       caption: {
         fontSize: '$caption',
         lineHeight: '$1',
-        fontWeight: 'normal',
       },
       footnote: {
         fontSize: '$footnote',
         lineHeight: '$0',
-        fontWeight: 'normal',
       },
     },
     lineHeight: {
@@ -138,35 +157,6 @@ const StyledText = styled('p', {
       },
       6: {
         lineHeight: '$6',
-      },
-    },
-    weight: {
-      hairline: {
-        fontWeight: '$hairline',
-      },
-      thin: {
-        fontWeight: '$thin',
-      },
-      light: {
-        fontWeight: '$light',
-      },
-      normal: {
-        fontWeight: '$normal',
-      },
-      medium: {
-        fontWeight: '$medium',
-      },
-      semibold: {
-        fontWeight: '$semibold',
-      },
-      bold: {
-        fontWeight: '$bold',
-      },
-      extrabold: {
-        fontWeight: '$extrabold',
-      },
-      black: {
-        fontWeight: '$black',
       },
     },
     center: {

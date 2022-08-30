@@ -112,7 +112,7 @@ describe('components/Text', () => {
   describe('size', () => {
     it('h1 with size p', () => {
       cy.mount(
-        <Text as="h1" size="body">
+        <Text as="h1" size="body" weight="normal">
           Hello World
         </Text>
       );

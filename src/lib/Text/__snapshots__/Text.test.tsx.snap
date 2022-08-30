@@ -56,52 +56,52 @@ exports[`components/Text renders all lineHeights 1`] = `
 exports[`components/Text renders all sizes 1`] = `
 <DocumentFragment>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-iSJsTd-size-h1 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cFWcZl-size-h1 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-fImtMF-size-h2 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-kKUNrJ-size-h2 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cjgGcF-size-h3 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-hlOZHJ-size-h3 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-kEsGIF-size-h4 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-erFqON-size-h4 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-iUAjAV-size-h5 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cHMTHd-size-h5 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-iCMAXq-size-h6 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cpZldy-size-h6 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-gpSXQN-size-body c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-jQkWJT-size-body c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cqZFtv-size-bodySm c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-RtCVl-size-bodySm c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-ePSDQP-size-caption c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-eqmpvd-size-caption c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-suMNG-size-footnote c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-ejpLhE-size-footnote c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
@@ -186,7 +186,7 @@ exports[`components/Text renders all variants 1`] = `
 exports[`components/Text renders sizes with variants 1`] = `
 <DocumentFragment>
   <h1
-    class="c-hhwXGU c-hhwXGU-cFWcZl-as-h1 c-hhwXGU-fImtMF-size-h2 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-cFWcZl-as-h1 c-hhwXGU-kKUNrJ-size-h2 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </h1>
