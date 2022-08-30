@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.8](https://github.com/deca-org/deca-ui/compare/v1.4.7...v1.4.8) (2022-08-30)
+
+
+### Bug Fixes
+
+* **components/text:** widened type for text size ([9aadca2](https://github.com/deca-org/deca-ui/commit/9aadca2d4399ecacc30dcf509a9792dbb008604d))
+
 ### [1.4.7](https://github.com/deca-org/deca-ui/compare/v1.4.6...v1.4.7) (2022-08-30)
 
 
