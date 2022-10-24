@@ -6,8 +6,8 @@
   <a href="https://codecov.io/gh/deca-org/deca-ui">  
     <img src="https://codecov.io/gh/deca-org/deca-ui/branch/main/graph/badge.svg?token=LU7SZSZQG5"/> 
   </a>
-  <a href="https://dashboard.cypress.io/projects/udbcua/runs">
-    <img src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/udbcua/main&style=flat&logo=cypress" />
+  <a href="https://www.codacy.com/gh/deca-org/deca-ui/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=deca-org/deca-ui&amp;utm_campaign=Badge_Grade">
+    <img src="https://app.codacy.com/project/badge/Grade/7ec6172d6dbf4af88682996c955d6604"/>
   </a>
   <a href="https://www.npmjs.com/package/@deca-ui/react">
     <img src="https://img.shields.io/npm/dm/@deca-ui/react" />

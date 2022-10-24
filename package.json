@@ -1,14 +1,26 @@
 {
   "name": "@deca-ui/react",
   "version": "1.4.11",
-  "description": "deca-ui is an easily configurable UI library for React.js",
+  "description": "DecaUI is production-ready themable component library built with StitchesJS.",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
   "module": "build/module/index.js",
   "repository": "https://github.com/deca-org/deca-ui",
+  "homepage": "deca-ui.com",
   "author": "herilsaha",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "react",
+    "javascript",
+    "components",
+    "design-systems",
+    "typescript",
+    "a11y",
+    "react-components",
+    "server-side-rendering",
+    "component-library",
+    "stitches"
+  ],
   "scripts": {
     "clean": "rimraf build",
     "build": "npm run clean && run-p build:*",
