@@ -1,3 +1,4 @@
+import { VariantProps } from '@stitches/react';
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { useDOMRef, __DEV__ } from '@lib/Utils';

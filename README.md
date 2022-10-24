@@ -1,7 +1,75 @@
-# deca-ui
+<p align="center">
+  <a href="https://deca-ui.com/" rel="noopener" target="_blank"><img width="100" src="https://www.deca-ui.com/icon.svg" alt="DecaUI logo"></a>
+  <h1 align="center">DecaUI</h1>
+</p>
+<p align="center">
+  <a href="https://codecov.io/gh/deca-org/deca-ui">  
+    <img src="https://codecov.io/gh/deca-org/deca-ui/branch/main/graph/badge.svg?token=LU7SZSZQG5"/> 
+  </a>
+  <a href="https://dashboard.cypress.io/projects/udbcua/runs">
+    <img src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/udbcua/main&style=flat&logo=cypress" />
+  </a>
+  <a href="https://www.npmjs.com/package/@deca-ui/react">
+    <img src="https://img.shields.io/npm/dm/@deca-ui/react" />
+  </a>
+  <a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/deca-org/deca-ui" />
+  </a>
+</p>
+<p>DecaUI provides a set of accessible and customizable React components that make it make it easy to quickly prototype and develop stunning websites.</p>
 
-deca-ui is an easily configurable UI library for React.js
+## Getting Started
+```
+npm install @deca-ui/react
+```
 
+## Using a component
+Here is a simple example of a basic app using DecaUI's ```Button``` component
 
+```jsx
+import { Button } from '@deca-ui/react';
+
+function App() {
+  return <Button variant="solid">Hello World</Button>;
+}
+```
+
+#### [Click here for the full documentation](https://www.deca-ui.com/docs/guide/installation)
+
+## What's so different about DecaUI
+With DecaUI, developers can use the centralized theming system anywhere within their application with shorthand names for css properties.
+
+### Custom CSS with other UI libraries
+```jsx
+<Box sx={{
+  marginRight: "2rem",
+  marginLeft: "2rem",
+  marginTop: "2rem",
+  marginBottom: "2rem"
+}}>
+  <Input placeholder="Email Address" />
+  <Input placeholder="Password" />
+  <Button sx={{ 
+    width: "100%"
+  }}>Create Account</Button>
+</Box>
+```
+
+### Custom CSS with DecaUI 
+```jsx
+<Box css={{ m: "md" }}>
+  <Input placeholder="Email Address" />
+  <Input placeholder="Password" />
+  <Button maxWidth>Create Account</Button>
+</Box>
+```
+
+## Our focus is consistancy
+The main problem with other UI libraries is that it's confusing to create consistant webpage layouts with them. DecaUI allows developers to utilize a root theme object which serves properties following the [System UI](https://github.com/system-ui/theme-specification) specification.
+
+## License
+<img src="https://www.deca-ui.com/headshot.png" width="40" alt="Heril Saha" align="center"/>
+
+<a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">MIT @ Heril Saha</a>
 
 

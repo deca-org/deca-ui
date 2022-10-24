@@ -74,7 +74,7 @@ const Grid = React.forwardRef(
     const gridRef = useDOMRef(ref);
     const preClass = 'decaGrid';
 
-    const genGridItemCss = (breakpoint?: number, bp?: CSS) => {
+    const genGridItemCss = (breakpoint?: Cols, bp?: CSS) => {
       if (bp) {
         return {
           flexBasis: `calc((${breakpoint} / 12) * 100%)`,

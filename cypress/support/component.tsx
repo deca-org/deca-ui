@@ -59,8 +59,7 @@ Cypress.Commands.add(
   },
   (el, property) => {
     const win = el[0].ownerDocument.defaultView;
-    const before = win.getComputedStyle(el[0], 'before');
-    return unquote(before.getPropertyValue(property));
+    const before = win.getComputedStyle(el[0], 'before'); return unquote(before.getPropertyValue(property));
   }
 );
 
