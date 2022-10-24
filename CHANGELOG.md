@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.12](https://github.com/deca-org/deca-ui/compare/v1.4.11...v1.4.12) (2022-10-24)
+
+
+### Bug Fixes
+
+* **package.json:** added keywords and homepage ([3d07aad](https://github.com/deca-org/deca-ui/commit/3d07aad07e03c2ecc7bd0acdc61798397ad40862))
+
 ### [1.4.11](https://github.com/deca-org/deca-ui/compare/v1.4.10...v1.4.11) (2022-10-24)
 
 
