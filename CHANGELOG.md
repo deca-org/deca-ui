@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.11](https://github.com/deca-org/deca-ui/compare/v1.4.10...v1.4.11) (2022-10-24)
+
+
+### Bug Fixes
+
+* **readme:** made better README and changed LICENSE to include full name ([4d7e2ca](https://github.com/deca-org/deca-ui/commit/4d7e2cade6aac03949a60f520233bbca67f0528f))
+
 ### [1.4.10](https://github.com/deca-org/deca-ui/compare/v1.4.9...v1.4.10) (2022-08-30)
 
 
