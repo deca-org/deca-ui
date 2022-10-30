@@ -5,7 +5,7 @@ import React from 'react';
 
 import { StyledBadge } from './Badge.styles';
 
-export interface BadgeProps {
+export interface BadgeProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'div'> {
   /**
    * The content of the component.
    */
@@ -28,7 +28,7 @@ export interface BadgeProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -39,39 +39,39 @@ export interface BadgeProps {
   pill?: boolean;
 }
 
-const Badge = React.forwardRef(
+const Badge = React.forwardRef(<T extends React.ElementType = "div">
   (
     {
       children,
       className,
       color = 'primary',
       size = 'md',
-      as = 'span',
+      as,
       css,
       pill = false,
       ...props
-    }: BadgeProps,
+    }: BadgeProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof BadgeProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
-    const badgeRef = useDOMRef(ref);
+  const badgeRef = useDOMRef(ref);
 
-    const preClass = 'decaBadge';
+  const preClass = 'decaBadge';
 
-    return (
-      <StyledBadge
-        ref={badgeRef}
-        size={size}
-        as={as}
-        css={css}
-        color={color}
-        className={clsx(className, `${preClass}-root`)}
-        pill={pill}
-        {...props}
-      >
-        {children}
-      </StyledBadge>
-    );
-  }
+  return (
+    <StyledBadge
+      ref={badgeRef}
+      size={size}
+      as={as}
+      css={css}
+      color={color}
+      className={clsx(className, `${preClass}-root`)}
+      pill={pill}
+      {...props}
+    >
+      {children}
+    </StyledBadge>
+  );
+}
 );
 
 if (__DEV__) {

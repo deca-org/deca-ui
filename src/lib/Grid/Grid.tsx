@@ -126,11 +126,11 @@ const Grid = React.forwardRef(
 type GridComponent<
   T,
   P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Container: typeof GridContainer;
-};
+  > = React.ForwardRefExoticComponent<
+    React.PropsWithoutRef<P> & React.RefAttributes<T>
+  > & {
+    Container: typeof GridContainer;
+  };
 
 if (__DEV__) {
   Grid.displayName = 'DecaUI.Grid';
