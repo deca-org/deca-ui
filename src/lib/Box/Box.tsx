@@ -1,4 +1,3 @@
-import { Button } from "../Button"
 import { CSS } from '@lib/Theme/stitches.config';
 import { useDOMRef, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
@@ -46,7 +45,6 @@ const Box = React.forwardRef(<T extends React.ElementType = "div">
       ref={boxRef}
       {...boxProps}
     >
-      <Button as="a" href="/awd">hello</Button>
       {children}
     </StyledBox>
   );

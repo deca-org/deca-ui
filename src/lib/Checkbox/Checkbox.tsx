@@ -14,16 +14,16 @@ import CheckboxGroup from './CheckboxGroup';
 /**
  * Checkboxes can be used to turn an option on or off
  */
-export interface CheckboxProps
+export interface CheckboxProps<T extends React.ElementType>
   extends Modify<
-    React.ComponentPropsWithRef<'input'>,
-    {
-      /**
-       * Size of the component.
-       * @default md
-       */
-      size?: 'sm' | 'md' | 'lg';
-    }
+  React.ComponentPropsWithRef<'input'>,
+  {
+    /**
+     * Size of the component.
+     * @default md
+     */
+    size?: 'sm' | 'md' | 'lg';
+  }
   > {
   /**
    * Size of the component.
@@ -47,7 +47,7 @@ export interface CheckboxProps
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -103,7 +103,7 @@ const Check = () => (
   </svg>
 );
 
-const Checkbox = React.forwardRef(
+const Checkbox = React.forwardRef(<T extends React.ElementType = "label">
   (
     {
       size = 'md',
@@ -111,7 +111,7 @@ const Checkbox = React.forwardRef(
       className,
       name,
       disabled = false,
-      as = 'label',
+      as,
       css,
       color = 'primary',
       required = false,
@@ -120,83 +120,83 @@ const Checkbox = React.forwardRef(
       onChange,
       value,
       ...props
-    }: CheckboxProps,
+    }: CheckboxProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof CheckboxProps<T>>,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
-    const checkboxRef = useDOMRef(ref);
+  const checkboxRef = useDOMRef(ref);
 
-    const [selfChecked, setSelfChecked] = useState<boolean>(initialCheck);
+  const [selfChecked, setSelfChecked] = useState<boolean>(initialCheck);
 
-    const checkboxId = useMemo(() => {
-      if (props.id) {
-        return props.id;
-      } else {
-        return uuid();
-      }
-    }, [props.id]);
+  const checkboxId = useMemo(() => {
+    if (props.id) {
+      return props.id;
+    } else {
+      return uuid();
+    }
+  }, [props.id]);
 
-    const isControlledComponent = useMemo(
-      () => checked !== undefined,
-      [checked]
-    );
+  const isControlledComponent = useMemo(
+    () => checked !== undefined,
+    [checked]
+  );
 
-    const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (disabled) return;
-      if (!isControlledComponent) {
-        setSelfChecked(e.target.checked);
-      }
-      onChange && onChange(e);
-    };
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (disabled) return;
+    if (!isControlledComponent) {
+      setSelfChecked(e.target.checked);
+    }
+    onChange && onChange(e);
+  };
 
-    const preClass = 'decaCheckbox';
+  const preClass = 'decaCheckbox';
 
-    const { dark } = React.useContext(ThemeContext);
+  const { dark } = React.useContext(ThemeContext);
 
-    return (
-      <StyledCheckboxWrapper className={clsx(className, `${preClass}-root`)}>
-        <StyledCheckbox
-          id={checkboxId}
-          type="checkbox"
-          onChange={changeHandler}
-          checked={isControlledComponent ? checked : selfChecked}
-          ref={checkboxRef}
-          required={required}
-          className={`${preClass}-input`}
-          name={name}
-          size={size}
-          color={color}
-          disabled={disabled}
-          isDisabled={disabled}
-          value={value}
-          isDark={dark}
-          {...props}
-        />
-        <StyledCheckboxLabel
-          htmlFor={checkboxId}
-          css={css}
-          size={size}
-          as={as}
-          color={color}
-          isDisabled={disabled}
-          hasLabel={label ? true : false}
-          isDark={dark}
-        >
-          <Check />
-          {label && label}
-        </StyledCheckboxLabel>
-      </StyledCheckboxWrapper>
-    );
-  }
+  return (
+    <StyledCheckboxWrapper className={clsx(className, `${preClass}-root`)}>
+      <StyledCheckbox
+        id={checkboxId}
+        type="checkbox"
+        onChange={changeHandler}
+        checked={isControlledComponent ? checked : selfChecked}
+        ref={checkboxRef}
+        required={required}
+        className={`${preClass}-input`}
+        name={name}
+        size={size}
+        color={color}
+        disabled={disabled}
+        isDisabled={disabled}
+        value={value}
+        isDark={dark}
+        {...props}
+      />
+      <StyledCheckboxLabel
+        htmlFor={checkboxId}
+        css={css}
+        size={size}
+        as={as}
+        color={color}
+        isDisabled={disabled}
+        hasLabel={label ? true : false}
+        isDark={dark}
+      >
+        <Check />
+        {label && label}
+      </StyledCheckboxLabel>
+    </StyledCheckboxWrapper>
+  );
+}
 );
 
 type CheckboxComponent<
   T,
   P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Group: typeof CheckboxGroup;
-};
+  > = React.ForwardRefExoticComponent<
+    React.PropsWithoutRef<P> & React.RefAttributes<T>
+  > & {
+    Group: typeof CheckboxGroup;
+  };
 
 if (__DEV__) {
   Checkbox.displayName = 'DecaUI.Checkbox';
