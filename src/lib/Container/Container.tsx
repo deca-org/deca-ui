@@ -8,11 +8,11 @@ import { StyledContainer } from './Container.styles';
 /**
  * The Container component fixes an element's width to the current breakpoint
  */
-export interface ContainerProps extends React.ComponentPropsWithRef<'div'> {
+export interface ContainerProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'div'> {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -42,10 +42,10 @@ export interface ContainerProps extends React.ComponentPropsWithRef<'div'> {
   fluid?: boolean;
 }
 
-const Container = React.forwardRef(
+const Container = React.forwardRef(<T extends React.ElementType = "div">
   (
     {
-      as = 'div',
+      as,
       css,
       className = '',
       children,
@@ -53,27 +53,27 @@ const Container = React.forwardRef(
       responsive = true,
       fluid = false,
       ...containerProps
-    }: ContainerProps,
+    }: ContainerProps<T> & Omit<React.ComponentPropsWithRef<T>, keyof ContainerProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
-    const containerRef = useDOMRef(ref);
-    const preClass = 'decaContainer';
+  const containerRef = useDOMRef(ref);
+  const preClass = 'decaContainer';
 
-    return (
-      <StyledContainer
-        as={as}
-        css={css}
-        className={clsx(className, `${preClass}-root`)}
-        px={px}
-        responsive={responsive}
-        fluid={fluid}
-        ref={containerRef}
-        {...containerProps}
-      >
-        {children}
-      </StyledContainer>
-    );
-  }
+  return (
+    <StyledContainer
+      as={as}
+      css={css}
+      className={clsx(className, `${preClass}-root`)}
+      px={px}
+      responsive={responsive}
+      fluid={fluid}
+      ref={containerRef}
+      {...containerProps}
+    >
+      {children}
+    </StyledContainer>
+  );
+}
 );
 
 if (__DEV__) {
