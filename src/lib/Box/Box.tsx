@@ -9,11 +9,11 @@ import { StyledBox } from './Box.styles';
 /**
  * The Box component serves as a wrapper component
  */
-export interface BoxProps extends React.ComponentPropsWithRef<'div'> {
+export interface BoxProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'div'> {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -29,28 +29,28 @@ export interface BoxProps extends React.ComponentPropsWithRef<'div'> {
   className?: string;
 }
 
-const Box = React.forwardRef(
+const Box = React.forwardRef(<T extends React.ElementType = "div">
   (
-    { as = 'div', css, children, className = '', ...boxProps }: BoxProps,
+    { as, css, children, className = '', ...boxProps }: BoxProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof BoxProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
-    const boxRef = useDOMRef(ref);
+  const boxRef = useDOMRef(ref);
 
-    const preClass = 'decaBox';
+  const preClass = 'decaBox';
 
-    return (
-      <StyledBox
-        as={as}
-        css={css}
-        className={clsx(className, `${preClass}-root`)}
-        ref={boxRef}
-        {...boxProps}
-      >
-        <Button as="a" href="/awd">hello</Button>
-        {children}
-      </StyledBox>
-    );
-  }
+  return (
+    <StyledBox
+      as={as}
+      css={css}
+      className={clsx(className, `${preClass}-root`)}
+      ref={boxRef}
+      {...boxProps}
+    >
+      <Button as="a" href="/awd">hello</Button>
+      {children}
+    </StyledBox>
+  );
+}
 );
 
 if (__DEV__) {
