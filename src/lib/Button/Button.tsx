@@ -1,4 +1,3 @@
-import { VariantProps } from '@stitches/react';
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
 import { useDOMRef, __DEV__ } from '@lib/Utils';
@@ -11,7 +10,7 @@ import ButtonIcon from './ButtonIcon';
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
  */
-export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
+export interface ButtonProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'button'> {
   /**
    * The content of the component.
    */
@@ -42,7 +41,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -85,10 +84,10 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
 }
 
 const Button = React.forwardRef(
-  (
+  <T extends React.ElementType = "button">(
     {
       role = 'button',
-      as = 'button',
+      as,
       css,
       icon,
       iconRight,
@@ -104,7 +103,7 @@ const Button = React.forwardRef(
       children,
       pill = false,
       ...btnProps
-    }: ButtonProps,
+    }: ButtonProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>,
     ref: React.Ref<HTMLButtonElement | null>
   ) => {
     const hasText = useMemo(
