@@ -129,7 +129,7 @@ const Button = React.forwardRef(
     const preClass = 'decaButton';
 
     const { dark } = React.useContext(ThemeContext);
-
+    
     return (
       <StyledButton
         role={role}
