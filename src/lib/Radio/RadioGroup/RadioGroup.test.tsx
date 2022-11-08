@@ -36,7 +36,12 @@ describe('components/RadioGroup', () => {
     const user = userEvent.setup();
 
     render(
-      <Radio.Group value={value} onChange={(e) => (value = e.target.value)}>
+      <Radio.Group
+        value={value}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          (value = e.target.value)
+        }
+      >
         <Radio id="A" value="A" label="Option A" />
         <Radio id="B" value="B" label="Option B" />
         <Radio id="C" value="C" label="Option C" />

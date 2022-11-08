@@ -39,7 +39,9 @@ describe('components/CheckboxGroup', () => {
     render(
       <Checkbox.Group
         value={value}
-        onChange={(e) => (value = [...value, e.target.value])}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          (value = [...value, e.target.value])
+        }
       >
         <Checkbox id="A" value="A" label="Option A" />
         <Checkbox id="B" value="B" label="Option B" />
