@@ -1,6 +1,6 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, uuid, __DEV__ } from '@lib/Utils';
+import { Modify, useDOMRef, uuid, __DEV__ } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useState, useMemo } from 'react';
 
@@ -12,7 +12,17 @@ import {
 /**
  * Switches are an alternative to the checkbox component. You can switch between enabled or disabled states.
  */
-export interface SwitchProps {
+export interface SwitchProps<T extends React.ElementType>
+  extends Modify<
+    React.ComponentPropsWithRef<'input'>,
+    {
+      /**
+       * Size of the component.
+       * @default md
+       */
+      size?: 'sm' | 'md' | 'lg';
+    }
+  > {
   /**
    * Size of the component.
    * @default md
@@ -35,7 +45,7 @@ export interface SwitchProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -77,13 +87,13 @@ export interface SwitchProps {
 }
 
 const Switch = React.forwardRef(
-  (
+  <T extends React.ElementType = 'label'>(
     {
       size = 'md',
       label,
       className,
       disabled = false,
-      as = 'label',
+      as,
       css,
       color = 'primary',
       required = false,
@@ -92,7 +102,8 @@ const Switch = React.forwardRef(
       onChange,
       name,
       value,
-    }: SwitchProps,
+    }: SwitchProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof SwitchProps<T>>,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
     const switchRef = useDOMRef(ref);
@@ -140,7 +151,7 @@ const Switch = React.forwardRef(
           htmlFor={switchId}
           css={css}
           size={size}
-          as={as}
+          as={as as any} // as prop will not accept T in this case
           color={color}
           isDisabled={disabled}
           hasLabel={label ? true : false}
