@@ -14,7 +14,7 @@ import CheckboxGroup from './CheckboxGroup';
 /**
  * Checkboxes can be used to turn an option on or off
  */
-export interface CheckboxProps
+export interface CheckboxProps<T extends React.ElementType>
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -47,7 +47,7 @@ export interface CheckboxProps
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -104,14 +104,14 @@ const Check = () => (
 );
 
 const Checkbox = React.forwardRef(
-  (
+  <T extends React.ElementType = 'label'>(
     {
       size = 'md',
       label,
       className,
       name,
       disabled = false,
-      as = 'label',
+      as,
       css,
       color = 'primary',
       required = false,
@@ -120,7 +120,8 @@ const Checkbox = React.forwardRef(
       onChange,
       value,
       ...props
-    }: CheckboxProps,
+    }: CheckboxProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof CheckboxProps<T>>,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
     const checkboxRef = useDOMRef(ref);
@@ -175,7 +176,7 @@ const Checkbox = React.forwardRef(
           htmlFor={checkboxId}
           css={css}
           size={size}
-          as={as}
+          as={as as any} // as prop will not accept T in this case
           color={color}
           isDisabled={disabled}
           hasLabel={label ? true : false}
@@ -202,4 +203,7 @@ if (__DEV__) {
   Checkbox.displayName = 'DecaUI.Checkbox';
 }
 
-export default Checkbox as CheckboxComponent<HTMLInputElement, CheckboxProps>;
+export default Checkbox as CheckboxComponent<
+  HTMLInputElement,
+  CheckboxProps<React.ElementType>
+>;

@@ -13,8 +13,8 @@ export interface CheckboxGroupProps<T extends React.ElementType> {
    * The content of the component.
    */
   children?:
-  | Array<React.ReactElement<CheckboxProps>>
-  | React.ReactElement<CheckboxProps>;
+    | Array<React.ReactElement<CheckboxProps<React.ElementType>>>
+    | React.ReactElement<CheckboxProps<React.ElementType>>;
   /**
    * Array of checkboxes that are selected by default. Used when component is not controlled.
    */
@@ -59,8 +59,8 @@ export interface CheckboxGroupProps<T extends React.ElementType> {
   size?: 'sm' | 'md' | 'lg';
 }
 
-const CheckboxGroup = React.forwardRef(<T extends React.ElementType = "div">
-  (
+const CheckboxGroup = React.forwardRef(
+  <T extends React.ElementType = 'div'>(
     {
       children,
       defaultValue,
@@ -74,49 +74,50 @@ const CheckboxGroup = React.forwardRef(<T extends React.ElementType = "div">
       color,
       size,
       ...props
-    }: CheckboxGroupProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof CheckboxGroupProps<T>>,
+    }: CheckboxGroupProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof CheckboxGroupProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
-  const checkboxGroupRef = useDOMRef(ref);
+    const checkboxGroupRef = useDOMRef(ref);
 
-  const presetId = uuid('checkbox');
+    const presetId = uuid('checkbox');
 
-  const getName = useMemo(() => {
-    if (name) {
-      return name;
-    }
-    return presetId;
-  }, [name]);
+    const getName = useMemo(() => {
+      if (name) {
+        return name;
+      }
+      return presetId;
+    }, [name]);
 
-  const preClass = 'decaCheckboxGroup';
+    const preClass = 'decaCheckboxGroup';
 
-  return (
-    <StyledCheckboxGroupWrapper
-      ref={checkboxGroupRef}
-      className={clsx(className, `${preClass}-root`)}
-      as={as}
-      css={css}
-      {...props}
-    >
-      {React.Children.map(
-        children as React.ReactElement<CheckboxProps>,
-        (child: React.ReactElement<CheckboxProps>) => {
-          return React.cloneElement(child, {
-            name: getName,
-            onChange,
-            initialCheck:
-              defaultValue &&
-              defaultValue.includes(child.props.value as string),
-            checked: value && value.includes(child.props.value as string),
-            disabled: disabled ? disabled : child.props.disabled,
-            color,
-            size,
-          });
-        }
-      )}
-    </StyledCheckboxGroupWrapper>
-  );
-}
+    return (
+      <StyledCheckboxGroupWrapper
+        ref={checkboxGroupRef}
+        className={clsx(className, `${preClass}-root`)}
+        as={as}
+        css={css}
+        {...props}
+      >
+        {React.Children.map(
+          children as React.ReactElement<CheckboxProps<React.ElementType>>,
+          (child: React.ReactElement<CheckboxProps<React.ElementType>>) => {
+            return React.cloneElement(child, {
+              name: getName,
+              onChange,
+              initialCheck:
+                defaultValue &&
+                defaultValue.includes(child.props.value as string),
+              checked: value && value.includes(child.props.value as string),
+              disabled: disabled ? disabled : child.props.disabled,
+              color,
+              size,
+            });
+          }
+        )}
+      </StyledCheckboxGroupWrapper>
+    );
+  }
 );
 
 if (__DEV__) {
