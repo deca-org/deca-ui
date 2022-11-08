@@ -56,7 +56,7 @@ export type TextLineHeight = 'n' | '0' | '1' | '2' | '3' | '4' | '5' | '6';
 /**
  * The Text component is the used to render text and paragraphs within an interface
  */
-export interface TextProps {
+export interface TextProps extends React.ComponentPropsWithRef<'h1'> {
   /**
    * Changes which tag component outputs.
    */
