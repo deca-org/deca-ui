@@ -14,7 +14,7 @@ import RadioGroup from './RadioGroup';
 /**
  * Radio buttons allow the user to select one option from a set.
  */
-export interface RadioProps
+export interface RadioProps<T extends React.ElementType>
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -47,7 +47,7 @@ export interface RadioProps
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -84,13 +84,13 @@ export interface RadioProps
 }
 
 const Radio = React.forwardRef(
-  (
+  <T extends React.ElementType = 'label'>(
     {
       size = 'md',
       label,
       className,
       disabled = false,
-      as = 'label',
+      as,
       css,
       color = 'primary',
       value,
@@ -100,7 +100,8 @@ const Radio = React.forwardRef(
       initialSelect,
       selected,
       ...props
-    }: RadioProps,
+    }: RadioProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof RadioProps<T>>,
     ref: React.Ref<HTMLInputElement | null>
   ) => {
     const radioRef = useDOMRef(ref);
@@ -151,7 +152,7 @@ const Radio = React.forwardRef(
           htmlFor={radioId}
           css={css}
           size={size}
-          as={as}
+          as={as as any} // as prop will not accept T in this case
           color={color}
           isDisabled={disabled}
           hasLabel={label ? true : false}
@@ -178,4 +179,7 @@ if (__DEV__) {
   Radio.displayName = 'DecaUI.Radio';
 }
 
-export default Radio as RadioComponent<HTMLInputElement, RadioProps>;
+export default Radio as RadioComponent<
+  HTMLInputElement,
+  RadioProps<React.ElementType>
+>;

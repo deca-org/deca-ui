@@ -9,13 +9,13 @@ import { StyledRadioGroupWrapper } from './RadioGroup.styles';
 /**
  * RadioGroup is a helpful wrapper used to group Radio button components.
  */
-export interface RadioGroupProps {
+export interface RadioGroupProps<T extends React.ElementType> {
   /**
    * The content of the component.
    */
   children?:
-    | Array<React.ReactElement<RadioProps>>
-    | React.ReactElement<RadioProps>;
+    | Array<React.ReactElement<RadioProps<React.ElementType>>>
+    | React.ReactElement<RadioProps<React.ElementType>>;
   /**
    * The default value. Used when component is not controlled.
    */
@@ -53,7 +53,7 @@ export interface RadioGroupProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -61,7 +61,7 @@ export interface RadioGroupProps {
 }
 
 const RadioGroup = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
       children,
       defaultValue,
@@ -75,7 +75,8 @@ const RadioGroup = React.forwardRef(
       as,
       css,
       ...props
-    }: RadioGroupProps,
+    }: RadioGroupProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof RadioGroupProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const radioGroupRef = useDOMRef(ref);
@@ -100,8 +101,8 @@ const RadioGroup = React.forwardRef(
         {...props}
       >
         {React.Children.map(
-          children as React.ReactElement<RadioProps>,
-          (child: React.ReactElement<RadioProps>) => {
+          children as React.ReactElement<RadioProps<React.ElementType>>,
+          (child: React.ReactElement<RadioProps<React.ElementType>>) => {
             return React.cloneElement(child, {
               name: getName,
               onChange,
