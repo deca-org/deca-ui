@@ -9,7 +9,8 @@ import { StyledModalFooter } from './Modal.styles';
 /**
  * ModalFooter allows users to place content on the bottom of their modal component
  */
-export interface ModalFooterProps {
+export interface ModalFooterProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * The content of the component.
    */
@@ -26,7 +27,7 @@ export interface ModalFooterProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Have gap between all elements.
    */
@@ -34,15 +35,16 @@ export interface ModalFooterProps {
 }
 
 const ModalFooter = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
       children,
       className = '',
       css,
-      as = 'div',
+      as,
       autoGap,
       ...props
-    }: ModalFooterProps,
+    }: ModalFooterProps<T> &
+      Omit<React.ComponentPropsWithRef<T>, keyof ModalFooterProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const context = useContext(ModalContext) as IModalContext;

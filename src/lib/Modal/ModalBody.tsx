@@ -9,7 +9,8 @@ import { StyledModalBody } from './Modal.styles';
 /**
  * ModalBody contains the main content of a modal component
  */
-export interface ModalBodyProps {
+export interface ModalBodyProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * The content of the component.
    */
@@ -26,7 +27,7 @@ export interface ModalBodyProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Have gap between all elements.
    */
@@ -34,15 +35,16 @@ export interface ModalBodyProps {
 }
 
 const ModalBody = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
       children,
       className = '',
       css,
-      as = 'div',
+      as,
       autoGap,
       ...props
-    }: ModalBodyProps,
+    }: ModalBodyProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof ModalBodyProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const context = useContext(ModalContext) as IModalContext;

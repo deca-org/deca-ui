@@ -9,7 +9,8 @@ import { StyledModalHeader } from './Modal.styles';
 /**
  * ModalHeader allows users to place a header on their modal component
  */
-export interface ModalHeaderProps {
+export interface ModalHeaderProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * The content of the component.
    */
@@ -26,7 +27,7 @@ export interface ModalHeaderProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Have gap between all elements.
    */
@@ -34,15 +35,16 @@ export interface ModalHeaderProps {
 }
 
 const ModalHeader = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
       children,
       className = '',
       css,
-      as = 'div',
+      as,
       autoGap,
       ...props
-    }: ModalHeaderProps,
+    }: ModalHeaderProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof ModalHeaderProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const context = useContext(ModalContext) as IModalContext;

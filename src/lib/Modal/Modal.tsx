@@ -17,7 +17,8 @@ import ModalBody from './ModalBody';
 import ModalFooter from './ModalFooter';
 import ModalHeader from './ModalHeader';
 
-export interface ModalProps {
+export interface ModalProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * The content of the component.
    */
@@ -56,7 +57,7 @@ export interface ModalProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
 }
 
 export interface IModalContext {
@@ -84,7 +85,7 @@ const CloseButton = () => (
 );
 
 const Modal = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
       children,
       open,
@@ -94,9 +95,10 @@ const Modal = React.forwardRef(
       closeButton = false,
       autoGap = true,
       noPadding = false,
-      as = 'div',
+      as,
       ...props
-    }: ModalProps,
+    }: ModalProps<T> &
+      Omit<React.ComponentPropsWithRef<T>, keyof ModalProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -251,4 +253,7 @@ if (__DEV__) {
   Modal.displayName = 'DecaUI.Modal';
 }
 
-export default Modal as ModalComponent<HTMLDivElement, ModalProps>;
+export default Modal as ModalComponent<
+  HTMLDivElement,
+  ModalProps<React.ElementType>
+>;
