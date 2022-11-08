@@ -1,7 +1,7 @@
 import { CSS } from '@lib/Theme/stitches.config';
 import { useDOMRef } from '@lib/Utils';
 import clsx from 'clsx';
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 import { Cols, GridProps } from './Grid';
 import { StyledGridContainer } from './Grid.styles';
@@ -9,11 +9,12 @@ import { StyledGridContainer } from './Grid.styles';
 /**
  * The GridContainer component serves as a wrapper component to the Grid component
  */
-export interface GridContainerProps extends React.ComponentPropsWithRef<'div'> {
+export interface GridContainerProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -72,9 +73,9 @@ export interface GridContainerProps extends React.ComponentPropsWithRef<'div'> {
 }
 
 const GridContainer = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
-      as = 'div',
+      as,
       css,
       className = '',
       children,
@@ -88,7 +89,8 @@ const GridContainer = React.forwardRef(
       lg,
       xl,
       ...gridContainerProps
-    }: GridContainerProps,
+    }: GridContainerProps<T> &
+      Omit<React.ComponentPropsWithRef<T>, keyof GridContainerProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const gridContainerRef = useDOMRef(ref);
@@ -106,8 +108,8 @@ const GridContainer = React.forwardRef(
         {...gridContainerProps}
       >
         {React.Children.map(
-          children as React.ReactElement<GridProps>,
-          (child: React.ReactElement<GridProps>) => {
+          children as React.ReactElement<GridProps<React.ElementType>>,
+          (child: React.ReactElement<GridProps<React.ElementType>>) => {
             return React.cloneElement(child, {
               n: child.props.n ? child.props.n : n,
               xs: child.props.xs ? child.props.xs : xs,

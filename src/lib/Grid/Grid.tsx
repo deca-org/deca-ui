@@ -10,11 +10,12 @@ export type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 /**
  * The Grid component acts as a child to the GridContainer component
  */
-export interface GridProps extends React.ComponentPropsWithRef<'div'> {
+export interface GridProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Override default CSS style.
    */
@@ -55,9 +56,9 @@ export interface GridProps extends React.ComponentPropsWithRef<'div'> {
 }
 
 const Grid = React.forwardRef(
-  (
+  <T extends React.ElementType = 'div'>(
     {
-      as = 'div',
+      as,
       css,
       className = '',
       children,
@@ -68,7 +69,7 @@ const Grid = React.forwardRef(
       lg,
       xl,
       ...gridProps
-    }: GridProps,
+    }: GridProps<T> & Omit<React.ComponentPropsWithRef<T>, keyof GridProps<T>>,
     ref: React.Ref<HTMLDivElement | null>
   ) => {
     const gridRef = useDOMRef(ref);
@@ -126,14 +127,17 @@ const Grid = React.forwardRef(
 type GridComponent<
   T,
   P = Record<string, unknown>
-  > = React.ForwardRefExoticComponent<
-    React.PropsWithoutRef<P> & React.RefAttributes<T>
-  > & {
-    Container: typeof GridContainer;
-  };
+> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+> & {
+  Container: typeof GridContainer;
+};
 
 if (__DEV__) {
   Grid.displayName = 'DecaUI.Grid';
 }
 
-export default Grid as GridComponent<HTMLDivElement, GridProps>;
+export default Grid as GridComponent<
+  HTMLDivElement,
+  GridProps<React.ElementType>
+>;
