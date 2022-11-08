@@ -12,7 +12,8 @@ import { StyledPopover } from './Popover.styles';
 /**
  * PopoverContent contains the content shown when the trigger is executed
  */
-export interface PopoverContentProps {
+export interface PopoverContentProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'div'> {
   /**
    * The content of the component.
    */
@@ -29,15 +30,16 @@ export interface PopoverContentProps {
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
 }
 
-const PopoverContent = ({
+const PopoverContent = <T extends React.ElementType = 'div'>({
   children,
   css,
   className = '',
-  as = 'div',
-}: PopoverContentProps) => {
+  as,
+}: PopoverContentProps<T> &
+  Omit<React.ComponentPropsWithoutRef<T>, keyof PopoverContentProps<T>>) => {
   const context = useContext(PopoverContext) as IPopoverContext;
 
   const clickOutsideRef = useClickOutside(() => {
