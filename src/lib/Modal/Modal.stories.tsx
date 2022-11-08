@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof Modal> = (args) => {
       <Button onClick={() => setOpen(true)}>Open Modal</Button>
       <Modal closeButton open={open} setOpen={setOpen} {...args}>
         <Modal.Header>
-          <Text as="p" size="$h6" center>
+          <Text as="p" size="h6" center>
             Welcome to <b>DecaUI</b>
           </Text>
         </Modal.Header>
