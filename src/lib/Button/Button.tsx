@@ -10,7 +10,8 @@ import ButtonIcon from './ButtonIcon';
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
  */
-export interface ButtonProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'button'> {
+export interface ButtonProps<T extends React.ElementType>
+  extends React.ComponentPropsWithRef<'button'> {
   /**
    * The content of the component.
    */
@@ -84,7 +85,7 @@ export interface ButtonProps<T extends React.ElementType> extends React.Componen
 }
 
 const Button = React.forwardRef(
-  <T extends React.ElementType = "button">(
+  <T extends React.ElementType = 'button'>(
     {
       role = 'button',
       as,
@@ -103,7 +104,8 @@ const Button = React.forwardRef(
       children,
       pill = false,
       ...btnProps
-    }: ButtonProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>,
+    }: ButtonProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>,
     ref: React.Ref<HTMLButtonElement | null>
   ) => {
     const hasText = useMemo(
@@ -129,7 +131,7 @@ const Button = React.forwardRef(
     const preClass = 'decaButton';
 
     const { dark } = React.useContext(ThemeContext);
-    
+
     return (
       <StyledButton
         role={role}

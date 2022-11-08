@@ -20,7 +20,7 @@ export type FormElement = HTMLInputElement | HTMLTextAreaElement;
 /**
  * Inputs allow users to enter text into a UI. They typically appear in forms and dialogs.
  */
-export interface InputProps
+export interface InputProps<T extends React.ElementType>
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -58,7 +58,7 @@ export interface InputProps
   /**
    * Changes which tag component outputs.
    */
-  as?: keyof JSX.IntrinsicElements;
+  as?: T;
   /**
    * Placeholder text for component.
    */
@@ -114,14 +114,14 @@ export interface InputProps
 }
 
 const Input = React.forwardRef(
-  (
+  <T extends React.ElementType = 'input'>(
     {
       label,
       className = '',
       disabled = false,
       size = 'md',
       variant = 'solid',
-      as = 'input',
+      as,
       css,
       focusColor = 'primary',
       maxWidth = false,
@@ -135,7 +135,8 @@ const Input = React.forwardRef(
       onBlur,
       pill = false,
       ...props
-    }: InputProps,
+    }: InputProps<T> &
+      Omit<React.ComponentPropsWithoutRef<T>, keyof InputProps<T>>,
     ref: React.Ref<FormElement | null>
   ) => {
     const inputRef = useRef<UnionToIntersection<FormElement>>(null);
