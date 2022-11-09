@@ -67,6 +67,7 @@ With DecaUI, developers can use the centralized theming system anywhere within t
 ## Our focus is consistancy
 The main problem with other UI libraries is that it's confusing to create consistant webpage layouts with them. DecaUI allows developers to utilize a root theme object which serves properties following the [System UI](https://github.com/system-ui/theme-specification) specification.
 
+**NOTE: We do not support NextJS 13 at this time ([See Issue](https://www.github.com/stitchesjs/stitches/issues/1109))**
 ## License
 <img src="https://www.deca-ui.com/headshot.png" width="40" alt="Heril Saha" align="center"/>
 
