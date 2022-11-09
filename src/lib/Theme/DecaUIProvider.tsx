@@ -1,7 +1,7 @@
 import { styled } from '@lib/Theme/stitches.config';
 import { createPalette, __DEV__ } from '@lib/Utils';
 import React, { useMemo } from 'react';
-import { SSRProvider } from 'react-aria';
+import { SSRProvider } from '@react-aria/ssr';
 
 import { createTheme, globalCss } from './stitches.config';
 
