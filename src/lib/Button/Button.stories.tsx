@@ -72,10 +72,11 @@ DarkMode.args = { ...Default.args };
 DarkMode.parameters = { backgrounds: { default: 'dark' } };
 
 DarkMode.decorators = [
-  (Story) => (
-    <DecaUIProvider mode="dark">
-      <Story />
-    </DecaUIProvider>
-  ),
+  (Story) => {
+    return (
+      <DecaUIProvider mode="dark">
+        <Story />
+      </DecaUIProvider>
+    );
+  },
 ];
-

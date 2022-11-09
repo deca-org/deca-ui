@@ -1,4 +1,6 @@
 import { DecaUIProvider } from '@lib/Theme';
+const { addDecorator } = require('@storybook/react');
+const { withPropsTable } = require('storybook-addon-react-docgen');
 
 export const parameters = {
   backgrounds: {
@@ -27,3 +29,5 @@ export const decorators = [
     </DecaUIProvider>
   ),
 ];
+
+addDecorator(withPropsTable);
