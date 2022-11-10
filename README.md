@@ -16,15 +16,18 @@
     <img src="https://img.shields.io/github/license/deca-org/deca-ui" />
   </a>
 </p>
+<img src="./public/cover.png" alt="Overview of Components" style="margin-bottom: 15px"/>
 <p>DecaUI provides a set of accessible and customizable React components that make it make it easy to quickly prototype and develop stunning websites.</p>
 
 ## Getting Started
+
 ```
 npm install @deca-ui/react
 ```
 
 ## Using a component
-Here is a simple example of a basic app using DecaUI's ```Button``` component
+
+Here is a simple example of a basic app using DecaUI's `Button` component
 
 ```jsx
 import { Button } from '@deca-ui/react';
@@ -37,27 +40,36 @@ function App() {
 #### [Click here for the full documentation](https://www.deca-ui.com/docs/guide/installation)
 
 ## What's so different about DecaUI
+
 With DecaUI, developers can use the centralized theming system anywhere within their application with shorthand names for css properties.
 
 ### Custom CSS with other UI libraries
+
 ```jsx
-<Box sx={{
-  marginRight: "2rem",
-  marginLeft: "2rem",
-  marginTop: "2rem",
-  marginBottom: "2rem"
-}}>
+<Box
+  sx={{
+    marginRight: '2rem',
+    marginLeft: '2rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+  }}
+>
   <Input placeholder="Email Address" />
   <Input placeholder="Password" />
-  <Button sx={{ 
-    width: "100%"
-  }}>Create Account</Button>
+  <Button
+    sx={{
+      width: '100%',
+    }}
+  >
+    Create Account
+  </Button>
 </Box>
 ```
 
-### Custom CSS with DecaUI 
+### Custom CSS with DecaUI
+
 ```jsx
-<Box css={{ m: "md" }}>
+<Box css={{ m: 'md' }}>
   <Input placeholder="Email Address" />
   <Input placeholder="Password" />
   <Button maxWidth>Create Account</Button>
@@ -65,12 +77,13 @@ With DecaUI, developers can use the centralized theming system anywhere within t
 ```
 
 ## Our focus is consistancy
+
 The main problem with other UI libraries is that it's confusing to create consistant webpage layouts with them. DecaUI allows developers to utilize a root theme object which serves properties following the [System UI](https://github.com/system-ui/theme-specification) specification.
 
 **NOTE: We do not support NextJS 13 at this time ([See Issue](https://www.github.com/stitchesjs/stitches/issues/1109))**
+
 ## License
+
 <img src="https://www.deca-ui.com/headshot.png" width="40" alt="Heril Saha" align="center"/>
 
 <a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">MIT @ Heril Saha</a>
-
-
