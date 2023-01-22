@@ -26,3 +26,26 @@ export type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 export type DeepWriteable<T> = {
   -readonly [P in keyof T]: DeepWriteable<T[P]>;
 };
+
+export type AsProp<C extends React.ElementType> = {
+  as?: C;
+};
+
+export type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P);
+
+// reusable type utility for component props
+export type PolymorphicComponentProp<
+  C extends React.ElementType,
+  Props = Record<string, never>
+> = React.PropsWithChildren<Props & AsProp<C>> &
+  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>;
+
+// same utility for component props with refs
+export type PolymorphicComponentPropWithRef<
+  C extends React.ElementType,
+  Props = Record<string, never>
+> = PolymorphicComponentProp<C, Props> & { ref?: PolymorphicRef<C> };
+
+// This is the type for the "ref" only
+export type PolymorphicRef<C extends React.ElementType> =
+  React.ComponentPropsWithRef<C>['ref'];

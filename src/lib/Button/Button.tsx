@@ -1,36 +1,17 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { __DEV__ } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicComponentPropWithRef,
+  PolymorphicRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
 import StyledButton from './Button.styles';
 import ButtonIcon from './ButtonIcon';
 
-type AsProp<C extends React.ElementType> = {
-  as?: C;
-};
-
-type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P);
-
-// This is the first reusable type utility we built
-type PolymorphicComponentProp<
-  C extends React.ElementType,
-  Props = Record<string, never>
-> = React.PropsWithChildren<Props & AsProp<C>> &
-  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>;
-
-// This is a new type utitlity with ref!
-type PolymorphicComponentPropWithRef<
-  C extends React.ElementType,
-  Props = Record<string, never>
-> = PolymorphicComponentProp<C, Props> & { ref?: PolymorphicRef<C> };
-
-// This is the type for the "ref" only
-type PolymorphicRef<C extends React.ElementType> =
-  React.ComponentPropsWithRef<C>['ref'];
-
-export interface Props {
+interface Props {
   /**
    * The content of the component.
    */
