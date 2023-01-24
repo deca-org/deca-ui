@@ -1,21 +1,20 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
 import { StyledGridItem } from './Grid.styles';
-import GridContainer from './GridContainer';
 
 export type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
 /**
  * The Grid component acts as a child to the GridContainer component
  */
-export interface GridProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
+interface Props {
   /**
    * Override default CSS style.
    */
@@ -55,7 +54,14 @@ export interface GridProps<T extends React.ElementType>
   xl?: Cols;
 }
 
-const Grid = React.forwardRef(
+export type GridProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type GridComponent = (<C extends React.ElementType = 'div'>(
+  props: GridProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Grid: GridComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       as,
@@ -69,10 +75,9 @@ const Grid = React.forwardRef(
       lg,
       xl,
       ...gridProps
-    }: GridProps<T> & Omit<React.ComponentPropsWithRef<T>, keyof GridProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: GridProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const gridRef = useDOMRef(ref);
     const preClass = 'decaGrid';
 
     const genGridItemCss = (breakpoint?: Cols, bp?: CSS) => {
@@ -115,7 +120,7 @@ const Grid = React.forwardRef(
         as={as}
         css={getCss}
         className={clsx(className, `${preClass}-root`)}
-        ref={gridRef}
+        ref={ref}
         {...gridProps}
       >
         {children}
@@ -124,20 +129,8 @@ const Grid = React.forwardRef(
   }
 );
 
-type GridComponent<
-  T,
-  P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Container: typeof GridContainer;
-};
-
 if (__DEV__) {
   Grid.displayName = 'DecaUI.Grid';
 }
 
-export default Grid as GridComponent<
-  HTMLDivElement,
-  GridProps<React.ElementType>
->;
+export default Grid;

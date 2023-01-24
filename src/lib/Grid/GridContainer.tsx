@@ -1,5 +1,9 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -9,12 +13,7 @@ import { StyledGridContainer } from './Grid.styles';
 /**
  * The GridContainer component serves as a wrapper component to the Grid component
  */
-export interface GridContainerProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
+interface Props {
   /**
    * Override default CSS style.
    */
@@ -72,7 +71,14 @@ export interface GridContainerProps<T extends React.ElementType>
   xl?: Cols;
 }
 
-const GridContainer = React.forwardRef(
+export type GridContainerProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type GridContainerComponent = (<C extends React.ElementType = 'div'>(
+  props: GridContainerProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const GridContainer: GridContainerComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       as,
@@ -89,11 +95,9 @@ const GridContainer = React.forwardRef(
       lg,
       xl,
       ...gridContainerProps
-    }: GridContainerProps<T> &
-      Omit<React.ComponentPropsWithRef<T>, keyof GridContainerProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: GridContainerProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const gridContainerRef = useDOMRef(ref);
     const preClass = 'decaGridContainer';
 
     return (
@@ -101,7 +105,7 @@ const GridContainer = React.forwardRef(
         as={as}
         css={css}
         className={clsx(className, `${preClass}-root`)}
-        ref={gridContainerRef}
+        ref={ref}
         spacing={spacing}
         justifyContent={justifyContent}
         alignItems={alignItems}
@@ -124,5 +128,9 @@ const GridContainer = React.forwardRef(
     );
   }
 );
+
+if (__DEV__) {
+  GridContainer.displayName = 'DecaUI.GridContainer';
+}
 
 export default GridContainer;
