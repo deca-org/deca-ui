@@ -1,5 +1,9 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 
@@ -9,8 +13,7 @@ import { StyledModalFooter } from './Modal.styles';
 /**
  * ModalFooter allows users to place content on the bottom of their modal component
  */
-export interface ModalFooterProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
+interface Props {
   /**
    * The content of the component.
    */
@@ -25,16 +28,19 @@ export interface ModalFooterProps<T extends React.ElementType>
    */
   css?: CSS;
   /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
-  /**
    * Have gap between all elements.
    */
   autoGap?: boolean;
 }
 
-const ModalFooter = React.forwardRef(
+export type ModalFooterProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type ModalFooterComponent = (<C extends React.ElementType = 'div'>(
+  props: ModalFooterProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const ModalFooter: ModalFooterComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       children,
@@ -43,19 +49,17 @@ const ModalFooter = React.forwardRef(
       as,
       autoGap,
       ...props
-    }: ModalFooterProps<T> &
-      Omit<React.ComponentPropsWithRef<T>, keyof ModalFooterProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: ModalFooterProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
     const context = useContext(ModalContext) as IModalContext;
-    const modalFooterRef = useDOMRef(ref);
 
     const preClass = 'decaModalFooter';
 
     return (
       <StyledModalFooter
         autoGap={autoGap !== undefined ? autoGap : context.autoGap}
-        ref={modalFooterRef}
+        ref={ref}
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}

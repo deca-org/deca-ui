@@ -2,7 +2,13 @@ import { ThemeContext } from '@lib/Theme';
 import Box from '@lib/Box';
 import Button from '@lib/Button';
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, mergeRefs, useClickOutside, __DEV__ } from '@lib/Utils';
+import {
+  mergeRefs,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  useClickOutside,
+  __DEV__,
+} from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
 import React, { useEffect, useState, SetStateAction, Dispatch } from 'react';
@@ -13,12 +19,11 @@ import {
   StyledModalFlexbox,
   StyledModalOverlay,
 } from './Modal.styles';
-import ModalBody from './ModalBody';
-import ModalFooter from './ModalFooter';
-import ModalHeader from './ModalHeader';
 
-export interface ModalProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
+/*
+ * The Modal component provides a foundation for creating dialogs or popovers.
+ */
+interface Props {
   /**
    * The content of the component.
    */
@@ -54,10 +59,6 @@ export interface ModalProps<T extends React.ElementType>
    * @default false
    */
   noPadding?: boolean;
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
 }
 
 export interface IModalContext {
@@ -84,7 +85,14 @@ const CloseButton = () => (
   </svg>
 );
 
-const Modal = React.forwardRef(
+export type ModalProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type ModalComponent = (<C extends React.ElementType = 'div'>(
+  props: ModalProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Modal: ModalComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       children,
@@ -97,17 +105,14 @@ const Modal = React.forwardRef(
       noPadding = false,
       as,
       ...props
-    }: ModalProps<T> &
-      Omit<React.ComponentPropsWithRef<T>, keyof ModalProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: ModalProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setOpen && setOpen(false);
       }
     };
-
-    const modalRef = useDOMRef(ref);
 
     useEffect(() => {
       window.addEventListener('keydown', handleEsc);
@@ -179,7 +184,7 @@ const Modal = React.forwardRef(
                     overlayItem && <StyledModalOverlay style={overlayStyle} />
                 )}
                 <StyledModal
-                  ref={mergeRefs(modalRef, clickOutsideRef)}
+                  ref={mergeRefs(ref, clickOutsideRef)}
                   style={style}
                   className={clsx(className, `${preClass}-root`)}
                   css={css}
@@ -238,22 +243,8 @@ const Modal = React.forwardRef(
   }
 );
 
-type ModalComponent<
-  T,
-  P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Header: typeof ModalHeader;
-  Body: typeof ModalBody;
-  Footer: typeof ModalFooter;
-};
-
 if (__DEV__) {
   Modal.displayName = 'DecaUI.Modal';
 }
 
-export default Modal as ModalComponent<
-  HTMLDivElement,
-  ModalProps<React.ElementType>
->;
+export default Modal;

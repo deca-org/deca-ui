@@ -1,5 +1,9 @@
 import { CSS } from '@lib/Theme';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 
@@ -9,8 +13,7 @@ import { StyledModalBody } from './Modal.styles';
 /**
  * ModalBody contains the main content of a modal component
  */
-export interface ModalBodyProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
+interface Props {
   /**
    * The content of the component.
    */
@@ -25,37 +28,31 @@ export interface ModalBodyProps<T extends React.ElementType>
    */
   css?: CSS;
   /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
-  /**
    * Have gap between all elements.
    */
   autoGap?: boolean;
 }
 
-const ModalBody = React.forwardRef(
+export type ModalBodyProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type ModalBodyComponent = (<C extends React.ElementType = 'div'>(
+  props: ModalBodyProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const ModalBody: ModalBodyComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
-    {
-      children,
-      className = '',
-      css,
-      as,
-      autoGap,
-      ...props
-    }: ModalBodyProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof ModalBodyProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    { children, className = '', css, as, autoGap, ...props }: ModalBodyProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
     const context = useContext(ModalContext) as IModalContext;
-    const modalBodyRef = useDOMRef(ref);
 
     const preClass = 'decaModalBody';
 
     return (
       <StyledModalBody
         autoGap={autoGap !== undefined ? autoGap : context.autoGap}
-        ref={modalBodyRef}
+        ref={ref}
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}

@@ -1,5 +1,9 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 
@@ -9,8 +13,7 @@ import { StyledModalHeader } from './Modal.styles';
 /**
  * ModalHeader allows users to place a header on their modal component
  */
-export interface ModalHeaderProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
+interface Props {
   /**
    * The content of the component.
    */
@@ -25,16 +28,19 @@ export interface ModalHeaderProps<T extends React.ElementType>
    */
   css?: CSS;
   /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
-  /**
    * Have gap between all elements.
    */
   autoGap?: boolean;
 }
 
-const ModalHeader = React.forwardRef(
+export type ModalHeaderProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type ModalHeaderComponent = (<C extends React.ElementType = 'div'>(
+  props: ModalHeaderProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const ModalHeader: ModalHeaderComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       children,
@@ -43,19 +49,17 @@ const ModalHeader = React.forwardRef(
       as,
       autoGap,
       ...props
-    }: ModalHeaderProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof ModalHeaderProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: ModalHeaderProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
     const context = useContext(ModalContext) as IModalContext;
-    const modalHeaderRef = useDOMRef(ref);
 
     const preClass = 'decaModalHeader';
 
     return (
       <StyledModalHeader
         autoGap={autoGap !== undefined ? autoGap : context.autoGap}
-        ref={modalHeaderRef}
+        ref={ref}
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}
