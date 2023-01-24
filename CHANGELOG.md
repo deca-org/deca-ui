@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/deca-org/deca-ui/compare/v1.5.1...v1.5.2) (2023-01-24)
+
+
+### Bug Fixes
+
+* **components/checkbox:** fixed color of check when in darkmode ([c7c9223](https://github.com/deca-org/deca-ui/commit/c7c92234e732a460f905d527d5501dd356d4cc6e))
+
 ### [1.5.1](https://github.com/deca-org/deca-ui/compare/v1.5.0...v1.5.1) (2023-01-24)
 
 
