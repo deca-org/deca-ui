@@ -11,6 +11,9 @@ import React, { useMemo } from 'react';
 import StyledButton from './Button.styles';
 import ButtonIcon from './ButtonIcon';
 
+/**
+ * Buttons allow users to take actions, and make choices, with a single tap.
+ */
 interface Props {
   /**
    * The content of the component.
@@ -79,15 +82,10 @@ interface Props {
    */
   pill?: boolean;
 }
-/**
- * Buttons allow users to take actions, and make choices, with a single tap.
- */
+
 export type ButtonProps<T extends React.ElementType> =
   PolymorphicComponentPropWithRef<T, Props>;
 
-/**
- * This is the type used in the type annotation for the component
- */
 export type ButtonComponent = (<C extends React.ElementType = 'button'>(
   props: ButtonProps<C>
 ) => React.ReactElement | null) & { displayName?: string };
@@ -119,8 +117,6 @@ export const Button: ButtonComponent = React.forwardRef(
       () => React.Children.count(children) !== 0,
       [children]
     );
-
-    // const buttonRef = useDOMRef(ref);
 
     // ensures only icon or only iconRight is present
     const singleIcon = useMemo(
