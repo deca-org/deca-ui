@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/deca-org/deca-ui/compare/v1.4.12...v1.5.0) (2023-01-24)
+
+
+### Features
+
+* **components/badge:** added polymorphic type to badge component ([7d9d533](https://github.com/deca-org/deca-ui/commit/7d9d5331f3f56ef749b25fddd20a192fd82b562a))
+* **components/box:** added polymorphic type ([5a78c4a](https://github.com/deca-org/deca-ui/commit/5a78c4a2ff048bd33417d94672534dbd0af5fe49))
+* **components/button:** added polymorphic type for button component ([f377b86](https://github.com/deca-org/deca-ui/commit/f377b86f565b684de7a5ede03c618227d0b565e0))
+* **components/checkbox:** added general types to checkbox component ([f7b7585](https://github.com/deca-org/deca-ui/commit/f7b758546ca4256b08542d8ee6be830718ddabdf))
+* **components/checkbox:** added polymorphic type to checkbox component ([1be592f](https://github.com/deca-org/deca-ui/commit/1be592f16b2ecb333d94c3d17e100029888e0b64))
+* **components/checkboxgroup:** added polymorphism attributes to checkbox group component ([e1478c1](https://github.com/deca-org/deca-ui/commit/e1478c1b7922cdc7405e24dfd2761725f744cbfb))
+* **components/container:** added polymorphic attribs to container component ([b976990](https://github.com/deca-org/deca-ui/commit/b976990268c791641fa38ea35af002d29222fe57))
+* **components/grid:** added polymophism attribs to grid component & grid container ([1a2ad07](https://github.com/deca-org/deca-ui/commit/1a2ad0795e573a46cc4fe9d1693223bb47e32df1))
+* **components/input:** polymorphic attribs to input component ([cd4b4e3](https://github.com/deca-org/deca-ui/commit/cd4b4e3112dcd084891162ad856a0793fdbc3795))
+* **components/modal:** added polymorphic attribs to modal component ([3a74027](https://github.com/deca-org/deca-ui/commit/3a74027e81fe8e1fa2a26e5641ea7d097db0797f))
+* **components/popover:** added polymorphic attribs to popover component ([5bd04f6](https://github.com/deca-org/deca-ui/commit/5bd04f6cd18351dc0a7233e2ab9a4bd751bfdd51))
+* **components/radio:** added polymorphic attribs to radio component ([783726c](https://github.com/deca-org/deca-ui/commit/783726c4440674cd54bf2449e00b8e59c1febde3))
+* **components/switch:** added polymorphic attribs to switch component ([36e32a5](https://github.com/deca-org/deca-ui/commit/36e32a575221968786cce2e78f5d6b6224d0c854))
+* **components/text:** stronger types for text component ([0822a83](https://github.com/deca-org/deca-ui/commit/0822a83ec373c43846c07482f91319da358048d1))
+* **types:** added MasterComponent type for easy creation of components that have sub components ([bca3bdc](https://github.com/deca-org/deca-ui/commit/bca3bdc8a8e08843a9b40d2775d1c024ff6bf91a))
+
+
+### Bug Fixes
+
+* **components/modal:** fixed minor bug in modal.stories.tsx ([bbc6147](https://github.com/deca-org/deca-ui/commit/bbc61474de3ad87534761567397f27ae68ed44b3))
+* **inputgroups:** fixed inputgroup tests ([e19ca73](https://github.com/deca-org/deca-ui/commit/e19ca73e7ff0a389e06670b25952063d53ef327b))
+* **storybook:** fixed broken storybook ([69dfb7f](https://github.com/deca-org/deca-ui/commit/69dfb7fa69963d4f03921e3131701aaaf8538d46))
+
 ### [1.4.12](https://github.com/deca-org/deca-ui/compare/v1.4.11...v1.4.12) (2022-10-24)
 
 
