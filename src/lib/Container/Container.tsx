@@ -1,5 +1,9 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -8,12 +12,7 @@ import { StyledContainer } from './Container.styles';
 /**
  * The Container component fixes an element's width to the current breakpoint
  */
-export interface ContainerProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
+interface Props {
   /**
    * Override default CSS style.
    */
@@ -43,7 +42,14 @@ export interface ContainerProps<T extends React.ElementType>
   fluid?: boolean;
 }
 
-const Container = React.forwardRef(
+export type ContainerProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type ContainerComponent = (<C extends React.ElementType = 'div'>(
+  props: ContainerProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Container: ContainerComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       as,
@@ -54,11 +60,9 @@ const Container = React.forwardRef(
       responsive = true,
       fluid = false,
       ...containerProps
-    }: ContainerProps<T> &
-      Omit<React.ComponentPropsWithRef<T>, keyof ContainerProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: ContainerProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const containerRef = useDOMRef(ref);
     const preClass = 'decaContainer';
 
     return (
@@ -69,7 +73,7 @@ const Container = React.forwardRef(
         px={px}
         responsive={responsive}
         fluid={fluid}
-        ref={containerRef}
+        ref={ref}
         {...containerProps}
       >
         {children}
