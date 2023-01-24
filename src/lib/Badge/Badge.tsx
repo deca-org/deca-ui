@@ -1,11 +1,18 @@
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
 import { StyledBadge } from './Badge.styles';
 
-export interface BadgeProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'div'> {
+/**
+ * Badges are used to highlight an item's status for quick recognition.
+ */
+interface Props {
   /**
    * The content of the component.
    */
@@ -26,10 +33,6 @@ export interface BadgeProps<T extends React.ElementType> extends React.Component
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
-  /**
    * Override default CSS style.
    */
   css?: CSS;
@@ -39,8 +42,15 @@ export interface BadgeProps<T extends React.ElementType> extends React.Component
   pill?: boolean;
 }
 
-const Badge = React.forwardRef(<T extends React.ElementType = "div">
-  (
+export type BadgeProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type BadgeComponent = (<C extends React.ElementType = 'div'>(
+  props: BadgeProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Badge: BadgeComponent = React.forwardRef(
+  <T extends React.ElementType = 'div'>(
     {
       children,
       className,
@@ -50,28 +60,26 @@ const Badge = React.forwardRef(<T extends React.ElementType = "div">
       css,
       pill = false,
       ...props
-    }: BadgeProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof BadgeProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: BadgeProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-  const badgeRef = useDOMRef(ref);
+    const preClass = 'decaBadge';
 
-  const preClass = 'decaBadge';
-
-  return (
-    <StyledBadge
-      ref={badgeRef}
-      size={size}
-      as={as}
-      css={css}
-      color={color}
-      className={clsx(className, `${preClass}-root`)}
-      pill={pill}
-      {...props}
-    >
-      {children}
-    </StyledBadge>
-  );
-}
+    return (
+      <StyledBadge
+        ref={ref}
+        size={size}
+        as={as}
+        css={css}
+        color={color}
+        className={clsx(className, `${preClass}-root`)}
+        pill={pill}
+        {...props}
+      >
+        {children}
+      </StyledBadge>
+    );
+  }
 );
 
 if (__DEV__) {
