@@ -7,14 +7,14 @@ import { PopoverContext, IPopoverContext } from './Popover';
  * PopoverTrigger opens the popover's content. It must be an interactive element
  * such as `button` or `a`.
  */
-export interface PopoverTriggerProps {
+export interface Props {
   /**
    * The content of the component.
    */
   children?: React.ReactNode | undefined;
 }
 
-const PopoverTrigger = ({ children }: PopoverTriggerProps) => {
+const PopoverTrigger = ({ children }: Props) => {
   const context = useContext(PopoverContext) as IPopoverContext;
 
   // enforce single child

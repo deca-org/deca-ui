@@ -1,6 +1,12 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
-import { mergeRefs, useClickOutside, __DEV__ } from '@lib/Utils';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  mergeRefs,
+  useClickOutside,
+  __DEV__,
+} from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
 import React, { useState, useEffect, useContext } from 'react';
@@ -12,8 +18,7 @@ import { StyledPopover } from './Popover.styles';
 /**
  * PopoverContent contains the content shown when the trigger is executed
  */
-export interface PopoverContentProps<T extends React.ElementType>
-  extends React.ComponentPropsWithRef<'div'> {
+interface Props {
   /**
    * The content of the component.
    */
@@ -27,87 +32,91 @@ export interface PopoverContentProps<T extends React.ElementType>
    * @default ''
    */
   className?: string;
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
 }
 
-const PopoverContent = <T extends React.ElementType = 'div'>({
-  children,
-  css,
-  className = '',
-  as,
-}: PopoverContentProps<T> &
-  Omit<React.ComponentPropsWithoutRef<T>, keyof PopoverContentProps<T>>) => {
-  const context = useContext(PopoverContext) as IPopoverContext;
+export type PopoverContentProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
 
-  const clickOutsideRef = useClickOutside(() => {
-    context.setOpen && context.setOpen(false);
-  }, [context.triggerRef]);
+export type PopoverContentComponent = (<C extends React.ElementType = 'div'>(
+  props: PopoverContentProps<C>
+) => React.ReactElement | null) & { displayName?: string };
 
-  const transition = useTransition(context.open, {
-    from: {
-      scale: 0.75,
-      opacity: 0,
-    },
-    enter: {
-      scale: 1,
-      opacity: 1,
-    },
-    leave: {
-      scale: 0.75,
-      opacity: 0,
-    },
-    config: {
-      tension: 300,
-      friction: 19,
-    },
-  });
+const PopoverContent: PopoverContentComponent = React.forwardRef(
+  <T extends React.ElementType = 'div'>(
+    { children, css, className = '', as, ...props }: PopoverContentProps<T>,
+    ref?: PolymorphicRef<T>
+  ) => {
+    const context = useContext(PopoverContext) as IPopoverContext;
 
-  const preClass = 'decaPopover';
+    const clickOutsideRef = useClickOutside(() => {
+      context.setOpen && context.setOpen(false);
+    }, [context.triggerRef]);
 
-  const { dark } = React.useContext(ThemeContext);
+    const transition = useTransition(context.open, {
+      from: {
+        scale: 0.75,
+        opacity: 0,
+      },
+      enter: {
+        scale: 1,
+        opacity: 1,
+      },
+      leave: {
+        scale: 0.75,
+        opacity: 0,
+      },
+      config: {
+        tension: 300,
+        friction: 19,
+      },
+    });
 
-  const [DOM, setDOM] = useState(false);
+    const preClass = 'decaPopover';
 
-  useEffect(() => {
-    setDOM(true);
-  }, []);
+    const { dark } = React.useContext(ThemeContext);
 
-  if (DOM) {
-    return ReactDOM.createPortal(
-      transition(
-        (style, item) =>
-          item && (
-            <StyledPopover
-              style={style}
-              ref={mergeRefs(
-                context.mainComponentRef,
-                context.floating,
-                clickOutsideRef
-              )}
-              css={{
-                position: context.strategy,
-                top: context.y ?? 0,
-                left: context.x ?? 0,
-                ...css,
-              }}
-              className={clsx(className, `${preClass}-root`)}
-              as={animated[as as keyof JSX.IntrinsicElements]}
-              isDark={dark}
-            >
-              {children}
-            </StyledPopover>
-          )
-      ),
-      document.getElementById('decaUI-provider')
-        ? (document.getElementById('decaUI-provider') as Element)
-        : (document.querySelector('body') as Element)
-    );
+    const [DOM, setDOM] = useState(false);
+
+    useEffect(() => {
+      setDOM(true);
+    }, []);
+
+    if (DOM) {
+      return ReactDOM.createPortal(
+        transition(
+          (style, item) =>
+            item && (
+              <StyledPopover
+                style={style}
+                ref={mergeRefs(
+                  context.mainComponentRef,
+                  context.floating,
+                  clickOutsideRef,
+                  ref
+                )}
+                css={{
+                  position: context.strategy,
+                  top: context.y ?? 0,
+                  left: context.x ?? 0,
+                  ...css,
+                }}
+                className={clsx(className, `${preClass}-root`)}
+                as={animated[as as keyof JSX.IntrinsicElements]}
+                isDark={dark}
+                {...props}
+              >
+                {children}
+              </StyledPopover>
+            )
+        ),
+        document.getElementById('decaUI-provider')
+          ? (document.getElementById('decaUI-provider') as Element)
+          : (document.querySelector('body') as Element)
+      );
+    }
+    return <></>;
   }
-  return <></>;
-};
+);
 
 if (__DEV__) {
   PopoverContent.displayName = 'DecaUI.PopoverContent';

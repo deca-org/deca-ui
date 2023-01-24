@@ -7,7 +7,11 @@ import {
   UseFloatingReturn,
   Placement,
 } from '@floating-ui/react-dom';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  __DEV__,
+} from '@lib/Utils';
 import React, {
   useState,
   useEffect,
@@ -16,10 +20,10 @@ import React, {
   Dispatch,
 } from 'react';
 
-import PopoverContent from './PopoverContent';
-import PopoverTrigger from './PopoverTrigger';
-
-export interface PopoverProps {
+/**
+ * A Popover can be used to display some content on top of another.
+ */
+export interface Props {
   /**
    * The content of the component. It is usually the `Popover.Trigger`,
    * and `Popover.Content`
@@ -54,14 +58,21 @@ export interface IPopoverContext extends UseFloatingReturn {
   triggerRef?: React.Ref<HTMLElement | undefined>;
   open?: boolean;
   setOpen?: Dispatch<SetStateAction<boolean>>;
-  mainComponentRef: React.Ref<HTMLDivElement> | null;
+  mainComponentRef: PolymorphicRef<React.ElementType>;
   action: 'click' | 'hover';
 }
 
 export const PopoverContext = React.createContext<IPopoverContext | null>(null);
 
-const Popover = React.forwardRef(
-  (
+export type PopoverProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type PopoverComponent = (<C extends React.ElementType = 'div'>(
+  props: PopoverProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Popover: PopoverComponent = React.forwardRef(
+  <T extends React.ElementType = 'div'>(
     {
       children,
       open,
@@ -69,8 +80,8 @@ const Popover = React.forwardRef(
       placement = 'bottom',
       action = 'click',
       offset = 10,
-    }: PopoverProps,
-    ref: React.Ref<HTMLDivElement | null>
+    }: PopoverProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
     const floatingProps = useFloating({
       placement: placement,
@@ -109,7 +120,6 @@ const Popover = React.forwardRef(
 
     const [trigger, content] = React.Children.toArray(children);
 
-    const popoverRef = useDOMRef(ref);
     const triggerRef = React.useRef();
 
     return (
@@ -119,7 +129,7 @@ const Popover = React.forwardRef(
           triggerRef: triggerRef,
           open: isControlledComponent ? open : selfOpen,
           setOpen: isControlledComponent ? setOpen : setSelfOpen,
-          mainComponentRef: popoverRef,
+          mainComponentRef: ref,
           action,
         }}
       >
@@ -130,18 +140,8 @@ const Popover = React.forwardRef(
   }
 );
 
-type PopoverComponent<
-  T,
-  P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Trigger: typeof PopoverTrigger;
-  Content: typeof PopoverContent;
-};
-
 if (__DEV__) {
   Popover.displayName = 'DecaUI.Popover';
 }
 
-export default Popover as PopoverComponent<HTMLDivElement, PopoverProps>;
+export default Popover;
