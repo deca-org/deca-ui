@@ -1,8 +1,14 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, UnionToIntersection, uuid, __DEV__ } from '@lib/Utils';
+import {
+  Modify,
+  uuid,
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
-import React, { useRef, useMemo, useState, useImperativeHandle } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import {
   StyledInputMainContainer,
@@ -20,7 +26,7 @@ export type FormElement = HTMLInputElement | HTMLTextAreaElement;
 /**
  * Inputs allow users to enter text into a UI. They typically appear in forms and dialogs.
  */
-export interface InputProps<T extends React.ElementType>
+interface Props
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -55,10 +61,6 @@ export interface InputProps<T extends React.ElementType>
    * @default solid
    */
   variant?: 'solid' | 'outlined';
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
   /**
    * Placeholder text for component.
    */
@@ -113,7 +115,14 @@ export interface InputProps<T extends React.ElementType>
   pill?: boolean;
 }
 
-const Input = React.forwardRef(
+export type InputProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type InputComponent = (<C extends React.ElementType = 'input'>(
+  props: InputProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Input: InputComponent = React.forwardRef(
   <T extends React.ElementType = 'input'>(
     {
       label,
@@ -135,14 +144,9 @@ const Input = React.forwardRef(
       onBlur,
       pill = false,
       ...props
-    }: InputProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof InputProps<T>>,
-    ref: React.Ref<FormElement | null>
+    }: InputProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const inputRef = useRef<UnionToIntersection<FormElement>>(null);
-
-    useImperativeHandle(ref, () => inputRef.current);
-
     const [selfValue, setSelfValue] = useState<string>(initialValue);
     const [focused, setFocused] = useState<boolean>(false);
 
@@ -220,6 +224,7 @@ const Input = React.forwardRef(
             onBlur={blurHandler}
             onChange={changeHandler}
             className={`${preClass}-input`}
+            ref={ref}
             variant={variant}
             state={getState}
             as={as}
