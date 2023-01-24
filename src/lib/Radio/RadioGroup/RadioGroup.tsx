@@ -1,6 +1,11 @@
-import { RadioProps } from '@lib/Radio';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, uuid, __DEV__ } from '@lib/Utils';
+import { RadioProps } from '../Radio';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  uuid,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
@@ -9,7 +14,7 @@ import { StyledRadioGroupWrapper } from './RadioGroup.styles';
 /**
  * RadioGroup is a helpful wrapper used to group Radio button components.
  */
-export interface RadioGroupProps<T extends React.ElementType> {
+interface Props {
   /**
    * The content of the component.
    */
@@ -51,16 +56,19 @@ export interface RadioGroupProps<T extends React.ElementType> {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
-  /**
    * Override default CSS style.
    */
   css?: CSS;
 }
 
-const RadioGroup = React.forwardRef(
+export type RadioGroupProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type RadioGroupComponent = (<C extends React.ElementType = 'div'>(
+  props: RadioGroupProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const RadioGroup: RadioGroupComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       children,
@@ -75,12 +83,9 @@ const RadioGroup = React.forwardRef(
       as,
       css,
       ...props
-    }: RadioGroupProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof RadioGroupProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: RadioGroupProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const radioGroupRef = useDOMRef(ref);
-
     const presetId = uuid('radio');
 
     const getName = useMemo(() => {
@@ -94,7 +99,7 @@ const RadioGroup = React.forwardRef(
 
     return (
       <StyledRadioGroupWrapper
-        ref={radioGroupRef}
+        ref={ref}
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}

@@ -1,6 +1,12 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, useDOMRef, uuid, __DEV__ } from '@lib/Utils';
+import {
+  Modify,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  uuid,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 
@@ -9,12 +15,11 @@ import {
   StyledRadio,
   StyledRadioLabel,
 } from './Radio.styles';
-import RadioGroup from './RadioGroup';
 
 /**
  * Radio buttons allow the user to select one option from a set.
  */
-export interface RadioProps<T extends React.ElementType>
+interface Props
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -44,10 +49,6 @@ export interface RadioProps<T extends React.ElementType>
    * @default false
    */
   disabled?: boolean;
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
   /**
    * Override default CSS style.
    */
@@ -83,8 +84,15 @@ export interface RadioProps<T extends React.ElementType>
   selected?: boolean;
 }
 
-const Radio = React.forwardRef(
-  <T extends React.ElementType = 'label'>(
+export type RadioProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type RadioComponent = (<C extends React.ElementType = 'input'>(
+  props: RadioProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Radio: RadioComponent = React.forwardRef(
+  <T extends React.ElementType = 'input'>(
     {
       size = 'md',
       label,
@@ -100,12 +108,9 @@ const Radio = React.forwardRef(
       initialSelect,
       selected,
       ...props
-    }: RadioProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof RadioProps<T>>,
-    ref: React.Ref<HTMLInputElement | null>
+    }: RadioProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const radioRef = useDOMRef(ref);
-
     const radioId = useMemo(() => {
       if (props.id) {
         return props.id;
@@ -133,7 +138,7 @@ const Radio = React.forwardRef(
         <StyledRadio
           id={radioId}
           type="radio"
-          ref={radioRef}
+          ref={ref}
           className={`${preClass}-input`}
           size={size}
           color={color}
@@ -166,20 +171,8 @@ const Radio = React.forwardRef(
   }
 );
 
-type RadioComponent<
-  T,
-  P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Group: typeof RadioGroup;
-};
-
 if (__DEV__) {
   Radio.displayName = 'DecaUI.Radio';
 }
 
-export default Radio as RadioComponent<
-  HTMLInputElement,
-  RadioProps<React.ElementType>
->;
+export default Radio;
