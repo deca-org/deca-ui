@@ -337,7 +337,7 @@ export const StyledInputContainer = styled('div', {
       state: 'value',
       isDark: true,
       css: {
-        borderColor: '$gray800',
+        borderColor: '$gray700',
       },
     },
     {
@@ -345,7 +345,7 @@ export const StyledInputContainer = styled('div', {
       state: 'default',
       isDark: true,
       css: {
-        borderColor: '$gray800',
+        borderColor: '$gray700',
       },
     },
     {

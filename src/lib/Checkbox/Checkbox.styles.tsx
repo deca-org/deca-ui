@@ -151,7 +151,13 @@ export const StyledCheckbox = styled('input', {
       },
     },
     isDark: {
-      true: {},
+      true: {
+        '&:checked + label > svg': {
+          visibility: 'visible',
+          color: '$black',
+          opacity: 1,
+        },
+      },
       false: {},
     },
   },
