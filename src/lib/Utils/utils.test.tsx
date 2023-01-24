@@ -1,8 +1,5 @@
-import React from 'react';
-import DecaUIProvider from '@lib/Theme';
 import { uuid } from './random';
 import { createPalette } from './color';
-import { render } from '@testing-library/react';
 import { __DEV__ } from './env';
 
 describe('utils/color', () => {
