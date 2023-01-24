@@ -1,5 +1,9 @@
 import { CSS } from '@lib/Theme/stitches.config';
-import { useDOMRef, __DEV__ } from '@lib/Utils';
+import {
+  __DEV__,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -8,11 +12,7 @@ import { StyledBox } from './Box.styles';
 /**
  * The Box component serves as a wrapper component
  */
-export interface BoxProps<T extends React.ElementType> extends React.ComponentPropsWithRef<'div'> {
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
+interface Props {
   /**
    * Override default CSS style.
    */
@@ -28,27 +28,32 @@ export interface BoxProps<T extends React.ElementType> extends React.ComponentPr
   className?: string;
 }
 
-const Box = React.forwardRef(<T extends React.ElementType = "div">
-  (
-    { as, css, children, className = '', ...boxProps }: BoxProps<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof BoxProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+export type BoxProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type BoxComponent = (<C extends React.ElementType = 'div'>(
+  props: BoxProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Box: BoxComponent = React.forwardRef(
+  <T extends React.ElementType = 'div'>(
+    { as, css, children, className = '', ...boxProps }: BoxProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-  const boxRef = useDOMRef(ref);
+    const preClass = 'decaBox';
 
-  const preClass = 'decaBox';
-
-  return (
-    <StyledBox
-      as={as}
-      css={css}
-      className={clsx(className, `${preClass}-root`)}
-      ref={boxRef}
-      {...boxProps}
-    >
-      {children}
-    </StyledBox>
-  );
-}
+    return (
+      <StyledBox
+        as={as}
+        css={css}
+        className={clsx(className, `${preClass}-root`)}
+        ref={ref}
+        {...boxProps}
+      >
+        {children}
+      </StyledBox>
+    );
+  }
 );
 
 if (__DEV__) {
