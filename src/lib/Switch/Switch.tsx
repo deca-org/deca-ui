@@ -1,6 +1,12 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, useDOMRef, uuid, __DEV__ } from '@lib/Utils';
+import {
+  Modify,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  uuid,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useState, useMemo } from 'react';
 
@@ -12,7 +18,7 @@ import {
 /**
  * Switches are an alternative to the checkbox component. You can switch between enabled or disabled states.
  */
-export interface SwitchProps<T extends React.ElementType>
+interface Props
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -42,10 +48,6 @@ export interface SwitchProps<T extends React.ElementType>
    * @default false
    */
   disabled?: boolean;
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
   /**
    * Override default CSS style.
    */
@@ -86,8 +88,15 @@ export interface SwitchProps<T extends React.ElementType>
   required?: boolean;
 }
 
-const Switch = React.forwardRef(
-  <T extends React.ElementType = 'label'>(
+export type SwitchProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type SwitchComponent = (<C extends React.ElementType = 'input'>(
+  props: SwitchProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Switch: SwitchComponent = React.forwardRef(
+  <T extends React.ElementType = 'input'>(
     {
       size = 'md',
       label,
@@ -102,12 +111,9 @@ const Switch = React.forwardRef(
       onChange,
       name,
       value,
-    }: SwitchProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof SwitchProps<T>>,
-    ref: React.Ref<HTMLInputElement | null>
+    }: SwitchProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const switchRef = useDOMRef(ref);
-
     const [selfToggled, setSelfToggled] = useState<boolean>(initialToggle);
 
     const switchId = uuid('switch');
@@ -136,7 +142,7 @@ const Switch = React.forwardRef(
           type="checkbox"
           onChange={changeHandler}
           checked={isControlledComponent ? toggled : selfToggled}
-          ref={switchRef}
+          ref={ref}
           isDisabled={disabled}
           name={name}
           size={size}
