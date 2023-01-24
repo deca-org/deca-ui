@@ -3,11 +3,13 @@ import {
   PolymorphicRef,
   PolymorphicComponentPropWithRef,
   __DEV__,
+  MasterComponent,
 } from '@lib/Utils';
 import clsx from 'clsx';
 import React from 'react';
 
 import { StyledGridItem } from './Grid.styles';
+import GridContainer from './GridContainer';
 
 export type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
@@ -133,4 +135,8 @@ if (__DEV__) {
   Grid.displayName = 'DecaUI.Grid';
 }
 
-export default Grid;
+export default Grid as MasterComponent<
+  HTMLDivElement,
+  GridProps<React.ElementType>,
+  { Container: typeof GridContainer }
+>;

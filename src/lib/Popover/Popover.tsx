@@ -8,6 +8,7 @@ import {
   Placement,
 } from '@floating-ui/react-dom';
 import {
+  MasterComponent,
   PolymorphicRef,
   PolymorphicComponentPropWithRef,
   __DEV__,
@@ -19,6 +20,8 @@ import React, {
   SetStateAction,
   Dispatch,
 } from 'react';
+import PopoverTrigger from './PopoverTrigger';
+import PopoverContent from './PopoverContent';
 
 /**
  * A Popover can be used to display some content on top of another.
@@ -144,4 +147,11 @@ if (__DEV__) {
   Popover.displayName = 'DecaUI.Popover';
 }
 
-export default Popover;
+export default Popover as MasterComponent<
+  HTMLDivElement,
+  PopoverProps<React.ElementType>,
+  {
+    Trigger: typeof PopoverTrigger;
+    Content: typeof PopoverContent;
+  }
+>;

@@ -3,7 +3,7 @@
 exports[`components/Text matches snapshot 1`] = `
 <DocumentFragment>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-dTHfCl-mono-false decaText-root"
   />
 </DocumentFragment>
 `;
@@ -11,42 +11,42 @@ exports[`components/Text matches snapshot 1`] = `
 exports[`components/Text renders all lineHeights 1`] = `
 <DocumentFragment>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-hVSCMQ-lineHeight-n c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-hVSCMQ-lineHeight-n c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-kENwji-lineHeight-0 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-kENwji-lineHeight-0 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-kbxdZX-lineHeight-1 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-kbxdZX-lineHeight-1 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-bwqZvk-lineHeight-2 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-bwqZvk-lineHeight-2 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-iwoKbl-lineHeight-3 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-iwoKbl-lineHeight-3 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-guLIGy-lineHeight-4 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-guLIGy-lineHeight-4 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-fRvqxn-lineHeight-5 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-fRvqxn-lineHeight-5 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-iBKVrw-lineHeight-6 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-iBKVrw-lineHeight-6 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
@@ -56,52 +56,52 @@ exports[`components/Text renders all lineHeights 1`] = `
 exports[`components/Text renders all sizes 1`] = `
 <DocumentFragment>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cFWcZl-size-h1 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-cFWcZl-size-h1 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-kKUNrJ-size-h2 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-kKUNrJ-size-h2 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-hlOZHJ-size-h3 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-hlOZHJ-size-h3 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-erFqON-size-h4 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-erFqON-size-h4 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cHMTHd-size-h5 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-cHMTHd-size-h5 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-cpZldy-size-h6 c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-cpZldy-size-h6 c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-jQkWJT-size-body c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-jQkWJT-size-body c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-RtCVl-size-bodySm c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-RtCVl-size-bodySm c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-eqmpvd-size-caption c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-eqmpvd-size-caption c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>
   <p
-    class="c-hhwXGU c-hhwXGU-jQkWJT-as-p c-hhwXGU-ejpLhE-size-footnote c-hhwXGU-dTHfCl-mono-false decaText-root"
+    class="c-hhwXGU c-hhwXGU-ejpLhE-size-footnote c-hhwXGU-dTHfCl-mono-false decaText-root"
   >
     Children
   </p>

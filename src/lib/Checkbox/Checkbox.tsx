@@ -6,9 +6,11 @@ import {
   PolymorphicComponentPropWithRef,
   uuid,
   __DEV__,
+  MasterComponent,
 } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useState, useMemo } from 'react';
+import CheckboxGroup from './CheckboxGroup';
 
 import {
   StyledCheckboxWrapper,
@@ -199,4 +201,8 @@ if (__DEV__) {
   Checkbox.displayName = 'DecaUI.Checkbox';
 }
 
-export default Checkbox;
+export default Checkbox as MasterComponent<
+  HTMLInputElement,
+  CheckboxProps<React.ElementType>,
+  { Group: typeof CheckboxGroup }
+>;

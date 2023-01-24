@@ -33,6 +33,16 @@ export type AsProp<C extends React.ElementType> = {
 
 export type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P);
 
+// this type is used for when the component contains subcomponents (e.g. Checkbox.Group)
+export type MasterComponent<
+  T,
+  P = Record<string, unknown>,
+  V = Record<string, unknown>
+> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+> &
+  V;
+
 // reusable type utility for component props
 export type PolymorphicComponentProp<
   C extends React.ElementType,

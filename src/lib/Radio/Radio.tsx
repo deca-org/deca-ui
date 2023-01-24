@@ -6,6 +6,7 @@ import {
   PolymorphicComponentPropWithRef,
   uuid,
   __DEV__,
+  MasterComponent,
 } from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
@@ -15,6 +16,8 @@ import {
   StyledRadio,
   StyledRadioLabel,
 } from './Radio.styles';
+
+import RadioGroup from './RadioGroup';
 
 /**
  * Radio buttons allow the user to select one option from a set.
@@ -175,4 +178,10 @@ if (__DEV__) {
   Radio.displayName = 'DecaUI.Radio';
 }
 
-export default Radio;
+export default Radio as MasterComponent<
+  HTMLInputElement,
+  RadioProps<React.ElementType>,
+  {
+    Group: typeof RadioGroup;
+  }
+>;

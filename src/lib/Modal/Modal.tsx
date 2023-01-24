@@ -8,6 +8,7 @@ import {
   PolymorphicComponentPropWithRef,
   useClickOutside,
   __DEV__,
+  MasterComponent,
 } from '@lib/Utils';
 import { animated, useTransition } from '@react-spring/web';
 import clsx from 'clsx';
@@ -19,6 +20,10 @@ import {
   StyledModalFlexbox,
   StyledModalOverlay,
 } from './Modal.styles';
+
+import ModalHeader from './ModalHeader';
+import ModalBody from './ModalBody';
+import ModalFooter from './ModalFooter';
 
 /*
  * The Modal component provides a foundation for creating dialogs or popovers.
@@ -247,4 +252,12 @@ if (__DEV__) {
   Modal.displayName = 'DecaUI.Modal';
 }
 
-export default Modal;
+export default Modal as MasterComponent<
+  HTMLDivElement,
+  ModalProps<React.ElementType>,
+  {
+    Header: typeof ModalHeader;
+    Body: typeof ModalBody;
+    Footer: typeof ModalFooter;
+  }
+>;
