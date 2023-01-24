@@ -1,6 +1,12 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { Modify, useDOMRef, uuid, __DEV__ } from '@lib/Utils';
+import {
+  Modify,
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  uuid,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useState, useMemo } from 'react';
 
@@ -9,12 +15,11 @@ import {
   StyledCheckbox,
   StyledCheckboxLabel,
 } from './Checkbox.styles';
-import CheckboxGroup from './CheckboxGroup';
 
 /**
  * Checkboxes can be used to turn an option on or off
  */
-export interface CheckboxProps<T extends React.ElementType>
+interface Props
   extends Modify<
     React.ComponentPropsWithRef<'input'>,
     {
@@ -44,10 +49,6 @@ export interface CheckboxProps<T extends React.ElementType>
    * @default false
    */
   disabled?: boolean;
-  /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
   /**
    * Override default CSS style.
    */
@@ -103,8 +104,15 @@ const Check = () => (
   </svg>
 );
 
-const Checkbox = React.forwardRef(
-  <T extends React.ElementType = 'label'>(
+export type CheckboxProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type CheckboxComponent = (<C extends React.ElementType = 'input'>(
+  props: CheckboxProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Checkbox: CheckboxComponent = React.forwardRef(
+  <T extends React.ElementType = 'input'>(
     {
       size = 'md',
       label,
@@ -120,12 +128,9 @@ const Checkbox = React.forwardRef(
       onChange,
       value,
       ...props
-    }: CheckboxProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof CheckboxProps<T>>,
-    ref: React.Ref<HTMLInputElement | null>
+    }: CheckboxProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const checkboxRef = useDOMRef(ref);
-
     const [selfChecked, setSelfChecked] = useState<boolean>(initialCheck);
 
     const checkboxId = useMemo(() => {
@@ -160,7 +165,7 @@ const Checkbox = React.forwardRef(
           type="checkbox"
           onChange={changeHandler}
           checked={isControlledComponent ? checked : selfChecked}
-          ref={checkboxRef}
+          ref={ref}
           required={required}
           className={`${preClass}-input`}
           name={name}
@@ -190,20 +195,8 @@ const Checkbox = React.forwardRef(
   }
 );
 
-type CheckboxComponent<
-  T,
-  P = Record<string, unknown>
-> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
-> & {
-  Group: typeof CheckboxGroup;
-};
-
 if (__DEV__) {
   Checkbox.displayName = 'DecaUI.Checkbox';
 }
 
-export default Checkbox as CheckboxComponent<
-  HTMLInputElement,
-  CheckboxProps<React.ElementType>
->;
+export default Checkbox;

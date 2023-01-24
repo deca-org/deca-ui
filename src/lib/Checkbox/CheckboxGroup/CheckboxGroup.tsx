@@ -1,6 +1,11 @@
 import { CheckboxProps } from '@lib/Checkbox';
 import { CSS, StandardColors } from '@lib/Theme/stitches.config';
-import { useDOMRef, uuid, __DEV__ } from '@lib/Utils';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  uuid,
+  __DEV__,
+} from '@lib/Utils';
 import clsx from 'clsx';
 import React, { useMemo } from 'react';
 import { StyledCheckboxGroupWrapper } from './CheckboxGroup.styles';
@@ -8,7 +13,7 @@ import { StyledCheckboxGroupWrapper } from './CheckboxGroup.styles';
 /**
  * CheckboxGroup is a helpful wrapper used to group checkbox components.
  */
-export interface CheckboxGroupProps<T extends React.ElementType> {
+interface Props {
   /**
    * The content of the component.
    */
@@ -42,10 +47,6 @@ export interface CheckboxGroupProps<T extends React.ElementType> {
    */
   disabled?: boolean;
   /**
-   * Changes which tag component outputs.
-   */
-  as?: T;
-  /**
    * Override default CSS style.
    */
   css?: CSS;
@@ -59,7 +60,14 @@ export interface CheckboxGroupProps<T extends React.ElementType> {
   size?: 'sm' | 'md' | 'lg';
 }
 
-const CheckboxGroup = React.forwardRef(
+export type CheckboxGroupProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type CheckboxGroupComponent = (<C extends React.ElementType = 'div'>(
+  props: CheckboxGroupProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const CheckboxGroup: CheckboxGroupComponent = React.forwardRef(
   <T extends React.ElementType = 'div'>(
     {
       children,
@@ -74,12 +82,9 @@ const CheckboxGroup = React.forwardRef(
       color,
       size,
       ...props
-    }: CheckboxGroupProps<T> &
-      Omit<React.ComponentPropsWithoutRef<T>, keyof CheckboxGroupProps<T>>,
-    ref: React.Ref<HTMLDivElement | null>
+    }: CheckboxGroupProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const checkboxGroupRef = useDOMRef(ref);
-
     const presetId = uuid('checkbox');
 
     const getName = useMemo(() => {
@@ -93,7 +98,7 @@ const CheckboxGroup = React.forwardRef(
 
     return (
       <StyledCheckboxGroupWrapper
-        ref={checkboxGroupRef}
+        ref={ref}
         className={clsx(className, `${preClass}-root`)}
         as={as}
         css={css}
