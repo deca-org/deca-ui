@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/deca-org/deca-ui/compare/v1.5.0...v1.5.1) (2023-01-24)
+
+
+### Bug Fixes
+
+* **package.json:** switched clsx from dev dep to prod dep ([1faeb7e](https://github.com/deca-org/deca-ui/commit/1faeb7ee9d1ef17339f4c35fe36acb5e25e923fb))
+
 ## [1.5.0](https://github.com/deca-org/deca-ui/compare/v1.4.12...v1.5.0) (2023-01-24)
 
 

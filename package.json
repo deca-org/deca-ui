@@ -1,6 +1,6 @@
 {
   "name": "@deca-ui/react",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "DecaUI is production-ready themable component library built with StitchesJS.",
   "main": "build/main/index.js",
   "types": "build/main/index.d.ts",
