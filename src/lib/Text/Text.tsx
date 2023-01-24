@@ -1,15 +1,14 @@
 import { ThemeContext } from '@lib/Theme';
 import { CSS } from '@lib/Theme/stitches.config';
-import { AnyObject, UnionToIntersection, __DEV__ } from '@lib/Utils';
-import React, { useRef, useImperativeHandle } from 'react';
+import {
+  PolymorphicRef,
+  PolymorphicComponentPropWithRef,
+  AnyObject,
+  __DEV__,
+} from '@lib/Utils';
+import React from 'react';
 
 import StyledText from './Text.styles';
-
-type TextElement =
-  | HTMLHeadingElement
-  | HTMLParagraphElement
-  | HTMLSpanElement
-  | HTMLElement;
 
 export type TextAs =
   | 'h1'
@@ -56,7 +55,7 @@ export type TextLineHeight = 'n' | '0' | '1' | '2' | '3' | '4' | '5' | '6';
 /**
  * The Text component is the used to render text and paragraphs within an interface
  */
-export interface TextProps extends React.ComponentPropsWithRef<'h1'> {
+interface Props {
   /**
    * Changes which tag component outputs.
    */
@@ -92,10 +91,17 @@ export interface TextProps extends React.ComponentPropsWithRef<'h1'> {
   mono?: boolean;
 }
 
-const Text = React.forwardRef(
-  (
+export type TextProps<T extends React.ElementType> =
+  PolymorphicComponentPropWithRef<T, Props>;
+
+export type TextComponent = (<C extends React.ElementType = 'p'>(
+  props: TextProps<C>
+) => React.ReactElement | null) & { displayName?: string };
+
+const Text: TextComponent = React.forwardRef(
+  <T extends React.ElementType = 'p'>(
     {
-      as = 'p',
+      as,
       css,
       children,
       weight,
@@ -104,13 +110,9 @@ const Text = React.forwardRef(
       center,
       mono = false,
       ...textProps
-    }: TextProps,
-    ref: React.Ref<TextElement | null>
+    }: TextProps<T>,
+    ref?: PolymorphicRef<T>
   ) => {
-    const textRef = useRef<UnionToIntersection<TextElement>>(null);
-
-    useImperativeHandle(ref, () => textRef.current);
-
     const preClass = 'decaText';
 
     const { dark } = React.useContext(ThemeContext);
@@ -120,7 +122,7 @@ const Text = React.forwardRef(
         as={as}
         css={css}
         className={`${preClass}-root`}
-        ref={textRef}
+        ref={ref}
         weight={weight}
         center={center}
         size={size}
