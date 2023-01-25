@@ -19,6 +19,9 @@
 <img src="./public/cover.png" alt="Overview of Components" style="margin-bottom: 15px"/>
 <p>DecaUI provides a set of accessible and customizable React components that make it make it easy to quickly prototype and develop stunning websites.</p>
 
+> **Warning**
+> DecaUI is in beta and is being actively developed.
+
 ## Getting Started
 
 ```
@@ -69,7 +72,7 @@ With DecaUI, developers can use the centralized theming system anywhere within t
 ### Custom CSS with DecaUI
 
 ```jsx
-<Box css={{ m: 'md' }}>
+<Box css={{ m: '$3' }}>
   <Input placeholder="Email Address" />
   <Input placeholder="Password" />
   <Button maxWidth>Create Account</Button>
