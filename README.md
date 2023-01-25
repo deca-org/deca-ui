@@ -17,7 +17,7 @@
   </a>
 </p>
 <img src="./public/cover.png" alt="Overview of Components" style="margin-bottom: 15px"/>
-<p>DecaUI provides a set of accessible and customizable React components that make it make it easy to quickly prototype and develop stunning websites.</p>
+<p>DecaUI provides a set of accessible and customizable React components that make it easy to quickly prototype and develop stunning websites.</p>
 
 > **Warning**
 > DecaUI is in beta and is being actively developed.
