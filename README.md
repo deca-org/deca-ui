@@ -88,3 +88,11 @@ The main problem with other UI libraries is that it's confusing to create consis
 <img src="https://www.deca-ui.com/headshot.png" width="40" alt="Heril Saha" align="center"/>
 
 <a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">MIT @ Heril Saha</a>
+
+## Thank you
+<div>
+<img src="https://react.statuscode.com/images/reactkeith.png" width="40" alt="React Status"/>
+</div>
+Thanks to <a href="https://react.statuscode.com/">React Status</a> for showcasing this project on their newsletter (issue <a href="https://react.statuscode.com/issues/323">#323</a>)! 
+
+
