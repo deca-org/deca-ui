@@ -79,9 +79,9 @@ With DecaUI, developers can use the centralized theming system anywhere within t
 </Box>
 ```
 
-## Our focus is consistancy
+## Our focus is consistency
 
-The main problem with other UI libraries is that it's confusing to create consistant webpage layouts with them. DecaUI allows developers to utilize a root theme object which serves properties following the [System UI](https://github.com/system-ui/theme-specification) specification.
+The main problem with other UI libraries is that it's confusing to create consistent webpage layouts with them. DecaUI allows developers to utilize a root theme object which serves properties following the [System UI](https://github.com/system-ui/theme-specification) specification.
 
 ## License
 
