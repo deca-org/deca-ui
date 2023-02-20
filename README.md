@@ -89,10 +89,10 @@ The main problem with other UI libraries is that it's confusing to create consis
 
 <a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">MIT @ Heril Saha</a>
 
-## Thank you
+## Thank you React Status!
 <div>
 <img src="https://react.statuscode.com/images/reactkeith.png" width="40" alt="React Status"/>
 </div>
-Thanks to <a href="https://react.statuscode.com/">React Status</a> for showcasing this project on their newsletter (issue <a href="https://react.statuscode.com/issues/323">#323</a>)! 
+Thanks to <a href="https://react.statuscode.com/">React Status</a> for showcasing this project on their newsletter (issue <a href="https://react.statuscode.com/issues/323">#323</a>).
 
 
