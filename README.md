@@ -30,7 +30,7 @@ npm install @deca-ui/react
 
 ## Using a component
 
-Here is a simple example of a basic app using DecaUI's `Button` component
+Here is a simple example of a basic app using DecaUI's `Button` component:
 
 ```jsx
 import { Button } from '@deca-ui/react';
