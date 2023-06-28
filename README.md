@@ -1,3 +1,6 @@
+> **Warning**
+> I am sorry to say that as of June 28 2023, DecaUI is no longer actively maintained.
+
 <p align="center">
   <a href="https://deca-ui.com/" rel="noopener" target="_blank"><img width="100" src="https://www.deca-ui.com/icon.svg" alt="DecaUI logo"></a>
   <h1 align="center">DecaUI</h1>
@@ -18,9 +21,6 @@
 </p>
 <img src="./public/cover.png" alt="Overview of Components" style="margin-bottom: 15px"/>
 <p>DecaUI provides a set of accessible and customizable React components that make it easy to quickly prototype and develop stunning websites.</p>
-
-> **Warning**
-> DecaUI is in beta and is being actively developed.
 
 ## Getting Started
 
