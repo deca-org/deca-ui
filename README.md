@@ -85,9 +85,9 @@ The main problem with other UI libraries is that it's confusing to create consis
 
 ## License
 
-<img src="https://www.deca-ui.com/headshot.png" width="40" alt="Heril Saha" align="center"/>
+<img src="https://www.deca-ui.com/headshot.webp" width="40" alt="Elliot Saha" align="center"/>
 
-<a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">MIT @ Heril Saha</a>
+<a href="https://github.com/deca-org/deca-ui/blob/main/LICENSE">MIT @ Elliot Saha</a>
 
 ## Thank you React Status!
 <div>
