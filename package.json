@@ -7,7 +7,7 @@
   "module": "build/module/index.js",
   "repository": "https://github.com/deca-org/deca-ui",
   "homepage": "deca-ui.com",
-  "author": "herilsaha",
+  "author": "elliotsaha",
   "license": "MIT",
   "keywords": [
     "react",
